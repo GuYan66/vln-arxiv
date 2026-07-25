@@ -1,7 +1,14 @@
-"""调用智谱 GLM 为每篇论文生成中文摘要与推荐度评分。
+"""调用 LLM（智谱 GLM / 地瓜 D-Robotics 网关 / 任何 OpenAI 兼容端点）
+为每篇论文生成中文摘要与推荐度评分。
 
-端点：https://open.bigmodel.cn/api/paas/v4/chat/completions
-要求返回严格 JSON。解析失败重试 1 次，仍失败则降级记录原文、score=None，不中断整批。
+端点与模型走环境变量：
+  LLM_BASE_URL  基础地址（默认智谱官网 https://open.bigmodel.cn/api/paas/v4）
+                 地瓜网关用 https://ai-api.d-robotics.cc/v1
+  LLM_MODEL      模型名（默认 glm-4.6；地瓜网关可填 glm-5.2 等）
+  LLM_API_KEY    Bearer 鉴权 key
+
+要求返回严格 JSON。解析失败重试 1 次（回退去掉 response_format），仍失败则降级
+记录原文、score=None，不中断整批。
 """
 
 from __future__ import annotations
@@ -10,14 +17,13 @@ import json
 import os
 import re
 import time
-from datetime import datetime, timezone
 from typing import Any
 
 import requests
 
 from models import PaperRaw, PaperSummary
 
-ENDPOINT = "https://open.bigmodel.cn/api/paas/v4/chat/completions"
+DEFAULT_BASE_URL = "https://open.bigmodel.cn/api/paas/v4"
 TIMEOUT = 60
 MAX_RETRIES = 1  # 首次失败后重试 1 次
 
@@ -56,10 +62,8 @@ def _extract_json(text: str) -> dict[str, Any] | None:
     """从模型回复中抽取 JSON 对象。容忍前后多余文字与 ```json 代码块。"""
     if not text:
         return None
-    # 去 markdown 代码块
     fenced = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
     candidate = fenced.group(1) if fenced else text
-    # 取第一个完整 JSON 对象
     start = candidate.find("{")
     if start < 0:
         return None
@@ -78,7 +82,6 @@ def _extract_json(text: str) -> dict[str, Any] | None:
 
 
 def _coerce_summary(raw: dict[str, Any], model_output: str, err: str | None) -> PaperSummary:
-    """把解析出的 dict 规整为 PaperSummary，容错字段类型。"""
     score = raw.get("relevance_score")
     try:
         score_int = int(score) if score is not None else None
@@ -105,39 +108,56 @@ def _coerce_summary(raw: dict[str, Any], model_output: str, err: str | None) -> 
         is_uav_vln=bool(raw.get("is_uav_vln", False)),
         tags=tags,
         raw_model_output=model_output,
-        summarized_at=datetime.now(timezone.utc).isoformat(),
+        summarized_at=_now_iso(),
         summarize_error=err,
     )
 
 
-def _call_once(paper: PaperRaw, api_key: str, model: str) -> str:
-    """单次调用 GLM，返回模型原始文本。"""
+def _now_iso() -> str:
+    from datetime import datetime, timezone
+
+    return datetime.now(timezone.utc).isoformat()
+
+
+def _endpoint(base_url: str) -> str:
+    return f"{base_url.rstrip('/')}/chat/completions"
+
+
+def _call_once(
+    paper: PaperRaw,
+    api_key: str,
+    base_url: str,
+    model: str,
+    use_json_mode: bool,
+) -> str:
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
-    payload = {
+    payload: dict[str, Any] = {
         "model": model,
         "messages": [
             {"role": "system", "content": _SYSTEM},
             {"role": "user", "content": _build_user_prompt(paper)},
         ],
         "temperature": 0.3,
-        "response_format": {"type": "json_object"},  # 请求 JSON 模式
     }
-    resp = requests.post(ENDPOINT, headers=headers, json=payload, timeout=TIMEOUT)
+    if use_json_mode:
+        payload["response_format"] = {"type": "json_object"}
+    resp = requests.post(_endpoint(base_url), headers=headers, json=payload, timeout=TIMEOUT)
     resp.raise_for_status()
     data = resp.json()
     return data["choices"][0]["message"]["content"]
 
 
-def summarize(paper: PaperRaw, api_key: str, model: str) -> PaperSummary:
-    """总结单篇论文。失败重试 1 次，仍失败则降级。"""
+def summarize(paper: PaperRaw, api_key: str, base_url: str, model: str) -> PaperSummary:
+    """总结单篇论文。首次用 json 模式；失败则回退普通模式重试 1 次；仍失败则降级。"""
     last_err: str | None = None
     model_output = ""
     for attempt in range(MAX_RETRIES + 1):
+        use_json = attempt == 0
         try:
-            model_output = _call_once(paper, api_key, model)
+            model_output = _call_once(paper, api_key, base_url, model, use_json)
             parsed = _extract_json(model_output)
             if parsed is not None:
                 return _coerce_summary(parsed, model_output, None)
@@ -145,19 +165,22 @@ def summarize(paper: PaperRaw, api_key: str, model: str) -> PaperSummary:
         except Exception as e:  # noqa: BLE001
             last_err = f"{type(e).__name__}: {e}"
             model_output = model_output or ""
-        time.sleep(1.0)  # 重试前退避
-    # 降级：保留原文、score=None
+        time.sleep(1.0)
     return PaperSummary(
         raw_model_output=model_output,
-        summarized_at=datetime.now(timezone.utc).isoformat(),
+        summarized_at=_now_iso(),
         summarize_error=last_err,
     )
 
 
-def summarize_batch(papers: list[PaperRaw], api_key: str, model: str) -> list[PaperSummary]:
-    """批量总结，逐篇调用（GLM 限速宽松，逐篇便于排错与成本可控）。"""
+def summarize_batch(
+    papers: list[PaperRaw],
+    api_key: str,
+    base_url: str,
+    model: str,
+) -> list[PaperSummary]:
     out: list[PaperSummary] = []
     for i, p in enumerate(papers, 1):
         print(f"      [{i}/{len(papers)}] {p.arxiv_id} …", flush=True)
-        out.append(summarize(p, api_key, model))
+        out.append(summarize(p, api_key, base_url, model))
     return out

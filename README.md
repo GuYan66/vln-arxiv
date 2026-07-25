@@ -32,9 +32,16 @@ web/            Next.js 静态站（App Router + Tailwind v4）
 
 1. **建仓库并推送**：在 GitHub 建空仓库，把本目录推上去。
 2. **配 Pages 源**：仓库 Settings → Pages → Source 选 **GitHub Actions**。
-3. **配 Secrets**：仓库 Settings → Secrets and variables → Actions → New repository secret：
-   - `ZHIPU_API_KEY` = 你的智谱 API key（在 https://open.bigmodel.cn/ 获取）。
-4. **（可选）配模型名**：在同一页 Variables（不是 Secret）新建 `GLM_MODEL` = 你账号支持的模型名（默认 `glm-4.6`；如支持更新的 glm-5.x 可设对应名）。
+3. **配 Secret**：仓库 Settings → Secrets and variables → Actions → New repository secret：
+   - `LLM_API_KEY` = 你的 LLM 网关 key。
+4. **（必填）配 Variables**：在同一页切到 **Variables** 标签（不是 Secrets）→ New variable，按你的接入方式填：
+   - 地瓜 D-Robotics 网关（推荐，支持 glm-5.2）：
+     - `LLM_BASE_URL` = `https://ai-api.d-robotics.cc/v1`
+     - `LLM_MODEL` = `glm-5.2`
+   - 智谱官网直连：
+     - `LLM_BASE_URL` = `https://open.bigmodel.cn/api/paas/v4`
+     - `LLM_MODEL` = `glm-4.6`
+   - （不配 Variables 时默认走智谱官网 + glm-4.6，但 key 必须是智谱的。）
 5. **手动触发一次**：Actions → `Daily arXiv fetch & deploy` → Run workflow。完成后 Pages 上即看到站点。之后每天 UTC 00:17 自动跑。
 
 > 若部署在 `https://<user>.github.io/<repo>/`（项目站），workflow 会自动设置 `basePath=/<repo>`，无需手改。若仓库名形如 `<user>.github.io`，basePath 自动为空。
@@ -49,8 +56,8 @@ pip install -r fetcher/requirements.txt
 # 1) dry-run：只抓取与本地过滤，不调 GLM，看召回是否合理
 python fetcher/run_daily.py --days 7 --dry-run
 
-# 2) 小批量验证 GLM 总结（需 .env 或环境变量里有 ZHIPU_API_KEY）
-cp .env.example .env  # 填入真实 key
+# 2) 小批量验证 LLM 总结（需 .env 或环境变量里有 LLM_API_KEY 等）
+cp .env.example .env  # 填入真实 key、base_url、model
 python fetcher/run_daily.py --days 3 --limit 3
 
 # 3) 正式运行（默认上限 30 篇/天）
@@ -98,6 +105,6 @@ GLM 对每篇返回 1-10：核心 VLN/UAV-VLN 且有创新贡献 7-10；相关�
 
 ## 故障排查
 
-- **workflow 跑了但站点没数据**：看 Actions 日志的 `Fetch arXiv & summarize` 步骤；若 `命中候选 0 篇`，检查 `keywords.py` 与网络。若 `summarize_error` 满屏，检查 `ZHIPU_API_KEY` 与 `GLM_MODEL` 是否正确。
+- **workflow 跑了但站点没数据**：看 Actions 日志的 `Fetch arXiv & summarize` 步骤；若 `命中候选 0 篇`，检查 `keywords.py` 与网络。若 `summarize_error` 满屏，检查 `LLM_API_KEY` / `LLM_BASE_URL` / `LLM_MODEL` 是否正确（端点与模型必须配套，例如地瓜网关配 `glm-5.2`、智谱官网配 `glm-4.6`）。
 - **Pages 404 / 样式丢失**：通常是 basePath 不对。项目站必须是 `<user>.github.io/<repo>/`；workflow 已自动设置，若仍异常，本地 `NEXT_PUBLIC_BASE_PATH=/<repo> npm run build` 调试。
 - **详情页 404**：静态站只预渲染已存在的论文 id；新论文需等下一次构建。

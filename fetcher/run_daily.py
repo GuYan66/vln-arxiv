@@ -6,8 +6,10 @@
   python fetcher/run_daily.py --days 3                 # 正式运行（默认上限 30 篇/天）
 
 环境变量：
-  ZHIPU_API_KEY   智谱 API key（必填，除非 --dry-run）
-  GLM_MODEL       模型名（默认 glm-4.6；按你账号支持的填，如更新的 glm-5.x）
+  LLM_API_KEY    LLM 网关的 API key（必填，除非 --dry-run）
+  LLM_BASE_URL   OpenAI 兼容基址（默认智谱官网 https://open.bigmodel.cn/api/paas/v4；
+                 地瓜网关用 https://ai-api.d-robotics.cc/v1）
+  LLM_MODEL      模型名（默认 glm-4.6；地瓜网关可填 glm-5.2 等）
 """
 
 from __future__ import annotations
@@ -57,13 +59,16 @@ def main() -> int:
         print(f"\n共 {len(candidates)} 篇候选。dry-run 结束，未调用 GLM。")
         return 0
 
-    api_key = os.environ.get("ZHIPU_API_KEY", "").strip()
+    api_key = os.environ.get("LLM_API_KEY", "").strip()
     if not api_key:
-        print("错误：缺少 ZHIPU_API_KEY 环境变量（--dry-run 可跳过）", file=sys.stderr)
+        print("错误：缺少 LLM_API_KEY 环境变量（--dry-run 可跳过）", file=sys.stderr)
         return 2
 
     # 延迟导入，避免 dry-run 也强制要求 requests/glm 依赖
     from glm_summarizer import summarize_batch
+
+    base_url = os.environ.get("LLM_BASE_URL", "https://open.bigmodel.cn/api/paas/v4").strip()
+    model = os.environ.get("LLM_MODEL", "glm-4.6").strip()
 
     index = store.load_index(repo_root)
     known = store.known_ids(index)
@@ -76,11 +81,12 @@ def main() -> int:
     if skipped_unsummarized > 0:
         print(f"      超过 --limit {args.limit}，{skipped_unsummarized} 篇仅抓取不总结")
 
-    print(f"[3/4] 调用 GLM 总结 {len(to_summarize)} 篇 …")
+    print(f"[3/4] 调用 LLM 总结 {len(to_summarize)} 篇（{base_url} · {model}）…")
     summaries = summarize_batch(
         to_summarize,
         api_key=api_key,
-        model=os.environ.get("GLM_MODEL", "glm-4.6"),
+        base_url=base_url,
+        model=model,
     )
 
     today = _today_utc()

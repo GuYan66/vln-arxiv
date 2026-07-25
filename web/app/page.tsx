@@ -13,7 +13,7 @@ export default function HomePage() {
           VLN arXiv 监测台
         </h1>
         <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">
-          视觉语言导航 / 无人机 VLN 方向 · 每日自动抓取 · 智谱 GLM 总结与评分
+          视觉语言导航 / 无人机 VLN 方向 · 每日自动抓取 · LLM 中文总结与评分
         </p>
         {stats.total > 0 && (
           <div className="mt-2 flex flex-wrap gap-4 text-xs text-stone-500">
