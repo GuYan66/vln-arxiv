@@ -1,0 +1,94 @@
+name: Daily arXiv fetch & deploy
+
+on:
+  schedule:
+    # 每日 UTC 00:17（北京 08:17），避开整点拥堵；GHA cron 可能延迟十几分钟
+    - cron: "17 0 * * *"
+  workflow_dispatch: # 手动触发，用于调试与首次部署
+
+# 需要写回 data/ 与部署 Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 避免同时多次运行造成数据冲突
+concurrency:
+  group: daily-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true # 需回推 data/
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install fetcher deps
+        run: pip install -r fetcher/requirements.txt
+
+      - name: Fetch arXiv & summarize
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_MODEL: ${{ vars.GLM_MODEL || 'glm-4.6' }}
+        run: python fetcher/run_daily.py --days 3 --limit 30
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "无数据变更，跳过提交。"
+          else
+            git commit -m "data: daily fetch $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+          cache-dependency-path: web/package.json
+
+      - name: Install web deps
+        run: npm ci
+        working-directory: web
+
+      - name: Compute basePath
+        id: basepath
+        # 项目站 https://<user>.github.io/<repo>/ 需 basePath=/repo。
+        # 若仓库名形如 <user>.github.io（用户根域名站），则 basePath 为空。
+        run: |
+          repo="${GITHUB_REPOSITORY##*/}"
+          if [[ "$repo" == *.github.io ]]; then
+            echo "base=" >> "$GITHUB_OUTPUT"
+          else
+            echo "base=/$repo" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build static site
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.basepath.outputs.base }}
+        run: npm run build
+        working-directory: web
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/out
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Print site URL
+        run: echo "站点已部署 → ${{ steps.deploy.outputs.page_url }}"

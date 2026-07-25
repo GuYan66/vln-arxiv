@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* 深色模式跟随系统 prefers-color-scheme（Tailwind v4 默认），无需 JS */
+
+:root {
+  --bg: #fafaf9;
+  --fg: #1c1917;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-feature-settings: "tnum" 1;
+}
+
+/* 评分徽章分段色：顺序色阶（低→高），不用彩虹色 */
+.score-null { background: #e7e5e4; color: #57534e; }
+.score-low  { background: #fde68a; color: #92400e; }   /* 1-3 amber-200/800 */
+.score-mid  { background: #bbf7d0; color: #166534; }   /* 4-6 green-200/800 */
+.score-high { background: #6ee7b7; color: #064e3b; }   /* 7-8 emerald-300/900 */
+.score-top  { background: #10b981; color: #052e1b; }   /* 9-10 emerald-500, 强调 */

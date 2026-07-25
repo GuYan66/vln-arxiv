@@ -1,0 +1,1 @@
+# 占位，保证空目录被 git 跟踪。运行时 store.py 会在此写 papers-YYYY-MM-DD.json。
