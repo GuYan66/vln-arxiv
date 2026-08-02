@@ -5,6 +5,13 @@ on:
     # 每日 UTC 00:17（北京 08:17），避开整点拥堵；GHA cron 可能延迟十几分钟
     - cron: "17 0 * * *"
   workflow_dispatch: # 手动触发，用于调试与首次部署
+  push:
+    branches: [main]
+    # 只在代码/web 变更时重新部署，避免 data/ 提交触发循环
+    paths:
+      - "web/**"
+      - "fetcher/**"
+      - ".github/workflows/daily-fetch.yml"
 
 # 需要写回 data/ 与部署 Pages
 permissions:
@@ -35,6 +42,7 @@ jobs:
         run: pip install -r fetcher/requirements.txt
 
       - name: Fetch arXiv & summarize
+        continue-on-error: true # LLM 抽风不应阻塞网站重新部署（用旧数据继续）
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4' }}

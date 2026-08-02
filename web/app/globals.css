@@ -4,22 +4,85 @@
 
 :root {
   --bg: #fafaf9;
+  --bg-elev: #ffffff;
   --fg: #1c1917;
+  --muted: #78716c;
+  --border: #e7e5e4;
+  --accent: #0369a1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0a09;
+    --bg-elev: #1c1917;
+    --fg: #f5f5f4;
+    --muted: #a8a29e;
+    --border: #292524;
+    --accent: #38bdf8;
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
-  font-feature-settings: "tnum" 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "PingFang SC", "Noto Sans SC", "Microsoft YaHei",
+    sans-serif;
+  font-feature-settings: "tnum" 1, "cv01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 选中色 */
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* 细滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
 }
 
 /* 评分徽章分段色：顺序色阶（低→高），不用彩虹色 */
-.score-null { background: #e7e5e4; color: #57534e; }
-.score-low  { background: #fde68a; color: #92400e; }   /* 1-3 amber-200/800 */
+.score-null { background: #f5f5f4; color: #78716c; }
+.score-low  { background: #fef3c7; color: #92400e; }   /* 1-3 amber-100/800 */
 .score-mid  { background: #bbf7d0; color: #166534; }   /* 4-6 green-200/800 */
 .score-high { background: #6ee7b7; color: #064e3b; }   /* 7-8 emerald-300/900 */
-.score-top  { background: #10b981; color: #052e1b; }   /* 9-10 emerald-500, 强调 */
+.score-top  { background: #10b981; color: #052e1b; }   /* 9-10 emerald-500 */
+
+@media (prefers-color-scheme: dark) {
+  .score-null { background: #292524; color: #a8a29e; }
+  .score-low  { background: #422006; color: #fbbf24; }
+  .score-mid  { background: #052e16; color: #4ade80; }
+  .score-high { background: #053b2e; color: #6ee7b7; }
+  .score-top  { background: #047857; color: #d1fae5; }
+}
+
+/* 卡片悬停轻浮起 */
+.card-hover {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  .card-hover:hover {
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.4);
+  }
+}
