@@ -8,7 +8,52 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-08-02.json"
+    },
+    "2607.26914": {
+      "arxiv_id": "2607.26914",
+      "title": "BioVLN: A Simulation Platform for Visual Language Navigation in Biomedical Laboratories",
+      "date": "2026-08-02",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-02.json"
+    },
+    "2607.26148": {
+      "arxiv_id": "2607.26148",
+      "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation",
+      "date": "2026-08-02",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-02.json"
+    },
+    "2607.25754": {
+      "arxiv_id": "2607.25754",
+      "title": "Cooperative Multi-UAV Navigation in Complex Environments via Systematic Multi-Agent Deep Reinforcement Learning",
+      "date": "2026-08-02",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-02.json"
+    },
+    "2607.25106": {
+      "arxiv_id": "2607.25106",
+      "title": "IMPRINT: Image-Conditioned Query Enrichment for Long-Tail Object Goal Navigation",
+      "date": "2026-08-02",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-02.json"
+    },
+    "2607.24369": {
+      "arxiv_id": "2607.24369",
+      "title": "Model Predictive Planner for UAV Navigation in Non-Convex Air Corridors",
+      "date": "2026-08-02",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-02.json"
     }
   },
-  "last_updated": "2026-08-02T14:39:48.034967+00:00"
+  "last_updated": "2026-08-02T15:00:33.604834+00:00"
 }
