@@ -1,0 +1,14 @@
+{
+  "papers": {
+    "2607.28474": {
+      "arxiv_id": "2607.28474",
+      "title": "TEA-AgriVLN: Traversability Estimation Alarm for Agricultural Vision-and-Language Navigation",
+      "date": "2026-08-02",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-02.json"
+    }
+  },
+  "last_updated": "2026-08-02T14:39:48.034967+00:00"
+}
