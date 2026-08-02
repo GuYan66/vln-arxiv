@@ -1,30 +1,38 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search, Star, Plane, SlidersHorizontal } from "lucide-react";
-import type { Paper } from "@/lib/types";
+import { Search, Star, Plane, SlidersHorizontal, Calendar } from "lucide-react";
+import type { DayBundle, Paper } from "@/lib/types";
 import { PaperCard } from "./PaperCard";
 import { useFavorites } from "@/lib/favorites";
 
 type SortKey = "score" | "date";
 
 export function Dashboard({
-  papers,
-  dates,
+  bundles,
+  uniquePapers,
 }: {
-  papers: Paper[];
-  dates: string[];
+  bundles: DayBundle[];
+  uniquePapers: Paper[];
 }) {
+  const [mode, setMode] = useState<"day" | "all">("day");
+  const [selectedDate, setSelectedDate] = useState(bundles[0]?.date ?? "");
   const [query, setQuery] = useState("");
-  const [minScore, setMinScore] = useState(0); // 0 = 不限
+  const [minScore, setMinScore] = useState(0);
   const [uavOnly, setUavOnly] = useState(false);
   const [favOnly, setFavOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>("score");
   const { ids: favIds } = useFavorites();
 
+  const base: Paper[] = useMemo(() => {
+    if (mode === "all") return uniquePapers;
+    const b = bundles.find((x) => x.date === selectedDate);
+    return b ? b.papers : [];
+  }, [mode, selectedDate, bundles, uniquePapers]);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    let list = papers.filter((p) => {
+    let list = base.filter((p) => {
       if (uavOnly && !p.is_uav_vln) return false;
       if (favOnly && !favIds.has(p.arxiv_id)) return false;
       if (minScore > 0 && (p.relevance_score ?? 0) < minScore) return false;
@@ -41,10 +49,64 @@ export function Dashboard({
       return a.published < b.published ? 1 : -1;
     });
     return list;
-  }, [papers, query, minScore, uavOnly, favOnly, sort, favIds]);
+  }, [base, query, minScore, uavOnly, favOnly, sort, favIds]);
+
+  const currentBundle = bundles.find((x) => x.date === selectedDate);
 
   return (
     <div className="flex flex-col gap-4">
+      {/* 模式切换：按日 / 全部 */}
+      <div className="flex items-center gap-2">
+        <button
+          onClick={() => setMode("day")}
+          className={
+            "inline-flex items-center gap-1 rounded-md border px-3 py-1.5 text-sm " +
+            (mode === "day"
+              ? "border-stone-900 bg-stone-900 text-white dark:border-stone-100 dark:bg-stone-100 dark:text-stone-900"
+              : "border-stone-300 text-stone-600 dark:border-stone-700 dark:text-stone-300")
+          }
+        >
+          <Calendar className="h-3.5 w-3.5" /> 按日
+        </button>
+        <button
+          onClick={() => setMode("all")}
+          className={
+            "rounded-md border px-3 py-1.5 text-sm " +
+            (mode === "all"
+              ? "border-stone-900 bg-stone-900 text-white dark:border-stone-100 dark:bg-stone-100 dark:text-stone-900"
+              : "border-stone-300 text-stone-600 dark:border-stone-700 dark:text-stone-300")
+          }
+        >
+          全部（去重 {uniquePapers.length}）
+        </button>
+      </div>
+
+      {/* 日期导航（仅按日模式） */}
+      {mode === "day" && bundles.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {bundles.map((b) => (
+            <button
+              key={b.date}
+              onClick={() => setSelectedDate(b.date)}
+              className={
+                "rounded-md px-2 py-1 text-xs " +
+                (b.date === selectedDate
+                  ? "bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900"
+                  : "bg-stone-100 text-stone-600 hover:bg-stone-200 dark:bg-stone-800 dark:text-stone-300")
+              }
+            >
+              {b.date}（{b.papers.length}）
+            </button>
+          ))}
+        </div>
+      )}
+
+      {mode === "day" && currentBundle && (
+        <p className="text-xs text-stone-500">
+          {currentBundle.date} 的滚动窗口：过去 7 天（含当天）共 {currentBundle.papers.length} 篇；其中已总结 {currentBundle.summarized_count} 篇。
+        </p>
+      )}
+
       {/* 搜索 + 排序 */}
       <div className="flex flex-wrap items-center gap-2">
         <div className="relative flex-1 min-w-[200px]">
@@ -102,36 +164,22 @@ export function Dashboard({
           />
           <Star className="h-3.5 w-3.5 text-amber-500" /> 仅收藏
         </label>
-        <span className="text-stone-400 ml-auto">
-          共 {filtered.length} 篇
-        </span>
+        <span className="text-stone-400 ml-auto">共 {filtered.length} 篇</span>
       </div>
 
       {/* 列表 */}
       {filtered.length === 0 ? (
         <div className="rounded-lg border border-dashed border-stone-300 p-8 text-center text-stone-500 dark:border-stone-700">
-          {papers.length === 0
-            ? "暂无数据。等 GitHub Actions 跑完每日抓取后，这里会显示论文。"
+          {base.length === 0
+            ? "该日期暂无数据。等 GitHub Actions 跑完每日抓取后，这里会显示论文。"
             : "没有符合条件的论文，试试放宽筛选。"}
         </div>
       ) : (
         <div className="grid gap-3">
           {filtered.map((p) => (
-            <PaperCard key={p.arxiv_id} paper={p} />
+            <PaperCard key={p.arxiv_id + p.fetch_date} paper={p} />
           ))}
         </div>
-      )}
-
-      {/* 日期快捷跳转（最近几天） */}
-      {dates.length > 0 && (
-        <details className="text-xs text-stone-500">
-          <summary className="cursor-pointer">已抓取日期（{dates.length}）</summary>
-          <div className="mt-1 flex flex-wrap gap-1.5">
-            {dates.map((d) => (
-              <span key={d} className="rounded bg-stone-100 px-1.5 py-0.5 dark:bg-stone-800">{d}</span>
-            ))}
-          </div>
-        </details>
       )}
     </div>
   );

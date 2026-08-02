@@ -1,9 +1,9 @@
-import { getAllPapers, getDates, getStats } from "@/lib/data";
+import { getBundles, getUniquePapers, getStats } from "@/lib/data";
 import { Dashboard } from "@/components/Dashboard";
 
 export default function HomePage() {
-  const papers = getAllPapers();
-  const dates = getDates();
+  const bundles = getBundles();
+  const uniquePapers = getUniquePapers();
   const stats = getStats();
 
   return (
@@ -17,7 +17,7 @@ export default function HomePage() {
         </p>
         {stats.total > 0 && (
           <div className="mt-2 flex flex-wrap gap-4 text-xs text-stone-500">
-            <span>共 {stats.total} 篇</span>
+            <span>去重共 {stats.total} 篇</span>
             <span>UAV-VLN {stats.uav} 篇</span>
             <span>覆盖 {stats.days} 个抓取日</span>
             <span>平均推荐度 {stats.avgScore.toFixed(1)}/10</span>
@@ -25,7 +25,7 @@ export default function HomePage() {
         )}
       </header>
 
-      <Dashboard papers={papers} dates={dates} />
+      <Dashboard bundles={bundles} uniquePapers={uniquePapers} />
     </main>
   );
 }

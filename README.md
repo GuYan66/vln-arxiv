@@ -10,14 +10,14 @@ GitHub Actions（每日 cron）
        ├─ arxiv_source.py   按学科+关键词查 arXiv，本地二级过滤
        ├─ keywords.py        VLN / UAV-VLN 检索词配置（改这里微调召回）
        ├─ glm_summarizer.py  调智谱 GLM：中文摘要 + 推荐度（结构化 JSON）
-       └─ store.py            去重（按 arxiv id）→ 只总结新论文 → 写 data/
+       └─ store.py            总结缓存复用（按 arxiv id）→ 只对新论文调 LLM → 写 data/
   └─ git commit & push data/*.json
   └─ Next.js 静态导出 → 部署到 GitHub Pages
 ```
 
 - **后端逻辑**在 GHA 跑的 Python 管线里，不在网站里。
 - **网站**是 Next.js（`output: 'export'`）纯静态站，构建时读 `data/*.json`，部署到 Pages。筛选/排序/搜索/收藏全在客户端（收藏用 localStorage）。
-- 每日只对**新增论文**调 GLM，且有 `--limit` 上限，成本可控。
+- **滚动 7 天窗口**：每日抓过去 7 天（含当天）论文，当日 bundle 含整周。已总结过的论文走缓存复用、不重复调 GLM，只对全新论文调 GLM，成本可控。网站默认显示当日 bundle（即过去一周），可切日期或看「全部（去重）」。
 
 ## 目录
 
@@ -58,7 +58,7 @@ python fetcher/run_daily.py --days 7 --dry-run
 
 # 2) 小批量验证 LLM 总结（需 .env 或环境变量里有 LLM_API_KEY 等）
 cp .env.example .env  # 填入真实 key、base_url、model
-python fetcher/run_daily.py --days 3 --limit 3
+python fetcher/run_daily.py --days 7 --limit 3
 
 # 3) 正式运行（默认上限 30 篇/天）
 python fetcher/run_daily.py --days 3

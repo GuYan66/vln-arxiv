@@ -41,7 +41,19 @@ function load(): Loaded {
 }
 
 export function getAllPapers(): Paper[] {
+  // 全部论文（含跨日重复，因为 bundle 是滚动 7 天窗口）。如需去重见 getUniquePapers。
   return load().papers;
+}
+
+export function getUniquePapers(): Paper[] {
+  // 按 arxiv_id 去重，保留最新 fetch_date 的版本（滚动窗口下同一篇会出现在多日 bundle 里）。
+  const { papers } = load();
+  const byId = new Map<string, Paper>();
+  for (const p of papers) {
+    const ex = byId.get(p.arxiv_id);
+    if (!ex || p.fetch_date > ex.fetch_date) byId.set(p.arxiv_id, p);
+  }
+  return [...byId.values()].sort((a, b) => (a.published < b.published ? 1 : -1));
 }
 
 export function getDates(): string[] {
@@ -63,7 +75,7 @@ export function getPapersForDate(date: string): Paper[] {
 
 export function getRelated(paper: Paper, n = 5): Paper[] {
   const tagSet = new Set(paper.tags.map((t) => t.toLowerCase()));
-  const all = load().papers.filter((p) => p.arxiv_id !== paper.arxiv_id);
+  const all = getUniquePapers().filter((p) => p.arxiv_id !== paper.arxiv_id);
   return all
     .map((p) => {
       const overlap =
@@ -79,7 +91,8 @@ export function getRelated(paper: Paper, n = 5): Paper[] {
 }
 
 export function getStats() {
-  const { papers, dates } = load();
+  const papers = getUniquePapers();
+  const dates = load().dates;
   const scored = papers.filter((p) => p.relevance_score !== null);
   const uav = papers.filter((p) => p.is_uav_vln);
   const avg =

@@ -39,7 +39,7 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4' }}
           LLM_MODEL: ${{ vars.LLM_MODEL || 'glm-4.6' }}
-        run: python fetcher/run_daily.py --days 3 --limit 30
+        run: python fetcher/run_daily.py --days 7 --limit 30
 
       - name: Commit data
         run: |

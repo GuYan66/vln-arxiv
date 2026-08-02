@@ -1,8 +1,9 @@
-"""读写 data/ JSON 存储，并维护去重索引 index.json。
+"""读写 data/ JSON 存储，维护总结缓存与去重索引。
 
 仓库布局：
-  data/index.json               汇总索引（id→精简项），去重主依据
-  data/papers/papers-YYYY-MM-DD.json   单日论文 bundle
+  data/index.json                        汇总索引（id→精简项），跨日记录
+  data/papers/papers-YYYY-MM-DD.json     单日 bundle（滚动 7 天窗口）
+  data/cache/summaries.json              总结缓存（id→PaperSummary），避免重复调 LLM
 """
 
 from __future__ import annotations
@@ -17,6 +18,7 @@ from models import DayBundle, Index, IndexEntry, Paper
 def _data_dir(repo_root: Path) -> Path:
     d = repo_root / "data"
     (d / "papers").mkdir(parents=True, exist_ok=True)
+    (d / "cache").mkdir(parents=True, exist_ok=True)
     return d
 
 
@@ -87,3 +89,27 @@ def load_day_bundle(repo_root: Path, date: str) -> DayBundle | None:
         return DayBundle.model_validate(json.loads(p.read_text(encoding="utf-8")))
     except Exception:
         return None
+
+
+def _summaries_path(repo_root: Path) -> Path:
+    return _data_dir(repo_root) / "cache" / "summaries.json"
+
+
+def load_summaries(repo_root: Path) -> dict:
+    """总结缓存：{arxiv_id: PaperSummary dict}。用于复用旧总结、避免重复调 LLM。"""
+    p = _summaries_path(repo_root)
+    if not p.exists():
+        return {}
+    try:
+        raw = json.loads(p.read_text(encoding="utf-8"))
+        return raw if isinstance(raw, dict) else {}
+    except Exception:
+        return {}
+
+
+def save_summaries(repo_root: Path, cache: dict) -> None:
+    p = _summaries_path(repo_root)
+    p.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
