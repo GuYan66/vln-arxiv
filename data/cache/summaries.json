@@ -122,5 +122,26 @@
     "raw_model_output": "{\n  \"summary_cn\": \"本文提出了一种用于无人机在非凸城市空中走廊中导航的运动规划框架。该规划器基于混合整数跟踪模型预测控制（MIMPC）公式，在单个优化问题中同时保证走廊可行性与动态一致性。通过嵌入基于最短路径的偏移成本与可行性约束，确保收敛至目标并缓解非凸几何导致的局部极小值问题。\",\n  \"highlights\": [\n    \"提出混合整数跟踪模型预测控制（MIMPC）公式，在单个优化问题中强制执行走廊可行性与动态一致性\",\n    \"嵌入基于最短路径的偏移成本与可行性约束，保证收敛至目标并缓解非凸几何导致的局部极小值\",\n    \"数值仿真表明该方法无需依赖外部全局规划阶段即可生成满足走廊约束的动态有效轨迹\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"该论文研究无人机在非凸空中走廊的运动规划与控制，虽属无人机导航领域，但不涉及视觉语言导航（VLN）或语言指令。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"UAV Navigation\", \"Motion Planning\", \"Model Predictive Control\", \"Non-Convex Corridors\"]\n}",
     "summarized_at": "2026-08-02T15:00:33.603654+00:00",
     "summarize_error": null
+  },
+  "2607.29600": {
+    "summary_cn": "针对基于多模态大模型的长时程视觉语言导航(VLN)中存在的记忆与推理瓶颈问题，本文提出HAM-VLN方法。该方法构建了与决策耦合的持久化深度世界图，在单次模型调用中记录语义与反思信息，并通过相关性、新近性和显著性检索历史，无需额外LLM调用即可将上下文长度缩减65%以上。在VLN-CE R2R/RxR和HM3D-v2 ObjectNav上实现了零训练条件下的最优性能。",
+    "highlights": [
+      "提出与决策耦合的智能体记忆机制，构建深度世界图记录语义与反思信息",
+      "通过相关性、新近性和显著性检索历史航点，上下文长度减少超65%",
+      "零训练范式下在VLN-CE R2R/RxR和HM3D ObjectNav上取得优异成功率"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文直接解决视觉语言导航(VLN)的核心问题，提出创新的零样本记忆管理机制，属于核心VLN研究且有显著贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "zero-shot",
+      "memory",
+      "agent",
+      "navigation"
+    ],
+    "raw_model_output": "{\"summary_cn\": \"针对基于多模态大模型的长时程视觉语言导航(VLN)中存在的记忆与推理瓶颈问题，本文提出HAM-VLN方法。该方法构建了与决策耦合的持久化深度世界图，在单次模型调用中记录语义与反思信息，并通过相关性、新近性和显著性检索历史，无需额外LLM调用即可将上下文长度缩减65%以上。在VLN-CE R2R/RxR和HM3D-v2 ObjectNav上实现了零训练条件下的最优性能。\",\"highlights\": [\"提出与决策耦合的智能体记忆机制，构建深度世界图记录语义与反思信息\",\"通过相关性、新近性和显著性检索历史航点，上下文长度减少超65%\",\"零训练范式下在VLN-CE R2R/RxR和HM3D ObjectNav上取得优异成功率\"],\"relevance_score\": 8,\"relevance_reason\": \"该论文直接解决视觉语言导航(VLN)的核心问题，提出创新的零样本记忆管理机制，属于核心VLN研究且有显著贡献。\",\"is_uav_vln\": false,\"tags\": [\"VLN\",\"zero-shot\",\"memory\",\"agent\",\"navigation\"]}",
+    "summarized_at": "2026-08-03T03:55:20.927022+00:00",
+    "summarize_error": null
   }
 }
