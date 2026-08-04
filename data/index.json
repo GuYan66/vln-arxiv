@@ -62,7 +62,43 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-08-03.json"
+    },
+    "2608.01802": {
+      "arxiv_id": "2608.01802",
+      "title": "CoNav-UAV: Cooperative Dual-Altitude Aerial Navigation via Stackelberg Learning",
+      "date": "2026-08-04",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-08-04.json"
+    },
+    "2608.00970": {
+      "arxiv_id": "2608.00970",
+      "title": "FreqNav: Stage-Wise Frequency Routing for Object-Oriented Aerial Vision-Language Navigation",
+      "date": "2026-08-04",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-04.json"
+    },
+    "2608.00635": {
+      "arxiv_id": "2608.00635",
+      "title": "FlowPilot: Real-Time World-Action Modeling for Agile UAV Navigation",
+      "date": "2026-08-04",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-04.json"
+    },
+    "2608.00237": {
+      "arxiv_id": "2608.00237",
+      "title": "Latent-Centroid Steering: Single-Pass Classifier-Free Guidance for Command-Aligned Autonomous Driving",
+      "date": "2026-08-04",
+      "relevance_score": 6,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-04.json"
     }
   },
-  "last_updated": "2026-08-03T03:55:20.928109+00:00"
+  "last_updated": "2026-08-04T03:38:12.990808+00:00"
 }
