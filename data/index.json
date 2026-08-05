@@ -98,7 +98,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-08-04.json"
+    },
+    "2608.03143": {
+      "arxiv_id": "2608.03143",
+      "title": "From Routes to Steps: Separating Semantic Progress from Local Execution in Vision-and-Language Navigation",
+      "date": "2026-08-05",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-05.json"
+    },
+    "2608.02834": {
+      "arxiv_id": "2608.02834",
+      "title": "Biconvex Optimization for Smooth Minimum-Time Trajectories around Convex Obstacles",
+      "date": "2026-08-05",
+      "relevance_score": 3,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-05.json"
     }
   },
-  "last_updated": "2026-08-04T03:38:12.990808+00:00"
+  "last_updated": "2026-08-05T03:33:25.355521+00:00"
 }
