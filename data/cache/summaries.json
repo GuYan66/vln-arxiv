@@ -268,5 +268,26 @@
     "raw_model_output": "{\"summary_cn\":\"本文提出了一种双凸优化方法，用于在凸障碍物周围生成最小时间运动规划轨迹。该方法通过变量替换将目标函数和导数约束联合凸化，并利用时变分离平面处理碰撞避免，将其转化为双凸规划交替求解。实验表明，该方法在无人机导航和双臂卸货任务中能可靠生成高质量轨迹，计算效率与鲁棒性优于现有方法。\",\"highlights\":[\"提出一种收敛且有保证的双凸优化方法，支持任意阶导数约束的最小时间轨迹规划\",\"通过时变分离平面处理碰撞避免，仅对当前碰撞障碍物添加平面，可跳过障碍物并逃离局部最优\",\"在无人机导航等实验中计算效率与最先进方法相当，且对初始化鲁棒性更强\"],\"relevance_score\":3,\"relevance_reason\":\"虽然实验涉及无人机导航，但该研究属于传统运动规划与轨迹优化领域，不涉及视觉语言导航(VLN)。\",\"is_uav_vln\":false,\"tags\":[\"运动规划\",\"轨迹优化\",\"双凸优化\",\"无人机导航\",\"碰撞避免\"]}",
     "summarized_at": "2026-08-05T03:33:25.353993+00:00",
     "summarize_error": null
+  },
+  "2608.05078": {
+    "summary_cn": "针对具身导航中传统人工神经网络计算量大且易受视觉损坏影响的问题，本文提出了基于脉冲神经网络（SNN）的 SpikingNav 框架。该框架包含脉冲感知编码器和脉冲策略网络，利用脉冲驱动的动态特性提升了导航性能与鲁棒性。实验表明，该方法在保持竞争力的同时显著增强了视觉鲁棒性，并降低了参数量与计算量，且已在神经形态芯片上完成硬件验证。",
+    "highlights": [
+      "提出 SpikingNav 框架，结合脉冲感知编码器（SSE）与脉冲策略网络（SPN）处理具身导航任务",
+      "在视觉损坏条件下显著提升鲁棒性，同时减少参数量并降低单步计算开销",
+      "在 Thruster-V2 神经形态芯片上完成硬件部署验证，证明其实际可部署性"
+    ],
+    "relevance_score": 4,
+    "relevance_reason": "该论文研究具身导航（PointNav和ObjectNav）与脉冲神经网络的结合，虽属于具身AI导航领域，但未涉及视觉语言导航（VLN）或无人机场景。",
+    "is_uav_vln": false,
+    "tags": [
+      "Embodied Navigation",
+      "Spiking Neural Networks",
+      "PointNav",
+      "ObjectNav",
+      "Neuromorphic Computing"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对具身导航中传统人工神经网络计算量大且易受视觉损坏影响的问题，本文提出了基于脉冲神经网络（SNN）的 SpikingNav 框架。该框架包含脉冲感知编码器和脉冲策略网络，利用脉冲驱动的动态特性提升了导航性能与鲁棒性。实验表明，该方法在保持竞争力的同时显著增强了视觉鲁棒性，并降低了参数量与计算量，且已在神经形态芯片上完成硬件验证。\",\n  \"highlights\": [\n    \"提出 SpikingNav 框架，结合脉冲感知编码器（SSE）与脉冲策略网络（SPN）处理具身导航任务\",\n    \"在视觉损坏条件下显著提升鲁棒性，同时减少参数量并降低单步计算开销\",\n    \"在 Thruster-V2 神经形态芯片上完成硬件部署验证，证明其实际可部署性\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"该论文研究具身导航（PointNav和ObjectNav）与脉冲神经网络的结合，虽属于具身AI导航领域，但未涉及视觉语言导航（VLN）或无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"Embodied Navigation\", \"Spiking Neural Networks\", \"PointNav\", \"ObjectNav\", \"Neuromorphic Computing\"]\n}",
+    "summarized_at": "2026-08-06T03:37:40.173034+00:00",
+    "summarize_error": null
   }
 }

@@ -116,7 +116,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-08-05.json"
+    },
+    "2608.05078": {
+      "arxiv_id": "2608.05078",
+      "title": "SpikingNav: Robust Embodied Navigation with Spiking Neural Policies",
+      "date": "2026-08-06",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-06.json"
     }
   },
-  "last_updated": "2026-08-05T03:33:25.355521+00:00"
+  "last_updated": "2026-08-06T03:37:40.174528+00:00"
 }

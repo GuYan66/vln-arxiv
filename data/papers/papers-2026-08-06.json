@@ -1,0 +1,441 @@
+{
+  "date": "2026-08-06",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "针对具身导航中传统人工神经网络计算量大且易受视觉损坏影响的问题，本文提出了基于脉冲神经网络（SNN）的 SpikingNav 框架。该框架包含脉冲感知编码器和脉冲策略网络，利用脉冲驱动的动态特性提升了导航性能与鲁棒性。实验表明，该方法在保持竞争力的同时显著增强了视觉鲁棒性，并降低了参数量与计算量，且已在神经形态芯片上完成硬件验证。",
+      "highlights": [
+        "提出 SpikingNav 框架，结合脉冲感知编码器（SSE）与脉冲策略网络（SPN）处理具身导航任务",
+        "在视觉损坏条件下显著提升鲁棒性，同时减少参数量并降低单步计算开销",
+        "在 Thruster-V2 神经形态芯片上完成硬件部署验证，证明其实际可部署性"
+      ],
+      "relevance_score": 4,
+      "relevance_reason": "该论文研究具身导航（PointNav和ObjectNav）与脉冲神经网络的结合，虽属于具身AI导航领域，但未涉及视觉语言导航（VLN）或无人机场景。",
+      "is_uav_vln": false,
+      "tags": [
+        "Embodied Navigation",
+        "Spiking Neural Networks",
+        "PointNav",
+        "ObjectNav",
+        "Neuromorphic Computing"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对具身导航中传统人工神经网络计算量大且易受视觉损坏影响的问题，本文提出了基于脉冲神经网络（SNN）的 SpikingNav 框架。该框架包含脉冲感知编码器和脉冲策略网络，利用脉冲驱动的动态特性提升了导航性能与鲁棒性。实验表明，该方法在保持竞争力的同时显著增强了视觉鲁棒性，并降低了参数量与计算量，且已在神经形态芯片上完成硬件验证。\",\n  \"highlights\": [\n    \"提出 SpikingNav 框架，结合脉冲感知编码器（SSE）与脉冲策略网络（SPN）处理具身导航任务\",\n    \"在视觉损坏条件下显著提升鲁棒性，同时减少参数量并降低单步计算开销\",\n    \"在 Thruster-V2 神经形态芯片上完成硬件部署验证，证明其实际可部署性\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"该论文研究具身导航（PointNav和ObjectNav）与脉冲神经网络的结合，虽属于具身AI导航领域，但未涉及视觉语言导航（VLN）或无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"Embodied Navigation\", \"Spiking Neural Networks\", \"PointNav\", \"ObjectNav\", \"Neuromorphic Computing\"]\n}",
+      "summarized_at": "2026-08-06T03:37:40.173034+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.05078",
+      "title": "SpikingNav: Robust Embodied Navigation with Spiking Neural Policies",
+      "authors": [
+        "Jiahong Zhang",
+        "Sijun Shen",
+        "Dehua Wu",
+        "Yifan Lin",
+        "Xuechen Xia",
+        "Xu Chu",
+        "Youhui Zhang",
+        " GuoqiLi"
+      ],
+      "abstract": "Embodied navigation requires an agent to make sequential decisions from egocentric observations in a physical environment. Existing Artificial Neural Network (ANN)-based navigation models have achieved strong performance, yet they often rely on dense computation and may degrade under visual corruptions. Spiking neural networks (SNNs) provide event-driven computation and intrinsic temporal dynamics, which are promising for compact and robust navigation on resource-constrained platforms. However, whether spike-based sensing and policy dynamics can improve robustness in visually rich embodied navigation remains an open problem. This paper proposes SpikingNav, a spiking framework for robust indoor embodied navigation. It contains a Spiking Sensing Encoder (SSE) and a Spiking Policy Network (SPN). The SSE extracts task-conditioned visual features with a spike-based backbone. The SPN maintains a recurrent policy state through membrane integration, thresholding, and spike-triggered reset. In this way, SpikingNav exploits the dynamic properties and spike activations of SNNs to improve navigation performance and robustness. We evaluate SpikingNav on PointNav and ObjectNav under clean observations and visual corruptions. SpikingNav achieves competitive clean performance and stronger robustness with fewer parameters and lower per-step computation than a matched ANN baseline. For instance, SpikingNav improves ObjectNav success from 31.05% to 34.12%, and raises the average success under visual corruptions from 8.45% to 13.71%, demonstrating the benefits of spike-based sensing and policy dynamics. We further validate the deployability of our spike-based sensing method on the Thruster-V2 neuromorphic chip. This physical hardware validation shows that SpikingNav can be instantiated on a real neuromorphic substrate for cyber-physical systems.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-05T17:21:09+00:00",
+      "updated": "2026-08-05T17:21:09+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.05078v1",
+      "abs_url": "https://arxiv.org/abs/2608.05078",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-06"
+    },
+    {
+      "summary_cn": "现有基于VLM的VLN导航器通常仅通过下一动作预测来同时监督进度跟踪与动作执行，难以区分语义进度错误与局部执行错误。本文提出Route2Step框架，通过显式的步骤级接口将语义进度跟踪与动作生成解耦，包含指令分析模块和动作生成模块。同时提出E-SPA步骤对齐程序，无需人工时间标签即可实现状态监督，在R2R-CE上将SR从48.1%提升至55.3%。",
+      "highlights": [
+        "将语义进度跟踪与局部动作生成解耦，通过显式步骤级接口解决进度错误与执行错误难以区分的问题",
+        "提出E-SPA步骤对齐程序，自动将子指令与路线级演示的对应部分关联，无需人工时间标签即可监督进度状态",
+        "在R2R-CE上SR提升7.2%，仅需11.5K直接动作监督样本，并在真实室内外环境中验证了实用性"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文是视觉语言导航(VLN)领域的核心研究，提出了解耦语义进度与动作执行的新框架，对VLN方法论有重要创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "语义进度跟踪",
+        "动作生成",
+        "步骤对齐",
+        "R2R-CE"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有基于VLM的VLN导航器通常仅通过下一动作预测来同时监督进度跟踪与动作执行，难以区分语义进度错误与局部执行错误。本文提出Route2Step框架，通过显式的步骤级接口将语义进度跟踪与动作生成解耦，包含指令分析模块和动作生成模块。同时提出E-SPA步骤对齐程序，无需人工时间标签即可实现状态监督，在R2R-CE上将SR从48.1%提升至55.3%。\",\n  \"highlights\": [\n    \"将语义进度跟踪与局部动作生成解耦，通过显式步骤级接口解决进度错误与执行错误难以区分的问题\",\n    \"提出E-SPA步骤对齐程序，自动将子指令与路线级演示的对应部分关联，无需人工时间标签即可监督进度状态\",\n    \"在R2R-CE上SR提升7.2%，仅需11.5K直接动作监督样本，并在真实室内外环境中验证了实用性\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文是视觉语言导航(VLN)领域的核心研究，提出了解耦语义进度与动作执行的新框架，对VLN方法论有重要创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"语义进度跟踪\", \"动作生成\", \"步骤对齐\", \"R2R-CE\"]\n}",
+      "summarized_at": "2026-08-05T03:33:11.703197+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.03143",
+      "title": "From Routes to Steps: Separating Semantic Progress from Local Execution in Vision-and-Language Navigation",
+      "authors": [
+        "Xiangyun Huang",
+        "Xiangchen Wang",
+        "Runfeng Lin",
+        "Yihao Xu",
+        "Kangyu Huang",
+        "Jiang Hengchen",
+        "Xiwang Dong",
+        "Lin Jiarong"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) requires an agent to follow a route-level instruction by executing its constituent steps from egocentric visual observations. Existing VLM-based navigators typically supervise both capabilities through next-action prediction alone, making progress-tracking errors difficult to distinguish from execution errors. When an agent deviates from the route, a corrective action label may recover the next movement but does not indicate whether the agent selected the wrong sub-instruction or failed to execute the correct one. Consequently, the agent may continue making decisions from an erroneous progress state. To resolve this ambiguity, we propose \\textbf{Route2Step}, a framework that decouples semantic progress tracking from action generation through an explicit step-level interface. The Instruction Analysis Module ($\\mathcal{M}_{\\mathrm{IA}}$) predicts this state from the global instruction and visual history. Conditioned on the predicted state and recent observations, the Action Generation Module ($\\mathcal{M}_{\\mathrm{AG}}$) generates local action chunks. To supervise the progress state without manual temporal labels, E-SPA, a step-alignment procedure, associates sub-instructions with their corresponding portions of route-level demonstrations. These alignments enable state supervision for incorrect progress estimates, while direct action supervision is reserved for rollout groups that repeatedly fail under the correct active sub-instruction. On R2R-CE, Route2Step improves SR from 48.1\\% to 55.3\\% and SPL from 43.3\\% to 48.2\\%, using 190K state-level corrective samples while requiring only 11.5K directly action-supervised states. Experiments in real-world indoor and outdoor environments further demonstrate the practical applicability of Route2Step. The project page is: https://sisyphus-hxy.github.io/Route2Step/.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-08-04T05:14:45+00:00",
+      "updated": "2026-08-04T05:14:45+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.03143v1",
+      "abs_url": "https://arxiv.org/abs/2608.03143",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-06"
+    },
+    {
+      "summary_cn": "本文提出了一种双凸优化方法，用于在凸障碍物周围生成最小时间运动规划轨迹。该方法通过变量替换将目标函数和导数约束联合凸化，并利用时变分离平面处理碰撞避免，将其转化为双凸规划交替求解。实验表明，该方法在无人机导航和双臂卸货任务中能可靠生成高质量轨迹，计算效率与鲁棒性优于现有方法。",
+      "highlights": [
+        "提出一种收敛且有保证的双凸优化方法，支持任意阶导数约束的最小时间轨迹规划",
+        "通过时变分离平面处理碰撞避免，仅对当前碰撞障碍物添加平面，可跳过障碍物并逃离局部最优",
+        "在无人机导航等实验中计算效率与最先进方法相当，且对初始化鲁棒性更强"
+      ],
+      "relevance_score": 3,
+      "relevance_reason": "虽然实验涉及无人机导航，但该研究属于传统运动规划与轨迹优化领域，不涉及视觉语言导航(VLN)。",
+      "is_uav_vln": false,
+      "tags": [
+        "运动规划",
+        "轨迹优化",
+        "双凸优化",
+        "无人机导航",
+        "碰撞避免"
+      ],
+      "raw_model_output": "{\"summary_cn\":\"本文提出了一种双凸优化方法，用于在凸障碍物周围生成最小时间运动规划轨迹。该方法通过变量替换将目标函数和导数约束联合凸化，并利用时变分离平面处理碰撞避免，将其转化为双凸规划交替求解。实验表明，该方法在无人机导航和双臂卸货任务中能可靠生成高质量轨迹，计算效率与鲁棒性优于现有方法。\",\"highlights\":[\"提出一种收敛且有保证的双凸优化方法，支持任意阶导数约束的最小时间轨迹规划\",\"通过时变分离平面处理碰撞避免，仅对当前碰撞障碍物添加平面，可跳过障碍物并逃离局部最优\",\"在无人机导航等实验中计算效率与最先进方法相当，且对初始化鲁棒性更强\"],\"relevance_score\":3,\"relevance_reason\":\"虽然实验涉及无人机导航，但该研究属于传统运动规划与轨迹优化领域，不涉及视觉语言导航(VLN)。\",\"is_uav_vln\":false,\"tags\":[\"运动规划\",\"轨迹优化\",\"双凸优化\",\"无人机导航\",\"碰撞避免\"]}",
+      "summarized_at": "2026-08-05T03:33:25.353993+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.02834",
+      "title": "Biconvex Optimization for Smooth Minimum-Time Trajectories around Convex Obstacles",
+      "authors": [
+        "Peter Werner",
+        "Tobia Marcucci",
+        "Daniela Rus"
+      ],
+      "abstract": "We present a biconvex approach for minimum-time motion planning around convex obstacles that is guaranteed to converge, is anytime, and supports derivative constraints to arbitrary order. We jointly convexify the minimum-time objective and all derivative constraints through a change of variables, and handle collision avoidance via time-varying separating planes, reducing the problem to a biconvex program. This program is solved by alternating between computing maximum-margin separating planes and optimizing the trajectory. By only adding planes for obstacles that the current iterate collides with, the trajectory can jump around obstacles and escape local minima. The method is guaranteed to converge starting from a simple collision-free polygonal curve. In our experiments on drone navigation and dual-arm bin unloading, we find that the proposed method reliably produces high-quality trajectories with computation times comparable to state-of-the-art decomposition-based motion planners, while handling a larger class of problems and being substantially more robust to bad initialization. Project page:https://wernerpe.github.io/bmtp-website/",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "published": "2026-08-03T19:48:24+00:00",
+      "updated": "2026-08-03T19:48:24+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.02834v1",
+      "abs_url": "https://arxiv.org/abs/2608.02834",
+      "matched_keywords": [
+        "drone navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-06"
+    },
+    {
+      "summary_cn": "针对无人机视觉语言导航中全局探索与近距避障难以兼顾的问题，提出双高度协同导航框架CoNav-UAV。该方法将高空领航者与低空跟随者建模为Stackelberg博弈，通过迭代学习与上下文学习、专家蒸馏交替优化，实现双机协同。在AerialVLN基准上，成功率较基线提升最高达30.8分，且跨场景迁移所需数据量减少约3倍。",
+      "highlights": [
+        "将双无人机协同导航建模为Stackelberg博弈，实现高低空agent的相互适应与协同",
+        "结合基于记忆的上下文学习与DAgger风格专家蒸馏，驱动双方达到Stackelberg均衡",
+        "在AerialVLN基准的三个城市场景中，成功率最高提升30.8分，跨场景迁移数据需求减少约3倍"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "该论文直接研究无人机视觉语言导航(UAV-VLN)，提出双高度协同导航新范式并在AerialVLN基准上取得显著提升，属于该研究者的核心领域且有重要创新贡献。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "cooperative-navigation",
+        "Stackelberg-game",
+        "multi-agent",
+        "AerialVLN"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对无人机视觉语言导航中全局探索与近距避障难以兼顾的问题，提出双高度协同导航框架CoNav-UAV。该方法将高空领航者与低空跟随者建模为Stackelberg博弈，通过迭代学习与上下文学习、专家蒸馏交替优化，实现双机协同。在AerialVLN基准上，成功率较基线提升最高达30.8分，且跨场景迁移所需数据量减少约3倍。\",\n  \"highlights\": [\n    \"将双无人机协同导航建模为Stackelberg博弈，实现高低空agent的相互适应与协同\",\n    \"结合基于记忆的上下文学习与DAgger风格专家蒸馏，驱动双方达到Stackelberg均衡\",\n    \"在AerialVLN基准的三个城市场景中，成功率最高提升30.8分，跨场景迁移数据需求减少约3倍\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接研究无人机视觉语言导航(UAV-VLN)，提出双高度协同导航新范式并在AerialVLN基准上取得显著提升，属于该研究者的核心领域且有重要创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"cooperative-navigation\", \"Stackelberg-game\", \"multi-agent\", \"AerialVLN\"]\n}",
+      "summarized_at": "2026-08-04T03:37:33.039391+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.01802",
+      "title": "CoNav-UAV: Cooperative Dual-Altitude Aerial Navigation via Stackelberg Learning",
+      "authors": [
+        "Junru Song",
+        "Wenhao Zhang",
+        "Yang Yang",
+        "Xuekai Qiu",
+        "Feifei Wang",
+        "Weien Zhou",
+        "Tingsong Jiang",
+        "Ying Wen",
+        "Yang Li",
+        "Wen Yao"
+      ],
+      "abstract": "Target-oriented vision-and-language navigation (VLN) on aerial platforms is attracting growing attention for missions such as disaster rescue, infrastructure inspection, and security patrol. In this task, an unmanned aerial vehicle (UAV) needs to locate targets given only a concise description of their appearance and surroundings. This requires global exploration and grounding as well as collision-free close-range approach, two interleaved processes difficult to reconcile within a single agent. Most existing methods transfer the ground VLN paradigm to a low-altitude UAV and compensate for its inefficient exploration with external assistance. A recent attempt deploys two UAVs at complementary altitudes yet still relies on privileged information and trains its two agents independently, precluding any mutual adaptation essential for cooperation. Here we propose CoNav-UAV, which explicitly models the task as a Stackelberg game between a high-altitude leader and a low-altitude follower, with the system operating on onboard visual and linguistic inputs alone. To solve this game, we introduce Iterative Stackelberg Learning. The leader's high-level vision-language reasoning is refined via memory-based in-context learning, while the follower's precise motion control is updated via DAgger-style expert distillation. The alternation drives both agents toward a Stackelberg equilibrium. CoNav-UAV consistently outperforms single- and dual-agent baselines across three high-fidelity urban scenes from the AerialVLN benchmark. Success rate improves by up to 30.8 points on the learning scene, and 9.0 points under cross-scene transfer while using about 3x less adaptation data. Further analyses validate the complementary gains of the leader and follower updates and reveal robust gains yet distinct learning dynamics across VLM backbones.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-08-03T07:10:38+00:00",
+      "updated": "2026-08-03T07:10:38+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.01802v1",
+      "abs_url": "https://arxiv.org/abs/2608.01802",
+      "matched_keywords": [
+        "UAV: Cooperative Dual-Altitude Aerial Navigation",
+        "vision-and-language navigation",
+        "VLN",
+        "AerialVLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-06"
+    },
+    {
+      "summary_cn": "针对无人机长时程视觉语言导航中感知需求随阶段动态变化的问题，提出FreqNav频率路由自适应感知框架。该框架根据导航阶段动态分配视觉令牌至不同频率分量，结合阶段相关接地模块与扩散Transformer预测连续控制轨迹。实验表明该方法在推理速度提升约3倍的同时显著优于基线，并具备真实世界部署潜力。",
+      "highlights": [
+        "将长时程无人机导航建模为从低频空间结构到高频局部细节的频率偏好转移过程",
+        "提出频率令牌路由器与阶段相关接地模块，在固定计算预算下动态重分配视觉令牌",
+        "在推理速度提升约3倍的同时超越强基线，并完成真实世界部署验证"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "该论文直接研究无人机视觉语言导航的核心问题，提出创新的频率路由感知框架并验证了真实世界部署能力，与研究者方向高度契合。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "VLN",
+        "频率路由",
+        "扩散Transformer",
+        "自适应感知"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对无人机长时程视觉语言导航中感知需求随阶段动态变化的问题，提出FreqNav频率路由自适应感知框架。该框架根据导航阶段动态分配视觉令牌至不同频率分量，结合阶段相关接地模块与扩散Transformer预测连续控制轨迹。实验表明该方法在推理速度提升约3倍的同时显著优于基线，并具备真实世界部署潜力。\",\n  \"highlights\": [\n    \"将长时程无人机导航建模为从低频空间结构到高频局部细节的频率偏好转移过程\",\n    \"提出频率令牌路由器与阶段相关接地模块，在固定计算预算下动态重分配视觉令牌\",\n    \"在推理速度提升约3倍的同时超越强基线，并完成真实世界部署验证\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接研究无人机视觉语言导航的核心问题，提出创新的频率路由感知框架并验证了真实世界部署能力，与研究者方向高度契合。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"VLN\", \"频率路由\", \"扩散Transformer\", \"自适应感知\"]\n}",
+      "summarized_at": "2026-08-04T03:37:43.695147+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.00970",
+      "title": "FreqNav: Stage-Wise Frequency Routing for Object-Oriented Aerial Vision-Language Navigation",
+      "authors": [
+        "Yin Tang",
+        "Jiawei Ma",
+        "Jiahao Li",
+        "Hao Zhang",
+        "Zhemin Sun",
+        "Jianqiao Sun",
+        "Deyu Zhang"
+      ],
+      "abstract": "Object-oriented aerial vision-and-language navigation (VLN) requires searching for a described target and landing on it precisely, under long-horizon and closed-loop control. Guided by a target-descriptive instruction during navigation, perceptual priorities dynamically evolve: early-stage exploration prioritizes low-frequency spatial layout, and then shifts to high-frequency target details. Existing VLN methods model the varying perceptual requirements across navigation stages with identical visual tokens, leading to interference from irrelevant objects and background clutter. To this end, we therefore formulate long-horizon aerial navigation as a frequencypreference shift from spatial structure to local detail and propose FreqNav, a lightweight frequency-routing adaptive perception framework. Under a fixed computational budget, FreqNav dynamically reallocates visual tokens across frequency components according to the current navigation stage. A Frequency Token Router selects stage-relevant visual representations from dual-view observations, while a Phase-dependent Grounding Module anchors visual evidence through explicit supervision. A Diffusion Transformer then predicts smooth trajectories for continuous control. Experiments show that FreqNav outperforms strong baselines while achieving approximately 3x faster inference. Real-world deployment further demonstrates its effectiveness, efficiency, and practical potential for long-horizon aerial autonomy.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-02T03:49:54+00:00",
+      "updated": "2026-08-02T03:49:54+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.00970v1",
+      "abs_url": "https://arxiv.org/abs/2608.00970",
+      "matched_keywords": [
+        "Aerial Vision-Language Navigation",
+        "vision-and-language navigation",
+        "VLN",
+        "aerial navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-06"
+    },
+    {
+      "summary_cn": "本文提出FlowPilot，一种用于实时机载无人机导航的紧凑型世界-动作模型。该模型通过流匹配联合去噪未来深度观测与可执行轨迹，利用双流混合Transformer使未来场景预测与轨迹生成相互指导，并采用7次伯恩斯坦多项式参数化动作以保证轨迹的可追踪性。在仿真和物理四旋翼实验中，该方法在复杂环境下以低于18ms的延迟实现了高达5.5m/s的敏捷飞行。",
+      "highlights": [
+        "提出双流混合Transformer架构，通过流匹配联合预测未来深度场景与可执行轨迹",
+        "采用7次伯恩斯坦多项式参数化动作，生成具有C2连续性且具备闭式速度/加速度/加加速度的轨迹",
+        "在Jetson Orin NX上实现低于18ms的感知到动作全流程延迟，在 cluttered 环境中达到5.5m/s的实机飞行速度"
+      ],
+      "relevance_score": 4,
+      "relevance_reason": "该论文研究基于深度图像的无人机敏捷导航与轨迹规划，属于UAV导航领域，但未涉及视觉语言导航(VLN)中的语言指令理解与语义推理。",
+      "is_uav_vln": false,
+      "tags": [
+        "UAV Navigation",
+        "Flow Matching",
+        "World Model",
+        "Trajectory Planning",
+        "Depth-based Navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文提出FlowPilot，一种用于实时机载无人机导航的紧凑型世界-动作模型。该模型通过流匹配联合去噪未来深度观测与可执行轨迹，利用双流混合Transformer使未来场景预测与轨迹生成相互指导，并采用7次伯恩斯坦多项式参数化动作以保证轨迹的可追踪性。在仿真和物理四旋翼实验中，该方法在复杂环境下以低于18ms的延迟实现了高达5.5m/s的敏捷飞行。\",\n  \"highlights\": [\n    \"提出双流混合Transformer架构，通过流匹配联合预测未来深度场景与可执行轨迹\",\n    \"采用7次伯恩斯坦多项式参数化动作，生成具有C2连续性且具备闭式速度/加速度/加加速度的轨迹\",\n    \"在Jetson Orin NX上实现低于18ms的感知到动作全流程延迟，在 cluttered 环境中达到5.5m/s的实机飞行速度\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"该论文研究基于深度图像的无人机敏捷导航与轨迹规划，属于UAV导航领域，但未涉及视觉语言导航(VLN)中的语言指令理解与语义推理。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"UAV Navigation\", \"Flow Matching\", \"World Model\", \"Trajectory Planning\", \"Depth-based Navigation\"]\n}",
+      "summarized_at": "2026-08-04T03:37:58.459627+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.00635",
+      "title": "FlowPilot: Real-Time World-Action Modeling for Agile UAV Navigation",
+      "authors": [
+        "Runqing Wang",
+        "Ding Yu",
+        "Pengyuan Min",
+        "Xinhong Zhang",
+        "Wei Xiao",
+        "Yu Hu",
+        "Jie Chen",
+        "Fu Zhang",
+        "Gang Wang"
+      ],
+      "abstract": "We present FlowPilot, a compact world-action model for real-time onboard UAV navigation from depth. Unlike map-then-optimize pipelines that require local reconstruction or end-to-end policies that lack explicit scene prediction, FlowPilot jointly denoises future depth observations and executable trajectories with flow matching. A dual-stream mixture-of-transformers couples video and action experts through shared attention, allowing future-scene prediction and trajectory generation to inform each other. At deployment, the model runs action-centrically and outputs only a trajectory. To ensure trackability, actions are parameterized as degree-7 Bernstein polynomials: the current state constrains the initial control points, and the network predicts five free control points, yielding C^2-continuous references with closed-form velocity, acceleration and jerk. FlowPilot is trained on a three-level depth pyramid spanning high-throughput simulation, photorealistic simulation, and real onboard data. In closed-loop simulation, it outperforms learning- and optimization-based baselines under increasing clutter and commanded speeds up to 8m/s. On a physical quadrotor, the full perception-to-action pipeline runs in under 18ms on a Jetson Orin NX and reaches 5.5m/s in cluttered indoor and forest environments using only onboard sensing and computation.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-01T12:43:31+00:00",
+      "updated": "2026-08-01T12:43:31+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.00635v1",
+      "abs_url": "https://arxiv.org/abs/2608.00635",
+      "matched_keywords": [
+        "UAV Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-06"
+    },
+    {
+      "summary_cn": "针对视觉语言自动驾驶中模型对导航指令敏感度不足的“条件策略坍缩”问题，本文提出了一种基于无分类器引导（CFG）原理的潜在质心引导（LCS）方法。该方法通过将条件表示投影到预计算的指令特定质心上，在单次推理中实现类级别的潜在引导，从而在降低约50%推理延迟的同时提升了指令遵循能力和驾驶性能。该研究为基于回归的视觉语言驾驶任务提供了显式放大语言指令影响的创新方案。",
+      "highlights": [
+        "提出潜在质心引导（LCS）单次引导机制，解决视觉语言自动驾驶中的条件策略坍缩问题",
+        "基于无分类器引导（CFG）的均值偏移解释，用类级别潜在偏移替代实例级残差，提升稳定性与效率",
+        "在闭环和开环基准测试中，推理延迟降低约50%，且指令遵循能力与驾驶性能均得到提升"
+      ],
+      "relevance_score": 6,
+      "relevance_reason": "该论文研究视觉语言模型在自动驾驶中如何更好地遵循导航指令，与地面VLN的指令对齐问题相关，但场景为自动驾驶而非典型VLN或无人机导航。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "自动驾驶",
+        "视觉语言模型",
+        "无分类器引导"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言自动驾驶中模型对导航指令敏感度不足的“条件策略坍缩”问题，本文提出了一种基于无分类器引导（CFG）原理的潜在质心引导（LCS）方法。该方法通过将条件表示投影到预计算的指令特定质心上，在单次推理中实现类级别的潜在引导，从而在降低约50%推理延迟的同时提升了指令遵循能力和驾驶性能。该研究为基于回归的视觉语言驾驶任务提供了显式放大语言指令影响的创新方案。\",\n  \"highlights\": [\n    \"提出潜在质心引导（LCS）单次引导机制，解决视觉语言自动驾驶中的条件策略坍缩问题\",\n    \"基于无分类器引导（CFG）的均值偏移解释，用类级别潜在偏移替代实例级残差，提升稳定性与效率\",\n    \"在闭环和开环基准测试中，推理延迟降低约50%，且指令遵循能力与驾驶性能均得到提升\"\n  ],\n  \"relevance_score\": 6,\n  \"relevance_reason\": \"该论文研究视觉语言模型在自动驾驶中如何更好地遵循导航指令，与地面VLN的指令对齐问题相关，但场景为自动驾驶而非典型VLN或无人机导航。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"自动驾驶\", \"视觉语言模型\", \"无分类器引导\"]\n}",
+      "summarized_at": "2026-08-04T03:38:12.989841+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.00237",
+      "title": "Latent-Centroid Steering: Single-Pass Classifier-Free Guidance for Command-Aligned Autonomous Driving",
+      "authors": [
+        "Meibo Hu",
+        "Jiamian Wang",
+        "Pichao Wang",
+        "Zhiqiang Tao"
+      ],
+      "abstract": "Vision-language models (VLMs) have recently emerged as a promising paradigm for end-to-end autonomous driving, enabling agents to map multimodal inputs and high-level navigation instructions directly to executable trajectories. However, in practice, these models exhibit a persistent command-following gap: predicted trajectories often show weak sensitivity to navigation commands, resulting in incorrect behavior at critical decision points. We identify this issue as a form of conditional policy collapse, where regression-based training under multimodal trajectory distributions encourages the model to rely on dominant visual priors while marginalizing the language-conditioned signal. To address this issue, we introduce a principled formulation of classifier-free guidance (CFG) for regression-based vision-language driving. We show that CFG can be interpreted as isolating the instruction-induced residual in the action space by contrasting conditional and unconditional predictions, thereby explicitly amplifying the effect of the navigation command at inference time. However, a standard two-pass CFG introduces prohibitive latency for real-time control and produces noisy instance-level guidance directions. Building on a mean-shift interpretation of CFG, we propose Latent-Centroid Steering (LCS), a single-pass guidance mechanism that replaces instance-level residuals with class-level latent shifts. By projecting conditional representations toward precomputed command-specific centroids, LCS performs class-level latent steering based on cluster geometry that is both more stable and computationally efficient. We demonstrate that LCS reduces inference latency by approximately 50% while achieving stronger command adherence and improved driving performance on both closed-loop (Bench2Drive) and open-loop (nuScenes) benchmarks. Code will be released.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-31T19:32:28+00:00",
+      "updated": "2026-07-31T19:32:28+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.00237v1",
+      "abs_url": "https://arxiv.org/abs/2608.00237",
+      "matched_keywords": [
+        "navigation instruction"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-06"
+    },
+    {
+      "summary_cn": "针对基于多模态大模型的长时程视觉语言导航(VLN)中存在的记忆与推理瓶颈问题，本文提出HAM-VLN方法。该方法构建了与决策耦合的持久化深度世界图，在单次模型调用中记录语义与反思信息，并通过相关性、新近性和显著性检索历史，无需额外LLM调用即可将上下文长度缩减65%以上。在VLN-CE R2R/RxR和HM3D-v2 ObjectNav上实现了零训练条件下的最优性能。",
+      "highlights": [
+        "提出与决策耦合的智能体记忆机制，构建深度世界图记录语义与反思信息",
+        "通过相关性、新近性和显著性检索历史航点，上下文长度减少超65%",
+        "零训练范式下在VLN-CE R2R/RxR和HM3D ObjectNav上取得优异成功率"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文直接解决视觉语言导航(VLN)的核心问题，提出创新的零样本记忆管理机制，属于核心VLN研究且有显著贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "zero-shot",
+        "memory",
+        "agent",
+        "navigation"
+      ],
+      "raw_model_output": "{\"summary_cn\": \"针对基于多模态大模型的长时程视觉语言导航(VLN)中存在的记忆与推理瓶颈问题，本文提出HAM-VLN方法。该方法构建了与决策耦合的持久化深度世界图，在单次模型调用中记录语义与反思信息，并通过相关性、新近性和显著性检索历史，无需额外LLM调用即可将上下文长度缩减65%以上。在VLN-CE R2R/RxR和HM3D-v2 ObjectNav上实现了零训练条件下的最优性能。\",\"highlights\": [\"提出与决策耦合的智能体记忆机制，构建深度世界图记录语义与反思信息\",\"通过相关性、新近性和显著性检索历史航点，上下文长度减少超65%\",\"零训练范式下在VLN-CE R2R/RxR和HM3D ObjectNav上取得优异成功率\"],\"relevance_score\": 8,\"relevance_reason\": \"该论文直接解决视觉语言导航(VLN)的核心问题，提出创新的零样本记忆管理机制，属于核心VLN研究且有显著贡献。\",\"is_uav_vln\": false,\"tags\": [\"VLN\",\"zero-shot\",\"memory\",\"agent\",\"navigation\"]}",
+      "summarized_at": "2026-08-03T03:55:20.927022+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2607.29600",
+      "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation",
+      "authors": [
+        "An Liu",
+        "Bingxi Liu",
+        "Hongyu Ding",
+        "Yixuan Jiang",
+        "Yaran Chen",
+        "Fulin Tang",
+        "Cong Leng",
+        "Hong Zhang",
+        "Jian Cheng"
+      ],
+      "abstract": "Vision-and-language navigation (VLN) enables robots to follow instructions in previously unseen environments. Recently, a training-free paradigm has emerged: the robot queries a multimodal LLM to understand its observations and plan the next action. However, long-horizon navigation based on either image streams or dense map inevitably introduces a growing memory and reasoning bottleneck. We present HAM-VLN, a decision-coupled, agent-authored memory that equips the robot with a persistent, depth-grounded world graph. In the same model call used to select the next action, HAM-VLN also records semantic and reflective information---including room type, objects, navigation progress, and failure notes. Recent waypoints remain verbatim within a bounded window, while older history re-enters the context only through retrieval scored by relevance, recency, and salience, together with one-hop topological expansion. This design requires no additional LLM calls beyond the per-waypoint decision. Compared to previous methods, HAM-VLN not only improves various navigation metrics but also reduces the context length by more than 65%. Specifically, HAM-VLN achieves 61.0% Success Rate (SR) on VLN-CE R2R, 52.7% SR on VLN-CE RxR, and 79.7% SR on HM3D-v2 ObjectNav without any training.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-31T16:32:38+00:00",
+      "updated": "2026-07-31T16:32:38+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2607.29600v1",
+      "abs_url": "https://arxiv.org/abs/2607.29600",
+      "matched_keywords": [
+        "VLN",
+        "Vision-and-Language Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-06"
+    },
+    {
+      "summary_cn": "本文聚焦农业场景下的连续视觉语言导航（VLN-CE），针对农田环境中可通行性判断模糊的问题，提出TEA模块。该模块通过估计相机图像的可通行性，在预测动作与可通行性图不一致时触发警报促使决策器重新思考，将其集成至AgriVLN基线中构建TEA-AgriVLN方法。在A2A基准上取得SOTA性能，成功率提升至0.54，导航误差降至2.70米。",
+      "highlights": [
+        "提出TEA模块解决农业场景中可通行性模糊问题",
+        "集成至AgriVLN构建TEA-AgriVLN，在A2A基准上SR提升至0.54",
+        "通过消融实验和案例研究验证了不同地面类别和场景下的有效性"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文是VLN-CE在农业场景的前沿研究，提出了创新的可通行性估计模块，属于核心VLN方向且有显著贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "VLN-CE",
+        "农业导航",
+        "可通行性估计",
+        "机器人导航"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文聚焦农业场景下的连续视觉语言导航（VLN-CE），针对农田环境中可通行性判断模糊的问题，提出TEA模块。该模块通过估计相机图像的可通行性，在预测动作与可通行性图不一致时触发警报促使决策器重新思考，将其集成至AgriVLN基线中构建TEA-AgriVLN方法。在A2A基准上取得SOTA性能，成功率提升至0.54，导航误差降至2.70米。\",\n  \"highlights\": [\n    \"提出TEA模块解决农业场景中可通行性模糊问题\",\n    \"集成至AgriVLN构建TEA-AgriVLN，在A2A基准上SR提升至0.54\",\n    \"通过消融实验和案例研究验证了不同地面类别和场景下的有效性\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文是VLN-CE在农业场景的前沿研究，提出了创新的可通行性估计模块，属于核心VLN方向且有显著贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLN-CE\", \"农业导航\", \"可通行性估计\", \"机器人导航\"]\n}",
+      "summarized_at": "2026-08-02T14:58:57.463647+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2607.28474",
+      "title": "TEA-AgriVLN: Traversability Estimation Alarm for Agricultural Vision-and-Language Navigation",
+      "authors": [
+        "Xiaobei Zhao",
+        "Xingqi Lyu",
+        "Xin Chen",
+        "Xiang Li"
+      ],
+      "abstract": "Vision-and-Language Navigation in Continuous Environments (VLN-CE) requires an agent to follow a natural language instruction, predicting a sequence of low-level actions to navigate a robot from a starting point to a target location. The A2A benchmark and the AgriVLN method pioneeringly extended VLN-CE from indoor scenes to agricultural scenes, while we observed a challenging distinction: In indoor scenes, whether a zone is traversable tends to be clear to classify, such as wood floors are traversable but concrete walls are not. In agricultural scenes, however, this issue tends to be ambiguous, such as an unripe cornfield might be traversable for a robotic dog but might be non-traversable for a human. To address this issue, we propose the TEA module, which estimates the traversability of the camera image, then alarm the decision-maker for rethinking when the predicted action does not align with the traversability map. We integrate it into the AgriVLN backbone to build our TEA-AgriVLN method. When evaluated on A2A, it improves Success Rate (SR) from 0.47 to 0.54 and Navigation Error (NE) from 2.91 m to 2.70 m, showing the state-of-the-art performance in the agricultural VLN-CE domain. We further implement the ablation studies and the case study, discussing the effectiveness and limitations of TEA on different ground categories and scene classes. Code: https://github.com/AlexTraveling/TEA-AgriVLN.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-30T16:27:12+00:00",
+      "updated": "2026-07-30T16:27:12+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2607.28474v1",
+      "abs_url": "https://arxiv.org/abs/2607.28474",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-06"
+    }
+  ],
+  "summarized_count": 9,
+  "skipped_no_summary": 0
+}
