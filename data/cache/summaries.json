@@ -289,5 +289,26 @@
     "raw_model_output": "{\n  \"summary_cn\": \"针对具身导航中传统人工神经网络计算量大且易受视觉损坏影响的问题，本文提出了基于脉冲神经网络（SNN）的 SpikingNav 框架。该框架包含脉冲感知编码器和脉冲策略网络，利用脉冲驱动的动态特性提升了导航性能与鲁棒性。实验表明，该方法在保持竞争力的同时显著增强了视觉鲁棒性，并降低了参数量与计算量，且已在神经形态芯片上完成硬件验证。\",\n  \"highlights\": [\n    \"提出 SpikingNav 框架，结合脉冲感知编码器（SSE）与脉冲策略网络（SPN）处理具身导航任务\",\n    \"在视觉损坏条件下显著提升鲁棒性，同时减少参数量并降低单步计算开销\",\n    \"在 Thruster-V2 神经形态芯片上完成硬件部署验证，证明其实际可部署性\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"该论文研究具身导航（PointNav和ObjectNav）与脉冲神经网络的结合，虽属于具身AI导航领域，但未涉及视觉语言导航（VLN）或无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"Embodied Navigation\", \"Spiking Neural Networks\", \"PointNav\", \"ObjectNav\", \"Neuromorphic Computing\"]\n}",
     "summarized_at": "2026-08-06T03:37:40.173034+00:00",
     "summarize_error": null
+  },
+  "2608.07267": {
+    "summary_cn": "针对连续VLN中现有世界-动作模型缺乏几何感知条件的问题，提出WNM-3D，通过冻结的几何编码器从单目RGB历史中提取几何感知表示，并经3D Scene-to-Token Adapter转换为固定长度前缀，以块因果注意力为未来视频与动作生成提供共享几何上下文。方法结合监督微调、DAgger式自适应和DanceGRPO闭环策略优化。实验表明其在闭环导航中优于强VLM基线和2D条件对应方法。",
+    "highlights": [
+      "提出3D场景条件化的生成式世界导航模型，将几何感知表示作为Diffusion Transformer的前缀",
+      "通过块因果注意力使几何前缀同时条件化未来视角和动作生成",
+      "结合监督微调、DAgger自适应与DanceGRPO闭环优化三阶段训练"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文直接研究连续VLN，提出基于3D场景条件化的世界导航模型，是VLN方向的核心工作且具有显著创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "world navigation model",
+      "3D scene conditioning",
+      "diffusion transformer",
+      "closed-loop navigation"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对连续VLN中现有世界-动作模型缺乏几何感知条件的问题，提出WNM-3D，通过冻结的几何编码器从单目RGB历史中提取几何感知表示，并经3D Scene-to-Token Adapter转换为固定长度前缀，以块因果注意力为未来视频与动作生成提供共享几何上下文。方法结合监督微调、DAgger式自适应和DanceGRPO闭环策略优化。实验表明其在闭环导航中优于强VLM基线和2D条件对应方法。\",\n  \"highlights\": [\n    \"提出3D场景条件化的生成式世界导航模型，将几何感知表示作为Diffusion Transformer的前缀\",\n    \"通过块因果注意力使几何前缀同时条件化未来视角和动作生成\",\n    \"结合监督微调、DAgger自适应与DanceGRPO闭环优化三阶段训练\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究连续VLN，提出基于3D场景条件化的世界导航模型，是VLN方向的核心工作且具有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"world navigation model\", \"3D scene conditioning\", \"diffusion transformer\", \"closed-loop navigation\"]\n}",
+    "summarized_at": "2026-08-10T02:34:48.264008+00:00",
+    "summarize_error": null
   }
 }

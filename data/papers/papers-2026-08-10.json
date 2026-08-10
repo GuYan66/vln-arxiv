@@ -1,0 +1,260 @@
+{
+  "date": "2026-08-10",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "针对连续VLN中现有世界-动作模型缺乏几何感知条件的问题，提出WNM-3D，通过冻结的几何编码器从单目RGB历史中提取几何感知表示，并经3D Scene-to-Token Adapter转换为固定长度前缀，以块因果注意力为未来视频与动作生成提供共享几何上下文。方法结合监督微调、DAgger式自适应和DanceGRPO闭环策略优化。实验表明其在闭环导航中优于强VLM基线和2D条件对应方法。",
+      "highlights": [
+        "提出3D场景条件化的生成式世界导航模型，将几何感知表示作为Diffusion Transformer的前缀",
+        "通过块因果注意力使几何前缀同时条件化未来视角和动作生成",
+        "结合监督微调、DAgger自适应与DanceGRPO闭环优化三阶段训练"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接研究连续VLN，提出基于3D场景条件化的世界导航模型，是VLN方向的核心工作且具有显著创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "world navigation model",
+        "3D scene conditioning",
+        "diffusion transformer",
+        "closed-loop navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对连续VLN中现有世界-动作模型缺乏几何感知条件的问题，提出WNM-3D，通过冻结的几何编码器从单目RGB历史中提取几何感知表示，并经3D Scene-to-Token Adapter转换为固定长度前缀，以块因果注意力为未来视频与动作生成提供共享几何上下文。方法结合监督微调、DAgger式自适应和DanceGRPO闭环策略优化。实验表明其在闭环导航中优于强VLM基线和2D条件对应方法。\",\n  \"highlights\": [\n    \"提出3D场景条件化的生成式世界导航模型，将几何感知表示作为Diffusion Transformer的前缀\",\n    \"通过块因果注意力使几何前缀同时条件化未来视角和动作生成\",\n    \"结合监督微调、DAgger自适应与DanceGRPO闭环优化三阶段训练\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究连续VLN，提出基于3D场景条件化的世界导航模型，是VLN方向的核心工作且具有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"world navigation model\", \"3D scene conditioning\", \"diffusion transformer\", \"closed-loop navigation\"]\n}",
+      "summarized_at": "2026-08-10T02:34:48.264008+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.07267",
+      "title": "WNM-3D: A World Navigation Model with 3D Scene Conditioning for Closed-Loop VLN",
+      "authors": [
+        "Yuehao Huang",
+        "Yunzi Wu",
+        "Xiaotao Zhang",
+        "Xinhai Li",
+        "Jiankun Dong",
+        "Jiajun Lv",
+        "Chi Zhang",
+        "Chenjia Bai",
+        "Yong Liu",
+        "Xuelong Li"
+      ],
+      "abstract": "Recent vision-language navigation (VLN) systems increasingly adapt pretrained vision-language models (VLMs) into vision-language-action (VLA) policies that map egocentric observations and language instructions directly to navigation actions. Although semantically capable, such action-centric training does not explicitly model how the agent's visual observations should evolve under its predicted motion. Generative world-action models (WAMs) jointly predict future observations and actions, yet existing WAMs for continuous VLN do not condition joint future-view and action generation on geometry-aware representations inferred from the observed history. We present WNM-3D, a generative World Navigation Model with 3D scene conditioning for continuous VLN. To consolidate past observations into persistent scene context, a frozen feed-forward geometry encoder extracts geometry-aware representations from the monocular egocentric RGB history, and a trainable 3D Scene-to-Token Adapter converts them into a fixed-length prefix in the token space of the world-action Diffusion Transformer. Through block-causal attention, this prefix conditions every future video-action block, providing a shared geometric context for both future-view and action generation. We train WNM-3D through supervised world-action fine-tuning on A*-generated demonstrations, DAgger-style adaptation on policy-visited states, and DanceGRPO-based closed-loop policy optimization. Experiments on GN-Bench show that WNM-3D outperforms strong VLM-based navigation policies and its 2D-conditioned counterpart in closed-loop navigation. On a fixed near-goal evaluation set, WNM-3D also achieves higher flow-action consistency and lower visual-motion error.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-08-07T14:29:00+00:00",
+      "updated": "2026-08-07T14:29:00+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.07267v1",
+      "abs_url": "https://arxiv.org/abs/2608.07267",
+      "matched_keywords": [
+        "VLN",
+        "vision-language navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-10"
+    },
+    {
+      "summary_cn": "针对具身导航中传统人工神经网络计算量大且易受视觉损坏影响的问题，本文提出了基于脉冲神经网络（SNN）的 SpikingNav 框架。该框架包含脉冲感知编码器和脉冲策略网络，利用脉冲驱动的动态特性提升了导航性能与鲁棒性。实验表明，该方法在保持竞争力的同时显著增强了视觉鲁棒性，并降低了参数量与计算量，且已在神经形态芯片上完成硬件验证。",
+      "highlights": [
+        "提出 SpikingNav 框架，结合脉冲感知编码器（SSE）与脉冲策略网络（SPN）处理具身导航任务",
+        "在视觉损坏条件下显著提升鲁棒性，同时减少参数量并降低单步计算开销",
+        "在 Thruster-V2 神经形态芯片上完成硬件部署验证，证明其实际可部署性"
+      ],
+      "relevance_score": 4,
+      "relevance_reason": "该论文研究具身导航（PointNav和ObjectNav）与脉冲神经网络的结合，虽属于具身AI导航领域，但未涉及视觉语言导航（VLN）或无人机场景。",
+      "is_uav_vln": false,
+      "tags": [
+        "Embodied Navigation",
+        "Spiking Neural Networks",
+        "PointNav",
+        "ObjectNav",
+        "Neuromorphic Computing"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对具身导航中传统人工神经网络计算量大且易受视觉损坏影响的问题，本文提出了基于脉冲神经网络（SNN）的 SpikingNav 框架。该框架包含脉冲感知编码器和脉冲策略网络，利用脉冲驱动的动态特性提升了导航性能与鲁棒性。实验表明，该方法在保持竞争力的同时显著增强了视觉鲁棒性，并降低了参数量与计算量，且已在神经形态芯片上完成硬件验证。\",\n  \"highlights\": [\n    \"提出 SpikingNav 框架，结合脉冲感知编码器（SSE）与脉冲策略网络（SPN）处理具身导航任务\",\n    \"在视觉损坏条件下显著提升鲁棒性，同时减少参数量并降低单步计算开销\",\n    \"在 Thruster-V2 神经形态芯片上完成硬件部署验证，证明其实际可部署性\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"该论文研究具身导航（PointNav和ObjectNav）与脉冲神经网络的结合，虽属于具身AI导航领域，但未涉及视觉语言导航（VLN）或无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"Embodied Navigation\", \"Spiking Neural Networks\", \"PointNav\", \"ObjectNav\", \"Neuromorphic Computing\"]\n}",
+      "summarized_at": "2026-08-06T03:37:40.173034+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.05078",
+      "title": "SpikingNav: Robust Embodied Navigation with Spiking Neural Policies",
+      "authors": [
+        "Jiahong Zhang",
+        "Sijun Shen",
+        "Dehua Wu",
+        "Yifan Lin",
+        "Xuechen Xia",
+        "Xu Chu",
+        "Youhui Zhang",
+        " GuoqiLi"
+      ],
+      "abstract": "Embodied navigation requires an agent to make sequential decisions from egocentric observations in a physical environment. Existing Artificial Neural Network (ANN)-based navigation models have achieved strong performance, yet they often rely on dense computation and may degrade under visual corruptions. Spiking neural networks (SNNs) provide event-driven computation and intrinsic temporal dynamics, which are promising for compact and robust navigation on resource-constrained platforms. However, whether spike-based sensing and policy dynamics can improve robustness in visually rich embodied navigation remains an open problem. This paper proposes SpikingNav, a spiking framework for robust indoor embodied navigation. It contains a Spiking Sensing Encoder (SSE) and a Spiking Policy Network (SPN). The SSE extracts task-conditioned visual features with a spike-based backbone. The SPN maintains a recurrent policy state through membrane integration, thresholding, and spike-triggered reset. In this way, SpikingNav exploits the dynamic properties and spike activations of SNNs to improve navigation performance and robustness. We evaluate SpikingNav on PointNav and ObjectNav under clean observations and visual corruptions. SpikingNav achieves competitive clean performance and stronger robustness with fewer parameters and lower per-step computation than a matched ANN baseline. For instance, SpikingNav improves ObjectNav success from 31.05% to 34.12%, and raises the average success under visual corruptions from 8.45% to 13.71%, demonstrating the benefits of spike-based sensing and policy dynamics. We further validate the deployability of our spike-based sensing method on the Thruster-V2 neuromorphic chip. This physical hardware validation shows that SpikingNav can be instantiated on a real neuromorphic substrate for cyber-physical systems.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-05T17:21:09+00:00",
+      "updated": "2026-08-05T17:21:09+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.05078v1",
+      "abs_url": "https://arxiv.org/abs/2608.05078",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-10"
+    },
+    {
+      "summary_cn": "现有基于VLM的VLN导航器通常仅通过下一动作预测来同时监督进度跟踪与动作执行，难以区分语义进度错误与局部执行错误。本文提出Route2Step框架，通过显式的步骤级接口将语义进度跟踪与动作生成解耦，包含指令分析模块和动作生成模块。同时提出E-SPA步骤对齐程序，无需人工时间标签即可实现状态监督，在R2R-CE上将SR从48.1%提升至55.3%。",
+      "highlights": [
+        "将语义进度跟踪与局部动作生成解耦，通过显式步骤级接口解决进度错误与执行错误难以区分的问题",
+        "提出E-SPA步骤对齐程序，自动将子指令与路线级演示的对应部分关联，无需人工时间标签即可监督进度状态",
+        "在R2R-CE上SR提升7.2%，仅需11.5K直接动作监督样本，并在真实室内外环境中验证了实用性"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文是视觉语言导航(VLN)领域的核心研究，提出了解耦语义进度与动作执行的新框架，对VLN方法论有重要创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "语义进度跟踪",
+        "动作生成",
+        "步骤对齐",
+        "R2R-CE"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有基于VLM的VLN导航器通常仅通过下一动作预测来同时监督进度跟踪与动作执行，难以区分语义进度错误与局部执行错误。本文提出Route2Step框架，通过显式的步骤级接口将语义进度跟踪与动作生成解耦，包含指令分析模块和动作生成模块。同时提出E-SPA步骤对齐程序，无需人工时间标签即可实现状态监督，在R2R-CE上将SR从48.1%提升至55.3%。\",\n  \"highlights\": [\n    \"将语义进度跟踪与局部动作生成解耦，通过显式步骤级接口解决进度错误与执行错误难以区分的问题\",\n    \"提出E-SPA步骤对齐程序，自动将子指令与路线级演示的对应部分关联，无需人工时间标签即可监督进度状态\",\n    \"在R2R-CE上SR提升7.2%，仅需11.5K直接动作监督样本，并在真实室内外环境中验证了实用性\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文是视觉语言导航(VLN)领域的核心研究，提出了解耦语义进度与动作执行的新框架，对VLN方法论有重要创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"语义进度跟踪\", \"动作生成\", \"步骤对齐\", \"R2R-CE\"]\n}",
+      "summarized_at": "2026-08-05T03:33:11.703197+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.03143",
+      "title": "From Routes to Steps: Separating Semantic Progress from Local Execution in Vision-and-Language Navigation",
+      "authors": [
+        "Xiangyun Huang",
+        "Xiangchen Wang",
+        "Runfeng Lin",
+        "Yihao Xu",
+        "Kangyu Huang",
+        "Jiang Hengchen",
+        "Xiwang Dong",
+        "Lin Jiarong"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) requires an agent to follow a route-level instruction by executing its constituent steps from egocentric visual observations. Existing VLM-based navigators typically supervise both capabilities through next-action prediction alone, making progress-tracking errors difficult to distinguish from execution errors. When an agent deviates from the route, a corrective action label may recover the next movement but does not indicate whether the agent selected the wrong sub-instruction or failed to execute the correct one. Consequently, the agent may continue making decisions from an erroneous progress state. To resolve this ambiguity, we propose \\textbf{Route2Step}, a framework that decouples semantic progress tracking from action generation through an explicit step-level interface. The Instruction Analysis Module ($\\mathcal{M}_{\\mathrm{IA}}$) predicts this state from the global instruction and visual history. Conditioned on the predicted state and recent observations, the Action Generation Module ($\\mathcal{M}_{\\mathrm{AG}}$) generates local action chunks. To supervise the progress state without manual temporal labels, E-SPA, a step-alignment procedure, associates sub-instructions with their corresponding portions of route-level demonstrations. These alignments enable state supervision for incorrect progress estimates, while direct action supervision is reserved for rollout groups that repeatedly fail under the correct active sub-instruction. On R2R-CE, Route2Step improves SR from 48.1\\% to 55.3\\% and SPL from 43.3\\% to 48.2\\%, using 190K state-level corrective samples while requiring only 11.5K directly action-supervised states. Experiments in real-world indoor and outdoor environments further demonstrate the practical applicability of Route2Step. The project page is: https://sisyphus-hxy.github.io/Route2Step/.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-08-04T05:14:45+00:00",
+      "updated": "2026-08-04T05:14:45+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.03143v1",
+      "abs_url": "https://arxiv.org/abs/2608.03143",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-10"
+    },
+    {
+      "summary_cn": "本文提出了一种双凸优化方法，用于在凸障碍物周围生成最小时间运动规划轨迹。该方法通过变量替换将目标函数和导数约束联合凸化，并利用时变分离平面处理碰撞避免，将其转化为双凸规划交替求解。实验表明，该方法在无人机导航和双臂卸货任务中能可靠生成高质量轨迹，计算效率与鲁棒性优于现有方法。",
+      "highlights": [
+        "提出一种收敛且有保证的双凸优化方法，支持任意阶导数约束的最小时间轨迹规划",
+        "通过时变分离平面处理碰撞避免，仅对当前碰撞障碍物添加平面，可跳过障碍物并逃离局部最优",
+        "在无人机导航等实验中计算效率与最先进方法相当，且对初始化鲁棒性更强"
+      ],
+      "relevance_score": 3,
+      "relevance_reason": "虽然实验涉及无人机导航，但该研究属于传统运动规划与轨迹优化领域，不涉及视觉语言导航(VLN)。",
+      "is_uav_vln": false,
+      "tags": [
+        "运动规划",
+        "轨迹优化",
+        "双凸优化",
+        "无人机导航",
+        "碰撞避免"
+      ],
+      "raw_model_output": "{\"summary_cn\":\"本文提出了一种双凸优化方法，用于在凸障碍物周围生成最小时间运动规划轨迹。该方法通过变量替换将目标函数和导数约束联合凸化，并利用时变分离平面处理碰撞避免，将其转化为双凸规划交替求解。实验表明，该方法在无人机导航和双臂卸货任务中能可靠生成高质量轨迹，计算效率与鲁棒性优于现有方法。\",\"highlights\":[\"提出一种收敛且有保证的双凸优化方法，支持任意阶导数约束的最小时间轨迹规划\",\"通过时变分离平面处理碰撞避免，仅对当前碰撞障碍物添加平面，可跳过障碍物并逃离局部最优\",\"在无人机导航等实验中计算效率与最先进方法相当，且对初始化鲁棒性更强\"],\"relevance_score\":3,\"relevance_reason\":\"虽然实验涉及无人机导航，但该研究属于传统运动规划与轨迹优化领域，不涉及视觉语言导航(VLN)。\",\"is_uav_vln\":false,\"tags\":[\"运动规划\",\"轨迹优化\",\"双凸优化\",\"无人机导航\",\"碰撞避免\"]}",
+      "summarized_at": "2026-08-05T03:33:25.353993+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.02834",
+      "title": "Biconvex Optimization for Smooth Minimum-Time Trajectories around Convex Obstacles",
+      "authors": [
+        "Peter Werner",
+        "Tobia Marcucci",
+        "Daniela Rus"
+      ],
+      "abstract": "We present a biconvex approach for minimum-time motion planning around convex obstacles that is guaranteed to converge, is anytime, and supports derivative constraints to arbitrary order. We jointly convexify the minimum-time objective and all derivative constraints through a change of variables, and handle collision avoidance via time-varying separating planes, reducing the problem to a biconvex program. This program is solved by alternating between computing maximum-margin separating planes and optimizing the trajectory. By only adding planes for obstacles that the current iterate collides with, the trajectory can jump around obstacles and escape local minima. The method is guaranteed to converge starting from a simple collision-free polygonal curve. In our experiments on drone navigation and dual-arm bin unloading, we find that the proposed method reliably produces high-quality trajectories with computation times comparable to state-of-the-art decomposition-based motion planners, while handling a larger class of problems and being substantially more robust to bad initialization. Project page:https://wernerpe.github.io/bmtp-website/",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "published": "2026-08-03T19:48:24+00:00",
+      "updated": "2026-08-03T19:48:24+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.02834v1",
+      "abs_url": "https://arxiv.org/abs/2608.02834",
+      "matched_keywords": [
+        "drone navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-10"
+    },
+    {
+      "summary_cn": "针对无人机视觉语言导航中全局探索与近距避障难以兼顾的问题，提出双高度协同导航框架CoNav-UAV。该方法将高空领航者与低空跟随者建模为Stackelberg博弈，通过迭代学习与上下文学习、专家蒸馏交替优化，实现双机协同。在AerialVLN基准上，成功率较基线提升最高达30.8分，且跨场景迁移所需数据量减少约3倍。",
+      "highlights": [
+        "将双无人机协同导航建模为Stackelberg博弈，实现高低空agent的相互适应与协同",
+        "结合基于记忆的上下文学习与DAgger风格专家蒸馏，驱动双方达到Stackelberg均衡",
+        "在AerialVLN基准的三个城市场景中，成功率最高提升30.8分，跨场景迁移数据需求减少约3倍"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "该论文直接研究无人机视觉语言导航(UAV-VLN)，提出双高度协同导航新范式并在AerialVLN基准上取得显著提升，属于该研究者的核心领域且有重要创新贡献。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "cooperative-navigation",
+        "Stackelberg-game",
+        "multi-agent",
+        "AerialVLN"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对无人机视觉语言导航中全局探索与近距避障难以兼顾的问题，提出双高度协同导航框架CoNav-UAV。该方法将高空领航者与低空跟随者建模为Stackelberg博弈，通过迭代学习与上下文学习、专家蒸馏交替优化，实现双机协同。在AerialVLN基准上，成功率较基线提升最高达30.8分，且跨场景迁移所需数据量减少约3倍。\",\n  \"highlights\": [\n    \"将双无人机协同导航建模为Stackelberg博弈，实现高低空agent的相互适应与协同\",\n    \"结合基于记忆的上下文学习与DAgger风格专家蒸馏，驱动双方达到Stackelberg均衡\",\n    \"在AerialVLN基准的三个城市场景中，成功率最高提升30.8分，跨场景迁移数据需求减少约3倍\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接研究无人机视觉语言导航(UAV-VLN)，提出双高度协同导航新范式并在AerialVLN基准上取得显著提升，属于该研究者的核心领域且有重要创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"cooperative-navigation\", \"Stackelberg-game\", \"multi-agent\", \"AerialVLN\"]\n}",
+      "summarized_at": "2026-08-04T03:37:33.039391+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.01802",
+      "title": "CoNav-UAV: Cooperative Dual-Altitude Aerial Navigation via Stackelberg Learning",
+      "authors": [
+        "Junru Song",
+        "Wenhao Zhang",
+        "Yang Yang",
+        "Xuekai Qiu",
+        "Feifei Wang",
+        "Weien Zhou",
+        "Tingsong Jiang",
+        "Ying Wen",
+        "Yang Li",
+        "Wen Yao"
+      ],
+      "abstract": "Target-oriented vision-and-language navigation (VLN) on aerial platforms is attracting growing attention for missions such as disaster rescue, infrastructure inspection, and security patrol. In this task, an unmanned aerial vehicle (UAV) needs to locate targets given only a concise description of their appearance and surroundings. This requires global exploration and grounding as well as collision-free close-range approach, two interleaved processes difficult to reconcile within a single agent. Most existing methods transfer the ground VLN paradigm to a low-altitude UAV and compensate for its inefficient exploration with external assistance. A recent attempt deploys two UAVs at complementary altitudes yet still relies on privileged information and trains its two agents independently, precluding any mutual adaptation essential for cooperation. Here we propose CoNav-UAV, which explicitly models the task as a Stackelberg game between a high-altitude leader and a low-altitude follower, with the system operating on onboard visual and linguistic inputs alone. To solve this game, we introduce Iterative Stackelberg Learning. The leader's high-level vision-language reasoning is refined via memory-based in-context learning, while the follower's precise motion control is updated via DAgger-style expert distillation. The alternation drives both agents toward a Stackelberg equilibrium. CoNav-UAV consistently outperforms single- and dual-agent baselines across three high-fidelity urban scenes from the AerialVLN benchmark. Success rate improves by up to 30.8 points on the learning scene, and 9.0 points under cross-scene transfer while using about 3x less adaptation data. Further analyses validate the complementary gains of the leader and follower updates and reveal robust gains yet distinct learning dynamics across VLM backbones.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-08-03T07:10:38+00:00",
+      "updated": "2026-08-03T07:10:38+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.01802v1",
+      "abs_url": "https://arxiv.org/abs/2608.01802",
+      "matched_keywords": [
+        "UAV: Cooperative Dual-Altitude Aerial Navigation",
+        "vision-and-language navigation",
+        "VLN",
+        "AerialVLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-10"
+    }
+  ],
+  "summarized_count": 5,
+  "skipped_no_summary": 0
+}

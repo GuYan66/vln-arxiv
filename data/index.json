@@ -125,7 +125,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-08-06.json"
+    },
+    "2608.07267": {
+      "arxiv_id": "2608.07267",
+      "title": "WNM-3D: A World Navigation Model with 3D Scene Conditioning for Closed-Loop VLN",
+      "date": "2026-08-10",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-08-10.json"
     }
   },
-  "last_updated": "2026-08-09T02:28:57.534765+00:00"
+  "last_updated": "2026-08-10T02:34:48.265358+00:00"
 }
