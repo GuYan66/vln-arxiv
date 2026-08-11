@@ -134,7 +134,61 @@
       "is_uav_vln": false,
       "primary_category": "cs.AI",
       "path": "papers/papers-2026-08-10.json"
+    },
+    "2608.09564": {
+      "arxiv_id": "2608.09564",
+      "title": "From Semantic Grounding to Decision Optimization: A Unified Framework for Long-Horizon UAV Vision-Language Navigation",
+      "date": "2026-08-11",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-11.json"
+    },
+    "2608.09467": {
+      "arxiv_id": "2608.09467",
+      "title": "RecoverFly: A Failure-Aware Reinforcement Learning Post-Training Framework for Aerial Vision-Language Navigation",
+      "date": "2026-08-11",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-11.json"
+    },
+    "2608.09270": {
+      "arxiv_id": "2608.09270",
+      "title": "GRASP: Granularity-Aware Region Alignment and Semantic Prototype Learning for Fine-Grained Cross-Modal Understanding in Drone Views",
+      "date": "2026-08-11",
+      "relevance_score": 8,
+      "is_uav_vln": true,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-11.json"
+    },
+    "2608.09196": {
+      "arxiv_id": "2608.09196",
+      "title": "SAIN: Structure-Aware Interactive Navigation with Active Dialogue Grounding for Mobile Robot",
+      "date": "2026-08-11",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-11.json"
+    },
+    "2608.08814": {
+      "arxiv_id": "2608.08814",
+      "title": "360CityArena: A Realistic Virtual Urban Navigation Benchmark for Embodied Agents",
+      "date": "2026-08-11",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-11.json"
+    },
+    "2608.08596": {
+      "arxiv_id": "2608.08596",
+      "title": "Goal-oriented Navigation Instruction Generation with Tour Video Priors",
+      "date": "2026-08-11",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-11.json"
     }
   },
-  "last_updated": "2026-08-10T02:34:48.265358+00:00"
+  "last_updated": "2026-08-11T02:29:10.099062+00:00"
 }
