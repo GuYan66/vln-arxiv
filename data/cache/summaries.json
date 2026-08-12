@@ -436,5 +436,26 @@
     "raw_model_output": "{\n  \"summary_cn\": \"导航指令生成(NIG)旨在为导航引导生成逐步的自然语言指令。本文提出VideoNIG任务，基于第一人称导览视频、初始观测和目标，在无图或地图等中间表示的情况下生成导航指令，并构建了包含6万条室内导览视频的基准。作者提出两阶段课程学习框架，先进行动作预热以实现空间动作-视角对齐，再通过复杂度递进进行长程导航推理，显著提升了指令质量并验证了下游VLN智能体的可执行性。\",\n  \"highlights\": [\n    \"提出VideoNIG任务：基于第一人称导览视频和目标生成导航指令，无需图/地图等中间表示\",\n    \"构建了包含60K室内连续环境导览视频和37K多模态提示的基准及诊断评估协议\",\n    \"提出两阶段课程学习框架（动作预热+复杂度递进），显著提升现有MLLM的指令生成质量\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"本文直接研究VLN中的导航指令生成任务，提出新任务基准与方法，对VLN研究有核心贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"导航指令生成\", \"课程学习\", \"多模态大语言模型\", \"视频理解\"]\n}",
     "summarized_at": "2026-08-11T02:29:10.097758+00:00",
     "summarize_error": null
+  },
+  "2608.10278": {
+    "summary_cn": "空间理解是具身智能的基础，现有视觉语言模型(VLMs)的空间推理方法常依赖额外空间编码器或架构修改，增加计算成本。本文提出Space Tokens，一种轻量级、架构无关的框架，通过将场景级3D几何和以物体为中心的空间属性蒸馏为连续潜在标记，直接融入思维链推理过程，提升VLM的空间推理能力。实验表明该方法在VSI-Bench上显著提升模型性能，并在物体尺寸和房间尺寸估计上达到SOTA。",
+    "highlights": [
+      "提出Space Tokens，无需额外推理模块即可为VLM注入连续空间表示",
+      "将3D几何与物体空间属性蒸馏为潜在标记并融入思维链推理",
+      "在VSI-Bench上提升Qwen3-VL-8B达4.3%，物体尺寸和房间尺寸估计达SOTA"
+    ],
+    "relevance_score": 4,
+    "relevance_reason": "论文涉及具身导航的空间理解，但核心贡献在于VLM的通用空间推理与几何感知，非直接针对VLN任务设计。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLM",
+      "spatial reasoning",
+      "embodied intelligence",
+      "chain-of-thought",
+      "3D geometry"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"空间理解是具身智能的基础，现有视觉语言模型(VLMs)的空间推理方法常依赖额外空间编码器或架构修改，增加计算成本。本文提出Space Tokens，一种轻量级、架构无关的框架，通过将场景级3D几何和以物体为中心的空间属性蒸馏为连续潜在标记，直接融入思维链推理过程，提升VLM的空间推理能力。实验表明该方法在VSI-Bench上显著提升模型性能，并在物体尺寸和房间尺寸估计上达到SOTA。\",\n  \"highlights\": [\n    \"提出Space Tokens，无需额外推理模块即可为VLM注入连续空间表示\",\n    \"将3D几何与物体空间属性蒸馏为潜在标记并融入思维链推理\",\n    \"在VSI-Bench上提升Qwen3-VL-8B达4.3%，物体尺寸和房间尺寸估计达SOTA\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"论文涉及具身导航的空间理解，但核心贡献在于VLM的通用空间推理与几何感知，非直接针对VLN任务设计。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLM\", \"spatial reasoning\", \"embodied intelligence\", \"chain-of-thought\", \"3D geometry\"]\n}",
+    "summarized_at": "2026-08-12T02:44:51.108743+00:00",
+    "summarize_error": null
   }
 }
