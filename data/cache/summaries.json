@@ -457,5 +457,48 @@
     "raw_model_output": "{\n  \"summary_cn\": \"空间理解是具身智能的基础，现有视觉语言模型(VLMs)的空间推理方法常依赖额外空间编码器或架构修改，增加计算成本。本文提出Space Tokens，一种轻量级、架构无关的框架，通过将场景级3D几何和以物体为中心的空间属性蒸馏为连续潜在标记，直接融入思维链推理过程，提升VLM的空间推理能力。实验表明该方法在VSI-Bench上显著提升模型性能，并在物体尺寸和房间尺寸估计上达到SOTA。\",\n  \"highlights\": [\n    \"提出Space Tokens，无需额外推理模块即可为VLM注入连续空间表示\",\n    \"将3D几何与物体空间属性蒸馏为潜在标记并融入思维链推理\",\n    \"在VSI-Bench上提升Qwen3-VL-8B达4.3%，物体尺寸和房间尺寸估计达SOTA\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"论文涉及具身导航的空间理解，但核心贡献在于VLM的通用空间推理与几何感知，非直接针对VLN任务设计。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLM\", \"spatial reasoning\", \"embodied intelligence\", \"chain-of-thought\", \"3D geometry\"]\n}",
     "summarized_at": "2026-08-12T02:44:51.108743+00:00",
     "summarize_error": null
+  },
+  "2608.12308": {
+    "summary_cn": "针对无人机视觉语言导航(VLN)中历史上下文有限、规划视野短和终止不可靠的问题，本文提出基于扩散模型的DreamFly框架。该框架引入因果对齐的历史记忆、滚动时域扩散规划（预测K步仅执行一步）以及LiteStop显式终止机制。在OpenFly基准上取得最优的SR和SPL指标，验证了联合建模历史、未来动作结构与显式终止的有效性。",
+    "highlights": [
+      "提出因果对齐的历史记忆，仅使用当前决策步之前的观测增强视觉表征，避免未来信息泄露",
+      "将导航建模为滚动时域扩散规划，采用预测K步执行1步策略，兼顾未来动作辅助规划与闭环视觉反馈",
+      "设计LiteStop从动作logits直接估计停止概率，实现与动作生成解耦的显式终止机制"
+    ],
+    "relevance_score": 10,
+    "relevance_reason": "本文直接针对无人机视觉语言导航(UAV-VLN)提出创新框架，是该领域的核心研究且贡献显著。",
+    "is_uav_vln": true,
+    "tags": [
+      "VLN",
+      "UAV-VLN",
+      "扩散模型",
+      "视觉语言动作模型",
+      "记忆机制",
+      "路径规划"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对无人机视觉语言导航(VLN)中历史上下文有限、规划视野短和终止不可靠的问题，本文提出基于扩散模型的DreamFly框架。该框架引入因果对齐的历史记忆、滚动时域扩散规划（预测K步仅执行一步）以及LiteStop显式终止机制。在OpenFly基准上取得最优的SR和SPL指标，验证了联合建模历史、未来动作结构与显式终止的有效性。\",\n  \"highlights\": [\n    \"提出因果对齐的历史记忆，仅使用当前决策步之前的观测增强视觉表征，避免未来信息泄露\",\n    \"将导航建模为滚动时域扩散规划，采用预测K步执行1步策略，兼顾未来动作辅助规划与闭环视觉反馈\",\n    \"设计LiteStop从动作logits直接估计停止概率，实现与动作生成解耦的显式终止机制\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"本文直接针对无人机视觉语言导航(UAV-VLN)提出创新框架，是该领域的核心研究且贡献显著。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"扩散模型\", \"视觉语言动作模型\", \"记忆机制\", \"路径规划\"]\n}",
+    "summarized_at": "2026-08-13T02:47:33.788633+00:00",
+    "summarize_error": null
+  },
+  "2608.11901": {
+    "summary_cn": "现有室外VLN数据集多依赖固定离散拓扑图，难以适应真实多变的室外环境并阻碍了sim-to-real迁移。本文提出DaViNCi，首个同时引入连续动作空间和动态元素的室外VLN数据集，包含6张地图共6933条轨迹。实验表明连续和动态设置下导航成功率显著下降，验证了该数据集的挑战性与实用价值。",
+    "highlights": [
+      "首个同时引入连续动作和动态元素的室外VLN数据集",
+      "包含6张地图共6933条轨迹，涵盖连续动作空间与不可预测动态元素",
+      "实验表明连续设置下成功率大幅下降，揭示了向真实环境迁移的挑战"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文是室外VLN领域的核心贡献，首次同时引入连续动作和动态元素，对VLN的sim-to-real迁移有重要意义。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "outdoor",
+      "continuous action",
+      "dynamic environment",
+      "dataset"
+    ],
+    "raw_model_output": "{\"summary_cn\":\"现有室外VLN数据集多依赖固定离散拓扑图，难以适应真实多变的室外环境并阻碍了sim-to-real迁移。本文提出DaViNCi，首个同时引入连续动作空间和动态元素的室外VLN数据集，包含6张地图共6933条轨迹。实验表明连续和动态设置下导航成功率显著下降，验证了该数据集的挑战性与实用价值。\",\"highlights\":[\"首个同时引入连续动作和动态元素的室外VLN数据集\",\"包含6张地图共6933条轨迹，涵盖连续动作空间与不可预测动态元素\",\"实验表明连续设置下成功率大幅下降，揭示了向真实环境迁移的挑战\"],\"relevance_score\":8,\"relevance_reason\":\"该论文是室外VLN领域的核心贡献，首次同时引入连续动作和动态元素，对VLN的sim-to-real迁移有重要意义。\",\"is_uav_vln\":false,\"tags\":[\"VLN\",\"outdoor\",\"continuous action\",\"dynamic environment\",\"dataset\"]}",
+    "summarized_at": "2026-08-13T02:47:40.460665+00:00",
+    "summarize_error": null
   }
 }
