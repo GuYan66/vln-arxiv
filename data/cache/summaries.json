@@ -563,5 +563,89 @@
     "raw_model_output": "{\"summary_cn\":\"该论文研究视觉语言模型(VLM)能否从机器人第一人称视角评估社交距离风险，以保障具身导航安全。作者在InternVL、Qwen-VL和SmolVLM三个开源VLM上，比较了不同提示策略和QLoRA微调对四级危险分类的效果。研究发现当前VLM在细粒度空间推理和定位方面仍有限，但针对性提示和微调可改善高危场景检测。\",\"highlights\":[\"评估三个开源VLM在机器人第一人称视角下的社交距离风险分类能力\",\"发现微调仅带来有限提升，但Qwen-VL配合高级提示在高危案例召回率上显著更优\",\"揭示正确的危险分类并不等同于更好的空间定位，VLM在细粒度空间推理上仍有局限\"],\"relevance_score\":4,\"relevance_reason\":\"论文涉及具身导航安全与VLM空间推理，与VLN有一定关联，但核心任务是基于第一人称视角的社交距离风险评估而非视觉语言导航本身。\",\"is_uav_vln\":false,\"tags\":[\"VLM\",\"embodied navigation\",\"proxemic reasoning\",\"spatial grounding\",\"fine-tuning\"]}",
     "summarized_at": "2026-08-14T02:47:03.988738+00:00",
     "summarize_error": null
+  },
+  "2608.18632": {
+    "summary_cn": "高空白拍航拍视频因几何约束弱且感知混淆严重，对单目SLAM构成挑战。本文在本地无人机飞行、合成城市图像和长程航拍序列上基准测试了五种单目SLAM系统，且不提供惯性或GNSS辅助。结果表明现有单目SLAM方法不足以支撑可靠的纯视觉无人机导航。",
+    "highlights": [
+      "在无人机本地飞行、合成城市级图像和长程航拍序列上评估了五种单目SLAM系统",
+      "MASt3R-SLAM在五次DJI飞行中水平MAE最低，DROID-SLAM整体表现最佳",
+      "现有单目SLAM方法不足以支撑可靠的纯视觉无人机导航"
+    ],
+    "relevance_score": 4,
+    "relevance_reason": "该论文聚焦无人机航拍场景下的单目SLAM基准测试，涉及无人机视觉导航但未涉及视觉语言导航(VLN)任务。",
+    "is_uav_vln": false,
+    "tags": [
+      "SLAM",
+      "UAV",
+      "aerial navigation",
+      "benchmark",
+      "monocular"
+    ],
+    "raw_model_output": "{\"summary_cn\": \"高空白拍航拍视频因几何约束弱且感知混淆严重，对单目SLAM构成挑战。本文在本地无人机飞行、合成城市图像和长程航拍序列上基准测试了五种单目SLAM系统，且不提供惯性或GNSS辅助。结果表明现有单目SLAM方法不足以支撑可靠的纯视觉无人机导航。\",\"highlights\":[\"在无人机本地飞行、合成城市级图像和长程航拍序列上评估了五种单目SLAM系统\",\"MASt3R-SLAM在五次DJI飞行中水平MAE最低，DROID-SLAM整体表现最佳\",\"现有单目SLAM方法不足以支撑可靠的纯视觉无人机导航\"],\"relevance_score\":4,\"relevance_reason\":\"该论文聚焦无人机航拍场景下的单目SLAM基准测试，涉及无人机视觉导航但未涉及视觉语言导航(VLN)任务。\",\"is_uav_vln\":false,\"tags\":[\"SLAM\",\"UAV\",\"aerial navigation\",\"benchmark\",\"monocular\"]}",
+    "summarized_at": "2026-08-24T01:58:24.003817+00:00",
+    "summarize_error": null
+  },
+  "2608.17512": {
+    "summary_cn": "针对大型视觉语言模型(VLM)在具身导航中动作空间不匹配、推理调度僵化和内存管理低效的问题，提出TAMP-Nav框架。该方法将导航转化为2D视觉提示并投影至3D坐标供底层SLAM控制器执行，结合选择性推理与锚点轨迹记忆机制，并采用双层对齐范式进行GRPO优化。实验表明该方法在R2R-CE上达到SOTA，同时具备高运行和样本效率。",
+    "highlights": [
+      "提出Pixel-to-3D动作公式化，将导航转化为2D像素选择并投影至3D坐标，自然对齐VLM的2D视觉能力",
+      "设计选择性推理与锚点轨迹记忆机制，仅在关键节点触发思维链并压缩冗余轨迹为轻量级时空指示器",
+      "通过GRPO实现双层对齐范式，结合全局结果奖励与细粒度过程奖励，紧密对齐认知规划与环境反馈"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文聚焦具身导航并使用R2R-CE基准，是视觉语言导航(VLN)领域的核心研究且在动作空间对齐和记忆机制上有显著创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "embodied navigation",
+      "VLM",
+      "SLAM",
+      "GRPO"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对大型视觉语言模型(VLM)在具身导航中动作空间不匹配、推理调度僵化和内存管理低效的问题，提出TAMP-Nav框架。该方法将导航转化为2D视觉提示并投影至3D坐标供底层SLAM控制器执行，结合选择性推理与锚点轨迹记忆机制，并采用双层对齐范式进行GRPO优化。实验表明该方法在R2R-CE上达到SOTA，同时具备高运行和样本效率。\",\n  \"highlights\": [\n    \"提出Pixel-to-3D动作公式化，将导航转化为2D像素选择并投影至3D坐标，自然对齐VLM的2D视觉能力\",\n    \"设计选择性推理与锚点轨迹记忆机制，仅在关键节点触发思维链并压缩冗余轨迹为轻量级时空指示器\",\n    \"通过GRPO实现双层对齐范式，结合全局结果奖励与细粒度过程奖励，紧密对齐认知规划与环境反馈\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文聚焦具身导航并使用R2R-CE基准，是视觉语言导航(VLN)领域的核心研究且在动作空间对齐和记忆机制上有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"embodied navigation\", \"VLM\", \"SLAM\", \"GRPO\"]\n}",
+    "summarized_at": "2026-08-24T01:58:48.028731+00:00",
+    "summarize_error": null
+  },
+  "2608.17318": {
+    "summary_cn": "现有视觉语言导航(VLN)评估多关注路线型指令，难以诊断智能体在条件分支指令（如“如果...则...否则...”）上的逻辑决策能力。本文提出CondVLN基准，基于3D场景图谓词程序化生成超11,500条条件指令，覆盖AI2-THOR、Matterport3D等环境，并引入分支选择准确率等诊断指标。实验表明SOTA VLN智能体在条件分支上存在标准指标无法暴露的失败，作者还提出轻量级神经符号分支选择模型将性能提升2倍。",
+    "highlights": [
+      "提出CondVLN：首个基于场景图诊断VLN条件分支的基准",
+      "程序化生成可控条件指令，支持分支深度、依赖链长度等维度变化",
+      "引入分支选择准确率(BSA)与条件成功率(CSR)等分支专属诊断指标"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "论文直接研究视觉语言导航(VLN)的评估与诊断，提出新基准和指标，属于核心VLN研究且有显著创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "benchmark",
+      "conditional-branching",
+      "scene-graph",
+      "neurosymbolic"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"现有视觉语言导航(VLN)评估多关注路线型指令，难以诊断智能体在条件分支指令（如“如果...则...否则...”）上的逻辑决策能力。本文提出CondVLN基准，基于3D场景图谓词程序化生成超11,500条条件指令，覆盖AI2-THOR、Matterport3D等环境，并引入分支选择准确率等诊断指标。实验表明SOTA VLN智能体在条件分支上存在标准指标无法暴露的失败，作者还提出轻量级神经符号分支选择模型将性能提升2倍。\",\n  \"highlights\": [\n    \"提出CondVLN：首个基于场景图诊断VLN条件分支的基准\",\n    \"程序化生成可控条件指令，支持分支深度、依赖链长度等维度变化\",\n    \"引入分支选择准确率(BSA)与条件成功率(CSR)等分支专属诊断指标\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接研究视觉语言导航(VLN)的评估与诊断，提出新基准和指标，属于核心VLN研究且有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"benchmark\", \"conditional-branching\", \"scene-graph\", \"neurosymbolic\"]\n}",
+    "summarized_at": "2026-08-24T01:59:03.589250+00:00",
+    "summarize_error": null
+  },
+  "2608.16640": {
+    "summary_cn": "针对视觉无人机在死胡同易导航失败的问题，本文提出一种高效的死胡同预测与避让系统。该方法利用轻量级网络基于RGB-D输入预测死胡同的相对距离与方位，并据此修剪预定义轨迹库以实现主动避让，无需真实数据微调即可实现50Hz高频机载重规划。",
+    "highlights": [
+      "提出轻量级网络预测视野内死胡同的距离与方位",
+      "利用预测结果修剪轨迹库实现主动避障，保持导航平滑性",
+      "支持50Hz高频机载重规划，具备零样本真实世界迁移能力"
+    ],
+    "relevance_score": 3,
+    "relevance_reason": "该论文属于无人机视觉导航与避障，但未涉及语言指令引导，与VLN/UAV-VLN仅顺带相关。",
+    "is_uav_vln": false,
+    "tags": [
+      "UAV Navigation",
+      "Dead-End Prediction",
+      "Trajectory Planning",
+      "RGB-D",
+      "Sim-to-Real"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对视觉无人机在死胡同易导航失败的问题，本文提出一种高效的死胡同预测与避让系统。该方法利用轻量级网络基于RGB-D输入预测死胡同的相对距离与方位，并据此修剪预定义轨迹库以实现主动避让，无需真实数据微调即可实现50Hz高频机载重规划。\",\n  \"highlights\": [\n    \"提出轻量级网络预测视野内死胡同的距离与方位\",\n    \"利用预测结果修剪轨迹库实现主动避障，保持导航平滑性\",\n    \"支持50Hz高频机载重规划，具备零样本真实世界迁移能力\"\n  ],\n  \"relevance_score\": 3,\n  \"relevance_reason\": \"该论文属于无人机视觉导航与避障，但未涉及语言指令引导，与VLN/UAV-VLN仅顺带相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"UAV Navigation\", \"Dead-End Prediction\", \"Trajectory Planning\", \"RGB-D\", \"Sim-to-Real\"]\n}",
+    "summarized_at": "2026-08-24T01:59:12.957950+00:00",
+    "summarize_error": null
   }
 }

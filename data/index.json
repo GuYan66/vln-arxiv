@@ -242,7 +242,43 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-08-14.json"
+    },
+    "2608.18632": {
+      "arxiv_id": "2608.18632",
+      "title": "Evaluation of Monocular SLAM Systems on High-Altitude Nadir UAV Footage",
+      "date": "2026-08-24",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-24.json"
+    },
+    "2608.17512": {
+      "arxiv_id": "2608.17512",
+      "title": "Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation",
+      "date": "2026-08-24",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-24.json"
+    },
+    "2608.17318": {
+      "arxiv_id": "2608.17318",
+      "title": "If, Then, Otherwise: Diagnosing Conditional Branching in Vision-Language Navigation",
+      "date": "2026-08-24",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-24.json"
+    },
+    "2608.16640": {
+      "arxiv_id": "2608.16640",
+      "title": "DPNet: Efficient Dead-End Prediction and Avoidance for Vision-Based UAV Navigation",
+      "date": "2026-08-24",
+      "relevance_score": 3,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-24.json"
     }
   },
-  "last_updated": "2026-08-17T01:59:55.088526+00:00"
+  "last_updated": "2026-08-24T01:59:12.959713+00:00"
 }

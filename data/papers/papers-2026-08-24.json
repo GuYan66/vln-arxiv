@@ -1,0 +1,207 @@
+{
+  "date": "2026-08-24",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "高空白拍航拍视频因几何约束弱且感知混淆严重，对单目SLAM构成挑战。本文在本地无人机飞行、合成城市图像和长程航拍序列上基准测试了五种单目SLAM系统，且不提供惯性或GNSS辅助。结果表明现有单目SLAM方法不足以支撑可靠的纯视觉无人机导航。",
+      "highlights": [
+        "在无人机本地飞行、合成城市级图像和长程航拍序列上评估了五种单目SLAM系统",
+        "MASt3R-SLAM在五次DJI飞行中水平MAE最低，DROID-SLAM整体表现最佳",
+        "现有单目SLAM方法不足以支撑可靠的纯视觉无人机导航"
+      ],
+      "relevance_score": 4,
+      "relevance_reason": "该论文聚焦无人机航拍场景下的单目SLAM基准测试，涉及无人机视觉导航但未涉及视觉语言导航(VLN)任务。",
+      "is_uav_vln": false,
+      "tags": [
+        "SLAM",
+        "UAV",
+        "aerial navigation",
+        "benchmark",
+        "monocular"
+      ],
+      "raw_model_output": "{\"summary_cn\": \"高空白拍航拍视频因几何约束弱且感知混淆严重，对单目SLAM构成挑战。本文在本地无人机飞行、合成城市图像和长程航拍序列上基准测试了五种单目SLAM系统，且不提供惯性或GNSS辅助。结果表明现有单目SLAM方法不足以支撑可靠的纯视觉无人机导航。\",\"highlights\":[\"在无人机本地飞行、合成城市级图像和长程航拍序列上评估了五种单目SLAM系统\",\"MASt3R-SLAM在五次DJI飞行中水平MAE最低，DROID-SLAM整体表现最佳\",\"现有单目SLAM方法不足以支撑可靠的纯视觉无人机导航\"],\"relevance_score\":4,\"relevance_reason\":\"该论文聚焦无人机航拍场景下的单目SLAM基准测试，涉及无人机视觉导航但未涉及视觉语言导航(VLN)任务。\",\"is_uav_vln\":false,\"tags\":[\"SLAM\",\"UAV\",\"aerial navigation\",\"benchmark\",\"monocular\"]}",
+      "summarized_at": "2026-08-24T01:58:24.003817+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.18632",
+      "title": "Evaluation of Monocular SLAM Systems on High-Altitude Nadir UAV Footage",
+      "authors": [
+        "Gašper Spagnolo",
+        "Matej Dobrevski",
+        "Danijel Skočaj"
+      ],
+      "abstract": "Aerial nadir video combines weak geometric constraints with severe perceptual aliasing, making it a difficult regime for monocular SLAM. We benchmark five monocular SLAM systems on local UAV flights, synthetic city-scale imagery, and long-range aerial sequences. To isolate visual performance, we provide no inertial or GNSS aiding. Performance varies strongly with environment and trajectory scale: MASt3R-SLAM achieves the lowest mean horizontal MAE on the five DJI flights (0.53\\% of reference path length), whereas no system consistently preserves global trajectory shape on the long GES and ALTO sequences. Overall, DROID-SLAM performs best, averaging 2.88\\% of reference path length across completed runs. Vertical position remains poor, and large-area trajectories remain highly distorted despite loop-closure capability. Current monocular SLAM methods are by themselves therefore insufficient for reliable visual-only aerial navigation.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-19T07:27:51+00:00",
+      "updated": "2026-08-19T07:27:51+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.18632v1",
+      "abs_url": "https://arxiv.org/abs/2608.18632",
+      "matched_keywords": [
+        "aerial navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-24"
+    },
+    {
+      "summary_cn": "针对大型视觉语言模型(VLM)在具身导航中动作空间不匹配、推理调度僵化和内存管理低效的问题，提出TAMP-Nav框架。该方法将导航转化为2D视觉提示并投影至3D坐标供底层SLAM控制器执行，结合选择性推理与锚点轨迹记忆机制，并采用双层对齐范式进行GRPO优化。实验表明该方法在R2R-CE上达到SOTA，同时具备高运行和样本效率。",
+      "highlights": [
+        "提出Pixel-to-3D动作公式化，将导航转化为2D像素选择并投影至3D坐标，自然对齐VLM的2D视觉能力",
+        "设计选择性推理与锚点轨迹记忆机制，仅在关键节点触发思维链并压缩冗余轨迹为轻量级时空指示器",
+        "通过GRPO实现双层对齐范式，结合全局结果奖励与细粒度过程奖励，紧密对齐认知规划与环境反馈"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文聚焦具身导航并使用R2R-CE基准，是视觉语言导航(VLN)领域的核心研究且在动作空间对齐和记忆机制上有显著创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "embodied navigation",
+        "VLM",
+        "SLAM",
+        "GRPO"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对大型视觉语言模型(VLM)在具身导航中动作空间不匹配、推理调度僵化和内存管理低效的问题，提出TAMP-Nav框架。该方法将导航转化为2D视觉提示并投影至3D坐标供底层SLAM控制器执行，结合选择性推理与锚点轨迹记忆机制，并采用双层对齐范式进行GRPO优化。实验表明该方法在R2R-CE上达到SOTA，同时具备高运行和样本效率。\",\n  \"highlights\": [\n    \"提出Pixel-to-3D动作公式化，将导航转化为2D像素选择并投影至3D坐标，自然对齐VLM的2D视觉能力\",\n    \"设计选择性推理与锚点轨迹记忆机制，仅在关键节点触发思维链并压缩冗余轨迹为轻量级时空指示器\",\n    \"通过GRPO实现双层对齐范式，结合全局结果奖励与细粒度过程奖励，紧密对齐认知规划与环境反馈\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文聚焦具身导航并使用R2R-CE基准，是视觉语言导航(VLN)领域的核心研究且在动作空间对齐和记忆机制上有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"embodied navigation\", \"VLM\", \"SLAM\", \"GRPO\"]\n}",
+      "summarized_at": "2026-08-24T01:58:48.028731+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.17512",
+      "title": "Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation",
+      "authors": [
+        "Hongyan Feng",
+        "Sunlai Chen",
+        "Xuanyu Liu",
+        "Miao Pan",
+        "Yangfan Xie",
+        "Yuxiang Cui",
+        "Zhongxiang Zhou",
+        "Rong Xiong",
+        "Wenqi Zhang",
+        "Jianwei Yin",
+        "Yueting Zhuang",
+        "Xuhong Zhang"
+      ],
+      "abstract": "Although Large Vision-Language Models (VLMs) have significantly advanced embodied navigation, their direct deployment remains challenging, as existing methods often force VLMs into unnatural action spaces that misalign with their 2D pre-training priors, compounded by rigid reasoning schedules and inefficient memory management. To overcome these limitations, we propose TAMP-Nav, a unified framework for efficient embodied navigation. First, we introduce a Pixel-to-3D Action Formulation (Point) that reformulates navigation into 2D visual prompting. Specifically, the VLM merely selects 2D pixels, which are then projected into 3D coordinates for a low-level SLAM controller. This design naturally aligns embodied execution with the VLM's inherent 2D visual capabilities. Second, we propose an integrated Selective Reasoning and Anchor-Trajectory Memory mechanism (Think and Memorize), which dynamically triggers Chain-of-Thought and retains high-fidelity memory only at critical nodes, compressing redundant trajectories into lightweight Space-Time Indicators, thereby preserving critical historical information and enhancing spatio-temporal perception. Finally, we design an efficient Two-Level Alignment Paradigm (Align) via Group Relative Policy Optimization (GRPO). By superimposing global outcome rewards with fine-grained process rewards, this dense supervision tightly aligns the agent's cognitive planning with physical environmental feedback, endowing the model with adaptive reasoning capabilities. Experiments demonstrate that TAMP-Nav achieves state-of-the-art performance (e.g., 66.2% SR on R2R-CE) with high runtime and sample efficiency (requiring only 90k training trajectories).",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-18T08:37:08+00:00",
+      "updated": "2026-08-18T08:37:08+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.17512v1",
+      "abs_url": "https://arxiv.org/abs/2608.17512",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-24"
+    },
+    {
+      "summary_cn": "现有视觉语言导航(VLN)评估多关注路线型指令，难以诊断智能体在条件分支指令（如“如果...则...否则...”）上的逻辑决策能力。本文提出CondVLN基准，基于3D场景图谓词程序化生成超11,500条条件指令，覆盖AI2-THOR、Matterport3D等环境，并引入分支选择准确率等诊断指标。实验表明SOTA VLN智能体在条件分支上存在标准指标无法暴露的失败，作者还提出轻量级神经符号分支选择模型将性能提升2倍。",
+      "highlights": [
+        "提出CondVLN：首个基于场景图诊断VLN条件分支的基准",
+        "程序化生成可控条件指令，支持分支深度、依赖链长度等维度变化",
+        "引入分支选择准确率(BSA)与条件成功率(CSR)等分支专属诊断指标"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "论文直接研究视觉语言导航(VLN)的评估与诊断，提出新基准和指标，属于核心VLN研究且有显著创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "benchmark",
+        "conditional-branching",
+        "scene-graph",
+        "neurosymbolic"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有视觉语言导航(VLN)评估多关注路线型指令，难以诊断智能体在条件分支指令（如“如果...则...否则...”）上的逻辑决策能力。本文提出CondVLN基准，基于3D场景图谓词程序化生成超11,500条条件指令，覆盖AI2-THOR、Matterport3D等环境，并引入分支选择准确率等诊断指标。实验表明SOTA VLN智能体在条件分支上存在标准指标无法暴露的失败，作者还提出轻量级神经符号分支选择模型将性能提升2倍。\",\n  \"highlights\": [\n    \"提出CondVLN：首个基于场景图诊断VLN条件分支的基准\",\n    \"程序化生成可控条件指令，支持分支深度、依赖链长度等维度变化\",\n    \"引入分支选择准确率(BSA)与条件成功率(CSR)等分支专属诊断指标\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接研究视觉语言导航(VLN)的评估与诊断，提出新基准和指标，属于核心VLN研究且有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"benchmark\", \"conditional-branching\", \"scene-graph\", \"neurosymbolic\"]\n}",
+      "summarized_at": "2026-08-24T01:59:03.589250+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.17318",
+      "title": "If, Then, Otherwise: Diagnosing Conditional Branching in Vision-Language Navigation",
+      "authors": [
+        "Seoyoung Lee",
+        "Neel P. Bhatt",
+        "Pranay Samineni",
+        "Cong Liu",
+        "S P Sharan",
+        "Timothy Barclay",
+        "Gregory M. Wagner",
+        "Daniel Milan",
+        "Sandeep Chinchali",
+        "Ufuk Topcu",
+        "Atlas Wang"
+      ],
+      "abstract": "Vision-language navigation agents are often evaluated on their ability to follow route-like instructions toward a fixed goal. Yet, real navigation instructions often depend on observed states of the environment: if a condition holds, then follow one path, otherwise take another. Such instructions require an agent to evaluate scene evidence, select the correct logical branch, and execute the corresponding navigation behavior. Existing evaluations provide limited control over conditional branch execution, making it difficult to determine whether agents fail because of perception, grounding, navigation, or logical decision-making. We introduce CondVLN, a scene-graph-grounded benchmark for diagnosing conditional branching in vision-language navigation. CondVLN programmatically generates instructions whose branch conditions are grounded in verifiable 3D scene-graph predicates, with controlled variation in branch depth, dependency chain length, spatial composition, evidence observability, and instruction horizon. CondVLN contains over 11,500 generated conditional instructions across AI2-THOR, Matterport3D, Gibson, and ReplicaCAD, and evaluates agents using standard VLN metrics and branch-specific diagnostics: Branch Selection Accuracy and Conditional Success Rate. Evaluating four state-of-the-art VLN agents (VLN-Zero, NaVid, NaVILA, and Open-Nav) shows that conditional branching exposes failures that are not captured by standard success rate or path length alone: agents can navigate plausibly while committing to a branch inconsistent with the observed scene condition. We also present a lightweight neurosymbolic branch-selection model that separates condition grounding from navigation execution, improving performance by 2x. CondVLN provides a reusable testbed for measuring whether embodied agents can not only follow instructions, but follow the right instruction under the right condition.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-08-18T03:22:29+00:00",
+      "updated": "2026-08-18T03:22:29+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.17318v1",
+      "abs_url": "https://arxiv.org/abs/2608.17318",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "navigation instruction",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-24"
+    },
+    {
+      "summary_cn": "针对视觉无人机在死胡同易导航失败的问题，本文提出一种高效的死胡同预测与避让系统。该方法利用轻量级网络基于RGB-D输入预测死胡同的相对距离与方位，并据此修剪预定义轨迹库以实现主动避让，无需真实数据微调即可实现50Hz高频机载重规划。",
+      "highlights": [
+        "提出轻量级网络预测视野内死胡同的距离与方位",
+        "利用预测结果修剪轨迹库实现主动避障，保持导航平滑性",
+        "支持50Hz高频机载重规划，具备零样本真实世界迁移能力"
+      ],
+      "relevance_score": 3,
+      "relevance_reason": "该论文属于无人机视觉导航与避障，但未涉及语言指令引导，与VLN/UAV-VLN仅顺带相关。",
+      "is_uav_vln": false,
+      "tags": [
+        "UAV Navigation",
+        "Dead-End Prediction",
+        "Trajectory Planning",
+        "RGB-D",
+        "Sim-to-Real"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉无人机在死胡同易导航失败的问题，本文提出一种高效的死胡同预测与避让系统。该方法利用轻量级网络基于RGB-D输入预测死胡同的相对距离与方位，并据此修剪预定义轨迹库以实现主动避让，无需真实数据微调即可实现50Hz高频机载重规划。\",\n  \"highlights\": [\n    \"提出轻量级网络预测视野内死胡同的距离与方位\",\n    \"利用预测结果修剪轨迹库实现主动避障，保持导航平滑性\",\n    \"支持50Hz高频机载重规划，具备零样本真实世界迁移能力\"\n  ],\n  \"relevance_score\": 3,\n  \"relevance_reason\": \"该论文属于无人机视觉导航与避障，但未涉及语言指令引导，与VLN/UAV-VLN仅顺带相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"UAV Navigation\", \"Dead-End Prediction\", \"Trajectory Planning\", \"RGB-D\", \"Sim-to-Real\"]\n}",
+      "summarized_at": "2026-08-24T01:59:12.957950+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.16640",
+      "title": "DPNet: Efficient Dead-End Prediction and Avoidance for Vision-Based UAV Navigation",
+      "authors": [
+        "Ruibin Zhang",
+        "Lun Pan",
+        "Zelong Xia",
+        "Jialiang Hou",
+        "Fei Gao"
+      ],
+      "abstract": "Vision-based Unmanned Aerial Vehicles (UAVs) often suffer from navigation failures in dead ends due to limited sensing accuracy and range. To address this challenge, this paper proposes a systematic solution for efficient dead-end prediction and avoidance. The proposed method introduces a lightweight neural network to predict the relative distance and bearing of potential dead ends within the current field of view using RGB-D inputs. These predictions prune a predefined, compact trajectory library, enabling the planner to proactively avoid dead ends while maintaining navigational smoothness. Notably, our approach transfers across real-world scenarios without manual annotation or fine-tuning on real-world data. The system achieves high-frequency replanning at 50 Hz onboard. Extensive simulation benchmarks demonstrate superior performance in success rate, flight time, and trajectory length, and real-world experiments further validate its effectiveness in complex scenarios.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-08-17T14:39:04+00:00",
+      "updated": "2026-08-17T14:39:04+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.16640v1",
+      "abs_url": "https://arxiv.org/abs/2608.16640",
+      "matched_keywords": [
+        "UAV Navigation",
+        "UAVs) often suffer from navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-24"
+    }
+  ],
+  "summarized_count": 4,
+  "skipped_no_summary": 0
+}
