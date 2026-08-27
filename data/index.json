@@ -278,7 +278,34 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-08-24.json"
+    },
+    "2608.23354": {
+      "arxiv_id": "2608.23354",
+      "title": "OptiSight: Bridging Semantic Reasoning and Geometric Control for Embodied Navigation",
+      "date": "2026-08-27",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-27.json"
+    },
+    "2608.22678": {
+      "arxiv_id": "2608.22678",
+      "title": "RACO: Reliability-Aware Coarse-Goal Optimization for Inspection-Oriented UAV Vision-Language Navigation",
+      "date": "2026-08-27",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-08-27.json"
+    },
+    "2608.21926": {
+      "arxiv_id": "2608.21926",
+      "title": "AirAlign: Geometry-Aware Relative Pose Alignment for UAV Last-Meter Navigation",
+      "date": "2026-08-27",
+      "relevance_score": 6,
+      "is_uav_vln": true,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-08-27.json"
     }
   },
-  "last_updated": "2026-08-24T01:59:12.959713+00:00"
+  "last_updated": "2026-08-27T09:49:54.251943+00:00"
 }
