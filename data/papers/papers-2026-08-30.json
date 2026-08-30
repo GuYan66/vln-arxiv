@@ -1,0 +1,105 @@
+{
+  "date": "2026-08-30",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "针对自主室内导航需兼顾语义理解与几何控制的问题，提出OptiSight混合框架。该框架通过有限状态思维链架构将视觉语言模型推理与确定性视觉伺服相结合，利用Grounded-SAM定位开放词汇目标，并通过相机投影几何将视觉观测转化为导航指令。实验表明该方法在8GB显存预算内实现了可靠的零样本室内导航。",
+      "highlights": [
+        "结合VLM语义推理与确定性视觉伺服的混合导航框架",
+        "仅在关键决策点查询VLM以降低计算开销，无需稠密建图",
+        "在AI Habitat中实现8GB显存预算下的零样本导航"
+      ],
+      "relevance_score": 7,
+      "relevance_reason": "该工作结合VLM与几何控制解决具身导航问题，与VLN核心任务高度相关，但聚焦室内场景且未涉及无人机航拍场景。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "embodied navigation",
+        "VLM",
+        "visual servoing",
+        "zero-shot"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对自主室内导航需兼顾语义理解与几何控制的问题，提出OptiSight混合框架。该框架通过有限状态思维链架构将视觉语言模型推理与确定性视觉伺服相结合，利用Grounded-SAM定位开放词汇目标，并通过相机投影几何将视觉观测转化为导航指令。实验表明该方法在8GB显存预算内实现了可靠的零样本室内导航。\",\n  \"highlights\": [\n    \"结合VLM语义推理与确定性视觉伺服的混合导航框架\",\n    \"仅在关键决策点查询VLM以降低计算开销，无需稠密建图\",\n    \"在AI Habitat中实现8GB显存预算下的零样本导航\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"该工作结合VLM与几何控制解决具身导航问题，与VLN核心任务高度相关，但聚焦室内场景且未涉及无人机航拍场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"embodied navigation\", \"VLM\", \"visual servoing\", \"zero-shot\"]\n}",
+      "summarized_at": "2026-08-27T09:49:11.408543+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.23354",
+      "title": "OptiSight: Bridging Semantic Reasoning and Geometric Control for Embodied Navigation",
+      "authors": [
+        "Alperen Avan",
+        "Jordi Sanchez-Riera"
+      ],
+      "abstract": "Autonomous indoor navigation requires both semantic understanding and precise geometric control. We propose OptiSight, a hybrid framework that combines Vision-Language Model reasoning with deterministic visual servoing through a finite-state Chain-of-Thought architecture. Grounded-SAM localizes open-vocabulary targets, while camera projection geometry converts visual observations into navigation commands without requiring dense mapping. The VLM is queried only at key decision points, reducing computational overhead while geometric control handles continuous navigation. Experiments in AI Habitat demonstrate reliable zero-shot navigation across diverse indoor scenarios, including obstacle avoidance and semantic ambiguity, while operating within an 8~GB VRAM budget. The source code is available at https://github.com/avanalperen/OptiSight-Python-Multimodal-CoT-for-Visual-Reasoning.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-08-24T15:02:17+00:00",
+      "updated": "2026-08-24T15:02:17+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.23354v1",
+      "abs_url": "https://arxiv.org/abs/2608.23354",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-08-30"
+    },
+    {
+      "summary_cn": "针对面向巡检的无人机视觉语言导航（UAV-VLN）任务，本文指出现有粗到细策略中粗目标易被误判为可靠的问题。作者提出了可靠性感知的自适应粗到细导航框架 RACO，将粗目标视为运行时假设，利用对象级候选锚点在局部细化前进行校验与修正，并采用尺度自适应的终端细化策略。此外，基于 CityNav/CityRefer 构建了面向巡检的评估设置 LG-UVI，在验证和测试集上显著提升了成功率与巡检区域到达率。",
+      "highlights": [
+        "提出可靠性感知的自适应粗到细导航框架 RACO，将粗目标视为运行时假设而非固定航点",
+        "引入面向对象级巡检的评估设置 LG-UVI，扩展标准 UAV-VLN 场景以包含目标对象、困难干扰项和类型感知巡检区域",
+        "在验证和测试未见集上，成功率分别提升 9.53 和 7.98 个百分点，同时降低误验证风险"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "本文直接聚焦无人机视觉语言导航（UAV-VLN），提出可靠性感知的粗到细优化框架并构建巡检导向评估基准，是该领域的核心研究。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "coarse-to-fine",
+        "inspection",
+        "reliability-aware",
+        "CityNav"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对面向巡检的无人机视觉语言导航（UAV-VLN）任务，本文指出现有粗到细策略中粗目标易被误判为可靠的问题。作者提出了可靠性感知的自适应粗到细导航框架 RACO，将粗目标视为运行时假设，利用对象级候选锚点在局部细化前进行校验与修正，并采用尺度自适应的终端细化策略。此外，基于 CityNav/CityRefer 构建了面向巡检的评估设置 LG-UVI，在验证和测试集上显著提升了成功率与巡检区域到达率。\",\n  \"highlights\": [\n    \"提出可靠性感知的自适应粗到细导航框架 RACO，将粗目标视为运行时假设而非固定航点\",\n    \"引入面向对象级巡检的评估设置 LG-UVI，扩展标准 UAV-VLN 场景以包含目标对象、困难干扰项和类型感知巡检区域\",\n    \"在验证和测试未见集上，成功率分别提升 9.53 和 7.98 个百分点，同时降低误验证风险\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"本文直接聚焦无人机视觉语言导航（UAV-VLN），提出可靠性感知的粗到细优化框架并构建巡检导向评估基准，是该领域的核心研究。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"coarse-to-fine\", \"inspection\", \"reliability-aware\", \"CityNav\"]\n}",
+      "summarized_at": "2026-08-27T09:49:25.335893+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.22678",
+      "title": "RACO: Reliability-Aware Coarse-Goal Optimization for Inspection-Oriented UAV Vision-Language Navigation",
+      "authors": [
+        "Sen Wang",
+        "Yiming Sun",
+        "Jiaxuan He",
+        "Pengfei Zhu"
+      ],
+      "abstract": "UAV vision-language navigation (UAV-VLN) is commonly evaluated as goal reaching, but inspection-oriented deployment requires the agent to stop within a valid inspection region and avoid falsely confirming visually or semantically similar distractors. This requirement exposes a key weakness in existing coarse-to-fine UAV-VLN policies: the coarse goal predicted before local refinement is often treated as reliable, although it may drift toward plausible but incorrect object regions and limit the ability of the local stage to recover. To systematically evaluate this problem, we introduce LG-UVI, an object-centric inspection evaluation setting derived from CityNav/CityRefer. LG-UVI extends standard UAV-VLN episodes with target objects, hard distractors, type-aware inspection regions, and diagnostics for inspection-region arrival and object-level confirmation. To address this inspection-oriented setting, we further propose RACO, a reliability-aware adaptive coarse-to-fine navigation framework. Instead of treating the predicted coarse goal as a fixed waypoint, RACO views it as a runtime hypothesis and uses object-level candidate anchors to check and correct coarse localization before Stage 1 and at the Stage 1-to-Stage 2 boundary. RACO also applies scale-adaptive terminal refinement to handle terminal near-miss cases using runtime-observable geometric and anchor-based evidence. Under a unified online evaluation protocol, RACO improves SR over the reproduced HETT baseline by 9.53 and 7.98 percentage points on validation-unseen and test-unseen, respectively. It also improves inspection-region arrival and reduces false verification risk, showing that coarse-goal reliability optimization is an effective complement to existing coarse-to-fine UAV-VLN policies.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-08-24T00:32:51+00:00",
+      "updated": "2026-08-24T00:32:51+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.22678v1",
+      "abs_url": "https://arxiv.org/abs/2608.22678",
+      "matched_keywords": [
+        "UAV Vision-Language Navigation",
+        "VLN",
+        "CityNav"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-08-30"
+    }
+  ],
+  "summarized_count": 2,
+  "skipped_no_summary": 0
+}
