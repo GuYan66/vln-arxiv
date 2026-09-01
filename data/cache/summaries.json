@@ -709,5 +709,85 @@
     "raw_model_output": "{\n  \"summary_cn\": \"针对无人机在最后阶段导航中因视角和外观变化大导致位姿对齐困难的问题，提出AirAlign框架。该方法利用预训练视觉几何重建模型提取几何感知特征，并通过场景不交叉验证与模型集成策略提升泛化能力。实验表明该方法在PairUAV挑战赛中有效且鲁棒。\",\n  \"highlights\": [\n    \"提出基于RGB图像对的无人机相对位姿对齐框架AirAlign\",\n    \"利用预训练视觉几何重建模型提取几何感知特征\",\n    \"采用场景不交叉验证与集成策略提升有限数据下的泛化性\"\n  ],\n  \"relevance_score\": 6,\n  \"relevance_reason\": \"该论文聚焦于无人机最后阶段导航的视觉位姿对齐，属于UAV导航相关研究，但未涉及视觉语言导航(VLN)中的语言指令理解与推理。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV导航\", \"位姿对齐\", \"视觉几何\", \"模型集成\"]\n}",
     "summarized_at": "2026-08-27T09:49:54.250395+00:00",
     "summarize_error": null
+  },
+  "2608.30935": {
+    "summary_cn": "现有具身导航系统多依赖任务或本体特定的组件，泛化性受限。LightNav-0 通过统一 token 接口激发预训练 VLM 的空间智能，利用双通道指向和残差向量量化动作分词器将空间意图映射为精确轨迹，实现跨任务、跨场景、跨本体的通用导航。该模型在 10 个公开导航模拟环境中取得 SOTA 单目成功率，并在真实世界零样本泛化评估中验证了有效性。",
+    "highlights": [
+      "提出统一 token 接口，无需任务特定预测头，支持指令跟随、开放词汇目标导航和视觉跟踪",
+      "采用双通道指向表达任务/场景/本体无关的空间意图，结合残差向量量化动作分词器生成精确轨迹",
+      "在 8 个具身推理基准和 10 个公开导航模拟环境中均取得最优表现，并实现真实世界零样本跨本体泛化"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该工作聚焦通用具身导航，核心涉及视觉语言导航与跨本体泛化，对 VLN 研究具有重要参考价值。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "具身导航",
+      "VLM",
+      "通用导航",
+      "跨本体泛化"
+    ],
+    "raw_model_output": "{\"summary_cn\":\"现有具身导航系统多依赖任务或本体特定的组件，泛化性受限。LightNav-0 通过统一 token 接口激发预训练 VLM 的空间智能，利用双通道指向和残差向量量化动作分词器将空间意图映射为精确轨迹，实现跨任务、跨场景、跨本体的通用导航。该模型在 10 个公开导航模拟环境中取得 SOTA 单目成功率，并在真实世界零样本泛化评估中验证了有效性。\",\"highlights\":[\"提出统一 token 接口，无需任务特定预测头，支持指令跟随、开放词汇目标导航和视觉跟踪\",\"采用双通道指向表达任务/场景/本体无关的空间意图，结合残差向量量化动作分词器生成精确轨迹\",\"在 8 个具身推理基准和 10 个公开导航模拟环境中均取得最优表现，并实现真实世界零样本跨本体泛化\"],\"relevance_score\":8,\"relevance_reason\":\"该工作聚焦通用具身导航，核心涉及视觉语言导航与跨本体泛化，对 VLN 研究具有重要参考价值。\",\"is_uav_vln\":false,\"tags\":[\"VLN\",\"具身导航\",\"VLM\",\"通用导航\",\"跨本体泛化\"]}",
+    "summarized_at": "2026-09-01T05:08:57.966689+00:00",
+    "summarize_error": null
+  },
+  "2608.29483": {
+    "summary_cn": "现有VLM在图像地理定位任务上表现优异，但大多局限于静态图像检索与分类。本文提出GeoAgent基准，要求多模态智能体在街景环境中自主导航以收集观测，通过序列推理优化地理定位预测。实验表明，智能体导航显著提升了定位精度，同时揭示了VLM在区域级模式识别和自我改进能力上的不足。",
+    "highlights": [
+      "提出基于智能体环境的地理定位基准GeoAgent，要求在街景环境中进行具身导航",
+      "智能体导航相比静态图像基线在多项指标上显著提升地理定位精度",
+      "揭示了前沿VLM在发达/发展中地区间的偏差及区域级预测的不足"
+    ],
+    "relevance_score": 5,
+    "relevance_reason": "该论文涉及具身导航与视觉语言模型，但核心任务是地理定位而非视觉语言导航(VLN)，属于相关但非核心研究。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLM",
+      "geolocalization",
+      "embodied navigation",
+      "benchmark",
+      "Street View"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"现有VLM在图像地理定位任务上表现优异，但大多局限于静态图像检索与分类。本文提出GeoAgent基准，要求多模态智能体在街景环境中自主导航以收集观测，通过序列推理优化地理定位预测。实验表明，智能体导航显著提升了定位精度，同时揭示了VLM在区域级模式识别和自我改进能力上的不足。\",\n  \"highlights\": [\n    \"提出基于智能体环境的地理定位基准GeoAgent，要求在街景环境中进行具身导航\",\n    \"智能体导航相比静态图像基线在多项指标上显著提升地理定位精度\",\n    \"揭示了前沿VLM在发达/发展中地区间的偏差及区域级预测的不足\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"该论文涉及具身导航与视觉语言模型，但核心任务是地理定位而非视觉语言导航(VLN)，属于相关但非核心研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLM\", \"geolocalization\", \"embodied navigation\", \"benchmark\", \"Street View\"]\n}",
+    "summarized_at": "2026-09-01T05:09:20.510658+00:00",
+    "summarize_error": null
+  },
+  "2608.29114": {
+    "summary_cn": "针对VLN中环境表征难以同时支持显式语义记忆与连续探索引导的问题，本文提出认知图场记忆（CGFM），将物体、空间关系与视觉观测组织为多模态场景图，并在无可靠目标匹配时将图证据投影至目标条件语义前沿场以引导探索。基于此构建的CGFM-Nav框架集成了子图选择、VLM推理与验证反馈的闭环决策，在GOAT-Bench上显著提升了导航成功率与SPL。",
+    "highlights": [
+      "提出认知图场记忆（CGFM），耦合显式关系记忆（多模态场景图）与连续空间直觉（语义前沿场）",
+      "构建基于基础模型的生命周期多模态导航框架CGFM-Nav，实现子图选择、VLM推理与验证反馈的闭环决策",
+      "在GOAT-Bench基准上，相同骨干网络下将成功率从53.2%提升至63.0%，SPL从30.0%提升至39.6%"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文是VLN领域的核心研究，提出结合场景图与语义前沿场的创新环境表征方法，对VLN研究有直接贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "Embodied Navigation",
+      "Scene Graph",
+      "Foundation Model",
+      "Lifelong Navigation"
+    ],
+    "raw_model_output": "{\"summary_cn\":\"针对VLN中环境表征难以同时支持显式语义记忆与连续探索引导的问题，本文提出认知图场记忆（CGFM），将物体、空间关系与视觉观测组织为多模态场景图，并在无可靠目标匹配时将图证据投影至目标条件语义前沿场以引导探索。基于此构建的CGFM-Nav框架集成了子图选择、VLM推理与验证反馈的闭环决策，在GOAT-Bench上显著提升了导航成功率与SPL。\",\"highlights\":[\"提出认知图场记忆（CGFM），耦合显式关系记忆（多模态场景图）与连续空间直觉（语义前沿场）\",\"构建基于基础模型的生命周期多模态导航框架CGFM-Nav，实现子图选择、VLM推理与验证反馈的闭环决策\",\"在GOAT-Bench基准上，相同骨干网络下将成功率从53.2%提升至63.0%，SPL从30.0%提升至39.6%\"],\"relevance_score\":8,\"relevance_reason\":\"该论文是VLN领域的核心研究，提出结合场景图与语义前沿场的创新环境表征方法，对VLN研究有直接贡献。\",\"is_uav_vln\":false,\"tags\":[\"VLN\",\"Embodied Navigation\",\"Scene Graph\",\"Foundation Model\",\"Lifelong Navigation\"]}",
+    "summarized_at": "2026-09-01T05:09:31.330624+00:00",
+    "summarize_error": null
+  },
+  "2608.29073": {
+    "summary_cn": "",
+    "highlights": [
+      " ",
+      " ",
+      " "
+    ],
+    "relevance_score": 3,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [
+      " "
+    ],
+    "raw_model_output": "{\"summary_cn\":\" \",\"highlights\": [\" \",\" \",\" \"],\"relevance_score\": 3,\"relevance_reason\": \" \",\"is_uav_vln\": false,\"tags\": [\" \"]}",
+    "summarized_at": "2026-09-01T05:10:08.248604+00:00",
+    "summarize_error": null
   }
 }

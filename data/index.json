@@ -305,7 +305,43 @@
       "is_uav_vln": true,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-08-27.json"
+    },
+    "2608.30935": {
+      "arxiv_id": "2608.30935",
+      "title": "LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation",
+      "date": "2026-09-01",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-01.json"
+    },
+    "2608.29483": {
+      "arxiv_id": "2608.29483",
+      "title": "GeoAgent: Evaluating VLM Geolocalization Through Embodied Navigation",
+      "date": "2026-09-01",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-01.json"
+    },
+    "2608.29114": {
+      "arxiv_id": "2608.29114",
+      "title": "CGFM-Nav: Cognitive Graph-Field Memory for Semantic-Guided Lifelong Multimodal Embodied Navigation",
+      "date": "2026-09-01",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-01.json"
+    },
+    "2608.29073": {
+      "arxiv_id": "2608.29073",
+      "title": "Revolutionizing Turn-by-Turn Navigation with Cloud-Edge Deep Learning",
+      "date": "2026-09-01",
+      "relevance_score": 3,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-09-01.json"
     }
   },
-  "last_updated": "2026-08-31T05:35:19.604336+00:00"
+  "last_updated": "2026-09-01T05:10:08.250158+00:00"
 }

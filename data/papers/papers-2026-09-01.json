@@ -1,0 +1,209 @@
+{
+  "date": "2026-09-01",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "现有具身导航系统多依赖任务或本体特定的组件，泛化性受限。LightNav-0 通过统一 token 接口激发预训练 VLM 的空间智能，利用双通道指向和残差向量量化动作分词器将空间意图映射为精确轨迹，实现跨任务、跨场景、跨本体的通用导航。该模型在 10 个公开导航模拟环境中取得 SOTA 单目成功率，并在真实世界零样本泛化评估中验证了有效性。",
+      "highlights": [
+        "提出统一 token 接口，无需任务特定预测头，支持指令跟随、开放词汇目标导航和视觉跟踪",
+        "采用双通道指向表达任务/场景/本体无关的空间意图，结合残差向量量化动作分词器生成精确轨迹",
+        "在 8 个具身推理基准和 10 个公开导航模拟环境中均取得最优表现，并实现真实世界零样本跨本体泛化"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该工作聚焦通用具身导航，核心涉及视觉语言导航与跨本体泛化，对 VLN 研究具有重要参考价值。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "具身导航",
+        "VLM",
+        "通用导航",
+        "跨本体泛化"
+      ],
+      "raw_model_output": "{\"summary_cn\":\"现有具身导航系统多依赖任务或本体特定的组件，泛化性受限。LightNav-0 通过统一 token 接口激发预训练 VLM 的空间智能，利用双通道指向和残差向量量化动作分词器将空间意图映射为精确轨迹，实现跨任务、跨场景、跨本体的通用导航。该模型在 10 个公开导航模拟环境中取得 SOTA 单目成功率，并在真实世界零样本泛化评估中验证了有效性。\",\"highlights\":[\"提出统一 token 接口，无需任务特定预测头，支持指令跟随、开放词汇目标导航和视觉跟踪\",\"采用双通道指向表达任务/场景/本体无关的空间意图，结合残差向量量化动作分词器生成精确轨迹\",\"在 8 个具身推理基准和 10 个公开导航模拟环境中均取得最优表现，并实现真实世界零样本跨本体泛化\"],\"relevance_score\":8,\"relevance_reason\":\"该工作聚焦通用具身导航，核心涉及视觉语言导航与跨本体泛化，对 VLN 研究具有重要参考价值。\",\"is_uav_vln\":false,\"tags\":[\"VLN\",\"具身导航\",\"VLM\",\"通用导航\",\"跨本体泛化\"]}",
+      "summarized_at": "2026-09-01T05:08:57.966689+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.30935",
+      "title": "LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation",
+      "authors": [
+        "Shaoan Wang",
+        "Aocheng Luo",
+        "Fei Huang",
+        "Jingyi Xu",
+        "Xiaoyang Wang",
+        "Yueyu Wang",
+        "Qianli Ma",
+        "Fan Yang",
+        "Ran Mei",
+        "Jia Wei",
+        "Jiangpeng Hu",
+        "Xuhao Liu",
+        "Hongming Chen",
+        "Yuanbin Shao",
+        "Yiyang Lin",
+        "Ziliang Li",
+        "Liang Pan",
+        "Xinhang Liu",
+        "Yuntao Ma",
+        "Tingxiang Fan"
+      ],
+      "abstract": "Embodied navigation requires agents to translate heterogeneous goals and visual observations into actions across tasks, environments, and robot embodiments. Modern vision-language models (VLMs) already encode spatial priors for visual grounding, spatial reasoning, and pointing, but these capabilities are rarely elicited directly for robot control. Existing navigation systems instead rely on task- or embodiment-specific components, fragmenting perception, reasoning, and action while offering limited generalization. Here we present LightNav-0, a compact generalist embodied navigation model that elicits the spatial intelligence of a pretrained VLM and aligns it with navigation, without task-specific prediction heads. LightNav-0 represents diverse navigation tasks through a unified token interface: dual-channel pointing expresses task-, scene-, and embodiment-agnostic spatial intent, while a residual vector-quantized action tokenizer maps this intent to precise, embodiment-specific trajectories. Together with temporally aware visual history compression, ER mid-training, supervised fine-tuning, and reinforcement learning, this formulation supports instruction following, open-vocabulary object navigation, and visual tracking within a single model. The navigation training corpus spans 2K+ scenes and 4K+ hours of embodied navigation data. LightNav-ER, the embodied-reasoning checkpoint used to initialize LightNav-0, attains the highest complete-set average across 8 embodied-reasoning benchmarks, while LightNav-0 achieves state-of-the-art monocular success rates across all 10 public navigation simulation settings. Real-world evaluations further demonstrate zero-shot generalization across robot embodiments, diverse scenes, and static and dynamic targets. These results establish compact VLMs as a unified and transferable backbone for generalist embodied navigation.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-31T15:08:53+00:00",
+      "updated": "2026-08-31T15:08:53+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.30935v1",
+      "abs_url": "https://arxiv.org/abs/2608.30935",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-01"
+    },
+    {
+      "summary_cn": "现有VLM在图像地理定位任务上表现优异，但大多局限于静态图像检索与分类。本文提出GeoAgent基准，要求多模态智能体在街景环境中自主导航以收集观测，通过序列推理优化地理定位预测。实验表明，智能体导航显著提升了定位精度，同时揭示了VLM在区域级模式识别和自我改进能力上的不足。",
+      "highlights": [
+        "提出基于智能体环境的地理定位基准GeoAgent，要求在街景环境中进行具身导航",
+        "智能体导航相比静态图像基线在多项指标上显著提升地理定位精度",
+        "揭示了前沿VLM在发达/发展中地区间的偏差及区域级预测的不足"
+      ],
+      "relevance_score": 5,
+      "relevance_reason": "该论文涉及具身导航与视觉语言模型，但核心任务是地理定位而非视觉语言导航(VLN)，属于相关但非核心研究。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLM",
+        "geolocalization",
+        "embodied navigation",
+        "benchmark",
+        "Street View"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有VLM在图像地理定位任务上表现优异，但大多局限于静态图像检索与分类。本文提出GeoAgent基准，要求多模态智能体在街景环境中自主导航以收集观测，通过序列推理优化地理定位预测。实验表明，智能体导航显著提升了定位精度，同时揭示了VLM在区域级模式识别和自我改进能力上的不足。\",\n  \"highlights\": [\n    \"提出基于智能体环境的地理定位基准GeoAgent，要求在街景环境中进行具身导航\",\n    \"智能体导航相比静态图像基线在多项指标上显著提升地理定位精度\",\n    \"揭示了前沿VLM在发达/发展中地区间的偏差及区域级预测的不足\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"该论文涉及具身导航与视觉语言模型，但核心任务是地理定位而非视觉语言导航(VLN)，属于相关但非核心研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLM\", \"geolocalization\", \"embodied navigation\", \"benchmark\", \"Street View\"]\n}",
+      "summarized_at": "2026-09-01T05:09:20.510658+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.29483",
+      "title": "GeoAgent: Evaluating VLM Geolocalization Through Embodied Navigation",
+      "authors": [
+        "Arka Mukherjee",
+        "Soham Roy",
+        "Kartikeya Trivedi",
+        "Shreya Ghosh"
+      ],
+      "abstract": "Modern Vision-Language Models (VLMs) perform well above the human baseline in image geolocalization, a task critically important in disaster response, OSINT verification, and location privacy. However, most efforts to study AI behavior on the task remain limited to static image-based retrieval, classification, and predictions. We argue that faithful recreation of the task should involve embodied navigation, where a multimodal agent autonomously explores its surroundings to gather observations before submitting a prediction. To this end, we introduce \\textbf{GeoAgent}, an agentic environment-based benchmark that requires agents to navigate Street View environments to refine their geolocalization through sequential reasoning. Our analysis shows that modern VLMs struggle to discern regional patterns while succeeding at country- and continent-level predictions. When compared to static image-based baselines, agentic navigation significantly improves accuracy across established metrics. We also note severe bias in a developed/developing region context across frontier model architectures and poor self-improvement capabilities given incorrect priors. Overall, our work establishes the challenges of embodied navigation and geospatial reasoning. We publicly release our code and the GeoAgent environment: https://geoagent-benchmark.github.io",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "published": "2026-08-30T00:19:49+00:00",
+      "updated": "2026-08-30T00:19:49+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.29483v1",
+      "abs_url": "https://arxiv.org/abs/2608.29483",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-01"
+    },
+    {
+      "summary_cn": "针对VLN中环境表征难以同时支持显式语义记忆与连续探索引导的问题，本文提出认知图场记忆（CGFM），将物体、空间关系与视觉观测组织为多模态场景图，并在无可靠目标匹配时将图证据投影至目标条件语义前沿场以引导探索。基于此构建的CGFM-Nav框架集成了子图选择、VLM推理与验证反馈的闭环决策，在GOAT-Bench上显著提升了导航成功率与SPL。",
+      "highlights": [
+        "提出认知图场记忆（CGFM），耦合显式关系记忆（多模态场景图）与连续空间直觉（语义前沿场）",
+        "构建基于基础模型的生命周期多模态导航框架CGFM-Nav，实现子图选择、VLM推理与验证反馈的闭环决策",
+        "在GOAT-Bench基准上，相同骨干网络下将成功率从53.2%提升至63.0%，SPL从30.0%提升至39.6%"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文是VLN领域的核心研究，提出结合场景图与语义前沿场的创新环境表征方法，对VLN研究有直接贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "Embodied Navigation",
+        "Scene Graph",
+        "Foundation Model",
+        "Lifelong Navigation"
+      ],
+      "raw_model_output": "{\"summary_cn\":\"针对VLN中环境表征难以同时支持显式语义记忆与连续探索引导的问题，本文提出认知图场记忆（CGFM），将物体、空间关系与视觉观测组织为多模态场景图，并在无可靠目标匹配时将图证据投影至目标条件语义前沿场以引导探索。基于此构建的CGFM-Nav框架集成了子图选择、VLM推理与验证反馈的闭环决策，在GOAT-Bench上显著提升了导航成功率与SPL。\",\"highlights\":[\"提出认知图场记忆（CGFM），耦合显式关系记忆（多模态场景图）与连续空间直觉（语义前沿场）\",\"构建基于基础模型的生命周期多模态导航框架CGFM-Nav，实现子图选择、VLM推理与验证反馈的闭环决策\",\"在GOAT-Bench基准上，相同骨干网络下将成功率从53.2%提升至63.0%，SPL从30.0%提升至39.6%\"],\"relevance_score\":8,\"relevance_reason\":\"该论文是VLN领域的核心研究，提出结合场景图与语义前沿场的创新环境表征方法，对VLN研究有直接贡献。\",\"is_uav_vln\":false,\"tags\":[\"VLN\",\"Embodied Navigation\",\"Scene Graph\",\"Foundation Model\",\"Lifelong Navigation\"]}",
+      "summarized_at": "2026-09-01T05:09:31.330624+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.29114",
+      "title": "CGFM-Nav: Cognitive Graph-Field Memory for Semantic-Guided Lifelong Multimodal Embodied Navigation",
+      "authors": [
+        "Yuxiang Xiao",
+        "Xibei Chen",
+        "Xin Zhou",
+        "Jie Chen",
+        "Yifeng Zhang",
+        "Guillaume Sartoretti"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) requires agents to reason over accumulated observations while continuously exploring unseen regions. However, existing environment representations often struggle to jointly support explicit semantic memory and continuous exploration guidance. To address this challenge, we propose Cognitive Graph-Field Memory (CGFM), a persistent multimodal scene representation that couples explicit relational memory with continuous spatial intuition. CGFM organizes objects, spatial relations, and visual observations into a multimodal scene graph, enabling target retrieval and long-horizon reasoning across navigation tasks. When no reliable target match is identified, graph-based evidence is projected into a goal-conditioned semantic-frontier field to guide exploration toward semantically promising frontiers and regions. Building upon CGFM, we introduce CGFM-Nav, a foundation-model-based framework for lifelong multimodal navigation that integrates task-relevant subgraph selection, VLM reasoning, and verification feedback into a closed decision loop. Preliminary experiments on GOAT-Bench show that, under the same Qwen3-VL-8B backbone, CGFM-Nav improves the overall success rate from 53.2% to 63.0% and SPL from 30.0% to 39.6%, demonstrating the effectiveness of combining explicit semantic memory with semantic-guided exploration.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-08-29T07:54:38+00:00",
+      "updated": "2026-08-29T07:54:38+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.29114v1",
+      "abs_url": "https://arxiv.org/abs/2608.29114",
+      "matched_keywords": [
+        "Embodied Navigation",
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-01"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [
+        " ",
+        " ",
+        " "
+      ],
+      "relevance_score": 3,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [
+        " "
+      ],
+      "raw_model_output": "{\"summary_cn\":\" \",\"highlights\": [\" \",\" \",\" \"],\"relevance_score\": 3,\"relevance_reason\": \" \",\"is_uav_vln\": false,\"tags\": [\" \"]}",
+      "summarized_at": "2026-09-01T05:10:08.248604+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2608.29073",
+      "title": "Revolutionizing Turn-by-Turn Navigation with Cloud-Edge Deep Learning",
+      "authors": [
+        "Yiming Yang",
+        "Hao Fu",
+        "Fanxiang Zeng",
+        "Xikai Yang",
+        "Yue Liu",
+        "Ning Guo"
+      ],
+      "abstract": "Turn-by-turn (TBT) navigation systems are integral to modern driving experiences, providing real-time audio instructions to guide drivers safely to destinations. However, existing audio instruction policy often relies on rule-based approaches that struggle to balance informational content with cognitive load, potentially leading to driver confusion or missed turns in complex environments. To overcome these difficulties, we first model the generation of navigation instructions as a multi-task learning problem by decomposing the audio content into combinations of modular elements. Then, we propose a novel deep learning framework that leverages the powerful spatiotemporal information processing capabilities of Transformers and the strong multi-task learning abilities of Mixture of Experts (MoE) to generate real-time, context-aware audio instructions for TBT driving navigation. A cloud-edge collaborative architecture is implemented to handle the computational demands of the model, ensuring scalability and real-time performance for practical applications. Experimental results in the real world demonstrate that the proposed method significantly reduces the yaw rate (the proportion of vehicles deviating from navigation routes) compared to traditional methods, delivering clearer and more effective audio instructions. This is the first large-scale application of deep learning in driving audio navigation, marking a substantial advancement in intelligent transportation and driving assistance technologies.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-08-29T05:57:54+00:00",
+      "updated": "2026-08-29T05:57:54+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2608.29073v1",
+      "abs_url": "https://arxiv.org/abs/2608.29073",
+      "matched_keywords": [
+        "navigation instruction"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-01"
+    }
+  ],
+  "summarized_count": 4,
+  "skipped_no_summary": 0
+}
