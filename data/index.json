@@ -341,7 +341,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.AI",
       "path": "papers/papers-2026-09-01.json"
+    },
+    "2609.00920": {
+      "arxiv_id": "2609.00920",
+      "title": "VerNav: Verifier-First Low-Latency Vision-and-Language Navigation",
+      "date": "2026-09-02",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-02.json"
     }
   },
-  "last_updated": "2026-09-01T05:10:08.250158+00:00"
+  "last_updated": "2026-09-02T04:34:58.982828+00:00"
 }
