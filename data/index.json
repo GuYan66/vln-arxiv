@@ -350,7 +350,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-09-02.json"
+    },
+    "2609.02350": {
+      "arxiv_id": "2609.02350",
+      "title": "LookStep: Efficient Vision-Language Navigation with Linguistic Foresight and Event Driven Memory",
+      "date": "2026-09-03",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-03.json"
     }
   },
-  "last_updated": "2026-09-02T04:34:58.982828+00:00"
+  "last_updated": "2026-09-03T04:33:55.775910+00:00"
 }
