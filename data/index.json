@@ -359,7 +359,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-09-03.json"
+    },
+    "2609.03906": {
+      "arxiv_id": "2609.03906",
+      "title": "Revisiting Topological Graphs for Macro Action based Closed-loop Reinforcement Learning of Vision Language Navigation in Continuous Environment",
+      "date": "2026-09-04",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-04.json"
+    },
+    "2609.03483": {
+      "arxiv_id": "2609.03483",
+      "title": "Air-Ground Collaborative Vision-and-Language Navigation via Shared Bird's-Eye Maps",
+      "date": "2026-09-04",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-04.json"
     }
   },
-  "last_updated": "2026-09-03T04:33:55.775910+00:00"
+  "last_updated": "2026-09-04T04:34:43.314255+00:00"
 }
