@@ -377,7 +377,61 @@
       "is_uav_vln": true,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-09-04.json"
+    },
+    "2609.09158": {
+      "arxiv_id": "2609.09158",
+      "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+      "date": "2026-09-09",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-09.json"
+    },
+    "2609.08442": {
+      "arxiv_id": "2609.08442",
+      "title": "AirAnchor: Bridging Local and Global Spatial Information for Zero-Shot Aerial Vision-and-Language Navigation",
+      "date": "2026-09-09",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-09.json"
+    },
+    "2609.06476": {
+      "arxiv_id": "2609.06476",
+      "title": "One MLLM, One Call: Efficient Zero-Shot Vision-and-Language Navigation via Spatial-Aware Waypoints",
+      "date": "2026-09-09",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-09.json"
+    },
+    "2609.06251": {
+      "arxiv_id": "2609.06251",
+      "title": "MobileVLA-R1 2.0: RL-Enhanced Reasoning for Mobile Robot Control",
+      "date": "2026-09-09",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-09.json"
+    },
+    "2609.05841": {
+      "arxiv_id": "2609.05841",
+      "title": "Map the Possibilities: Spatial Belief Fields for Language-Goal Aerial Navigation",
+      "date": "2026-09-09",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-09.json"
+    },
+    "2609.05596": {
+      "arxiv_id": "2609.05596",
+      "title": "Time-Aware Assistive Navigation",
+      "date": "2026-09-09",
+      "relevance_score": 6,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-09.json"
     }
   },
-  "last_updated": "2026-09-08T04:36:33.020015+00:00"
+  "last_updated": "2026-09-09T04:43:46.897013+00:00"
 }
