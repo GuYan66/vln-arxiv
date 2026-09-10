@@ -1,0 +1,395 @@
+{
+  "date": "2026-09-10",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "针对人形机器人在杂乱室内环境中的导航问题，本文提出首个全身视觉语言导航框架TANGO。该框架根据自然语言指令和第一视角RGB图像直接预测29自由度关节空间动作，通过仿真合成数据训练并在真实机器人上实现零样本部署。",
+      "highlights": [
+        "提出首个面向人形机器人的全身视觉语言导航(VLN)框架，直接预测29-DoF关节动作",
+        "在仿真中通过全局路径规划、运动学生成与强化学习生成动态可行的训练监督",
+        "在Unitree G1人形机器人上实现零样本真实世界部署，无需真实导航数据训练"
+      ],
+      "relevance_score": 5,
+      "relevance_reason": "该论文虽明确属于视觉语言导航(VLN)领域，但聚焦于人形机器人的全身运动控制与杂乱环境避障，与研究者关注的VLN及无人机VLN核心场景差异较大。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "humanoid robot",
+        "whole-body control",
+        "vision-language-action",
+        "sim-to-real"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对人形机器人在杂乱室内环境中的导航问题，本文提出首个全身视觉语言导航框架TANGO。该框架根据自然语言指令和第一视角RGB图像直接预测29自由度关节空间动作，通过仿真合成数据训练并在真实机器人上实现零样本部署。\",\n  \"highlights\": [\n    \"提出首个面向人形机器人的全身视觉语言导航(VLN)框架，直接预测29-DoF关节动作\",\n    \"在仿真中通过全局路径规划、运动学生成与强化学习生成动态可行的训练监督\",\n    \"在Unitree G1人形机器人上实现零样本真实世界部署，无需真实导航数据训练\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"该论文虽明确属于视觉语言导航(VLN)领域，但聚焦于人形机器人的全身运动控制与杂乱环境避障，与研究者关注的VLN及无人机VLN核心场景差异较大。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"humanoid robot\", \"whole-body control\", \"vision-language-action\", \"sim-to-real\"]\n}",
+      "summarized_at": "2026-09-09T04:42:49.555615+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.09158",
+      "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+      "authors": [
+        "Anqi Li",
+        "Yuxin Chen",
+        "Zhaobo Li",
+        "Zhuo Cao",
+        "Junli Ren",
+        "Masayoshi Tomizuka",
+        "Dhruv Shah"
+      ],
+      "abstract": "We study the problem of navigating cluttered indoor environments with a humanoid robot. Unlike conventional methods that model navigation as a 2D path planning problem, humanoid traversal in cluttered environments requires continuous geometry-aware whole-body adaptation, including coordinated arm placement, torso adjustment, and gait modulation for collision-free movement through complex 3D spaces. We introduce TANGO, the first whole-body vision-language navigation framework for language-conditioned humanoid traversal in cluttered environments. Given a natural-language instruction and egocentric RGB observations, TANGO directly predicts 29-DoF joint-space actions for downstream whole-body control. We train TANGO entirely in simulation by synthesizing diverse collision-free traversal behaviors via global path planning, kinematic whole-body motion generation, obstacle-aware motion editing, and RL-based tracking. This pipeline provides dynamically feasible action supervision for learning language-conditioned whole-body policies. In extensive simulation experiments, TANGO demonstrates state-of-the-art performance in vision-language navigation, while outperforming strong modular baselines in navigating challenging scenes requiring obstacle negotiation. Lastly, we deploy TANGO zero-shot on a Unitree G1 humanoid robot, and observe robust language-guided traversal in cluttered real-world scenes without training on any real-world navigation data.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-08T17:59:55+00:00",
+      "updated": "2026-09-08T17:59:55+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.09158v1",
+      "abs_url": "https://arxiv.org/abs/2609.09158",
+      "matched_keywords": [
+        "vision-language navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-10"
+    },
+    {
+      "summary_cn": "针对无人机视觉语言导航中零样本方法仅依赖单一空间尺度（局部观测或全局记忆）的局限，本文提出AirAnchor范式。该方法通过空间锚点桥接局部与全局空间信息，构建局部空间表征并增量维护全局目标记忆，将其整合至智能体框架中辅助决策。在AerialVLN数据集上的实验表明该方法显著优于现有零样本基线。",
+      "highlights": [
+        "提出通过空间锚点桥接局部在线观测与全局离线记忆的新范式",
+        "设计持久化目标空间记忆模块以增量维护知识库并检索地标先验",
+        "在AerialVLN数据集上大幅超越现有零样本基线"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "该论文直接针对无人机视觉语言导航(UAV-VLN)的零样本场景，提出创新的空间信息桥接方法并在AerialVLN数据集上验证，属于该研究者的核心领域。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "Zero-Shot",
+        "Spatial Anchor",
+        "AerialVLN",
+        "Navigation Agent"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对无人机视觉语言导航中零样本方法仅依赖单一空间尺度（局部观测或全局记忆）的局限，本文提出AirAnchor范式。该方法通过空间锚点桥接局部与全局空间信息，构建局部空间表征并增量维护全局目标记忆，将其整合至智能体框架中辅助决策。在AerialVLN数据集上的实验表明该方法显著优于现有零样本基线。\",\n  \"highlights\": [\n    \"提出通过空间锚点桥接局部在线观测与全局离线记忆的新范式\",\n    \"设计持久化目标空间记忆模块以增量维护知识库并检索地标先验\",\n    \"在AerialVLN数据集上大幅超越现有零样本基线\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接针对无人机视觉语言导航(UAV-VLN)的零样本场景，提出创新的空间信息桥接方法并在AerialVLN数据集上验证，属于该研究者的核心领域。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"Zero-Shot\", \"Spatial Anchor\", \"AerialVLN\", \"Navigation Agent\"]\n}",
+      "summarized_at": "2026-09-09T04:42:58.835971+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.08442",
+      "title": "AirAnchor: Bridging Local and Global Spatial Information for Zero-Shot Aerial Vision-and-Language Navigation",
+      "authors": [
+        "Shanwei Fan",
+        "Bin Zhang",
+        "Zhiwei Xu",
+        "Yingxuan Teng",
+        "Siqi Dai",
+        "Lin Cheng",
+        "Guoliang Fan"
+      ],
+      "abstract": "Aerial Vision-and-Language Navigation requires drones to follow natural-language instructions and navigate through complex urban environments. Accurate navigation relies on both local and global spatial information, which support immediate action grounding and long-horizon path planning, respectively. However, existing zero-shot methods typically operate at a single spatial scale, relying either on local representations constructed online from current observations or on global memories built offline from historical experience. To address this limitation, we propose AirAnchor, a new paradigm that bridges local and global spatial information through spatial anchors and integrates both into a shared navigation framework, enabling comprehensive spatial grounding for decision-making. AirAnchor consists of three core components: (1) Query-Driven Spatial Anchor Grounding, which identifies decision-relevant anchors from visual observations and organizes them into local spatial representations; (2) Persistent Object Spatial Memory, which incrementally maintains an object knowledge base as persistent global spatial memory and retrieves landmark-related spatial priors; and (3) a Spatially-Informed Navigation Agent, which explicitly integrates both local and global spatial information into an agentic framework for decision-making. Extensive experiments on AerialVLN demonstrate that AirAnchor substantially outperforms existing zero-shot baselines, validating the effectiveness and efficiency of the proposed paradigm.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-08T08:47:54+00:00",
+      "updated": "2026-09-08T08:47:54+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.08442v1",
+      "abs_url": "https://arxiv.org/abs/2609.08442",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "drones to follow natural-language instruction",
+        "AerialVLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-09-10"
+    },
+    {
+      "summary_cn": "针对连续环境下的视觉语言导航（VLN-CE）中零样本方法推理延迟高、计算开销大的问题，本文提出高效零样本导航框架 O2C-Nav。该方法在每个决策步仅调用一次多模态大模型（MLLM），通过无需训练的结构化航点生成器将候选航点投影至RGB图像作为视觉标记，并利用FMM规划器生成无碰撞路径。实验表明该方法在R2R-CE和RxR-CE基准上超越了现有零样本SOTA，具备实时机器人部署潜力。",
+      "highlights": [
+        "每步仅调用一次MLLM，显著降低零样本VLN的推理延迟与计算开销",
+        "提出无需训练的结构化航点生成器，将历史感知候选航点投影到RGB图像上作为视觉标记",
+        "结合FMM底层规划器生成无碰撞可执行路径，在R2R-CE和RxR-CE上达到零样本SOTA"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接研究视觉语言导航（VLN-CE），提出高效的零样本导航框架并在核心VLN基准上取得SOTA，属于VLN方向的核心创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "VLN-CE",
+        "zero-shot",
+        "MLLM",
+        "waypoint",
+        "robotics"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对连续环境下的视觉语言导航（VLN-CE）中零样本方法推理延迟高、计算开销大的问题，本文提出高效零样本导航框架 O2C-Nav。该方法在每个决策步仅调用一次多模态大模型（MLLM），通过无需训练的结构化航点生成器将候选航点投影至RGB图像作为视觉标记，并利用FMM规划器生成无碰撞路径。实验表明该方法在R2R-CE和RxR-CE基准上超越了现有零样本SOTA，具备实时机器人部署潜力。\",\n  \"highlights\": [\n    \"每步仅调用一次MLLM，显著降低零样本VLN的推理延迟与计算开销\",\n    \"提出无需训练的结构化航点生成器，将历史感知候选航点投影到RGB图像上作为视觉标记\",\n    \"结合FMM底层规划器生成无碰撞可执行路径，在R2R-CE和RxR-CE上达到零样本SOTA\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航（VLN-CE），提出高效的零样本导航框架并在核心VLN基准上取得SOTA，属于VLN方向的核心创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLN-CE\", \"zero-shot\", \"MLLM\", \"waypoint\", \"robotics\"]\n}",
+      "summarized_at": "2026-09-09T04:43:13.410313+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.06476",
+      "title": "One MLLM, One Call: Efficient Zero-Shot Vision-and-Language Navigation via Spatial-Aware Waypoints",
+      "authors": [
+        "Shiqi Pan",
+        "Qi Zheng",
+        "Hanqin Sun",
+        "Youjian Zhang",
+        "Daquan Feng",
+        "Xu Wang"
+      ],
+      "abstract": "Vision-and-Language Navigation in Continuous Environments (VLN-CE) requires an embodied agent to navigate unseen environments by following natural language instructions. Current zero-shot VLN-CE methods either rely on pre-trained waypoint predictors or require multiple queries to large models per step. To address prohibitive inference latency and computational overhead, we propose O2C-Nav, an efficient zero-shot navigation framework that calls only a single large model once per decision step. Our approach introduces a training-free structured waypoint generator and a novel abstract representation that projects sparse, history-aware candidate waypoints directly onto RGB images as visual markers. The MLLM selects a waypoint or generates a fallback target bounding box at each step, while a low-level Fast Marching Method (FMM) planner converts the selected target into an executable collision-free path. This paradigm provides the model with concrete spatial perception and explicit memory while significantly reducing the visual processing load. Extensive evaluations on the R2R-CE and RxR-CE benchmarks demonstrate that O2C-Nav outperforms current state-of-the-art zero-shot methods, highlighting its great potential for real-time robotic deployment. Code is available at https://github.com/kkpsq/O2C-Nav-Code.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-09-06T08:49:10+00:00",
+      "updated": "2026-09-06T08:49:10+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.06476v1",
+      "abs_url": "https://arxiv.org/abs/2609.06476",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-10"
+    },
+    {
+      "summary_cn": "针对移动机器人VLA系统在自然语言指令落地执行时高层语义推理与底层控制脱节的问题，提出强化学习增强的框架MobileVLA-R1 2.0。该框架通过思维链对齐与强化学习进行多粒度推理，并引入推理条件动作解码器，将多模态推理表征映射为任务级动作目标，实现感知-推理-动作的统一。实验表明，该方法在VLN-CE及真实世界人形移动操控任务上均显著优于基线，具备稳健的长时序指令跟随能力。",
+      "highlights": [
+        "通过监督式CoT对齐与强化学习实现多粒度具身轨迹推理",
+        "引入推理条件动作解码器，统一高层动作生成与机器人特定执行",
+        "在VLN-CE、四足及人形机器人操控任务上取得显著性能提升"
+      ],
+      "relevance_score": 7,
+      "relevance_reason": "该论文在VLN-CE基准上进行了实验并取得显著提升，属于具身导航与VLN相关研究，但核心侧重于移动机器人的通用视觉-语言-动作控制而非纯VLN。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "VLA",
+        "强化学习",
+        "具身推理",
+        "移动机器人"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对移动机器人VLA系统在自然语言指令落地执行时高层语义推理与底层控制脱节的问题，提出强化学习增强的框架MobileVLA-R1 2.0。该框架通过思维链对齐与强化学习进行多粒度推理，并引入推理条件动作解码器，将多模态推理表征映射为任务级动作目标，实现感知-推理-动作的统一。实验表明，该方法在VLN-CE及真实世界人形移动操控任务上均显著优于基线，具备稳健的长时序指令跟随能力。\",\n  \"highlights\": [\n    \"通过监督式CoT对齐与强化学习实现多粒度具身轨迹推理\",\n    \"引入推理条件动作解码器，统一高层动作生成与机器人特定执行\",\n    \"在VLN-CE、四足及人形机器人操控任务上取得显著性能提升\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"该论文在VLN-CE基准上进行了实验并取得显著提升，属于具身导航与VLN相关研究，但核心侧重于移动机器人的通用视觉-语言-动作控制而非纯VLN。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLA\", \"强化学习\", \"具身推理\", \"移动机器人\"]\n}",
+      "summarized_at": "2026-09-09T04:43:25.985511+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.06251",
+      "title": "MobileVLA-R1 2.0: RL-Enhanced Reasoning for Mobile Robot Control",
+      "authors": [
+        "Ting Huang",
+        "Yue Huang",
+        "Zeyu Zhang",
+        "Shuicheng Yan",
+        "Hao Tang"
+      ],
+      "abstract": "Grounding natural-language instructions into reliable and executable actions remains a fundamental challenge for vision-language-action (VLA) systems on mobile robots, due to the persistent gap between high-level semantic reasoning and low-level locomotion and manipulation control. Existing approaches often rely on implicit reasoning or monolithic action prediction, making it difficult to maintain coherent long-horizon decision making while producing precise and adaptable robot actions. To address this challenge, we propose MobileVLA-R1 2.0, an RL-enhanced VLA framework that explicitly couples structured embodied reasoning with executable mobile robot control. The framework learns multi-granularity reasoning over embodied trajectories through supervised Chain-of-Thought (CoT) alignment and reinforcement learning, improving reasoning-to-action consistency beyond purely behavioral supervision. To support both locomotion and manipulation, we further introduce a reasoning-conditioned action decoder that maps multimodal reasoning representations to task-level action targets, which are subsequently translated into embodiment-specific commands by robot controllers. This design provides a unified perception-reasoning-action interface while decoupling high-level action generation from robot-specific actuation. We conduct extensive evaluations on language-guided navigation, quadruped control, and humanoid mobile manipulation, covering VLN-CE, QUARD, and real-world deployments on Unitree Go2 and G1 robots. MobileVLA-R1 2.0 consistently outperforms strong VLA baselines, achieving an average 1.6 point improvement in SR on VLN-CE and a 10.0 point improvement in full-task success on real-world G1 mobile manipulation tasks over MobileVLA-R1, while demonstrating robust long-horizon instruction following and closed-loop execution across different robotic platforms.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-09-05T20:31:14+00:00",
+      "updated": "2026-09-05T20:31:14+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.06251v1",
+      "abs_url": "https://arxiv.org/abs/2609.06251",
+      "matched_keywords": [
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-10"
+    },
+    {
+      "summary_cn": "针对语言引导的无人机航拍导航中因观测不全和语言歧义导致的空间不确定性问题，本文提出了闭环导航框架SBFNav。其核心是构建语言条件下的空间信念场（SBF），以分布形式保留多个潜在目标位置假设，并在每步根据新观测动态更新，从而选择最符合指令的度量航点进行控制。该方法在CityNav基准测试中取得最优整体性能，显著提升了未见场景的成功率与路径效率。",
+      "highlights": [
+        "提出空间信念场（SBF）表示任务条件下的目标位置分布，保留空间多假设而非过早坍缩为单一点",
+        "构建闭环导航框架SBFNav，随观测积累动态更新信念场并选取最优度量航点",
+        "在CityNav基准上取得最佳报告性能，Test Unseen拆分下SR提升至32.29%，SPL提升至30.43%"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "该论文直接研究无人机视觉语言导航（UAV-VLN），提出空间信念场解决语言引导航拍导航中的核心挑战，属于该研究者的核心方向且具有显著创新贡献。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "aerial navigation",
+        "spatial belief field",
+        "CityNav",
+        "closed-loop navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对语言引导的无人机航拍导航中因观测不全和语言歧义导致的空间不确定性问题，本文提出了闭环导航框架SBFNav。其核心是构建语言条件下的空间信念场（SBF），以分布形式保留多个潜在目标位置假设，并在每步根据新观测动态更新，从而选择最符合指令的度量航点进行控制。该方法在CityNav基准测试中取得最优整体性能，显著提升了未见场景的成功率与路径效率。\",\n  \"highlights\": [\n    \"提出空间信念场（SBF）表示任务条件下的目标位置分布，保留空间多假设而非过早坍缩为单一点\",\n    \"构建闭环导航框架SBFNav，随观测积累动态更新信念场并选取最优度量航点\",\n    \"在CityNav基准上取得最佳报告性能，Test Unseen拆分下SR提升至32.29%，SPL提升至30.43%\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接研究无人机视觉语言导航（UAV-VLN），提出空间信念场解决语言引导航拍导航中的核心挑战，属于该研究者的核心方向且具有显著创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"aerial navigation\", \"spatial belief field\", \"CityNav\", \"closed-loop navigation\"]\n}",
+      "summarized_at": "2026-09-09T04:43:34.217245+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.05841",
+      "title": "Map the Possibilities: Spatial Belief Fields for Language-Goal Aerial Navigation",
+      "authors": [
+        "Haotian Xu",
+        "Yue Hu",
+        "Zhengqiu Zhu",
+        "Yong Zhao",
+        "Wenguan Wang",
+        "Quanjun Yin"
+      ],
+      "abstract": "Language-goal aerial navigation requires an agent to local- ize a potentially unobserved target from relational instruc- tions and partial observations, and translate this inference into metric actions in large-scale continuous environments. Existing methods often reduce language grounding to one single waypoint or action, prematurely collapsing the spatial uncertainty inherent in incomplete evidence and ambiguous relations. To address this limitation, we introduce SBFNav, a closed-loop navigation framework centered on a language- conditioned Spatial Belief Field (SBF). Unlike ego-centric maps that primarily record what has been observed, SBF rep- resents a task-conditioned distribution over plausible target locations, preserving multiple spatial hypotheses under par- tial evidence. At each step, this distribution is updated from accumulated observations as new evidence becomes avail- able. Built on this representation, SBFNav selects the goal that best aligns with the instruction and observations as a met- ric waypoint for control. Experiments on both the original and revised CityNav benchmarks achieve the best reported overall performance. On the Test Unseen split, our method improves SR from 25.91% to 32.29% and SPL from 19.63% to 30.43%. Ablation studies further confirm the advantages of spatial-belief modeling over single-point prediction.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-05T03:11:01+00:00",
+      "updated": "2026-09-05T03:11:01+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.05841v1",
+      "abs_url": "https://arxiv.org/abs/2609.05841",
+      "matched_keywords": [
+        "Aerial Navigation",
+        "CityNav"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-09-10"
+    },
+    {
+      "summary_cn": "针对多模态大语言模型（MLLM）在辅助导航中缺乏实时响应时机规划能力的问题，本文提出一个大规模第一人称户外辅助导航基准。研究发现现有MLLM难以提供安全及时（when to say）的导航指令，通过引入预测指令背后原因的直接监督方法，在开环、闭环及sim-to-real迁移中取得显著提升，并揭示了时序推理与安全感知等持续挑战。",
+      "highlights": [
+        "提出面向复杂户外环境的第一人称辅助导航大规模多模态基准",
+        "揭示现成MLLM在时间敏感导航指令生成上的根本局限",
+        "通过预测指令原因的简单有效监督方法，在多设置下显著提升性能",
+        "分析指出时序推理、安全关键物体感知和距离理解等持续挑战"
+      ],
+      "relevance_score": 6,
+      "relevance_reason": "该研究聚焦于第一人称视角的辅助导航与多模态大模型实时交互，虽涉及视觉语言导航指令生成，但核心关注响应时机而非传统VLN的路径规划与导航策略，属于相关但非核心VLN研究。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "MLLM",
+        "assistive-navigation",
+        "egocentric",
+        "temporal-reasoning",
+        "sim-to-real"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对多模态大语言模型（MLLM）在辅助导航中缺乏实时响应时机规划能力的问题，本文提出一个大规模第一人称户外辅助导航基准。研究发现现有MLLM难以提供安全及时（when to say）的导航指令，通过引入预测指令背后原因的直接监督方法，在开环、闭环及sim-to-real迁移中取得显著提升，并揭示了时序推理与安全感知等持续挑战。\",\n  \"highlights\": [\n    \"提出面向复杂户外环境的第一人称辅助导航大规模多模态基准\",\n    \"揭示现成MLLM在时间敏感导航指令生成上的根本局限\",\n    \"通过预测指令原因的简单有效监督方法，在多设置下显著提升性能\",\n    \"分析指出时序推理、安全关键物体感知和距离理解等持续挑战\"\n  ],\n  \"relevance_score\": 6,\n  \"relevance_reason\": \"该研究聚焦于第一人称视角的辅助导航与多模态大模型实时交互，虽涉及视觉语言导航指令生成，但核心关注响应时机而非传统VLN的路径规划与导航策略，属于相关但非核心VLN研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"MLLM\", \"assistive-navigation\", \"egocentric\", \"temporal-reasoning\", \"sim-to-real\"]\n}",
+      "summarized_at": "2026-09-09T04:43:46.895062+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.05596",
+      "title": "Time-Aware Assistive Navigation",
+      "authors": [
+        "Masaki Kuribayashi",
+        "Zhongkai Shangguan",
+        "Eshed Ohn-Bar"
+      ],
+      "abstract": "Can interactive vision-and-language agents learn not just what to say but also \\textbf{\\textit{when}} to say it? Current language models rarely plan over whether and when to realize a real-time response to a user. However, providing accurate and timely support for human decision-making, such as when guiding visually impaired individuals through urban environments, requires careful real-time responsiveness--poorly timed responses can distract users or add unnecessary cognitive load. As a machine intelligence challenge for Multimodal Large Language Model (MLLM)-based agents, we introduce a large-scale multimodal benchmark for an egocentric, assistive navigation task in complex outdoor environments. Using this benchmark, we uncover a fundamental limitation of off-the-shelf MLLMs in delivering safe and time-sensitive navigation instructions, even with model fine-tuning on substantial amounts of data. We then demonstrate that a simple yet effective modification of the model, including direct supervision to predict the underlying reason for each instruction, yields significant performance gains across open-loop, closed-loop, and sim-to-real generalization settings. However, our analysis highlights persistent challenges in temporal reasoning, safety-critical object awareness, and relational and distance understanding. To advance the development of scalable assistive agents, we will release our simulation, benchmark, and code (available at the project website: https://timeli-icra.github.io/).",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-09-04T17:59:47+00:00",
+      "updated": "2026-09-04T17:59:47+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.05596v1",
+      "abs_url": "https://arxiv.org/abs/2609.05596",
+      "matched_keywords": [
+        "navigation instruction"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-10"
+    },
+    {
+      "summary_cn": "针对连续环境视觉语言导航(VLN-CE)中模仿学习易受分布偏移影响及微观动作空间强化学习样本效率低的问题，本文提出将其重构为分层马尔可夫决策过程。方法通过拓扑图抽象环境，将高层策略运行于前沿节点的宏观动作空间，并使用免训练的低层控制器作为状态转移，显著压缩决策步长。结合提出的动作感知价值头与图PPO算法，模型在R2R-CE和RxR-CE基准上达到了SOTA性能。",
+      "highlights": [
+        "将VLN-CE重构为分层MDP，解耦高层规划与低层控制",
+        "利用拓扑图构建宏观动作空间，显著提升闭环RL的样本效率",
+        "提出动作感知价值头以适应动态前沿动作空间，赋能图PPO优化"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文是连续环境视觉语言导航(VLN-CE)的核心研究，提出了基于分层强化学习的新颖架构并在主流基准上取得SOTA，对VLN方向研究者具有高度参考价值。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN-CE",
+        "分层强化学习",
+        "拓扑图",
+        "PPO",
+        "宏观动作空间"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对连续环境视觉语言导航(VLN-CE)中模仿学习易受分布偏移影响及微观动作空间强化学习样本效率低的问题，本文提出将其重构为分层马尔可夫决策过程。方法通过拓扑图抽象环境，将高层策略运行于前沿节点的宏观动作空间，并使用免训练的低层控制器作为状态转移，显著压缩决策步长。结合提出的动作感知价值头与图PPO算法，模型在R2R-CE和RxR-CE基准上达到了SOTA性能。\",\n  \"highlights\": [\n    \"将VLN-CE重构为分层MDP，解耦高层规划与低层控制\",\n    \"利用拓扑图构建宏观动作空间，显著提升闭环RL的样本效率\",\n    \"提出动作感知价值头以适应动态前沿动作空间，赋能图PPO优化\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文是连续环境视觉语言导航(VLN-CE)的核心研究，提出了基于分层强化学习的新颖架构并在主流基准上取得SOTA，对VLN方向研究者具有高度参考价值。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN-CE\", \"分层强化学习\", \"拓扑图\", \"PPO\", \"宏观动作空间\"]\n}",
+      "summarized_at": "2026-09-04T04:34:17.321859+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.03906",
+      "title": "Revisiting Topological Graphs for Macro Action based Closed-loop Reinforcement Learning of Vision Language Navigation in Continuous Environment",
+      "authors": [
+        "Shuhao Ye",
+        "Sitong Mao",
+        "Yuxiang Cui",
+        "Yufei Wei",
+        "Xuan Yu",
+        "Shichao Zhai",
+        "Wen Chen",
+        "Shunbo Zhou",
+        "Rong Xiong",
+        "Yue Wang"
+      ],
+      "abstract": "Vision-Language Navigation in Continuous Environments (VLN-CE) requires an agent to follow natural language instructions through unseen environments. Existing imitation learning (IL) pipelines struggle in this closed-loop setting: behavior cloning suffers from distribution shift, and DAgger's expert actions become ambiguous upon trajectory deviation. While Reinforcement Learning (RL) offers a natural paradigm to address this, directly applying RL to micro action spaces is sample-inefficient due to reward sparsity. To overcome this bottleneck, we reformulate VLN-CE as a Hierarchical Markov Decision Process (MDP), explicitly decoupling high-level planning from low-level control. By abstracting the environment into a topological graph, our high-level policy operates on a macro action space of frontier nodes, with a training-free low-level controller acting as its state transition, which significantly compresses the decision horizon and makes closed-loop RL tractable. To support RL optimization on the macro MDP, we propose an action-aware value head to effectively evaluate state values under the dynamic frontier action space, powering a graph-based PPO. Extensive experiments demonstrate the effectiveness of our architecture. Finally, our model achieves state-of-the-art performance on the R2R-CE and RxR-CE benchmarks.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-03T14:24:29+00:00",
+      "updated": "2026-09-03T14:24:29+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.03906v1",
+      "abs_url": "https://arxiv.org/abs/2609.03906",
+      "matched_keywords": [
+        "Vision Language Navigation",
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-10"
+    },
+    {
+      "summary_cn": "针对无人机与地面机器人协同视觉语言导航(VLN)中缺乏有效协作机制的问题，本文提出首个免训练的空地协同VLN基线AGC-VLN。该方法利用无人机全局视角渲染共享鸟瞰图，为地面机器人提供全局空间上下文以辅助路径规划，同时无人机执行空间搜索定位目标。实验表明该方法显著提升了联合导航成功率，大幅超越单智能体基线。",
+      "highlights": [
+        "提出首个免训练的空地协同视觉语言导航(VLN)基线AGC-VLN",
+        "利用无人机全局视角构建共享鸟瞰图，实现空地空间上下文互补",
+        "在CARLA-Air中联合成功率达77.0%，较最强单智能体基线提升24.0个百分点"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "该论文直接研究无人机(UAV)与地面机器人协同的视觉语言导航(VLN)，属于UAV-VLN核心方向且提出了创新协作机制与基线方法。",
+      "is_uav_vln": true,
+      "tags": [
+        "VLN",
+        "UAV-VLN",
+        "Air-Ground Collaboration",
+        "Bird's-Eye Map",
+        "Training-Free"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对无人机与地面机器人协同视觉语言导航(VLN)中缺乏有效协作机制的问题，本文提出首个免训练的空地协同VLN基线AGC-VLN。该方法利用无人机全局视角渲染共享鸟瞰图，为地面机器人提供全局空间上下文以辅助路径规划，同时无人机执行空间搜索定位目标。实验表明该方法显著提升了联合导航成功率，大幅超越单智能体基线。\",\n  \"highlights\": [\n    \"提出首个免训练的空地协同视觉语言导航(VLN)基线AGC-VLN\",\n    \"利用无人机全局视角构建共享鸟瞰图，实现空地空间上下文互补\",\n    \"在CARLA-Air中联合成功率达77.0%，较最强单智能体基线提升24.0个百分点\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接研究无人机(UAV)与地面机器人协同的视觉语言导航(VLN)，属于UAV-VLN核心方向且提出了创新协作机制与基线方法。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"Air-Ground Collaboration\", \"Bird's-Eye Map\", \"Training-Free\"]\n}",
+      "summarized_at": "2026-09-04T04:34:43.312500+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.03483",
+      "title": "Air-Ground Collaborative Vision-and-Language Navigation via Shared Bird's-Eye Maps",
+      "authors": [
+        "Shuning Zhang",
+        "Liang Li",
+        "Yunheng Wang",
+        "Tao Wang",
+        "Yihang Kang",
+        "Renjing Xu"
+      ],
+      "abstract": "Air-ground collaborative Vision-and-Language Navigation (VLN) pairs an unmanned aerial vehicle (UAV) with a global bird's-eye view and an unmanned ground vehicle (UGV) with a local first-person view, yet the setting remains largely unexplored: existing training-free methods solve single-agent tasks but offer no collaboration mechanism, and a recent CARLA-Air evaluation found no stable cooperative behavior across five state-of-the-art VLA models; naive semantic communication or bidirectional coupling even degrades performance. We establish AGC-VLN (Air-Ground Collaborative VLN), the first training-free baseline for air-ground collaborative VLN. The key insight is that training-free methods decompose navigation into VLM-based semantic reasoning and deterministic geometric execution, exposing a collaboration interface: the UAV's global view, over which it renders the UGV's reported pose and the VLM-anchored target as CAR/GOAL markers with distance labels, yielding a shared bird's-eye map. From this map, the UGV acquires global spatial context its first-person view cannot provide, plans a road-following path with a frozen VLM, and executes it under closed-loop control; in parallel, the UAV runs 3D-SPF, a spatial-search upgrade of SPF that localizes the target in the downward view and flies toward it. On 100 closed-loop episodes in CARLA-Air's Town10HD scene, AGC-VLN reaches a 77.0% joint success rate, a collaboration gain of +27.0% over the weaker individual agent (the UAV, 50.0%), and exceeds the strongest published single-agent baseline (Travel UAV, 53.0%) by 24.0 points, stemming from the complementarity of the UAV's global view and the UGV's road-following execution. Project page: https://github.com/ZSN2024/AGC-VLN.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-03T07:38:41+00:00",
+      "updated": "2026-09-08T08:06:30+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.03483v3",
+      "abs_url": "https://arxiv.org/abs/2609.03483",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-09-10"
+    }
+  ],
+  "summarized_count": 8,
+  "skipped_no_summary": 0
+}
