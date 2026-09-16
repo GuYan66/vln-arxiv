@@ -431,7 +431,70 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-09-09.json"
+    },
+    "2609.17499": {
+      "arxiv_id": "2609.17499",
+      "title": "ENCP: Episode-Normalized Conformal Prediction for Vision-and-Language Navigation",
+      "date": "2026-09-16",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.LG",
+      "path": "papers/papers-2026-09-16.json"
+    },
+    "2609.17198": {
+      "arxiv_id": "2609.17198",
+      "title": "TIO-Former: Ultra-Lightweight 6-Directional ToF-Inertial Odometry for Nano-UAVs via a Streaming Causal Transformer",
+      "date": "2026-09-16",
+      "relevance_score": 2,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-16.json"
+    },
+    "2609.15195": {
+      "arxiv_id": "2609.15195",
+      "title": "HarnessVLN: Unifying Training-Free Embodied Navigation through an Agent Harness",
+      "date": "2026-09-16",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-16.json"
+    },
+    "2609.15142": {
+      "arxiv_id": "2609.15142",
+      "title": "C$^2$Nav: Compare Before You Commit for Zero-Shot Vision-and-Language Navigation",
+      "date": "2026-09-16",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-16.json"
+    },
+    "2609.15098": {
+      "arxiv_id": "2609.15098",
+      "title": "LG-VLN: A Zero-Shot Vision-and-Language Navigation Framework with LangGraph State Orchestration",
+      "date": "2026-09-16",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-16.json"
+    },
+    "2609.14806": {
+      "arxiv_id": "2609.14806",
+      "title": "Belief-Adaptive Online Autonomy for Quadrotor UAV Navigation under GNSS Degradation in Urban Environments",
+      "date": "2026-09-16",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-16.json"
+    },
+    "2609.12285": {
+      "arxiv_id": "2609.12285",
+      "title": "AnchorVLN: Geometry-Anchored Vision-Language Grounding Reasoning for Open-Vocabulary Navigation",
+      "date": "2026-09-16",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-16.json"
     }
   },
-  "last_updated": "2026-09-12T04:34:56.713347+00:00"
+  "last_updated": "2026-09-16T04:52:05.309443+00:00"
 }
