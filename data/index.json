@@ -494,7 +494,43 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-09-16.json"
+    },
+    "2609.18789": {
+      "arxiv_id": "2609.18789",
+      "title": "AdaGeoVLN: Selective Geometry Across Representation Depth and Navigation Time for Vision-Language Navigation",
+      "date": "2026-09-17",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-17.json"
+    },
+    "2609.18581": {
+      "arxiv_id": "2609.18581",
+      "title": "GroundingVLN: Reasoning and Acting with Grounding for Vision-Language Navigation",
+      "date": "2026-09-17",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-17.json"
+    },
+    "2609.18451": {
+      "arxiv_id": "2609.18451",
+      "title": "VLM-MPPI: Grounding Natural Language in Behaviorally Diverse Trajectories for Aerial Navigation",
+      "date": "2026-09-17",
+      "relevance_score": 9,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-17.json"
+    },
+    "2609.18326": {
+      "arxiv_id": "2609.18326",
+      "title": "UAVs Meet Embodied Intelligence: Bridging Human Intents and Flying Dynamics Via Harnessing Physical-Digital AI Agents",
+      "date": "2026-09-17",
+      "relevance_score": 8,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-17.json"
     }
   },
-  "last_updated": "2026-09-16T04:52:05.309443+00:00"
+  "last_updated": "2026-09-17T04:54:21.010254+00:00"
 }

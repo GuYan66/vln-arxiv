@@ -1,0 +1,540 @@
+{
+  "date": "2026-09-17",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "针对视觉语言导航中如何利用几何基础模型特征及保留历史几何信息的问题，本文提出AdaGeoVLN流式框架。该方法在表示深度上分层融合GFM不同深度的特征至策略各阶段，在导航时间上基于指令相关性等指标有界保留历史KV状态。在R2R-CE和RxR-CE上取得优异性能且无需额外数据，验证了多深度耦合与有界记忆保留的有效性。",
+      "highlights": [
+        "分层GFM-VLM融合：将GFM不同深度（浅层、中层、深层）表示耦合到连续的策略阶段，而非重复注入最终特征",
+        "导航感知GFM记忆：基于指令相关性、几何置信度和转移新颖性，在有限预算内保留历史VGGT全局注意力KV状态",
+        "在R2R-CE和RxR-CE上仅用单RGB流即取得强性能，无需额外导航专用外部数据"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文是核心VLN研究，创新性地将几何基础模型的多深度表示与历史记忆机制引入视觉语言导航，对VLN研究者具有直接参考价值。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "几何基础模型",
+        "特征融合",
+        "记忆机制",
+        "R2R-CE",
+        "RxR-CE"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航中如何利用几何基础模型特征及保留历史几何信息的问题，本文提出AdaGeoVLN流式框架。该方法在表示深度上分层融合GFM不同深度的特征至策略各阶段，在导航时间上基于指令相关性等指标有界保留历史KV状态。在R2R-CE和RxR-CE上取得优异性能且无需额外数据，验证了多深度耦合与有界记忆保留的有效性。\",\n  \"highlights\": [\n    \"分层GFM-VLM融合：将GFM不同深度（浅层、中层、深层）表示耦合到连续的策略阶段，而非重复注入最终特征\",\n    \"导航感知GFM记忆：基于指令相关性、几何置信度和转移新颖性，在有限预算内保留历史VGGT全局注意力KV状态\",\n    \"在R2R-CE和RxR-CE上仅用单RGB流即取得强性能，无需额外导航专用外部数据\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文是核心VLN研究，创新性地将几何基础模型的多深度表示与历史记忆机制引入视觉语言导航，对VLN研究者具有直接参考价值。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"几何基础模型\", \"特征融合\", \"记忆机制\", \"R2R-CE\", \"RxR-CE\"]\n}",
+      "summarized_at": "2026-09-17T04:53:48.895503+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.18789",
+      "title": "AdaGeoVLN: Selective Geometry Across Representation Depth and Navigation Time for Vision-Language Navigation",
+      "authors": [
+        "Quan-Dung Pham",
+        "Anh Dao",
+        "Danh Vinh Le",
+        "Nguyen Viet Tri Pham",
+        "The-Anh Nguyen",
+        "Zhirui Dai",
+        "Yiyu Chen",
+        "Tuyen P. Le",
+        "Truong Nguyen",
+        "Quan Nguyen"
+      ],
+      "abstract": "Vision-language navigation requires aligning language with visual observations while maintaining spatial understanding over time. Geometry foundation models (GFMs) expose intermediate representations throughout their hierarchy, but how navigation policies should use these features and retain historical geometric evidence remains unresolved. We introduce \\method{}, a streaming VLN framework that addresses these questions across \\textbf{representation depth} and \\textbf{navigation time}. Hierarchical GFM--VLM fusion couples earlier, intermediate, and later GFM representations to successive policy stages instead of repeatedly injecting a terminal feature. Navigation-aware GFM memory retains historical VGGT global-attention KV states according to instruction relevance, geometric confidence, and transition novelty under a bounded per-layer budget. Retained states provide geometric context for subsequent observations before fusion with the policy. Across R2R-CE and RxR-CE, \\method{} achieves strong performance using a single RGB stream without additional navigation-specific external data. Controlled ablations show that multi-depth coupling substantially outperforms repeated terminal-feature injection at matched fusion locations. Bounded navigation-aware retention preserves navigation performance while considerably reducing GFM-KV memory relative to larger-memory temporal retention. These findings support jointly examining the geometric representations exposed to the policy and the historical evidence retained for future inference. Code will be released upon acceptance at https://humanoid-research.github.io/adageovln/.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-16T15:10:04+00:00",
+      "updated": "2026-09-16T15:10:04+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.18789v1",
+      "abs_url": "https://arxiv.org/abs/2609.18789",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "针对现有VLN智能体在语义推理与空间执行间存在脱节的问题，本文提出GroundingVLN，利用视觉定位作为推理与行动的共享接口。该方法通过结构化推理将视觉证据锚定到精确图像位置，并预测像素级空间目标供几何规划器转化为底层动作，同时构建了大规模推理数据集并引入执行感知强化学习策略。实验表明该方法在R2R-CE和RxR-CE上达到SOTA，且仅用0.9%训练数据即超越最强基线，泛化能力显著提升。",
+      "highlights": [
+        "提出以视觉定位为桥梁连接高层语义推理与底层空间动作执行",
+        "构建GroundingCOTVLN-188K数据集并设计执行感知强化学习(GEAR)对齐推理与执行",
+        "在R2R-CE和RxR-CE上达到SOTA，训练数据仅需基线0.9%，跨数据集泛化提升20.1% SR"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "本文是VLN核心研究，在视觉语言导航的推理与动作对齐方面有重要创新贡献，与研究者方向高度相关。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "视觉定位",
+        "强化学习",
+        "推理链",
+        "VLM"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对现有VLN智能体在语义推理与空间执行间存在脱节的问题，本文提出GroundingVLN，利用视觉定位作为推理与行动的共享接口。该方法通过结构化推理将视觉证据锚定到精确图像位置，并预测像素级空间目标供几何规划器转化为底层动作，同时构建了大规模推理数据集并引入执行感知强化学习策略。实验表明该方法在R2R-CE和RxR-CE上达到SOTA，且仅用0.9%训练数据即超越最强基线，泛化能力显著提升。\",\n  \"highlights\": [\n    \"提出以视觉定位为桥梁连接高层语义推理与底层空间动作执行\",\n    \"构建GroundingCOTVLN-188K数据集并设计执行感知强化学习(GEAR)对齐推理与执行\",\n    \"在R2R-CE和RxR-CE上达到SOTA，训练数据仅需基线0.9%，跨数据集泛化提升20.1% SR\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"本文是VLN核心研究，在视觉语言导航的推理与动作对齐方面有重要创新贡献，与研究者方向高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"视觉定位\", \"强化学习\", \"推理链\", \"VLM\"]\n}",
+      "summarized_at": "2026-09-17T04:53:59.803220+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.18581",
+      "title": "GroundingVLN: Reasoning and Acting with Grounding for Vision-Language Navigation",
+      "authors": [
+        "Kailing Li",
+        "Yu Han",
+        "Tianwen Qian",
+        "Yuqian Fu",
+        "Jingyu Gong",
+        "Jiangming Shi",
+        "Xiaoling Wang"
+      ],
+      "abstract": "Although vision-language models (VLMs) possess strong visual understanding and reasoning capabilities, existing vision-and-language navigation (VLN) agents struggle to connect semantic reasoning with spatial execution. Two coupled gaps remain in this connection, as intermediate reasoning is not explicitly anchored to visual evidence and high-level decisions lack precise spatial goals to guide low-level motion. Cognitive science suggests that human navigation bridges these levels hierarchically by anchoring cognition to relevant landmarks and guiding locomotion toward spatial goals. Motivated by this principle, we propose GroundingVLN, which uses visual grounding as a shared interface between reasoning and action. GroundingVLN first reasons with grounding by anchoring task-relevant visual evidence to precise image locations throughout structured reasoning. It then acts through grounding by predicting a progress-aligned pixel goal that a geometric planner translates into primitive actions. To learn these capabilities, we construct GroundingCOTVLN-188K, a dataset of temporally aligned grounded reasoning traces, and introduce Grounded and Execution-Aware Reinforcement Learning (GEAR), which aligns grounded reasoning and spatial decisions with downstream execution. Experiments demonstrate that GroundingVLN achieves state-of-the-art performance (69.9% SR on R2R-CE and 75.1% SR on RxR-CE) with high sample efficiency, using just 0.9% as much training data as the strongest baseline. It also generalizes strongly across datasets, attaining 59.9% SR on RxR-CE when trained solely on R2R, a gain of 20.1% over the strongest baseline.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-16T12:41:26+00:00",
+      "updated": "2026-09-16T12:41:26+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.18581v1",
+      "abs_url": "https://arxiv.org/abs/2609.18581",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "vision-and-language navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "本文提出一种分层无人机导航框架，通过六个行为条件化的MPPI规划器生成多种动态可行的飞行轨迹候选。将这些3D轨迹投影到机载第一视角RGB图像上，利用预训练视觉语言模型（VLM）根据自然语言指令进行视觉动作选择，实现语言与飞行动作的对齐。该方法在仿真和真实四旋翼平台上实现了安全、可重复且语义对齐的飞行导航。",
+      "highlights": [
+        "采用六个行为条件化MPPI规划器并行生成具有行为多样性的轨迹候选集",
+        "将3D轨迹投影到FPV图像上，将语言导航转化为视觉动作选择问题交由VLM决策",
+        "在Isaac Sim仿真与真实四旋翼平台上验证，实现20Hz重规划与100%任务成功率"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接研究无人机视觉语言导航（UAV-VLN），结合VLM与MPPI轨迹规划实现自然语言驱动的无人机自主导航，属于核心UAV-VLN研究且有创新贡献。",
+      "is_uav_vln": true,
+      "tags": [
+        "VLN",
+        "UAV-VLN",
+        "MPPI",
+        "VLM",
+        "aerial navigation",
+        "trajectory planning"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文提出一种分层无人机导航框架，通过六个行为条件化的MPPI规划器生成多种动态可行的飞行轨迹候选。将这些3D轨迹投影到机载第一视角RGB图像上，利用预训练视觉语言模型（VLM）根据自然语言指令进行视觉动作选择，实现语言与飞行动作的对齐。该方法在仿真和真实四旋翼平台上实现了安全、可重复且语义对齐的飞行导航。\",\n  \"highlights\": [\n    \"采用六个行为条件化MPPI规划器并行生成具有行为多样性的轨迹候选集\",\n    \"将3D轨迹投影到FPV图像上，将语言导航转化为视觉动作选择问题交由VLM决策\",\n    \"在Isaac Sim仿真与真实四旋翼平台上验证，实现20Hz重规划与100%任务成功率\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究无人机视觉语言导航（UAV-VLN），结合VLM与MPPI轨迹规划实现自然语言驱动的无人机自主导航，属于核心UAV-VLN研究且有创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"MPPI\", \"VLM\", \"aerial navigation\", \"trajectory planning\"]\n}",
+      "summarized_at": "2026-09-17T04:54:09.705701+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.18451",
+      "title": "VLM-MPPI: Grounding Natural Language in Behaviorally Diverse Trajectories for Aerial Navigation",
+      "authors": [
+        "Hanbing Zhang",
+        "Fangguo Zhao",
+        "Zerui Li",
+        "Xin Guan",
+        "Peng Cheng",
+        "Shuo Li"
+      ],
+      "abstract": "We present a hierarchical UAV navigation framework that aligns natural-language intent with dynamically feasible flight behaviors in cluttered indoor environments. To bridge the gap between abstract semantics and low-level control, we employ a parallelized ensemble of six behavior-conditioned Model Predictive Path Integral (MPPI) planners. Crucially, by designing mode-specific guiding costs and sampling biases, we induce distinct trajectory modes that converge to unique behavioral means, yielding a compact set of intentionally diverse candidates rather than mere stochastic variations. We project these 3D candidates onto the onboard first-person-view RGB stream, turning language grounding into a visual action selection problem. A pretrained vision--language model (VLM) asynchronously selects the candidate index given the overlaid FPV image and a natural-language prompt, while MPPI replans at 20Hz and a PID-based low-level controller tracks the selected trajectory. We implement the full pipeline in NVIDIA Isaac Sim and on a real-world quadrotor platform equipped with LiDAR and RGB sensing. Experiments in both simulation and real-world flights show semantically meaningful behavior diversity, robust language alignment despite VLM latency, and safe, repeatable flight across all modes, achieving 100% task success in our evaluated scenarios.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-16T10:44:10+00:00",
+      "updated": "2026-09-16T10:44:10+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.18451v1",
+      "abs_url": "https://arxiv.org/abs/2609.18451",
+      "matched_keywords": [
+        "Aerial Navigation",
+        "UAV navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "本文综述了无人机具身智能（UAV EI）的新兴范式，提出5+5框架从能力维度和架构层级统一描述该领域。文章系统回顾了具身形态、感知、世界模型、规划、视觉语言导航及协作等方面的进展，并指出长时程自主、物理推理等关键挑战。研究强调通过物理-数字AI智能体的持续耦合，实现自适应且不断进化的无人机自主性。",
+      "highlights": [
+        "提出5+5框架统一描述无人机具身智能的能力维度与系统架构",
+        "系统综述涵盖视觉语言导航、世界模型、具身规划等核心技术",
+        "提出物理-数字AI智能体耦合作为实现无人机持续进化自主性的系统级路径"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该综述聚焦无人机具身智能，明确将视觉语言导航作为核心能力之一进行系统综述，直接服务于UAV-VLN研究方向。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV",
+        "具身智能",
+        "VLN",
+        "综述",
+        "AI Agent"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文综述了无人机具身智能（UAV EI）的新兴范式，提出5+5框架从能力维度和架构层级统一描述该领域。文章系统回顾了具身形态、感知、世界模型、规划、视觉语言导航及协作等方面的进展，并指出长时程自主、物理推理等关键挑战。研究强调通过物理-数字AI智能体的持续耦合，实现自适应且不断进化的无人机自主性。\",\n  \"highlights\": [\n    \"提出5+5框架统一描述无人机具身智能的能力维度与系统架构\",\n    \"系统综述涵盖视觉语言导航、世界模型、具身规划等核心技术\",\n    \"提出物理-数字AI智能体耦合作为实现无人机持续进化自主性的系统级路径\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该综述聚焦无人机具身智能，明确将视觉语言导航作为核心能力之一进行系统综述，直接服务于UAV-VLN研究方向。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV\", \"具身智能\", \"VLN\", \"综述\", \"AI Agent\"]\n}",
+      "summarized_at": "2026-09-17T04:54:21.008176+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.18326",
+      "title": "UAVs Meet Embodied Intelligence: Bridging Human Intents and Flying Dynamics Via Harnessing Physical-Digital AI Agents",
+      "authors": [
+        "Yonglin Tian",
+        "Weiyi Wang",
+        "Houhua Lu",
+        "Xinyi Li",
+        "Yihao Wu",
+        "Jingyang Chen",
+        "Jianli Sun",
+        "Chengxiang Li",
+        "Yinuo Chen",
+        "Fei Lin",
+        "Tengchao Zhang",
+        "Jing Yang",
+        "Deyi Ji",
+        "Jian Di",
+        "Naiqi Wu",
+        "Yisheng Lv"
+      ],
+      "abstract": "Unmanned aerial vehicles (UAVs) extend embodied intelligence into continuous three-dimensional space, where perception, reasoning, physical embodiment, and action are tightly coupled through flight and environmental interaction. Recent advances in foundation models, world models, and AI agents are shifting UAV autonomy from task-specific perception and control toward systems that can interpret human intent, understand open environments, reason about physical consequences, and organize complex behaviors under embodiment and flight-dynamic constraints. We characterize this emerging paradigm as UAV embodied intelligence (UAV EI) and distinguish it from its system realization, the embodied-intelligent UAV (EI UAV). To provide a unified view of the field, we introduce a 5+5 framework that describes UAV EI through five capability dimensions and EI UAVs through five architectural layers spanning physical embodiment, general cognition, embodied skills, external interaction, and system harnessing. Based on this framework, we systematically review recent progress in embodied morphology, embodied perception, world models, embodied planning, vision-language navigation, embodied manipulation, and embodied collaboration. We further identify long-horizon autonomy, predictive physical reasoning, test-time skill acquisition, and autonomous capability evolution as key challenges toward more general aerial embodied intelligence. Finally, we argue that harnessing physical-digital AI agents, through persistent coupling of digital intelligence with physical sensing, dynamics, action, and feedback, provides a system-level pathway toward adaptive and continuously evolving UAV autonomy. Project resources are available at our project website and GitHub repository.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-16T08:52:29+00:00",
+      "updated": "2026-09-16T08:52:29+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.18326v1",
+      "abs_url": "https://arxiv.org/abs/2609.18326",
+      "matched_keywords": [
+        "vision-language navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "针对视觉语言导航(VLN)中序列决策的不确定性估计问题，标准共形预测(CP)在变长且存在步骤依赖的导航回合中无法提供覆盖保证。为此，本文提出回合归一化共形预测(ENCP)，通过策略残差置信度重新缩放非一致性分数，并对每个回合校准一个最大分数，在允许步骤间依赖的同时保证逐步覆盖真值的概率至少为1-α。该方法在R2R和REVERIE数据集上验证了其模型无关的有效性，可用于判断VLN智能体何时应向更强预测器（如人类）求助。",
+      "highlights": [
+        "提出ENCP方法，解决标准共形预测在变长VLN序列决策中无法保证覆盖的问题",
+        "通过残差置信度重缩放非一致性分数并按回合校准，允许步骤间依赖且保证逐步覆盖概率",
+        "在R2R和REVERIE上跨多种策略和分数验证，提供模型无关的不确定性估计"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "论文直接解决VLN中的不确定性估计与共形预测覆盖保证问题，属于VLN核心方法论创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "uncertainty estimation",
+        "conformal prediction",
+        "navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航(VLN)中序列决策的不确定性估计问题，标准共形预测(CP)在变长且存在步骤依赖的导航回合中无法提供覆盖保证。为此，本文提出回合归一化共形预测(ENCP)，通过策略残差置信度重新缩放非一致性分数，并对每个回合校准一个最大分数，在允许步骤间依赖的同时保证逐步覆盖真值的概率至少为1-α。该方法在R2R和REVERIE数据集上验证了其模型无关的有效性，可用于判断VLN智能体何时应向更强预测器（如人类）求助。\",\n  \"highlights\": [\n    \"提出ENCP方法，解决标准共形预测在变长VLN序列决策中无法保证覆盖的问题\",\n    \"通过残差置信度重缩放非一致性分数并按回合校准，允许步骤间依赖且保证逐步覆盖概率\",\n    \"在R2R和REVERIE上跨多种策略和分数验证，提供模型无关的不确定性估计\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接解决VLN中的不确定性估计与共形预测覆盖保证问题，属于VLN核心方法论创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"uncertainty estimation\", \"conformal prediction\", \"navigation\"]\n}",
+      "summarized_at": "2026-09-16T04:49:44.635326+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.17499",
+      "title": "ENCP: Episode-Normalized Conformal Prediction for Vision-and-Language Navigation",
+      "authors": [
+        "Vicky Feliren",
+        "A. Taufiq Asyhari",
+        "Muhamad Risqi U. Saputra"
+      ],
+      "abstract": "Uncertainty estimation for Vision-Language-Navigation (VLN) models is a critical task since it can help identify ambiguous and unreliable predictions, enabling agents to make safer navigation decisions. As one of the most advanced uncertainty estimation frameworks, conformal prediction (CP) offers a promising approach for uncertainty estimation in VLN. However, given that VLN agent requires a sequence of steps, standard calibration in conformal prediction fails to provide coverage guarantee it promises over a dependent, variable-length VLN episode. To this end, we propose Episode-Normalized Conformal Prediction (ENCP), which rescales a nonconformity score by the policy's residual confidence and calibrates one maximum score per episode. Under exchangeable calibration and test episodes, this construction covers the ground truth at every step with probability at least $1 - α$, while allowing dependence among steps within an episode. Across four VLN policies and three nonconformity scores on R2R and REVERIE dataset, ENCP meets all reported empirical step-coverage targets on the seen-to-unseen evaluation. These results demonstrate that ENCP can provide model-agnostic uncertainty estimates, which might be useful for determining when a VLN agent should defer to a more capable predictor, including human assistance.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-15T17:42:15+00:00",
+      "updated": "2026-09-15T17:42:15+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.17499v1",
+      "abs_url": "https://arxiv.org/abs/2609.17499",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "针对纳米无人机在严苛SWaP-C约束下的自主导航难题，本文提出无相机、无光流、无地图的TIO-Former里程计框架。该框架结合IMU与超轻量六向ToF阵列，利用流式因果Transformer实现高效的惯性-测距融合，在极低延迟和内存占用下显著降低了位置估计误差。",
+      "highlights": [
+        "采用15g超轻量六向8x8 ToF阵列与IMU，规避了传统视觉传感器在功耗和算力上的限制",
+        "设计流式因果Transformer结合局部KV缓存与Chunk-FIFO记忆，实现恒定推理开销与内存占用",
+        "实飞实验中位置误差较光流方案降低54.4%，在RISC-V边缘设备上P95延迟仅10.466ms"
+      ],
+      "relevance_score": 2,
+      "relevance_reason": "该论文研究无人机底层里程计与状态估计，属于机器人导航基础模块，未涉及视觉语言导航(VLN)或语言指令驱动。",
+      "is_uav_vln": false,
+      "tags": [
+        "UAV",
+        "odometry",
+        "transformer",
+        "ToF",
+        "nano-UAV"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对纳米无人机在严苛SWaP-C约束下的自主导航难题，本文提出无相机、无光流、无地图的TIO-Former里程计框架。该框架结合IMU与超轻量六向ToF阵列，利用流式因果Transformer实现高效的惯性-测距融合，在极低延迟和内存占用下显著降低了位置估计误差。\",\n  \"highlights\": [\n    \"采用15g超轻量六向8x8 ToF阵列与IMU，规避了传统视觉传感器在功耗和算力上的限制\",\n    \"设计流式因果Transformer结合局部KV缓存与Chunk-FIFO记忆，实现恒定推理开销与内存占用\",\n    \"实飞实验中位置误差较光流方案降低54.4%，在RISC-V边缘设备上P95延迟仅10.466ms\"\n  ],\n  \"relevance_score\": 2,\n  \"relevance_reason\": \"该论文研究无人机底层里程计与状态估计，属于机器人导航基础模块，未涉及视觉语言导航(VLN)或语言指令驱动。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"UAV\", \"odometry\", \"transformer\", \"ToF\", \"nano-UAV\"]\n}",
+      "summarized_at": "2026-09-16T04:49:59.264032+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.17198",
+      "title": "TIO-Former: Ultra-Lightweight 6-Directional ToF-Inertial Odometry for Nano-UAVs via a Streaming Causal Transformer",
+      "authors": [
+        "Yang Liu",
+        "Yifan He",
+        "Wenhao Zhao",
+        "Xiangyu Mo",
+        "Yang Xu",
+        "Hao Wei",
+        "Mingze Ma",
+        "Huan Li",
+        "Yifan Wu",
+        "Zipeng Dai",
+        "Xin Zhou",
+        "Fei Gao"
+      ],
+      "abstract": "Autonomous nano-UAV navigation requires accurate ego-motion estimation under stringent size, weight, power, and computing (SWaP-C) constraints, where visual sensors and LiDARs exceed payload limits, optical flow degrades in low-texture scenes, and inertial-only state estimation is susceptible to accumulated drift. While multi-zone time-of-flight (ToF) arrays provide a lightweight metric complement, 6-DoF estimation from merely 384 ranges per frame is challenged by invalid returns, anisotropic observability, and temporal computational scaling. We propose TIO-FORMER, a camera-free, optical-flow-free, and mapless range-inertial odometry framework driven by an IMU and an ultra-lightweight (15 g) payload of six orthogonal 8 x 8 ToF arrays. Our frontend pairs consecutive range grids with a bilateral gated difference, while IMU-guided cross-attention dynamically routes directional features conditioned on platform kinematics. A Streaming Causal Transformer couples an uncompressed Local KV cache with compressed Chunk-FIFO memory, maintaining bounded inference cost and memory footprint independent of flight duration. In real-flight evaluations, TIO-FORMER reduces open-loop position error by 54.4% compared to nano-UAV optical flow and by 66.4%-89.1% over learned inertial baselines. We also evaluate performance across multiple environments and robustness under severe sensing degradation. Deployed on an edge RISC-V companion computer, TIO-FORMER achieves a P95 latency of 10.466 ms and peak resident memory of 6.324 MiB (less than 5 percent system RAM), demonstrating that sparse range sensing provides practical geometric anchoring for resource-constrained micro-aerial robots. Code is available at https://github.com/Ly041021/TIO-Former.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-15T13:54:06+00:00",
+      "updated": "2026-09-15T13:54:06+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.17198v1",
+      "abs_url": "https://arxiv.org/abs/2609.17198",
+      "matched_keywords": [
+        "UAV navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "针对无训练具身导航中多模态大模型缺乏动作与空间证据及任务进度协调机制的问题，提出零样本框架HarnessVLN。其核心Agent Harness通过统一工具接口协调感知、检索、接地、导航、恢复和终止，利用时空图和分层事件记忆验证规划动作的可行性并支持错误恢复。该方法在R2R、RxR等基准上超越此前的无训练SOTA，并成功部署于人形机器人。",
+      "highlights": [
+        "提出Agent Harness统一工具接口，验证规划动作与空间证据、几何可行性及子目标一致性",
+        "设计分层事件记忆与持久化时空图，跟踪任务进度并记录可复用的空间证据与失败标注",
+        "零训练在R2R、RxR、HM3D-v2和HM3D-OVON上取得60.8%、53.9%、76.0%、59.3%成功率，超越无训练SOTA"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该方法在R2R、RxR等核心VLN基准上取得无训练SOTA，其零样本导航、空间推理与错误恢复机制对VLN研究具有直接参考价值。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "零样本",
+        "具身导航",
+        "MLLM",
+        "空间推理"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对无训练具身导航中多模态大模型缺乏动作与空间证据及任务进度协调机制的问题，提出零样本框架HarnessVLN。其核心Agent Harness通过统一工具接口协调感知、检索、接地、导航、恢复和终止，利用时空图和分层事件记忆验证规划动作的可行性并支持错误恢复。该方法在R2R、RxR等基准上超越此前的无训练SOTA，并成功部署于人形机器人。\",\n  \"highlights\": [\n    \"提出Agent Harness统一工具接口，验证规划动作与空间证据、几何可行性及子目标一致性\",\n    \"设计分层事件记忆与持久化时空图，跟踪任务进度并记录可复用的空间证据与失败标注\",\n    \"零训练在R2R、RxR、HM3D-v2和HM3D-OVON上取得60.8%、53.9%、76.0%、59.3%成功率，超越无训练SOTA\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该方法在R2R、RxR等核心VLN基准上取得无训练SOTA，其零样本导航、空间推理与错误恢复机制对VLN研究具有直接参考价值。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"零样本\", \"具身导航\", \"MLLM\", \"空间推理\"]\n}",
+      "summarized_at": "2026-09-16T04:50:10.532089+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.15195",
+      "title": "HarnessVLN: Unifying Training-Free Embodied Navigation through an Agent Harness",
+      "authors": [
+        "Yang Chen",
+        "Lirong Che",
+        "Zhenyu Huang",
+        "Wenbo Fu",
+        "Chuang Wang",
+        "Xu Cao",
+        "Daqi Liu",
+        "Yuzhe Yang",
+        "Jian Su",
+        "Lan-Zhe Guo"
+      ],
+      "abstract": "Embodied navigation requires agents to ground instructions or object goals in spatial observations and translate plans into successful execution. As multimodal large language models (MLLMs) become increasingly capable, they offer stronger support for navigation without task-specific training; however, improved semantic reasoning alone does not ensure that proposed actions remain consistent with spatial evidence, task progress, and execution outcomes. We introduce HarnessVLN, a zero-shot, training-free framework that unifies instruction-following and object-goal navigation through a shared Agent Harness. The Harness coordinates perception, memory, and execution tools through a unified interface, validating planner proposals for evidential support, geometric feasibility, and subgoal consistency before dispatch. It jointly manages hierarchical event memory and a persistent Spatiotemporal Graph to track task progress, preserve spatial evidence, and contextualize failures. Structured execution feedback updates this shared state, guiding subsequent planning, recovery, and termination. Across R2R, RxR, HM3D-v2, and HM3D-OVON, HarnessVLN achieves success rates of 60.8%, 53.9%, 76.0%, and 59.3%, respectively, outperforming prior training-free state-of-the-art methods. Humanoid robot deployment further demonstrates its applicability to both navigation tasks in real-world environments. The project page is available at https://agibot-harnessvln.netlify.app/.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-14T08:15:56+00:00",
+      "updated": "2026-09-16T03:37:01+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.15195v2",
+      "abs_url": "https://arxiv.org/abs/2609.15195",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "针对连续环境中的零样本视觉语言导航（VLN-CE），本文提出免训练框架C2Nav。该方法让视觉语言模型对控制器构建的候选方案进行序数比较，而将几何计算与动作执行保留在物理侧，从而避免不可逆的绝对决策。实验表明该受限决策接口与更强的VLM推理能力互补而非可互换。",
+      "highlights": [
+        "提出VLM比较候选方案而非直接输出绝对动作的模型-机器人接口",
+        "包含Seeing、Remembering、Arriving三个协同模块实现可靠导航与停止",
+        "在OpenNav R2R-CE 100协议上验证，对比绝对输出形式显著提升成功率"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "本文直接研究零样本视觉语言导航（VLN-CE），提出创新的比较式决策接口框架，属于核心VLN研究且有重要贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "VLN-CE",
+        "zero-shot",
+        "VLM",
+        "navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对连续环境中的零样本视觉语言导航（VLN-CE），本文提出免训练框架C2Nav。该方法让视觉语言模型对控制器构建的候选方案进行序数比较，而将几何计算与动作执行保留在物理侧，从而避免不可逆的绝对决策。实验表明该受限决策接口与更强的VLM推理能力互补而非可互换。\",\n  \"highlights\": [\n    \"提出VLM比较候选方案而非直接输出绝对动作的模型-机器人接口\",\n    \"包含Seeing、Remembering、Arriving三个协同模块实现可靠导航与停止\",\n    \"在OpenNav R2R-CE 100协议上验证，对比绝对输出形式显著提升成功率\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"本文直接研究零样本视觉语言导航（VLN-CE），提出创新的比较式决策接口框架，属于核心VLN研究且有重要贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLN-CE\", \"zero-shot\", \"VLM\", \"navigation\"]\n}",
+      "summarized_at": "2026-09-16T04:50:20.248357+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.15142",
+      "title": "C$^2$Nav: Compare Before You Commit for Zero-Shot Vision-and-Language Navigation",
+      "authors": [
+        "Runtian Zheng",
+        "Congpeng Zhang",
+        "Ying Liu"
+      ],
+      "abstract": "Zero-shot vision-and-language navigation in continuous environments (VLN-CE) increasingly places foundation vision-language models (VLMs) inside the navigation loop. Existing systems commonly request cardinal outputs such as waypoints, pixels, headings, progress values, or absolute arrival decisions, coupling a generative response to geometric magnitude or an irreversible commitment. We study a complementary model-robot interface: the VLM compares controller-constructed alternatives, while geometry, thresholds, action magnitude, and execution remain on the physical side. We instantiate this idea in C2Nav, a training-free framework with three coordinated faculties. Seeing performs ordinal Gaze Election over physically vetted candidate views; Remembering maintains a compact route sketch and compares adjacent instruction-leg hypotheses; and Arriving combines a hesitation ladder, look-back comparison, and revocable walk-back for reliable stopping. On the public OpenNav R2R-CE 100 protocol, C2Nav with Qwen3-VL-8B-Instruct obtains 41.0% OSR, 31.0% SR, and 16.7% SPL, while the same interface with the standard GPT-5.5 model reaches 54.0% OSR, 44.0% SR, and 29.0% SPL. Whole-faculty ablations reduce SR to 14.0% without Seeing, 25.0% without Remembering, and 29.0% without Arriving. Matched role inversions that replace only the comparative answer form with cardinal/absolute questions reduce SR to 12.0%, 28.0%, and 21.0% in the spatial, transition, and terminal slots, respectively. The results indicate that a constrained decision interface and stronger VLM reasoning are complementary rather than interchangeable.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-14T07:14:59+00:00",
+      "updated": "2026-09-14T07:14:59+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.15142v1",
+      "abs_url": "https://arxiv.org/abs/2609.15142",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "针对连续环境视觉语言导航(VLN-CE)中过度依赖额外传感器及长轨迹空间语义不一致的问题，本文提出零样本单目视觉框架LG-VLN。该方法利用在线3D重建网络预测深度与位姿，并共享几何与导航的视觉特征以构建语义价值图，同时引入LangGraph将指令解析、感知、规划与失败恢复建模为有向状态图。实验验证了共享视觉表示与显式状态编排在仅用单目RGB的零样本VLN-CE任务上的有效性。",
+      "highlights": [
+        "仅依赖单目RGB实现零样本VLN-CE，无需LiDAR或全景相机等额外传感器",
+        "几何建图与语义导航共享CleanDIFT特征，缓解长轨迹空间语义不一致问题",
+        "利用LangGraph将导航全流程建模为有向状态图，实现模块化条件转移与失败恢复机制"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文直接研究视觉语言导航(VLN-CE)任务，在零样本单目设置下提出共享特征与状态编排的创新框架，属于核心VLN研究且有实质性贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "VLN-CE",
+        "zero-shot",
+        "LangGraph",
+        "monocular RGB",
+        "3D reconstruction"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对连续环境视觉语言导航(VLN-CE)中过度依赖额外传感器及长轨迹空间语义不一致的问题，本文提出零样本单目视觉框架LG-VLN。该方法利用在线3D重建网络预测深度与位姿，并共享几何与导航的视觉特征以构建语义价值图，同时引入LangGraph将指令解析、感知、规划与失败恢复建模为有向状态图。实验验证了共享视觉表示与显式状态编排在仅用单目RGB的零样本VLN-CE任务上的有效性。\",\n  \"highlights\": [\n    \"仅依赖单目RGB实现零样本VLN-CE，无需LiDAR或全景相机等额外传感器\",\n    \"几何建图与语义导航共享CleanDIFT特征，缓解长轨迹空间语义不一致问题\",\n    \"利用LangGraph将导航全流程建模为有向状态图，实现模块化条件转移与失败恢复机制\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航(VLN-CE)任务，在零样本单目设置下提出共享特征与状态编排的创新框架，属于核心VLN研究且有实质性贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLN-CE\", \"zero-shot\", \"LangGraph\", \"monocular RGB\", \"3D reconstruction\"]\n}",
+      "summarized_at": "2026-09-16T04:50:37.216695+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.15098",
+      "title": "LG-VLN: A Zero-Shot Vision-and-Language Navigation Framework with LangGraph State Orchestration",
+      "authors": [
+        "Jianhe Zhao",
+        "Yanhua Qiu",
+        "Zhiyu Zhang",
+        "Zibo Zhao",
+        "Jinhua Xie"
+      ],
+      "abstract": "Continuous-environment vision-and-language navigation (VLN-CE) requires interpreting natural-language instructions in unseen 3D environments and executing continuous low-level actions. Existing methods often depend on LiDAR, panoramic cameras, or extra sensors; separate geometric-mapping and semantic-navigation visual representations can cause long-trajectory spatial-semantic inconsistencies. We propose LG-VLN, a monocular zero-shot framework with shared visual features and LangGraph-based state orchestration. An online feed-forward 3D reconstruction network predicts depth, camera poses, and dense point clouds for agent-pose estimation and global map fusion. Geometry and navigation share dense CleanDIFT features: semantic consistency rejects incorrect inter-frame correspondences, while target-instance constraints define visual references whose similarity combines with local BLIP-2 image-text relevance to form a semantic value map. LangGraph represents instruction parsing, geometric perception, semantic value updates, path planning, action execution, and failure recovery as a directed state graph with conditional transitions, persistent state, and modular recovery mechanisms. On a fixed 550-episode subset of the R2R-CE val-unseen split, LG-VLN achieves 21.3% success and 12.1% success weighted by path length. Ablations show shared semantic features improve navigation, further boosted by combining visual similarity and image-text relevance. Results establish shared visual representations and explicit state orchestration as effective for zero-shot VLN-CE using monocular RGB alone. Code will be publicly released for reproducibility.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-09-14T06:23:31+00:00",
+      "updated": "2026-09-14T06:23:31+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.15098v1",
+      "abs_url": "https://arxiv.org/abs/2609.15098",
+      "matched_keywords": [
+        "VLN",
+        "Vision-and-Language Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "针对城市环境中GNSS信号退化影响四旋翼无人机导航的问题，本文提出一种信念自适应在线自主框架。该框架通过在扩展卡尔曼滤波(EKF)中引入显式GNSS信任建模、二阶在线信念适应和延迟感知机制，实现了无需先验环境知识或离线训练的稳定传感器信任适应。仿真表明该方法能显著改善信念收敛并降低估计与跟踪误差。",
+      "highlights": [
+        "提出信念自适应框架处理城市GNSS退化下的无人机导航问题",
+        "在EKF中引入GNSS信任建模与二阶在线信念适应，无需离线训练",
+        "在仿真城市场景中实现了更平滑的轨迹和更低的跟踪误差"
+      ],
+      "relevance_score": 4,
+      "relevance_reason": "论文属于无人机导航领域但聚焦于GNSS/IMU传感器融合与状态估计，不涉及视觉语言导航(VLN)的核心要素。",
+      "is_uav_vln": false,
+      "tags": [
+        "UAV Navigation",
+        "GNSS-IMU Fusion",
+        "EKF",
+        "State Estimation",
+        "Quadrotor"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对城市环境中GNSS信号退化影响四旋翼无人机导航的问题，本文提出一种信念自适应在线自主框架。该框架通过在扩展卡尔曼滤波(EKF)中引入显式GNSS信任建模、二阶在线信念适应和延迟感知机制，实现了无需先验环境知识或离线训练的稳定传感器信任适应。仿真表明该方法能显著改善信念收敛并降低估计与跟踪误差。\",\n  \"highlights\": [\n    \"提出信念自适应框架处理城市GNSS退化下的无人机导航问题\",\n    \"在EKF中引入GNSS信任建模与二阶在线信念适应，无需离线训练\",\n    \"在仿真城市场景中实现了更平滑的轨迹和更低的跟踪误差\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"论文属于无人机导航领域但聚焦于GNSS/IMU传感器融合与状态估计，不涉及视觉语言导航(VLN)的核心要素。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"UAV Navigation\", \"GNSS-IMU Fusion\", \"EKF\", \"State Estimation\", \"Quadrotor\"]\n}",
+      "summarized_at": "2026-09-16T04:51:56.204530+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.14806",
+      "title": "Belief-Adaptive Online Autonomy for Quadrotor UAV Navigation under GNSS Degradation in Urban Environments",
+      "authors": [
+        "Deepak Kumar Panda",
+        "Weisi Guo"
+      ],
+      "abstract": "Reliable online autonomy is critical for quadrotor operation in urban airspaces, where global navigation satellite systems (GNSS) measurements suffer from multipath, blockage, and latency issues, introducing non-stationary, temporally correlated errors that degrade conventional GNSS-IMU fusion. This paper presents a belief-adaptive online autonomy framework that augments an extended Kalman filter (EKF) with explicit GNSS trust modelling, second-order online belief adaptation, and latency-aware out-of-sequence measurement handling. GNSS trust is represented as a latent belief state that modulates measurement weighting and multipath bias uncertainty, and is updated online using EKF consistency signals. Unlike reactive covariance tuning, the proposed approach enables proactive and stable sensor trust adaptation without prior environmental knowledge or offline training. Evaluation in simulated urban air mobility scenarios with correlated multipath, stochastic latency, and obstacle constraints demonstrates improved belief convergence, smoother trajectories, and reduced estimation and tracking errors compared to naive, adaptive, and first-order baselines. The framework preserves classical GNSS-IMU fusion structure and can be integrated directly into existing flight control pipelines, supporting robust online autonomy in GNSS degraded environments.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "published": "2026-09-13T21:40:01+00:00",
+      "updated": "2026-09-13T21:40:01+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.14806v1",
+      "abs_url": "https://arxiv.org/abs/2609.14806",
+      "matched_keywords": [
+        "UAV Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-09-17"
+    },
+    {
+      "summary_cn": "现有VLM在VLN任务中难以直接从图像输出可靠的度量信息（距离、方位等）。AnchorVLN提出",
+      "highlights": [
+        "提出语义-几何分离原则：VLM负责语义推理，几何工具决定度量指标",
+        "基于模型上下文协议(MCP)实现工具调用架构，无需修改下游控制栈即可适配不同机器人",
+        "在CMU VLN挑战赛基准上显著提升性能，对象引用中位误差从3.37m降至2.48m"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "论文直接研究室内VLN系统的架构创新与几何锚定方法，属于核心VLN研究且有明确贡献，但场景为室内非无人机。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "VLM",
+        "几何锚定",
+        "开放词汇",
+        "MCP",
+        "室内导航"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有VLM在VLN任务中难以直接从图像输出可靠的度量信息（距离、方位等）。AnchorVLN提出\"  ,\n  \"highlights\": [\n    \"提出语义-几何分离原则：VLM负责语义推理，几何工具决定度量指标\",\n    \"基于模型上下文协议(MCP)实现工具调用架构，无需修改下游控制栈即可适配不同机器人\",\n    \"在CMU VLN挑战赛基准上显著提升性能，对象引用中位误差从3.37m降至2.48m\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接研究室内VLN系统的架构创新与几何锚定方法，属于核心VLN研究且有明确贡献，但场景为室内非无人机。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLM\", \"几何锚定\", \"开放词汇\", \"MCP\", \"室内导航\"]\n}",
+      "summarized_at": "2026-09-16T04:52:05.307636+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.12285",
+      "title": "AnchorVLN: Geometry-Anchored Vision-Language Grounding Reasoning for Open-Vocabulary Navigation",
+      "authors": [
+        "Long Giang Vu",
+        "Chengkai Yao",
+        "Yuxin Liu",
+        "FNU Aryan",
+        "Rajath Chandrashekar Aralikatti"
+      ],
+      "abstract": "Vision-Language Navigation (VLN) in unseen indoor environments is useful in real-world robotics, where an agent must follow natural-language instructions, locate objects, and answer spatial questions without a pre-built map or fixed object vocabulary. Multimodal vision-language models (VLMs) provide strong open-vocabulary grounding and zero-shot reasoning, but struggle to emit reliable metric quantities such as range, bearing, and comparative spatial relations directly from images. Existing approaches address this by folding geometry into hand-engineered pipelines or asking models to output waypoints, requiring changes to the control stack for different robots, tasks, or vocabularies. We introduce AnchorVLN, an open-vocabulary VLN system built on a simple rule: the VLM proposes semantics; geometry decides metrics. It is realised as EMBODIED-NAV-MCP, a Model Context Protocol (MCP) server driven by a VLM agent through a compact set of callable tools. Since no tool accepts distance in metres or bearing in radians, the schema enforces the semantic-geometry boundary without modifying the downstream autonomy stack. We benchmark both tasks of the CMU Vision-Language Navigation Challenge 2026: 30 instruction-following questions over 15 scenes and a frozen 45-question object-reference set. The full system achieves 64.4 percent on instruction following, dropping by 13.3 percentage points without controller modeling (t = 2.77). On object reference, geometric anchoring clears the challenge overlap threshold on 10 of 45 questions, versus 0 of 45 for direct coordinate estimation, reducing median center error from 3.37 m to 2.48 m.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-09-10T23:32:22+00:00",
+      "updated": "2026-09-10T23:32:22+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.12285v1",
+      "abs_url": "https://arxiv.org/abs/2609.12285",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-09-17"
+    }
+  ],
+  "summarized_count": 11,
+  "skipped_no_summary": 0
+}
