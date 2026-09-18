@@ -1236,5 +1236,48 @@
     "raw_model_output": "{\n  \"summary_cn\": \"本文综述了无人机具身智能（UAV EI）的新兴范式，提出5+5框架从能力维度和架构层级统一描述该领域。文章系统回顾了具身形态、感知、世界模型、规划、视觉语言导航及协作等方面的进展，并指出长时程自主、物理推理等关键挑战。研究强调通过物理-数字AI智能体的持续耦合，实现自适应且不断进化的无人机自主性。\",\n  \"highlights\": [\n    \"提出5+5框架统一描述无人机具身智能的能力维度与系统架构\",\n    \"系统综述涵盖视觉语言导航、世界模型、具身规划等核心技术\",\n    \"提出物理-数字AI智能体耦合作为实现无人机持续进化自主性的系统级路径\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该综述聚焦无人机具身智能，明确将视觉语言导航作为核心能力之一进行系统综述，直接服务于UAV-VLN研究方向。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV\", \"具身智能\", \"VLN\", \"综述\", \"AI Agent\"]\n}",
     "summarized_at": "2026-09-17T04:54:21.008176+00:00",
     "summarize_error": null
+  },
+  "2609.20388": {
+    "summary_cn": "针对连续环境下的零样本视觉语言导航(VLN-CE)中难以维持持久空间感知的问题，本文提出Navi-Agent。该方法无需坐标或几何定位，仅通过视觉观测与运动历史构建无坐标的拓扑空间状态，实现基于观测的自定位、进度验证和视觉重访恢复。实验表明该方法在几何约束方法中达到SOTA，且与依赖几何定位的方法表现相当。",
+    "highlights": [
+      "提出无坐标(coordinate-free)的拓扑空间状态表示，仅依赖视觉观测与运动历史",
+      "实现基于观测的近似自定位、任务进度验证与视觉重访恢复机制",
+      "在零样本VLN-CE基准和真实机器人平台上达到几何约束方法中的SOTA表现"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文是VLN-CE方向的核心研究，提出零样本导航的新方法，与研究者关注的视觉语言导航主题高度相关，但非无人机场景。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "VLN-CE",
+      "zero-shot",
+      "topological-map",
+      "spatial-awareness",
+      "navigation"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对连续环境下的零样本视觉语言导航(VLN-CE)中难以维持持久空间感知的问题，本文提出Navi-Agent。该方法无需坐标或几何定位，仅通过视觉观测与运动历史构建无坐标的拓扑空间状态，实现基于观测的自定位、进度验证和视觉重访恢复。实验表明该方法在几何约束方法中达到SOTA，且与依赖几何定位的方法表现相当。\",\n  \"highlights\": [\n    \"提出无坐标(coordinate-free)的拓扑空间状态表示，仅依赖视觉观测与运动历史\",\n    \"实现基于观测的近似自定位、任务进度验证与视觉重访恢复机制\",\n    \"在零样本VLN-CE基准和真实机器人平台上达到几何约束方法中的SOTA表现\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文是VLN-CE方向的核心研究，提出零样本导航的新方法，与研究者关注的视觉语言导航主题高度相关，但非无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLN-CE\", \"zero-shot\", \"topological-map\", \"spatial-awareness\", \"navigation\"]\n}",
+    "summarized_at": "2026-09-18T04:44:24.983235+00:00",
+    "summarize_error": null
+  },
+  "2609.20116": {
+    "summary_cn": "本文研究GPT-6-Astra在零样本连续环境视觉语言导航(VLN-CE)系统中的行为表现，该系统通过直接API调用实现观察-决策-执行工作流，无需导航专用微调。在R2R-CE数据集上取得52.0%的成功率，并分析了任务理解与自主完成之间的差距等关键挑战。",
+    "highlights": [
+      "无需导航专用微调或封装代理框架，直接通过API调用实现零样本VLN-CE",
+      "在R2R-CE val-unseen上取得52.0%成功率和48.9% SPL",
+      "揭示了局部判断正确但持续推进与停止策略不足的核心挑战"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "论文直接研究零样本VLN-CE任务，是视觉语言导航领域的核心研究，且对大模型在导航中的行为进行了深入分析。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "VLN-CE",
+      "zero-shot",
+      "GPT",
+      "navigation"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"本文研究GPT-6-Astra在零样本连续环境视觉语言导航(VLN-CE)系统中的行为表现，该系统通过直接API调用实现观察-决策-执行工作流，无需导航专用微调。在R2R-CE数据集上取得52.0%的成功率，并分析了任务理解与自主完成之间的差距等关键挑战。\",\n  \"highlights\": [\"无需导航专用微调或封装代理框架，直接通过API调用实现零样本VLN-CE\", \"在R2R-CE val-unseen上取得52.0%成功率和48.9% SPL\", \"揭示了局部判断正确但持续推进与停止策略不足的核心挑战\"],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"论文直接研究零样本VLN-CE任务，是视觉语言导航领域的核心研究，且对大模型在导航中的行为进行了深入分析。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLN-CE\", \"zero-shot\", \"GPT\", \"navigation\"]\n}",
+    "summarized_at": "2026-09-18T04:44:36.682019+00:00",
+    "summarize_error": null
   }
 }

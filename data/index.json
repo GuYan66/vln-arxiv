@@ -530,7 +530,25 @@
       "is_uav_vln": true,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-09-17.json"
+    },
+    "2609.20388": {
+      "arxiv_id": "2609.20388",
+      "title": "Navi-Agent: Unlocalized Monocular Navigation Agent",
+      "date": "2026-09-18",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-18.json"
+    },
+    "2609.20116": {
+      "arxiv_id": "2609.20116",
+      "title": "GPT-6-Astra in a Navigation Workflow: Behavioral Analysis in Zero-Shot Vision-and-Language Navigation in Continuous Environments",
+      "date": "2026-09-18",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-18.json"
     }
   },
-  "last_updated": "2026-09-17T04:54:21.010254+00:00"
+  "last_updated": "2026-09-18T04:44:36.684064+00:00"
 }
