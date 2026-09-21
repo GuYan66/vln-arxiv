@@ -548,7 +548,34 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-09-18.json"
+    },
+    "2609.21504": {
+      "arxiv_id": "2609.21504",
+      "title": "DPed-VLN: A Benchmark for Socially Compliant Vision-and-Language Navigation in Dynamic Pedestrian Environments",
+      "date": "2026-09-21",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-21.json"
+    },
+    "2609.21316": {
+      "arxiv_id": "2609.21316",
+      "title": "NaViRrator: Robot Navigation from Human-Readable Maps through a Learned Visual Route",
+      "date": "2026-09-21",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-21.json"
+    },
+    "2609.20982": {
+      "arxiv_id": "2609.20982",
+      "title": "ASGARD: Action-Space Guard for UAV Resilience via Reinforcement Learning",
+      "date": "2026-09-21",
+      "relevance_score": 3,
+      "is_uav_vln": false,
+      "primary_category": "cs.LG",
+      "path": "papers/papers-2026-09-21.json"
     }
   },
-  "last_updated": "2026-09-20T04:54:29.324985+00:00"
+  "last_updated": "2026-09-21T04:57:00.142064+00:00"
 }
