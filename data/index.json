@@ -575,7 +575,79 @@
       "is_uav_vln": false,
       "primary_category": "cs.LG",
       "path": "papers/papers-2026-09-21.json"
+    },
+    "2609.24576": {
+      "arxiv_id": "2609.24576",
+      "title": "What do VLM-Based Vision-Language Navigation Models Rely on: Interpreting and Steering Policy Behavior",
+      "date": "2026-09-22",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-22.json"
+    },
+    "2609.24189": {
+      "arxiv_id": "2609.24189",
+      "title": "A Topological Representation with Object-Path Graphs for Open-Vocabulary Instance Navigation",
+      "date": "2026-09-22",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-22.json"
+    },
+    "2609.23841": {
+      "arxiv_id": "2609.23841",
+      "title": "Structured World-State Reasoning for Agentic Robotic Search",
+      "date": "2026-09-22",
+      "relevance_score": 9,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-22.json"
+    },
+    "2609.23745": {
+      "arxiv_id": "2609.23745",
+      "title": "FlockDiffusion: Assignment-Conditioned Diffusion for Multi-Drone Task Allocation and Completion",
+      "date": "2026-09-22",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-22.json"
+    },
+    "2609.23695": {
+      "arxiv_id": "2609.23695",
+      "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+      "date": "2026-09-22",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-09-22.json"
+    },
+    "2609.23643": {
+      "arxiv_id": "2609.23643",
+      "title": "Spiking Neural Network Actor-Critic Proximal Policy Optimization Control for Autonomous UAV Navigation Through Constrained Openings in Civil Infrastructure and Buildings",
+      "date": "2026-09-22",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-22.json"
+    },
+    "2609.23423": {
+      "arxiv_id": "2609.23423",
+      "title": "RiverVLN: Phase-Grounded Temporal Vision--Language Navigation for Unmanned Surface Vehicles",
+      "date": "2026-09-22",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-22.json"
+    },
+    "2609.23407": {
+      "arxiv_id": "2609.23407",
+      "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+      "date": "2026-09-22",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.SD",
+      "path": "papers/papers-2026-09-22.json"
     }
   },
-  "last_updated": "2026-09-21T04:57:00.142064+00:00"
+  "last_updated": "2026-09-22T04:59:06.844246+00:00"
 }
