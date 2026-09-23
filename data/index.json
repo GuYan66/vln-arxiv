@@ -647,7 +647,34 @@
       "is_uav_vln": false,
       "primary_category": "cs.SD",
       "path": "papers/papers-2026-09-22.json"
+    },
+    "2609.26408": {
+      "arxiv_id": "2609.26408",
+      "title": "SparseNav: Instruction-conditioned Sparse Semantic Perception for Training-Free Vision-Language Navigation",
+      "date": "2026-09-23",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-23.json"
+    },
+    "2609.26007": {
+      "arxiv_id": "2609.26007",
+      "title": "Skytopia: Monocular Drone Navigation with Action-Conditioned Latent World Models",
+      "date": "2026-09-23",
+      "relevance_score": 7,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-23.json"
+    },
+    "2609.25666": {
+      "arxiv_id": "2609.25666",
+      "title": "Deploying Foundation Models for Embodied Navigation",
+      "date": "2026-09-23",
+      "relevance_score": 6,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-23.json"
     }
   },
-  "last_updated": "2026-09-22T04:59:06.844246+00:00"
+  "last_updated": "2026-09-23T04:46:08.036876+00:00"
 }
