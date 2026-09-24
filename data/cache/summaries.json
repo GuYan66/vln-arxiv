@@ -1563,5 +1563,46 @@
     "raw_model_output": "{\n  \"summary_cn\": \"本文探讨了在具身导航智能体上部署基础模型时面临的两大挑战：训练偏差导致在未见环境中的个性化表现差，以及上下文长度限制影响长时序任务的成功率。作者提出了利用场景中人类习惯数据引导模型的TAP方法，以及通过新增记忆头进行主动记忆管理的MemCtrl机制。实验表明，TAP在真实机器人导航中提升了18%的成功率，MemCtrl在长指令子集上提升了20%的表现，同时节省了近一半的上下文使用量。\",\n  \"highlights\": [\n    \"提出TAP方法，利用场景中的人类习惯数据缓解基础模型的训练偏差，提升个性化目标导航能力\",\n    \"提出MemCtrl记忆头增强机制，解决长时序任务中基础模型上下文长度受限的问题\",\n    \"在真实Turtlebot机器人上验证有效性，长指令任务提升20%且节省近一半上下文\"\n  ],\n  \"relevance_score\": 6,\n  \"relevance_reason\": \"论文聚焦于具身导航中基础模型的部署问题，与VLN领域相关，但未涉及视觉语言导航的核心任务设定，也非无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"Embodied Navigation\", \"Foundation Models\", \"Memory Management\", \"Personalization\"]\n}",
     "summarized_at": "2026-09-23T04:46:08.034316+00:00",
     "summarize_error": null
+  },
+  "2609.28296": {
+    "summary_cn": "现有VLN方法多采用单轮开环范式，易因感知歧义和里程计漂移导致累积误差且无法恢复。Talk2Escape提出一种主动对话干预框架，通过轻量级视觉语言模块持续监测智能体运动状态，在检测到循环或轨迹偏离时生成简洁查询以获取纠正反馈，将导航重构为闭环交互过程。该方法在R2R-CE等仿真器上取得SOTA性能，并在四足机器人上验证了sim-to-real迁移能力。",
+    "highlights": [
+      "提出主动对话干预框架将VLN从开环转为闭环交互，具备错误恢复机制",
+      "轻量级模块监测运动状态，检测异常后自动生成grounded查询寻求算法oracle或人类反馈",
+      "在R2R-CE上达66.0%成功率超越SOTA，并在Unitree Go2四足机器人上验证实机迁移"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文是核心VLN研究，提出闭环对话干预的创新框架并在多个VLN基准上取得SOTA，但场景为地面机器人而非无人机。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "closed-loop",
+      "dialogue-intervention",
+      "sim-to-real",
+      "R2R-CE"
+    ],
+    "raw_model_output": "{\"summary_cn\": \"现有VLN方法多采用单轮开环范式，易因感知歧义和里程计漂移导致累积误差且无法恢复。Talk2Escape提出一种主动对话干预框架，通过轻量级视觉语言模块持续监测智能体运动状态，在检测到循环或轨迹偏离时生成简洁查询以获取纠正反馈，将导航重构为闭环交互过程。该方法在R2R-CE等仿真器上取得SOTA性能，并在四足机器人上验证了sim-to-real迁移能力。\",\"highlights\": [\"提出主动对话干预框架将VLN从开环转为闭环交互，具备错误恢复机制\", \"轻量级模块监测运动状态，检测异常后自动生成grounded查询寻求算法oracle或人类反馈\", \"在R2R-CE上达66.0%成功率超越SOTA，并在Unitree Go2四足机器人上验证实机迁移\"],\"relevance_score\": 8,\"relevance_reason\": \"该论文是核心VLN研究，提出闭环对话干预的创新框架并在多个VLN基准上取得SOTA，但场景为地面机器人而非无人机。\",\"is_uav_vln\": false,\"tags\": [\"VLN\",\"closed-loop\",\"dialogue-intervention\",\"sim-to-real\",\"R2R-CE\"]}",
+    "summarized_at": "2026-09-24T04:51:56.881120+00:00",
+    "summarize_error": null
+  },
+  "2609.27218": {
+    "summary_cn": "针对具身导航中大规模标注数据获取困难的问题，本文提出NaviScale框架，通过组合真实住宅平面图与从MP3D和HM3DSem提取的房间级语义和障碍物地图来生成大规模语义地图训练数据。该方法通过房间间缩放和房间内缩放增加数据多样性，并利用光线投射可见性（VisRC）模拟部分观测，最终生成了包含192,000个语义地图的数据集。实验表明，在不改变预测架构的情况下，该系统在HM3D和MP3D上均取得了良好的ObjectNav性能。",
+    "highlights": [
+      "提出NaviScale框架，无需为每个样本重建完整3D环境即可生成大规模语义地图训练数据",
+      "通过房间间和房间内缩放策略增加数据多样性，利用VisRC模拟真实传感器的部分观测",
+      "生成包含192,000个语义地图的数据集，在HM3D和MP3D上分别达到64.3%和43.1%的成功率"
+    ],
+    "relevance_score": 5,
+    "relevance_reason": "该论文研究的是基于语义地图的具身目标导航，属于具身导航领域但未涉及视觉语言导航(VLN)或无人机场景，与用户的核心研究方向部分相关但非核心。",
+    "is_uav_vln": false,
+    "tags": [
+      "ObjectNav",
+      "Semantic Map",
+      "Data Generation",
+      "Embodied Navigation"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对具身导航中大规模标注数据获取困难的问题，本文提出NaviScale框架，通过组合真实住宅平面图与从MP3D和HM3DSem提取的房间级语义和障碍物地图来生成大规模语义地图训练数据。该方法通过房间间缩放和房间内缩放增加数据多样性，并利用光线投射可见性（VisRC）模拟部分观测，最终生成了包含192,000个语义地图的数据集。实验表明，在不改变预测架构的情况下，该系统在HM3D和MP3D上均取得了良好的ObjectNav性能。\",\n  \"highlights\": [\n    \"提出NaviScale框架，无需为每个样本重建完整3D环境即可生成大规模语义地图训练数据\",\n    \"通过房间间和房间内缩放策略增加数据多样性，利用VisRC模拟真实传感器的部分观测\",\n    \"生成包含192,000个语义地图的数据集，在HM3D和MP3D上分别达到64.3%和43.1%的成功率\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"该论文研究的是基于语义地图的具身目标导航，属于具身导航领域但未涉及视觉语言导航(VLN)或无人机场景，与用户的核心研究方向部分相关但非核心。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"ObjectNav\", \"Semantic Map\", \"Data Generation\", \"Embodied Navigation\"]\n}",
+    "summarized_at": "2026-09-24T04:52:07.277693+00:00",
+    "summarize_error": null
   }
 }
