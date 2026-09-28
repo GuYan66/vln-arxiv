@@ -1625,5 +1625,49 @@
     "raw_model_output": "{\n  \"summary_cn\": \"本文评估了通用基础模型GPT-6-Astra在连续环境下的零样本视觉语言导航（VLN-CE）能力。该模型仅利用单目RGB图像，无需导航微调或预建地图，即可自主决定观察、移动和停止。实验表明，该模型在R2R-CE基准上取得了79.0%的成功率，超越了现有最强零样本和有监督方法，并展示了多阶段指令理解和自适应导航能力。\",\n  \"highlights\": [\n    \"仅用单目RGB输入，无需导航特定微调或预建场景地图即可实现零样本VLN-CE\",\n    \"在R2R-CE基准上达到79.0%的成功率，超越最强零样本和有监督方法13.0和6.9个百分点\",\n    \"揭示了可靠路径执行与目标验证仍是挑战，并指出未来VLN研究应基于基础模型发展泛化智能\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"论文直接研究视觉语言导航（VLN）核心任务，评估基础模型在连续环境中的零样本导航性能，属于该领域的核心且具创新贡献的研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLN-CE\", \"零样本导航\", \"基础模型\", \"具身导航\"]\n}",
     "summarized_at": "2026-09-25T04:58:11.183957+00:00",
     "summarize_error": null
+  },
+  "2609.31507": {
+    "summary_cn": "针对城市级无人机视觉语言导航(VLN)中长程记忆与地理空间定位的需求，本文提出SatNav——一个基于高分辨率卫星影像构建的可扩展长航程UAV-VLN基准，涵盖18个城市59个场景共118K条导航episode，平均轨迹长度379米。该基准定义了Boundary、Landmark和Route三类任务以测试长程记忆与空间推理能力，并提出模块化框架SwiftVLN进行记忆组件消融研究，同时验证了卫星影像训练的导航模型可迁移至真实无人机观测。",
+    "highlights": [
+      "基于卫星影像构建可扩展的城市级UAV-VLN基准，无需依赖昂贵的3D重建资产，实现118K episodes覆盖18城市",
+      "定义Boundary/Landmark/Route三类任务族，系统测试长程记忆与地理空间推理能力",
+      "提出SwiftVLN模块化框架并开展记忆设计消融，同时验证卫星到无人机的迁移可行性"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文直接针对UAV-VLN构建大规模基准并提出新框架，是该领域的核心创新贡献。",
+    "is_uav_vln": true,
+    "tags": [
+      "UAV-VLN",
+      "benchmark",
+      "satellite imagery",
+      "long-horizon navigation",
+      "memory",
+      "geospatial grounding",
+      "LVLM"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对城市级无人机视觉语言导航(VLN)中长程记忆与地理空间定位的需求，本文提出SatNav——一个基于高分辨率卫星影像构建的可扩展长航程UAV-VLN基准，涵盖18个城市59个场景共118K条导航episode，平均轨迹长度379米。该基准定义了Boundary、Landmark和Route三类任务以测试长程记忆与空间推理能力，并提出模块化框架SwiftVLN进行记忆组件消融研究，同时验证了卫星影像训练的导航模型可迁移至真实无人机观测。\",\n  \"highlights\": [\n    \"基于卫星影像构建可扩展的城市级UAV-VLN基准，无需依赖昂贵的3D重建资产，实现118K episodes覆盖18城市\",\n    \"定义Boundary/Landmark/Route三类任务族，系统测试长程记忆与地理空间推理能力\",\n    \"提出SwiftVLN模块化框架并开展记忆设计消融，同时验证卫星到无人机的迁移可行性\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接针对UAV-VLN构建大规模基准并提出新框架，是该领域的核心创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"benchmark\", \"satellite imagery\", \"long-horizon navigation\", \"memory\", \"geospatial grounding\", \"LVLM\"]\n}",
+    "summarized_at": "2026-09-28T05:24:24.996326+00:00",
+    "summarize_error": null
+  },
+  "2609.30770": {
+    "summary_cn": "针对具身3D导航中模拟数据存在视觉sim-to-real差距且真实数据采集成本高的问题，提出NavGen，一种利用高保真视觉生成模型作为可扩展数据引擎的文本到视频数据生成管线。该方法能跨室内外场景生成多样化的VLN导航片段，并通过风格多样化方法扩充长尾数据，最终构建了约40万条导航片段的数据集。实验表明，基于该数据训练的模型随规模提升性能优于现有数据集，并在真实世界飞行实验中达到75%的成功率。",
+    "highlights": [
+      "提出NavGen管线，利用视觉生成模型作为可扩展数据引擎生成VLN导航片段",
+      "构建约40万条导航片段数据集，通过风格多样化方法扩充长尾数据",
+      "在真实世界无人机飞行实验中验证了模型的迁移性，成功率达75%"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文直接研究视觉语言导航(VLN)并涉及UAV导航数据集与真实世界飞行实验，属于核心VLN/UAV-VLN研究且有创新的数据生成贡献。",
+    "is_uav_vln": true,
+    "tags": [
+      "VLN",
+      "UAV-VLN",
+      "数据生成",
+      "视觉生成模型",
+      "sim-to-real"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对具身3D导航中模拟数据存在视觉sim-to-real差距且真实数据采集成本高的问题，提出NavGen，一种利用高保真视觉生成模型作为可扩展数据引擎的文本到视频数据生成管线。该方法能跨室内外场景生成多样化的VLN导航片段，并通过风格多样化方法扩充长尾数据，最终构建了约40万条导航片段的数据集。实验表明，基于该数据训练的模型随规模提升性能优于现有数据集，并在真实世界飞行实验中达到75%的成功率。\",\n  \"highlights\": [\n    \"提出NavGen管线，利用视觉生成模型作为可扩展数据引擎生成VLN导航片段\",\n    \"构建约40万条导航片段数据集，通过风格多样化方法扩充长尾数据\",\n    \"在真实世界无人机飞行实验中验证了模型的迁移性，成功率达75%\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航(VLN)并涉及UAV导航数据集与真实世界飞行实验，属于核心VLN/UAV-VLN研究且有创新的数据生成贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"数据生成\", \"视觉生成模型\", \"sim-to-real\"]\n}",
+    "summarized_at": "2026-09-28T05:24:33.944258+00:00",
+    "summarize_error": null
   }
 }
