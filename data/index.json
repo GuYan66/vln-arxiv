@@ -719,7 +719,106 @@
       "is_uav_vln": true,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-09-28.json"
+    },
+    "2609.35570": {
+      "arxiv_id": "2609.35570",
+      "title": "EdgeVLN: Runtime-Aware Deployment Ready Quantized Vision Language Navigation Model",
+      "date": "2026-09-29",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.34969": {
+      "arxiv_id": "2609.34969",
+      "title": "NavJev: Efficient Vision-Language Navigation via Action-Centric Visual Compression and Discriminative Action-Semantic Memory",
+      "date": "2026-09-29",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.34833": {
+      "arxiv_id": "2609.34833",
+      "title": "Multi-Scale Semantic Mapping in Urban Environments via Observation Calibration and Policy Dependence Regularization",
+      "date": "2026-09-29",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.34759": {
+      "arxiv_id": "2609.34759",
+      "title": "PanoVLN: Towards Effective Panoramic Vision-and-Language Navigation",
+      "date": "2026-09-29",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.34276": {
+      "arxiv_id": "2609.34276",
+      "title": "NavHarness: Towards Lifelong Embodied Navigation",
+      "date": "2026-09-29",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.34163": {
+      "arxiv_id": "2609.34163",
+      "title": "Reliability-Aware Sparse Route Memory for Round-Trip Vision-Language Navigation",
+      "date": "2026-09-29",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.33581": {
+      "arxiv_id": "2609.33581",
+      "title": "ForeFly: A Dual-Horizon World Action Model for Aerial Vision-Language Navigation",
+      "date": "2026-09-29",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.33097": {
+      "arxiv_id": "2609.33097",
+      "title": "Query, Align, and Distill: Navigation-Aware Cross-Modal Interaction for Efficient Vision-and-Language Navigation",
+      "date": "2026-09-29",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.32855": {
+      "arxiv_id": "2609.32855",
+      "title": "FINE: Future-Informed Navigation Encoding for Data-Efficient Vision-Language Navigation",
+      "date": "2026-09-29",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.32292": {
+      "arxiv_id": "2609.32292",
+      "title": "Affordance-Conditioned Decision Making: Bridging the Semantic-Spatial Gap in Zero-Shot Cross-Floor Vision-and-Language Navigation",
+      "date": "2026-09-29",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.32224": {
+      "arxiv_id": "2609.32224",
+      "title": "RAO-Nav: Probing Omni-Language Models for Zero-shot Semantic Audio-Visual Navigation",
+      "date": "2026-09-29",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-09-29.json"
     }
   },
-  "last_updated": "2026-09-28T05:24:33.946786+00:00"
+  "last_updated": "2026-09-29T05:47:29.747172+00:00"
 }

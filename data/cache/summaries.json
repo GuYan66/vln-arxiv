@@ -1669,5 +1669,228 @@
     "raw_model_output": "{\n  \"summary_cn\": \"针对具身3D导航中模拟数据存在视觉sim-to-real差距且真实数据采集成本高的问题，提出NavGen，一种利用高保真视觉生成模型作为可扩展数据引擎的文本到视频数据生成管线。该方法能跨室内外场景生成多样化的VLN导航片段，并通过风格多样化方法扩充长尾数据，最终构建了约40万条导航片段的数据集。实验表明，基于该数据训练的模型随规模提升性能优于现有数据集，并在真实世界飞行实验中达到75%的成功率。\",\n  \"highlights\": [\n    \"提出NavGen管线，利用视觉生成模型作为可扩展数据引擎生成VLN导航片段\",\n    \"构建约40万条导航片段数据集，通过风格多样化方法扩充长尾数据\",\n    \"在真实世界无人机飞行实验中验证了模型的迁移性，成功率达75%\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航(VLN)并涉及UAV导航数据集与真实世界飞行实验，属于核心VLN/UAV-VLN研究且有创新的数据生成贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"数据生成\", \"视觉生成模型\", \"sim-to-real\"]\n}",
     "summarized_at": "2026-09-28T05:24:33.944258+00:00",
     "summarize_error": null
+  },
+  "2609.35570": {
+    "summary_cn": "现有VLN模型依赖算力充足的平台，难以部署于内存和功耗受限的边缘设备。本文提出EdgeVLN，将量化StreamVLN模型与轻量因果变换器LATTE结合，通过llama.cpp VLN驱动实现流式上下文重建与内存token剪枝，在NVIDIA Jetson Orin NX上完成实时部署。在R2R VLN-CE全部1839个验证集场景上，4位量化模型以58.02%的成功率超越BF16基线，同时显著降低延迟、能耗和内存占用。",
+    "highlights": [
+      "提出LATTE轻量因果变换器，复用骨干网络隐状态预测停止动作，无需额外视觉编码器或前向传播",
+      "系统量化8至2位精度并评估多种推理运行时，发现IQ4_NL格式在边缘板上可行且性能几乎无损",
+      "4位量化模型在Jetson Orin NX上仅占11.35GB内存，比存储流式BF16快20.8倍、能耗低13.3倍"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "直接面向VLN模型的边缘部署，在量化、运行时优化和实时停止策略上有实质性创新，对VLN乃至UAV-VLN的端侧部署均有参考价值。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "边缘部署",
+      "量化",
+      "StreamVLN",
+      "Jetson",
+      "R2R-VLN-CE"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"现有VLN模型依赖算力充足的平台，难以部署于内存和功耗受限的边缘设备。本文提出EdgeVLN，将量化StreamVLN模型与轻量因果变换器LATTE结合，通过llama.cpp VLN驱动实现流式上下文重建与内存token剪枝，在NVIDIA Jetson Orin NX上完成实时部署。在R2R VLN-CE全部1839个验证集场景上，4位量化模型以58.02%的成功率超越BF16基线，同时显著降低延迟、能耗和内存占用。\",\n  \"highlights\": [\"提出LATTE轻量因果变换器，复用骨干网络隐状态预测停止动作，无需额外视觉编码器或前向传播\", \"系统量化8至2位精度并评估多种推理运行时，发现IQ4_NL格式在边缘板上可行且性能几乎无损\", \"4位量化模型在Jetson Orin NX上仅占11.35GB内存，比存储流式BF16快20.8倍、能耗低13.3倍\"],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"直接面向VLN模型的边缘部署，在量化、运行时优化和实时停止策略上有实质性创新，对VLN乃至UAV-VLN的端侧部署均有参考价值。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"边缘部署\", \"量化\", \"StreamVLN\", \"Jetson\", \"R2R-VLN-CE\"]\n}",
+    "summarized_at": "2026-09-29T05:44:28.908085+00:00",
+    "summarize_error": null
+  },
+  "2609.34969": {
+    "summary_cn": "针对零样本视觉语言导航(VLN)中多模态大模型推理延迟高的问题，提出高效框架NavJev。该方法通过动作中心视觉压缩(ACVC)整合航点几何、图像描述和语义标签，并利用判别性动作语义记忆(DASM)保留跨步骤的判别性证据，将在线导航重构为紧凑视觉压缩加轻量级动作选择。在R2R-CE数据集上以0.65秒/步的速度实现了27.0%的SR，显著降低了推理延迟与成本。",
+    "highlights": [
+      "提出动作中心视觉压缩(ACVC)，将航点几何、BLIP描述和RAM标签整合为候选动作的紧凑表示",
+      "提出判别性动作语义记忆(DASM)，过滤共享语义并维护跨步骤的判别性动作证据",
+      "将重复的多模态生成重构为轻量级类型化动作选择，在R2R-CE上实现0.65秒/步、27.0% SR的高效导航"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文直接解决视觉语言导航(VLN)中的效率问题，提出新的视觉压缩与记忆机制，属于核心VLN研究且具有创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "零样本导航",
+      "视觉压缩",
+      "动作选择",
+      "效率优化"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对零样本视觉语言导航(VLN)中多模态大模型推理延迟高的问题，提出高效框架NavJev。该方法通过动作中心视觉压缩(ACVC)整合航点几何、图像描述和语义标签，并利用判别性动作语义记忆(DASM)保留跨步骤的判别性证据，将在线导航重构为紧凑视觉压缩加轻量级动作选择。在R2R-CE数据集上以0.65秒/步的速度实现了27.0%的SR，显著降低了推理延迟与成本。\",\n  \"highlights\": [\n    \"提出动作中心视觉压缩(ACVC)，将航点几何、BLIP描述和RAM标签整合为候选动作的紧凑表示\",\n    \"提出判别性动作语义记忆(DASM)，过滤共享语义并维护跨步骤的判别性动作证据\",\n    \"将重复的多模态生成重构为轻量级类型化动作选择，在R2R-CE上实现0.65秒/步、27.0% SR的高效导航\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文直接解决视觉语言导航(VLN)中的效率问题，提出新的视觉压缩与记忆机制，属于核心VLN研究且具有创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"零样本导航\", \"视觉压缩\", \"动作选择\", \"效率优化\"]\n}",
+    "summarized_at": "2026-09-29T05:44:39.673254+00:00",
+    "summarize_error": null
+  },
+  "2609.34833": {
+    "summary_cn": "针对城市环境中物体尺度变化大、观测距离多样导致语义映射困难的问题，提出了一种多尺度语义映射方法。该方法引入类别感知的观测校准策略以缓解不可靠观测，并利用互信息正则化减少校准与运动策略间的冗余耦合，同时采用类别级价值估计器建模异构映射策略。贡献包括构建大规模城市语义映射数据集及提出解决尺度与观测距离失配的联合优化框架。",
+    "highlights": [
+      "构建了具有多尺度实例标注的大规模城市语义映射数据集",
+      "提出类别感知的观测校准策略与互信息正则化以解耦校准与运动策略",
+      "采用类别级价值估计器并通过Pareto优化解决跨类别梯度冲突"
+    ],
+    "relevance_score": 4,
+    "relevance_reason": "该论文研究城市环境下的具身导航语义映射，虽涉及embodied navigation但未涉及视觉语言导航(VLN)指令理解与执行，属于相关但非核心研究。",
+    "is_uav_vln": false,
+    "tags": [
+      "semantic mapping",
+      "embodied navigation",
+      "urban environments",
+      "observation calibration",
+      "policy dependence"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对城市环境中物体尺度变化大、观测距离多样导致语义映射困难的问题，提出了一种多尺度语义映射方法。该方法引入类别感知的观测校准策略以缓解不可靠观测，并利用互信息正则化减少校准与运动策略间的冗余耦合，同时采用类别级价值估计器建模异构映射策略。贡献包括构建大规模城市语义映射数据集及提出解决尺度与观测距离失配的联合优化框架。\",\n  \"highlights\": [\n    \"构建了具有多尺度实例标注的大规模城市语义映射数据集\",\n    \"提出类别感知的观测校准策略与互信息正则化以解耦校准与运动策略\",\n    \"采用类别级价值估计器并通过Pareto优化解决跨类别梯度冲突\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"该论文研究城市环境下的具身导航语义映射，虽涉及embodied navigation但未涉及视觉语言导航(VLN)指令理解与执行，属于相关但非核心研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"semantic mapping\", \"embodied navigation\", \"urban environments\", \"observation calibration\", \"policy dependence\"]\n}",
+    "summarized_at": "2026-09-29T05:45:02.728448+00:00",
+    "summarize_error": null
+  },
+  "2609.34759": {
+    "summary_cn": "本文提出 PanoVLN，探索在全景视觉输入下的视觉语言导航任务。针对全景视野带来的长视野规划和复杂路径选择问题，引入置信度引导执行策略、分支路径训练监督以及融合语义与几何特征的全景表示方法。在 R2R-CE 和 RxR-CE 上显著超越 SOTA，并在四足机器人上验证了更快的导航性能。",
+    "highlights": [
+      "提出置信度引导执行(CGE)策略，动态决定单次全景观测后执行的动作数量，支持长视野规划",
+      "构建含频繁分支点的训练路径并提供针对性监督，提升复杂路口的路径选择能力",
+      "融合 RGB 全景的语义与几何特征，在不增加视觉 token 的前提下捕捉场景内容与空间布局"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文是核心 VLN 研究，在全景视觉输入、动作预测和视觉表示方面做出创新贡献，与研究者方向高度相关",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "panoramic",
+      "action-planning",
+      "visual-representation",
+      "embodied-navigation"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"本文提出 PanoVLN，探索在全景视觉输入下的视觉语言导航任务。针对全景视野带来的长视野规划和复杂路径选择问题，引入置信度引导执行策略、分支路径训练监督以及融合语义与几何特征的全景表示方法。在 R2R-CE 和 RxR-CE 上显著超越 SOTA，并在四足机器人上验证了更快的导航性能。\",\n  \"highlights\": [\n    \"提出置信度引导执行(CGE)策略，动态决定单次全景观测后执行的动作数量，支持长视野规划\",\n    \"构建含频繁分支点的训练路径并提供针对性监督，提升复杂路口的路径选择能力\",\n    \"融合 RGB 全景的语义与几何特征，在不增加视觉 token 的前提下捕捉场景内容与空间布局\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文是核心 VLN 研究，在全景视觉输入、动作预测和视觉表示方面做出创新贡献，与研究者方向高度相关\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"panoramic\", \"action-planning\", \"visual-representation\", \"embodied-navigation\"]\n}",
+    "summarized_at": "2026-09-29T05:45:13.232064+00:00",
+    "summarize_error": null
+  },
+  "2609.34276": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "{\"summary_cn\":\" \",\"highlights\": [],\"relevance_score\": 0,\"relevance_reason\": \" \",\"is_uav_vln\": false,\"tags\": []}",
+    "summarized_at": "2026-09-29T05:45:22.373974+00:00",
+    "summarize_error": null
+  },
+  "2609.34163": {
+    "summary_cn": "本文研究连续往返视觉语言导航(VLN)中的返程问题，诊断了方向可观测性、偏差恢复和终止稳定性方面的失败。提出一种可靠性感知的稀疏路径记忆方法，将去程轨迹记录为有序几何锚点，并通过结构化提示、动作级仲裁和终端验证在返程中进行查询。实验表明该方法将语言-only返程成功率从22.0%提升至55.1%，揭示了信息质量、行为一致性和在线可靠性是长时程导航的独立限制因素。",
+    "highlights": [
+      "首次系统研究连续往返VLN的返程导航问题",
+      "提出可靠性感知稀疏路径记忆，将去程轨迹编码为几何锚点供返程查询",
+      "实验揭示了信息质量、行为一致性与在线可靠性三者对长时程导航的独立影响"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文直接研究核心VLN问题，提出往返导航新范式与稀疏路径记忆方法，对VLN研究有创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "round-trip navigation",
+      "route memory",
+      "reliability-aware",
+      "continuous VLN"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"本文研究连续往返视觉语言导航(VLN)中的返程问题，诊断了方向可观测性、偏差恢复和终止稳定性方面的失败。提出一种可靠性感知的稀疏路径记忆方法，将去程轨迹记录为有序几何锚点，并通过结构化提示、动作级仲裁和终端验证在返程中进行查询。实验表明该方法将语言-only返程成功率从22.0%提升至55.1%，揭示了信息质量、行为一致性和在线可靠性是长时程导航的独立限制因素。\",\n  \"highlights\": [\n    \"首次系统研究连续往返VLN的返程导航问题\",\n    \"提出可靠性感知稀疏路径记忆，将去程轨迹编码为几何锚点供返程查询\",\n    \"实验揭示了信息质量、行为一致性与在线可靠性三者对长时程导航的独立影响\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文直接研究核心VLN问题，提出往返导航新范式与稀疏路径记忆方法，对VLN研究有创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"round-trip navigation\", \"route memory\", \"reliability-aware\", \"continuous VLN\"]\n}",
+    "summarized_at": "2026-09-29T05:45:32.518122+00:00",
+    "summarize_error": null
+  },
+  "2609.33581": {
+    "summary_cn": "针对无人机视觉语言导航(AVLN)中现有方法仅依赖单时间尺度预测的问题，ForeFly提出双视界潜在世界动作模型，同时预测近端未来（局部连续性）和路由关键远端未来（长程引导）。通过视界特有前瞻查询结合近期与路由关键视觉记忆，并引入前瞻引导动作精炼(FGAR)模块对两种未来信息进行非对称利用，分别增强局部动作和路由级引导。在TravelUAV和UAV-ON基准上显著优于强基线。",
+    "highlights": [
+      "双视界潜在世界动作模型：同时预测近端未来与路由关键远端未来，弥补单视界预测不足",
+      "前瞻引导动作精炼(FGAR)：非对称利用近端前瞻增强局部动作、路由关键前瞻进行特征校正与长程引导",
+      "在TravelUAV和UAV-ON两个AVLN基准上的已见与未见场景均优于强基线"
+    ],
+    "relevance_score": 10,
+    "relevance_reason": "该论文直接针对无人机视觉语言导航(AVLN)提出双视界世界模型与动作精炼方法，是UAV-VLN方向的核心创新工作。",
+    "is_uav_vln": true,
+    "tags": [
+      "UAV-VLN",
+      "AVLN",
+      "world model",
+      "dual-horizon prediction",
+      "action refinement"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对无人机视觉语言导航(AVLN)中现有方法仅依赖单时间尺度预测的问题，ForeFly提出双视界潜在世界动作模型，同时预测近端未来（局部连续性）和路由关键远端未来（长程引导）。通过视界特有前瞻查询结合近期与路由关键视觉记忆，并引入前瞻引导动作精炼(FGAR)模块对两种未来信息进行非对称利用，分别增强局部动作和路由级引导。在TravelUAV和UAV-ON基准上显著优于强基线。\",\n  \"highlights\": [\n    \"双视界潜在世界动作模型：同时预测近端未来与路由关键远端未来，弥补单视界预测不足\",\n    \"前瞻引导动作精炼(FGAR)：非对称利用近端前瞻增强局部动作、路由关键前瞻进行特征校正与长程引导\",\n    \"在TravelUAV和UAV-ON两个AVLN基准上的已见与未见场景均优于强基线\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接针对无人机视觉语言导航(AVLN)提出双视界世界模型与动作精炼方法，是UAV-VLN方向的核心创新工作。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"AVLN\", \"world model\", \"dual-horizon prediction\", \"action refinement\"]\n}",
+    "summarized_at": "2026-09-29T05:45:39.086676+00:00",
+    "summarize_error": null
+  },
+  "2609.33097": {
+    "summary_cn": "针对视觉语言导航(VLN)模型参数量大、部署成本高的问题，提出一种两阶段方法：首先构建高性能教师模型，利用可学习查询槽显式提取全景观测中的导航证据并与指令对齐；其次通过知识蒸馏训练紧凑学生模型，同时迁移注意力位置和动作决策。实验表明学生模型在参数量减少93.65%的情况下仍能接近教师模型的导航性能。",
+    "highlights": [
+      "提出导航感知的跨模态交互方法，利用可学习查询槽显式提取全局与局部导航证据",
+      "设计基于查询瓶颈的蒸馏接口，同时迁移注意力区域和动作策略",
+      "在标准VLN基准上参数量减少93.65%且导航性能接近教师模型"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文直接研究视觉语言导航(VLN)的效率优化与知识蒸馏，属于核心VLN研究且具有显著创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "知识蒸馏",
+      "跨模态对齐",
+      "模型压缩"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航(VLN)模型参数量大、部署成本高的问题，提出一种两阶段方法：首先构建高性能教师模型，利用可学习查询槽显式提取全景观测中的导航证据并与指令对齐；其次通过知识蒸馏训练紧凑学生模型，同时迁移注意力位置和动作决策。实验表明学生模型在参数量减少93.65%的情况下仍能接近教师模型的导航性能。\",\n  \"highlights\": [\n    \"提出导航感知的跨模态交互方法，利用可学习查询槽显式提取全局与局部导航证据\",\n    \"设计基于查询瓶颈的蒸馏接口，同时迁移注意力区域和动作策略\",\n    \"在标准VLN基准上参数量减少93.65%且导航性能接近教师模型\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航(VLN)的效率优化与知识蒸馏，属于核心VLN研究且具有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"知识蒸馏\", \"跨模态对齐\", \"模型压缩\"]\n}",
+    "summarized_at": "2026-09-29T05:45:48.266418+00:00",
+    "summarize_error": null
+  },
+  "2609.32855": {
+    "summary_cn": "针对视觉语言导航(VLN)在新环境适应中数据成本高的问题，提出FINE框架从现有轨迹中提取未来观测作为潜在监督。该方法通过显式landmark tokens预测未来地标区域，并利用隐式future token结合视频世界模型区分真实与反事实未来，显著提升了数据受限条件下的导航成功率。",
+    "highlights": [
+      "利用未来观测信息提取潜在监督，提升VLN数据效率",
+      "引入显式landmark tokens和隐式future token双重辅助表示",
+      "在R2R-CE和RxR-CE数据集上，尤其在低数据预算下显著提升成功率"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文直接针对视觉语言导航(VLN)提出数据高效的未来信息编码方法，属于VLN核心研究且有显著创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "Data-Efficiency",
+      "Future Prediction",
+      "World Model",
+      "R2R-CE",
+      "RxR-CE"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航(VLN)在新环境适应中数据成本高的问题，提出FINE框架从现有轨迹中提取未来观测作为潜在监督。该方法通过显式landmark tokens预测未来地标区域，并利用隐式future token结合视频世界模型区分真实与反事实未来，显著提升了数据受限条件下的导航成功率。\",\n  \"highlights\": [\n    \"利用未来观测信息提取潜在监督，提升VLN数据效率\",\n    \"引入显式landmark tokens和隐式future token双重辅助表示\",\n    \"在R2R-CE和RxR-CE数据集上，尤其在低数据预算下显著提升成功率\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接针对视觉语言导航(VLN)提出数据高效的未来信息编码方法，属于VLN核心研究且有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Data-Efficiency\", \"Future Prediction\", \"World Model\", \"R2R-CE\", \"RxR-CE\"]\n}",
+    "summarized_at": "2026-09-29T05:46:01.524288+00:00",
+    "summarize_error": null
+  },
+  "2609.32292": {
+    "summary_cn": "该论文针对零样本视觉语言导航中高层语义意图与底层物理执行之间的鸿沟，提出PACE模块，将过渡语义（楼梯、门、窄通道）转化为以智能体为中心的可通行可供性位姿，并基于该位姿条件化短视界动作生成。通过失败感知的偏好优化利用rollout对比对进一步改进闭环纠错能力，可即插即用地集成到六个零样本VLN导航器中，在R2R-CE和RxR-CE跨楼层子集上成功率大幅提升，并在真实环境中验证了有效性。",
+    "highlights": [
+      "提出可供性条件化执行模块PACE，将语义目标转化为可执行的可供性位姿，弥合语义-空间鸿沟",
+      "通过失败感知偏好优化（rollout对比对）增强闭环纠错与偏差恢复能力",
+      "即插即用集成六个零样本VLN导航器，跨楼层成功率显著提升（R2R-CE 16.35%→27.65%，RxR-CE 4.76%→12.06%）"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "直接面向VLN核心任务，提出创新的可供性条件化执行与偏好优化模块并在标准基准R2R-CE/RxR-CE上验证，对该研究者高度相关。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "zero-shot",
+      "affordance",
+      "cross-floor",
+      "preference learning",
+      "embodied navigation"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"该论文针对零样本视觉语言导航中高层语义意图与底层物理执行之间的鸿沟，提出PACE模块，将过渡语义（楼梯、门、窄通道）转化为以智能体为中心的可通行可供性位姿，并基于该位姿条件化短视界动作生成。通过失败感知的偏好优化利用rollout对比对进一步改进闭环纠错能力，可即插即用地集成到六个零样本VLN导航器中，在R2R-CE和RxR-CE跨楼层子集上成功率大幅提升，并在真实环境中验证了有效性。\",\n  \"highlights\": [\n    \"提出可供性条件化执行模块PACE，将语义目标转化为可执行的可供性位姿，弥合语义-空间鸿沟\",\n    \"通过失败感知偏好优化（rollout对比对）增强闭环纠错与偏差恢复能力\",\n    \"即插即用集成六个零样本VLN导航器，跨楼层成功率显著提升（R2R-CE 16.35%→27.65%，RxR-CE 4.76%→12.06%）\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"直接面向VLN核心任务，提出创新的可供性条件化执行与偏好优化模块并在标准基准R2R-CE/RxR-CE上验证，对该研究者高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"zero-shot\", \"affordance\", \"cross-floor\", \"preference learning\", \"embodied navigation\"]\n}",
+    "summarized_at": "2026-09-29T05:46:17.659573+00:00",
+    "summarize_error": null
+  },
+  "2609.32224": {
+    "summary_cn": "本文探索全语言模型(OLMs)在零样本语义音频-视觉导航(SAVN)中的直接应用，提出RAO-Nav部署流程，利用OLMs中编码的隐式音频-视觉知识使具身智能体能够听、看、推理和行动。方法上提出测试时潜在导航推理(LNR)模块，集成到解码空间中以激发OLMs的内在思维能力，检索更多目标相关观测并做出有效导航决策。实验表明该框架在无需任何训练数据的情况下超越了公开SAVN基准上的SOTA基线，并引入了全局导航指令新设置来评估OLMs作为具身导航智能体的能力。",
+    "highlights": [
+      "提出RAO-Nav零样本导航框架，直接利用OLMs的隐式多模态知识实现听、看、推理、行动一体化导航",
+      "设计测试时潜在导航推理(LNR)模块，集成到解码空间中激发模型内在推理能力",
+      "无需训练数据即在SAVN基准上超越SOTA，并引入全局导航指令新评估设置"
+    ],
+    "relevance_score": 7,
+    "relevance_reason": "论文核心为基于语言模型的多模态具身导航，与VLN的指令理解与导航决策高度相关，但额外引入音频模态，非纯视觉语言导航。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "具身导航",
+      "零样本导航",
+      "全语言模型",
+      "音频-视觉导航"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"本文探索全语言模型(OLMs)在零样本语义音频-视觉导航(SAVN)中的直接应用，提出RAO-Nav部署流程，利用OLMs中编码的隐式音频-视觉知识使具身智能体能够听、看、推理和行动。方法上提出测试时潜在导航推理(LNR)模块，集成到解码空间中以激发OLMs的内在思维能力，检索更多目标相关观测并做出有效导航决策。实验表明该框架在无需任何训练数据的情况下超越了公开SAVN基准上的SOTA基线，并引入了全局导航指令新设置来评估OLMs作为具身导航智能体的能力。\",\n  \"highlights\": [\n    \"提出RAO-Nav零样本导航框架，直接利用OLMs的隐式多模态知识实现听、看、推理、行动一体化导航\",\n    \"设计测试时潜在导航推理(LNR)模块，集成到解码空间中激发模型内在推理能力\",\n    \"无需训练数据即在SAVN基准上超越SOTA，并引入全局导航指令新评估设置\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"论文核心为基于语言模型的多模态具身导航，与VLN的指令理解与导航决策高度相关，但额外引入音频模态，非纯视觉语言导航。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"具身导航\", \"零样本导航\", \"全语言模型\", \"音频-视觉导航\"]\n}",
+    "summarized_at": "2026-09-29T05:47:29.744758+00:00",
+    "summarize_error": null
   }
 }
