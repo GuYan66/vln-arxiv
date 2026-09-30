@@ -1892,5 +1892,58 @@
     "raw_model_output": "{\n  \"summary_cn\": \"本文探索全语言模型(OLMs)在零样本语义音频-视觉导航(SAVN)中的直接应用，提出RAO-Nav部署流程，利用OLMs中编码的隐式音频-视觉知识使具身智能体能够听、看、推理和行动。方法上提出测试时潜在导航推理(LNR)模块，集成到解码空间中以激发OLMs的内在思维能力，检索更多目标相关观测并做出有效导航决策。实验表明该框架在无需任何训练数据的情况下超越了公开SAVN基准上的SOTA基线，并引入了全局导航指令新设置来评估OLMs作为具身导航智能体的能力。\",\n  \"highlights\": [\n    \"提出RAO-Nav零样本导航框架，直接利用OLMs的隐式多模态知识实现听、看、推理、行动一体化导航\",\n    \"设计测试时潜在导航推理(LNR)模块，集成到解码空间中激发模型内在推理能力\",\n    \"无需训练数据即在SAVN基准上超越SOTA，并引入全局导航指令新评估设置\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"论文核心为基于语言模型的多模态具身导航，与VLN的指令理解与导航决策高度相关，但额外引入音频模态，非纯视觉语言导航。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"具身导航\", \"零样本导航\", \"全语言模型\", \"音频-视觉导航\"]\n}",
     "summarized_at": "2026-09-29T05:47:29.744758+00:00",
     "summarize_error": null
+  },
+  "2609.37591": {
+    "summary_cn": "针对视觉语言导航中测试时自适应面临的分布偏移问题，本文提出信用引导策略改进方法（CGPI）。该方法通过动作诱导的观测转移恢复有符号的决策信用信号，在冻结预训练策略的基础上提出轻量级自适应更新，并基于先前信用支持的交互进行验证，仅保留有支持的更新否则回滚。实验表明CGPI在多个VLN基准和导航骨干网络上取得一致提升，并验证了零样本sim-to-real迁移的可行性。",
+    "highlights": [
+      "提出从动作诱导的观测转移中恢复参考相对的决策信用信号，无需外部结果反馈",
+      "采用冻结预训练策略+轻量级自适应更新机制，更新经信用验证后决定保留或回滚",
+      "在多个VLN基准上一致提升性能，并通过真实机器人试验验证零样本sim-to-real迁移可行性"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "本文是VLN测试时自适应的核心研究，提出创新的信用引导策略改进方法，与VLN研究方向高度相关且有实质贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "test-time adaptation",
+      "policy improvement",
+      "sim-to-real",
+      "robot navigation"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航中测试时自适应面临的分布偏移问题，本文提出信用引导策略改进方法（CGPI）。该方法通过动作诱导的观测转移恢复有符号的决策信用信号，在冻结预训练策略的基础上提出轻量级自适应更新，并基于先前信用支持的交互进行验证，仅保留有支持的更新否则回滚。实验表明CGPI在多个VLN基准和导航骨干网络上取得一致提升，并验证了零样本sim-to-real迁移的可行性。\",\n  \"highlights\": [\n    \"提出从动作诱导的观测转移中恢复参考相对的决策信用信号，无需外部结果反馈\",\n    \"采用冻结预训练策略+轻量级自适应更新机制，更新经信用验证后决定保留或回滚\",\n    \"在多个VLN基准上一致提升性能，并通过真实机器人试验验证零样本sim-to-real迁移可行性\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"本文是VLN测试时自适应的核心研究，提出创新的信用引导策略改进方法，与VLN研究方向高度相关且有实质贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"test-time adaptation\", \"policy improvement\", \"sim-to-real\", \"robot navigation\"]\n}",
+    "summarized_at": "2026-09-30T05:33:00.338520+00:00",
+    "summarize_error": null
+  },
+  "2609.37353": {
+    "summary_cn": "现有VLN智能体存在",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "{\n  \"summary_cn\": \"现有VLN智能体存在\"\n}",
+    "summarized_at": "2026-09-30T05:33:06.748830+00:00",
+    "summarize_error": null
+  },
+  "2609.35965": {
+    "summary_cn": "现有VLN研究主要关注单智能体执行单条指令，本文首次系统化形式化了多智能体VLN问题，将其建模为带依赖与资源约束的协调问题，并构建了MAVLN基准（11,724条episode，145个场景，最多4个智能体）。同时提出TRISS系统，结合LLM子任务调度器、共享拓扑记忆和冲突感知执行机制，实现多智能体无碰撞协同导航。",
+    "highlights": [
+      "首次将多智能体VLN形式化为带依赖与资源约束的协调问题",
+      "构建MAVLN基准：11,724条episode、145场景、最多4智能体、三种指令模式及定制约束感知指标",
+      "提出TRISS方法：LLM调度+共享拓扑记忆+冲突感知执行，作为全面baseline并揭示协调挑战"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "本文是VLN方向的核心工作，首次系统化多智能体VLN并贡献新基准与新方法，对VLN研究者高度相关。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "multi-agent",
+      "benchmark",
+      "LLM",
+      "coordination"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"现有VLN研究主要关注单智能体执行单条指令，本文首次系统化形式化了多智能体VLN问题，将其建模为带依赖与资源约束的协调问题，并构建了MAVLN基准（11,724条episode，145个场景，最多4个智能体）。同时提出TRISS系统，结合LLM子任务调度器、共享拓扑记忆和冲突感知执行机制，实现多智能体无碰撞协同导航。\",\n  \"highlights\": [\n    \"首次将多智能体VLN形式化为带依赖与资源约束的协调问题\",\n    \"构建MAVLN基准：11,724条episode、145场景、最多4智能体、三种指令模式及定制约束感知指标\",\n    \"提出TRISS方法：LLM调度+共享拓扑记忆+冲突感知执行，作为全面baseline并揭示协调挑战\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"本文是VLN方向的核心工作，首次系统化多智能体VLN并贡献新基准与新方法，对VLN研究者高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"multi-agent\", \"benchmark\", \"LLM\", \"coordination\"]\n}",
+    "summarized_at": "2026-09-30T05:33:16.033935+00:00",
+    "summarize_error": null
   }
 }

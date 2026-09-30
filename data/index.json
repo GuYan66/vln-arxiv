@@ -818,7 +818,34 @@
       "is_uav_vln": false,
       "primary_category": "cs.AI",
       "path": "papers/papers-2026-09-29.json"
+    },
+    "2609.37591": {
+      "arxiv_id": "2609.37591",
+      "title": "Credit-Guided Policy Improvement for Test-time Adaptive Vision-Language Navigation",
+      "date": "2026-09-30",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-09-30.json"
+    },
+    "2609.37353": {
+      "arxiv_id": "2609.37353",
+      "title": "Seek Before You Move: Evidence Seeking for Progress Grounding in Vision-Language Navigation",
+      "date": "2026-09-30",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-09-30.json"
+    },
+    "2609.35965": {
+      "arxiv_id": "2609.35965",
+      "title": "Systematic Multi-Agent Vision-and-Language Navigation: Formulation, Benchmark, and Method",
+      "date": "2026-09-30",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-09-30.json"
     }
   },
-  "last_updated": "2026-09-29T05:47:29.747172+00:00"
+  "last_updated": "2026-09-30T05:33:16.036767+00:00"
 }
