@@ -845,7 +845,43 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-09-30.json"
+    },
+    "2609.39915": {
+      "arxiv_id": "2609.39915",
+      "title": "NavHarness: Adaptive Goals for Agentic Vision-Language Navigation",
+      "date": "2026-10-01",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-01.json"
+    },
+    "2609.39763": {
+      "arxiv_id": "2609.39763",
+      "title": "DiffWAM: A Fast and Efficient Navigation World Action Model",
+      "date": "2026-10-01",
+      "relevance_score": 8,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-01.json"
+    },
+    "2609.39579": {
+      "arxiv_id": "2609.39579",
+      "title": "AVERT-VLN: Abstention-aware Visual Error Recovery and Training for Vision-and-Language Navigation",
+      "date": "2026-10-01",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-10-01.json"
+    },
+    "2609.39207": {
+      "arxiv_id": "2609.39207",
+      "title": "ASENA: Self-evolving Agents for Embodied Navigation",
+      "date": "2026-10-01",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-01.json"
     }
   },
-  "last_updated": "2026-09-30T05:33:16.036767+00:00"
+  "last_updated": "2026-10-01T05:55:14.872536+00:00"
 }

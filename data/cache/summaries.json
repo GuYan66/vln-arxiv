@@ -1945,5 +1945,89 @@
     "raw_model_output": "{\n  \"summary_cn\": \"现有VLN研究主要关注单智能体执行单条指令，本文首次系统化形式化了多智能体VLN问题，将其建模为带依赖与资源约束的协调问题，并构建了MAVLN基准（11,724条episode，145个场景，最多4个智能体）。同时提出TRISS系统，结合LLM子任务调度器、共享拓扑记忆和冲突感知执行机制，实现多智能体无碰撞协同导航。\",\n  \"highlights\": [\n    \"首次将多智能体VLN形式化为带依赖与资源约束的协调问题\",\n    \"构建MAVLN基准：11,724条episode、145场景、最多4智能体、三种指令模式及定制约束感知指标\",\n    \"提出TRISS方法：LLM调度+共享拓扑记忆+冲突感知执行，作为全面baseline并揭示协调挑战\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"本文是VLN方向的核心工作，首次系统化多智能体VLN并贡献新基准与新方法，对VLN研究者高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"multi-agent\", \"benchmark\", \"LLM\", \"coordination\"]\n}",
     "summarized_at": "2026-09-30T05:33:16.033935+00:00",
     "summarize_error": null
+  },
+  "2609.39915": {
+    "summary_cn": "针对通用多模态智能体在VLN长程任务中动作执行偏离预期路线及交互历史累积导致推理开销过大的问题，提出NavHarness框架。该框架包含Goal Agent设定自适应目标、Verify Agent动态验证目标完成、Memory Agent压缩多模态上下文、Visuomotor Agent执行导航动作，四个智能体协同工作。在R2R-CE和RxR-CE基准及真实世界八条挑战性路线上验证了有效性，真实世界成功率达83.3%。",
+    "highlights": [
+      "提出多智能体协同的Agentic VLN框架，通过自适应目标分解长程导航任务",
+      "引入动态目标验证机制与多模态上下文压缩，兼顾导航一致性与推理效率",
+      "在R2R-CE、RxR-CE及真实世界场景中均取得优异表现"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "论文直接研究视觉语言导航(VLN)并提出创新的多智能体框架，是该领域的核心工作，但聚焦于地面导航而非无人机场景。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "Agentic",
+      "多智能体",
+      "目标自适应",
+      "上下文压缩"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对通用多模态智能体在VLN长程任务中动作执行偏离预期路线及交互历史累积导致推理开销过大的问题，提出NavHarness框架。该框架包含Goal Agent设定自适应目标、Verify Agent动态验证目标完成、Memory Agent压缩多模态上下文、Visuomotor Agent执行导航动作，四个智能体协同工作。在R2R-CE和RxR-CE基准及真实世界八条挑战性路线上验证了有效性，真实世界成功率达83.3%。\",\n  \"highlights\": [\n    \"提出多智能体协同的Agentic VLN框架，通过自适应目标分解长程导航任务\",\n    \"引入动态目标验证机制与多模态上下文压缩，兼顾导航一致性与推理效率\",\n    \"在R2R-CE、RxR-CE及真实世界场景中均取得优异表现\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接研究视觉语言导航(VLN)并提出创新的多智能体框架，是该领域的核心工作，但聚焦于地面导航而非无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Agentic\", \"多智能体\", \"目标自适应\", \"上下文压缩\"]\n}",
+    "summarized_at": "2026-10-01T05:54:24.018357+00:00",
+    "summarize_error": null
+  },
+  "2609.39763": {
+    "summary_cn": "预训练视频基础模型蕴含丰富的时空先验，但将其转化为无人机运动通常需要昂贵的未来视频生成与几何重建。本文提出DiffWAM，一种几何条件的导航世界动作模型，直接将冻结视频模型的预测特征转换为连续相机轨迹，无需在线视频解码和多帧重建。该方法在无人机平台上实现了低延迟的连续飞行执行，展示了包括受限穿越、环绕、S形飞行等复杂行为。",
+    "highlights": [
+      "提出DiffWAM，直接从冻结视频模型的多级预测特征中恢复3D运动，无需未来视频合成和几何重建",
+      "引入FastDreamer，通过预测与几何计算的流水线重叠及异步轨迹交接实现无人机连续执行",
+      "在Jetson AGX Thor上实现1.08s端到端延迟，轨迹RMSE达0.3492m，端点成功率74.40%"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文聚焦无人机视觉导航，利用视频预测模型直接生成连续3D飞行轨迹，与UAV-VLN核心任务高度相关且具有显著创新贡献。",
+    "is_uav_vln": true,
+    "tags": [
+      "UAV-VLN",
+      "world action model",
+      "video prediction",
+      "3D trajectory",
+      "embodied navigation"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"预训练视频基础模型蕴含丰富的时空先验，但将其转化为无人机运动通常需要昂贵的未来视频生成与几何重建。本文提出DiffWAM，一种几何条件的导航世界动作模型，直接将冻结视频模型的预测特征转换为连续相机轨迹，无需在线视频解码和多帧重建。该方法在无人机平台上实现了低延迟的连续飞行执行，展示了包括受限穿越、环绕、S形飞行等复杂行为。\",\n  \"highlights\": [\n    \"提出DiffWAM，直接从冻结视频模型的多级预测特征中恢复3D运动，无需未来视频合成和几何重建\",\n    \"引入FastDreamer，通过预测与几何计算的流水线重叠及异步轨迹交接实现无人机连续执行\",\n    \"在Jetson AGX Thor上实现1.08s端到端延迟，轨迹RMSE达0.3492m，端点成功率74.40%\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文聚焦无人机视觉导航，利用视频预测模型直接生成连续3D飞行轨迹，与UAV-VLN核心任务高度相关且具有显著创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"world action model\", \"video prediction\", \"3D trajectory\", \"embodied navigation\"]\n}",
+    "summarized_at": "2026-10-01T05:54:40.904036+00:00",
+    "summarize_error": null
+  },
+  "2609.39579": {
+    "summary_cn": "针对VLN智能体在未知环境中因不熟悉布局和视觉条件而偏离轨道的问题，提出AVERT-VLN闭环框架，通过插件式视觉语言Monitor进行在线人工辅助纠偏和离线偏好学习。构建含2万条反事实风险轨迹的LOSTNAV数据集训练Monitor识别偏离，运行时异步评估执行一致性并在判定偏离时请求人工指导，离线阶段通过轨迹锚定偏好学习将失败转化为决策级偏好对以改进策略。在R2R-CE和RxR-CE val-unseen上分别取得76.2%和66.3%的成功率。",
+    "highlights": [
+      "提出插件式视觉语言Monitor，独立于导航决策生成，在线评估指令-执行一致性并在偏离时请求人工纠偏",
+      "构建LOSTNAV数据集（20K反事实风险轨迹），通过先微调再联合微调的两阶段策略训练Monitor识别语义偏离",
+      "提出轨迹锚定偏好学习，将偏离相关失败转化为决策级偏好对，仅对需纠正的决策进行监督"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文是视觉语言导航(VLN)的核心研究，提出了完整的错误恢复与训练闭环框架，在R2R-CE和RxR-CE基准上取得显著成果，对VLN研究者具有高度参考价值。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "错误恢复",
+      "偏好学习",
+      "人机协作",
+      "闭环导航"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对VLN智能体在未知环境中因不熟悉布局和视觉条件而偏离轨道的问题，提出AVERT-VLN闭环框架，通过插件式视觉语言Monitor进行在线人工辅助纠偏和离线偏好学习。构建含2万条反事实风险轨迹的LOSTNAV数据集训练Monitor识别偏离，运行时异步评估执行一致性并在判定偏离时请求人工指导，离线阶段通过轨迹锚定偏好学习将失败转化为决策级偏好对以改进策略。在R2R-CE和RxR-CE val-unseen上分别取得76.2%和66.3%的成功率。\",\n  \"highlights\": [\n    \"提出插件式视觉语言Monitor，独立于导航决策生成，在线评估指令-执行一致性并在偏离时请求人工纠偏\",\n    \"构建LOSTNAV数据集（20K反事实风险轨迹），通过先微调再联合微调的两阶段策略训练Monitor识别语义偏离\",\n    \"提出轨迹锚定偏好学习，将偏离相关失败转化为决策级偏好对，仅对需纠正的决策进行监督\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文是视觉语言导航(VLN)的核心研究，提出了完整的错误恢复与训练闭环框架，在R2R-CE和RxR-CE基准上取得显著成果，对VLN研究者具有高度参考价值。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"错误恢复\", \"偏好学习\", \"人机协作\", \"闭环导航\"]\n}",
+    "summarized_at": "2026-10-01T05:54:55.868973+00:00",
+    "summarize_error": null
+  },
+  "2609.39207": {
+    "summary_cn": "本文提出 ASENA，一个将通用编程智能体与机器人感知、计算和持久经验相连接的具身导航系统。该系统允许智能体编写执行程序、修复失败并复用技能，同时引入了 4B 参数的单目导航策略 ASENA-VLN 作为可选工具，在 R2R 和 RxR 基准上达到 SOTA。通过持续的工作空间演化和模拟器反馈，ASENA 在 R2R 和 RxR 上的成功率显著提升，并在真实机器人上验证了其超越路径跟随的能力。",
+    "highlights": [
+      "提出 ASENA 自演化智能体系统，结合通用编程智能体与机器人感知执行，无需更新模型权重即可扩展机器人行为",
+      "引入 4B 参数的单目导航策略 ASENA-VLN，在 R2R (68.7%) 和 RxR (70.2%) 上达到 SOTA",
+      "通过持续经验积累与模拟器反馈，在 R2R 和 RxR 重复任务子集上成功率大幅提升至 98% 和 89%"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "ASENA-VLN 是核心视觉语言导航(VLN)策略，在 R2R 和 RxR 基准上取得 SOTA 成绩，对 VLN 研究有重要创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "Embodied Navigation",
+      "Self-evolving Agent",
+      "R2R",
+      "RxR"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"本文提出 ASENA，一个将通用编程智能体与机器人感知、计算和持久经验相连接的具身导航系统。该系统允许智能体编写执行程序、修复失败并复用技能，同时引入了 4B 参数的单目导航策略 ASENA-VLN 作为可选工具，在 R2R 和 RxR 基准上达到 SOTA。通过持续的工作空间演化和模拟器反馈，ASENA 在 R2R 和 RxR 上的成功率显著提升，并在真实机器人上验证了其超越路径跟随的能力。\",\n  \"highlights\": [\n    \"提出 ASENA 自演化智能体系统，结合通用编程智能体与机器人感知执行，无需更新模型权重即可扩展机器人行为\",\n    \"引入 4B 参数的单目导航策略 ASENA-VLN，在 R2R (68.7%) 和 RxR (70.2%) 上达到 SOTA\",\n    \"通过持续经验积累与模拟器反馈，在 R2R 和 RxR 重复任务子集上成功率大幅提升至 98% 和 89%\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"ASENA-VLN 是核心视觉语言导航(VLN)策略，在 R2R 和 RxR 基准上取得 SOTA 成绩，对 VLN 研究有重要创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Embodied Navigation\", \"Self-evolving Agent\", \"R2R\", \"RxR\"]\n}",
+    "summarized_at": "2026-10-01T05:55:14.869509+00:00",
+    "summarize_error": null
   }
 }

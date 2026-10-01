@@ -1,0 +1,989 @@
+{
+  "date": "2026-10-01",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "针对通用多模态智能体在VLN长程任务中动作执行偏离预期路线及交互历史累积导致推理开销过大的问题，提出NavHarness框架。该框架包含Goal Agent设定自适应目标、Verify Agent动态验证目标完成、Memory Agent压缩多模态上下文、Visuomotor Agent执行导航动作，四个智能体协同工作。在R2R-CE和RxR-CE基准及真实世界八条挑战性路线上验证了有效性，真实世界成功率达83.3%。",
+      "highlights": [
+        "提出多智能体协同的Agentic VLN框架，通过自适应目标分解长程导航任务",
+        "引入动态目标验证机制与多模态上下文压缩，兼顾导航一致性与推理效率",
+        "在R2R-CE、RxR-CE及真实世界场景中均取得优异表现"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "论文直接研究视觉语言导航(VLN)并提出创新的多智能体框架，是该领域的核心工作，但聚焦于地面导航而非无人机场景。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "Agentic",
+        "多智能体",
+        "目标自适应",
+        "上下文压缩"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对通用多模态智能体在VLN长程任务中动作执行偏离预期路线及交互历史累积导致推理开销过大的问题，提出NavHarness框架。该框架包含Goal Agent设定自适应目标、Verify Agent动态验证目标完成、Memory Agent压缩多模态上下文、Visuomotor Agent执行导航动作，四个智能体协同工作。在R2R-CE和RxR-CE基准及真实世界八条挑战性路线上验证了有效性，真实世界成功率达83.3%。\",\n  \"highlights\": [\n    \"提出多智能体协同的Agentic VLN框架，通过自适应目标分解长程导航任务\",\n    \"引入动态目标验证机制与多模态上下文压缩，兼顾导航一致性与推理效率\",\n    \"在R2R-CE、RxR-CE及真实世界场景中均取得优异表现\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接研究视觉语言导航(VLN)并提出创新的多智能体框架，是该领域的核心工作，但聚焦于地面导航而非无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Agentic\", \"多智能体\", \"目标自适应\", \"上下文压缩\"]\n}",
+      "summarized_at": "2026-10-01T05:54:24.018357+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.39915",
+      "title": "NavHarness: Adaptive Goals for Agentic Vision-Language Navigation",
+      "authors": [
+        "Haoxiang Shi",
+        "Zaijing Li",
+        "Muhe Ding",
+        "Xiang Deng",
+        "Yaowei Wang",
+        "Liqiang Nie"
+      ],
+      "abstract": "Vision-Language Navigation (VLN) requires embodied agents to generate actions based on instructions and observations. General-purpose multimodal agents offer a promising basis for this task, but selecting plausible local actions does not ensure that execution remains consistent with the intended route, particularly in long-horizon tasks. Moreover, the accumulated interaction history increases the input required for subsequent decisions, resulting in a significant inference overhead. To this end, we introduce \\method, an Agentic VLN framework that includes a Goal Agent that sets adaptive goals for local actions, a Verify Agent that dynamically verifies whether a goal has been completed, a Memory Agent for multimodal context compression, and a Visuomotor Agent to execute adaptive goals. Specifically, the Goal Agent formulates adaptive goals based on the instruction, current observation, and execution history. Then the Visuomotor Agent executes navigation actions to achieve each goal, while the Verify Agent uses a goal-specific verification question to dynamically assess whether the observed outcomes satisfy the intended completion condition. Verified goal completion then marks a boundary for the Memory Agent to compress the corresponding multimodal interaction history while preserving information needed for subsequent navigation. We evaluate navigation on R2R-CE and RxR-CE, examine framework variants across three model backbones, and study context evolution during execution. For Real-World evaluation, \\method achieves 83.3\\% success and 1.51\\,m navigation error across eight challenging routes evaluated three times each.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-09-30T15:06:45+00:00",
+      "updated": "2026-09-30T15:06:45+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.39915v1",
+      "abs_url": "https://arxiv.org/abs/2609.39915",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "预训练视频基础模型蕴含丰富的时空先验，但将其转化为无人机运动通常需要昂贵的未来视频生成与几何重建。本文提出DiffWAM，一种几何条件的导航世界动作模型，直接将冻结视频模型的预测特征转换为连续相机轨迹，无需在线视频解码和多帧重建。该方法在无人机平台上实现了低延迟的连续飞行执行，展示了包括受限穿越、环绕、S形飞行等复杂行为。",
+      "highlights": [
+        "提出DiffWAM，直接从冻结视频模型的多级预测特征中恢复3D运动，无需未来视频合成和几何重建",
+        "引入FastDreamer，通过预测与几何计算的流水线重叠及异步轨迹交接实现无人机连续执行",
+        "在Jetson AGX Thor上实现1.08s端到端延迟，轨迹RMSE达0.3492m，端点成功率74.40%"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文聚焦无人机视觉导航，利用视频预测模型直接生成连续3D飞行轨迹，与UAV-VLN核心任务高度相关且具有显著创新贡献。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "world action model",
+        "video prediction",
+        "3D trajectory",
+        "embodied navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"预训练视频基础模型蕴含丰富的时空先验，但将其转化为无人机运动通常需要昂贵的未来视频生成与几何重建。本文提出DiffWAM，一种几何条件的导航世界动作模型，直接将冻结视频模型的预测特征转换为连续相机轨迹，无需在线视频解码和多帧重建。该方法在无人机平台上实现了低延迟的连续飞行执行，展示了包括受限穿越、环绕、S形飞行等复杂行为。\",\n  \"highlights\": [\n    \"提出DiffWAM，直接从冻结视频模型的多级预测特征中恢复3D运动，无需未来视频合成和几何重建\",\n    \"引入FastDreamer，通过预测与几何计算的流水线重叠及异步轨迹交接实现无人机连续执行\",\n    \"在Jetson AGX Thor上实现1.08s端到端延迟，轨迹RMSE达0.3492m，端点成功率74.40%\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文聚焦无人机视觉导航，利用视频预测模型直接生成连续3D飞行轨迹，与UAV-VLN核心任务高度相关且具有显著创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"world action model\", \"video prediction\", \"3D trajectory\", \"embodied navigation\"]\n}",
+      "summarized_at": "2026-10-01T05:54:40.904036+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.39763",
+      "title": "DiffWAM: A Fast and Efficient Navigation World Action Model",
+      "authors": [
+        "Mo Zhu",
+        "Yuze Wu",
+        "Xijie Huang",
+        "Xiao Cui",
+        "Fei Gao",
+        "Xin Zhou"
+      ],
+      "abstract": "Pretrained video foundation models encode rich semantic and spatiotemporal priors for embodied navigation, yet converting these priors into UAV motion typically requires expensive future-video synthesis and geometric reconstruction. We investigate whether the motion implicit in future visual prediction can instead be recovered directly from the predictive representations of a frozen video model. To this end, we present DiffWAM, a geometry-conditioned navigation world-action model that directly transforms multi-level predictive features into continuous camera trajectories. Its Grid-Motion module preserves spatial-temporal motion associations, while Latent2Pose grounds them with first-frame geometry to recover metrically meaningful 3D motion. Complete video rollouts and geometric reconstruction are required only for offline supervision, eliminating future-video decoding and multi-frame reconstruction during deployment. We further introduce FastDreamer, which overlaps predictive and geometric computation with ongoing flight and performs timestamp-aware asynchronous trajectory handoff for continuous UAV execution. DiffWAM achieves a trajectory RMSE of 0.3492 m and an endpoint success rate of 74.40% on the 1,000-sample DiffWAM-1000 benchmark, while representative real-world experiments demonstrate complex behaviors including constrained traversal, orbiting, S-shaped flight, and multi-stage navigation. An onboard DiffWAM-Flash implementation further reaches 1.08 s model-pipeline latency on NVIDIA Jetson AGX Thor. These results demonstrate that predictive video representations can be efficiently grounded into continuous 3D motion, providing a direct alternative to generate-then-reconstruct navigation pipelines. Project page: https://zzmmzzm.github.io/diffwam.github.io/.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-30T13:57:26+00:00",
+      "updated": "2026-09-30T13:57:26+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.39763v1",
+      "abs_url": "https://arxiv.org/abs/2609.39763",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对VLN智能体在未知环境中因不熟悉布局和视觉条件而偏离轨道的问题，提出AVERT-VLN闭环框架，通过插件式视觉语言Monitor进行在线人工辅助纠偏和离线偏好学习。构建含2万条反事实风险轨迹的LOSTNAV数据集训练Monitor识别偏离，运行时异步评估执行一致性并在判定偏离时请求人工指导，离线阶段通过轨迹锚定偏好学习将失败转化为决策级偏好对以改进策略。在R2R-CE和RxR-CE val-unseen上分别取得76.2%和66.3%的成功率。",
+      "highlights": [
+        "提出插件式视觉语言Monitor，独立于导航决策生成，在线评估指令-执行一致性并在偏离时请求人工纠偏",
+        "构建LOSTNAV数据集（20K反事实风险轨迹），通过先微调再联合微调的两阶段策略训练Monitor识别语义偏离",
+        "提出轨迹锚定偏好学习，将偏离相关失败转化为决策级偏好对，仅对需纠正的决策进行监督"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文是视觉语言导航(VLN)的核心研究，提出了完整的错误恢复与训练闭环框架，在R2R-CE和RxR-CE基准上取得显著成果，对VLN研究者具有高度参考价值。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "错误恢复",
+        "偏好学习",
+        "人机协作",
+        "闭环导航"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对VLN智能体在未知环境中因不熟悉布局和视觉条件而偏离轨道的问题，提出AVERT-VLN闭环框架，通过插件式视觉语言Monitor进行在线人工辅助纠偏和离线偏好学习。构建含2万条反事实风险轨迹的LOSTNAV数据集训练Monitor识别偏离，运行时异步评估执行一致性并在判定偏离时请求人工指导，离线阶段通过轨迹锚定偏好学习将失败转化为决策级偏好对以改进策略。在R2R-CE和RxR-CE val-unseen上分别取得76.2%和66.3%的成功率。\",\n  \"highlights\": [\n    \"提出插件式视觉语言Monitor，独立于导航决策生成，在线评估指令-执行一致性并在偏离时请求人工纠偏\",\n    \"构建LOSTNAV数据集（20K反事实风险轨迹），通过先微调再联合微调的两阶段策略训练Monitor识别语义偏离\",\n    \"提出轨迹锚定偏好学习，将偏离相关失败转化为决策级偏好对，仅对需纠正的决策进行监督\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文是视觉语言导航(VLN)的核心研究，提出了完整的错误恢复与训练闭环框架，在R2R-CE和RxR-CE基准上取得显著成果，对VLN研究者具有高度参考价值。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"错误恢复\", \"偏好学习\", \"人机协作\", \"闭环导航\"]\n}",
+      "summarized_at": "2026-10-01T05:54:55.868973+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.39579",
+      "title": "AVERT-VLN: Abstention-aware Visual Error Recovery and Training for Vision-and-Language Navigation",
+      "authors": [
+        "Minrui Liu",
+        "Jingke Wang",
+        "Yuehao Huang",
+        "Hao Su",
+        "Jiajun Lv",
+        "Yukai Ma",
+        "Yong Liu"
+      ],
+      "abstract": "Deploying vision-and-language navigation (VLN) agents in unseen environments remains challenging because unfamiliar layouts and visual conditions can cause execution to go off track. Rather than relying on continuous human supervision, a practical strategy is to selectively request corrective guidance, recover the ongoing task, and reuse corrective interactions to improve subsequent navigation. We propose Abstention-aware Visual Error Recovery and Training for Vision-and-Language Navigation (AVERT-VLN), a closed-loop framework that uses a plug-in vision-language Monitor for online human-assisted recovery and offline preference learning. The Monitor operates separately from navigation decision generation and assesses instruction-execution consistency from the instruction, visual history, and current observation. To train the Monitor for deviation recognition, we construct LOSTNAV DATASET with 20K counterfactual risk trajectories and rule-based deviation labels. The Monitor is first fine-tuned on 40K normal trajectories to assess instruction progress and then jointly fine-tuned on normal and risk trajectories to recognize semantic deviations. At runtime, Asynchronous Sidecar Monitoring evaluates execution alongside the navigation model. When the controller accepts a LOST verdict, it suspends autonomous execution and requests human guidance for recovery. For offline policy improvement, Trajectory-Anchored Preference Learning converts deviation-associated failures into decision-level preference pairs under shared decision contexts, restricting supervision to the decisions targeted for correction. Under human-assisted evaluation, the full AVERT-VLN system achieves success rates of 76.2% and 66.3% on the val-unseen splits of R2R-CE and RxR-CE, respectively. The same monitoring and human-assisted recovery interface also improves success rates across the three evaluated navigation architectures.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-30T12:10:53+00:00",
+      "updated": "2026-09-30T12:10:53+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.39579v1",
+      "abs_url": "https://arxiv.org/abs/2609.39579",
+      "matched_keywords": [
+        "VLN",
+        "Vision-and-Language Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "本文提出 ASENA，一个将通用编程智能体与机器人感知、计算和持久经验相连接的具身导航系统。该系统允许智能体编写执行程序、修复失败并复用技能，同时引入了 4B 参数的单目导航策略 ASENA-VLN 作为可选工具，在 R2R 和 RxR 基准上达到 SOTA。通过持续的工作空间演化和模拟器反馈，ASENA 在 R2R 和 RxR 上的成功率显著提升，并在真实机器人上验证了其超越路径跟随的能力。",
+      "highlights": [
+        "提出 ASENA 自演化智能体系统，结合通用编程智能体与机器人感知执行，无需更新模型权重即可扩展机器人行为",
+        "引入 4B 参数的单目导航策略 ASENA-VLN，在 R2R (68.7%) 和 RxR (70.2%) 上达到 SOTA",
+        "通过持续经验积累与模拟器反馈，在 R2R 和 RxR 重复任务子集上成功率大幅提升至 98% 和 89%"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "ASENA-VLN 是核心视觉语言导航(VLN)策略，在 R2R 和 RxR 基准上取得 SOTA 成绩，对 VLN 研究有重要创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "Embodied Navigation",
+        "Self-evolving Agent",
+        "R2R",
+        "RxR"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文提出 ASENA，一个将通用编程智能体与机器人感知、计算和持久经验相连接的具身导航系统。该系统允许智能体编写执行程序、修复失败并复用技能，同时引入了 4B 参数的单目导航策略 ASENA-VLN 作为可选工具，在 R2R 和 RxR 基准上达到 SOTA。通过持续的工作空间演化和模拟器反馈，ASENA 在 R2R 和 RxR 上的成功率显著提升，并在真实机器人上验证了其超越路径跟随的能力。\",\n  \"highlights\": [\n    \"提出 ASENA 自演化智能体系统，结合通用编程智能体与机器人感知执行，无需更新模型权重即可扩展机器人行为\",\n    \"引入 4B 参数的单目导航策略 ASENA-VLN，在 R2R (68.7%) 和 RxR (70.2%) 上达到 SOTA\",\n    \"通过持续经验积累与模拟器反馈，在 R2R 和 RxR 重复任务子集上成功率大幅提升至 98% 和 89%\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"ASENA-VLN 是核心视觉语言导航(VLN)策略，在 R2R 和 RxR 基准上取得 SOTA 成绩，对 VLN 研究有重要创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Embodied Navigation\", \"Self-evolving Agent\", \"R2R\", \"RxR\"]\n}",
+      "summarized_at": "2026-10-01T05:55:14.869509+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.39207",
+      "title": "ASENA: Self-evolving Agents for Embodied Navigation",
+      "authors": [
+        "An-Chieh Cheng",
+        "Isabella Liu",
+        "Edmund Bu",
+        "Johan Bjorck",
+        "Hongxu Yin",
+        "Zhengyi Luo",
+        "Jan Kautz",
+        "Linxi \"Jim\" Fan",
+        "Yuke Zhu",
+        "Sifei Liu"
+      ],
+      "abstract": "We present ASENA, an embodied agent system that connects general-purpose coding agents to robot sensing, computation, supervised execution, and persistent experience. Agents can write and execute programs, inspect recorded outcomes, repair failures, and reuse notes and executable skills while keeping their model weights fixed. We further introduce ASENA-VLN, a 4B monocular navigation policy that serves as an optional tool within this programmable system. ASENA-VLN predicts body-frame trajectories for both extended routes and short-horizon behaviors using a shared vision-language decoder trained on route instructions, visual question answering, and a newly curated dataset of geometry-derived atomic navigation tasks. As a standalone policy, ASENA-VLN achieves state-of-the-art success rates of 68.7% on R2R and 70.2% on RxR. When integrated with a coding agent, learned navigation improves ASENA's success rate by 11 percentage points on both agentic benchmarks while reducing execution time. Through persistent workspace evolution and simulator feedback, ten passes over recurring 100-task subsets further improve success from 72% to 98% on R2R and from 65% to 89% on RxR. On embodied question answering, ASENA achieves state-of-the-art accuracy with fewer interaction steps. Finally, real-world demonstrations on a Unitree G1 combine search, visual inspection, spatial reasoning, and synthesized gestures without a pre-built map, illustrating how online programming extends robot behavior beyond route following and predefined skills.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-30T07:53:50+00:00",
+      "updated": "2026-09-30T07:53:50+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.39207v1",
+      "abs_url": "https://arxiv.org/abs/2609.39207",
+      "matched_keywords": [
+        "Embodied Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对视觉语言导航中测试时自适应面临的分布偏移问题，本文提出信用引导策略改进方法（CGPI）。该方法通过动作诱导的观测转移恢复有符号的决策信用信号，在冻结预训练策略的基础上提出轻量级自适应更新，并基于先前信用支持的交互进行验证，仅保留有支持的更新否则回滚。实验表明CGPI在多个VLN基准和导航骨干网络上取得一致提升，并验证了零样本sim-to-real迁移的可行性。",
+      "highlights": [
+        "提出从动作诱导的观测转移中恢复参考相对的决策信用信号，无需外部结果反馈",
+        "采用冻结预训练策略+轻量级自适应更新机制，更新经信用验证后决定保留或回滚",
+        "在多个VLN基准上一致提升性能，并通过真实机器人试验验证零样本sim-to-real迁移可行性"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "本文是VLN测试时自适应的核心研究，提出创新的信用引导策略改进方法，与VLN研究方向高度相关且有实质贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "test-time adaptation",
+        "policy improvement",
+        "sim-to-real",
+        "robot navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航中测试时自适应面临的分布偏移问题，本文提出信用引导策略改进方法（CGPI）。该方法通过动作诱导的观测转移恢复有符号的决策信用信号，在冻结预训练策略的基础上提出轻量级自适应更新，并基于先前信用支持的交互进行验证，仅保留有支持的更新否则回滚。实验表明CGPI在多个VLN基准和导航骨干网络上取得一致提升，并验证了零样本sim-to-real迁移的可行性。\",\n  \"highlights\": [\n    \"提出从动作诱导的观测转移中恢复参考相对的决策信用信号，无需外部结果反馈\",\n    \"采用冻结预训练策略+轻量级自适应更新机制，更新经信用验证后决定保留或回滚\",\n    \"在多个VLN基准上一致提升性能，并通过真实机器人试验验证零样本sim-to-real迁移可行性\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"本文是VLN测试时自适应的核心研究，提出创新的信用引导策略改进方法，与VLN研究方向高度相关且有实质贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"test-time adaptation\", \"policy improvement\", \"sim-to-real\", \"robot navigation\"]\n}",
+      "summarized_at": "2026-09-30T05:33:00.338520+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.37591",
+      "title": "Credit-Guided Policy Improvement for Test-time Adaptive Vision-Language Navigation",
+      "authors": [
+        "Yang Li",
+        "Sijia Zhang",
+        "Yihan Li",
+        "Aming WU",
+        "Zihao Zhang",
+        "Ziju Han",
+        "Yahong Han"
+      ],
+      "abstract": "Test-time adaptation for vision-language navigation (TTA-VLN) enables pretrained policies to adapt online to unseen environments using only test-time observations and interaction history. However, distribution shifts can distort local action preferences and lead to off-course decisions. Existing methods rely on predictive uncertainty, trajectory-level feedback, or accumulated adaptation experience to correct such deviations. These signals, however, do not directly reveal whether an executed action supports instruction-guided progress toward the goal. Moreover, a plausible corrective signal does not guarantee a reliable policy update. The key challenge is thus twofold: identifying interactions that support goal-directed improvement and determining whether the resulting updates are worth retaining. We observe that each executed action induces an immediate observation transition, providing evidence of its local consequences. Based on this insight, we propose Credit-Guided Policy Improvement (CGPI), which recovers signed, reference-relative decision credit from action-induced observation transitions without external outcome feedback. With the pretrained navigation policy frozen, CGPI uses this credit to propose lightweight adaptation updates and verifies them against prior credit-supported interactions. Updates are retained only when supported and rolled back otherwise. CGPI achieves consistent gains across the evaluated VLN benchmarks and navigation backbones, while qualitative robot trials further illustrate the feasibility of zero-shot sim-to-real transfer.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-29T13:46:11+00:00",
+      "updated": "2026-09-29T13:46:11+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.37591v1",
+      "abs_url": "https://arxiv.org/abs/2609.37591",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "现有VLN智能体存在",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有VLN智能体存在\"\n}",
+      "summarized_at": "2026-09-30T05:33:06.748830+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.37353",
+      "title": "Seek Before You Move: Evidence Seeking for Progress Grounding in Vision-Language Navigation",
+      "authors": [
+        "Zhimin Wang",
+        "Meiyuan Zhu",
+        "Duo Wu",
+        "Linjia Kang",
+        "Yajun Wang",
+        "Yuan Ni",
+        "Xiaohang Wang",
+        "Tianlu Pan",
+        "Jingyan Jiang",
+        "Yaowei Wang",
+        "Zhi Wang"
+      ],
+      "abstract": "Vision-Language Navigation (VLN) requires agents to continuously ground task progress from long-horizon instructions and partial egocentric observations. Existing VLM-based navigation agents typically reason only over available observations and may remain confident even when task-relevant evidence is missing. For example, an agent may confidently proceed forward and get lost even though the landmark indicating the next turn lies outside its current field of view. We term this failure mode Progress Myopia: the agent fails to recognize unreliable progress grounding and continues acting on insufficient evidence. To address it, we propose SeekVLN, an evidence-seeking framework that couples semantic progress reasoning with active acquisition of task-relevant observations. SeekVLN is trained in two stages: First, Future-guided Reverse Generation (FRG) uses future expert actions to augment offline expert trajectories with supplementary views and evidence annotations. Supervised fine-tuning on these trajectories establishes a prior for evidence seeking and progress reasoning without additional expert interaction. However, imitation alone does not reveal whether seeking improves subsequent navigation. We therefore introduce Counterfactual Contrastive Policy Optimization (C2PO) for reinforcement fine-tuning. By comparing each evidence-seeking branch with a counterfactual direct-navigation branch from the same state, C2PO uses a contrastive reward to assign credit to seeking decisions based on subsequent navigation benefit. Experiments on simulated benchmarks show that SeekVLN achieves state-of-the-art performance, improving success rate by 12.7% and 7.5% over the base model on R2R-CE and RxR-CE, respectively. Both simulated and real-world evaluations exhibit human-like evidence-seeking behaviors for more reliable progress grounding.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-29T12:18:16+00:00",
+      "updated": "2026-09-29T12:18:16+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.37353v1",
+      "abs_url": "https://arxiv.org/abs/2609.37353",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "现有VLN研究主要关注单智能体执行单条指令，本文首次系统化形式化了多智能体VLN问题，将其建模为带依赖与资源约束的协调问题，并构建了MAVLN基准（11,724条episode，145个场景，最多4个智能体）。同时提出TRISS系统，结合LLM子任务调度器、共享拓扑记忆和冲突感知执行机制，实现多智能体无碰撞协同导航。",
+      "highlights": [
+        "首次将多智能体VLN形式化为带依赖与资源约束的协调问题",
+        "构建MAVLN基准：11,724条episode、145场景、最多4智能体、三种指令模式及定制约束感知指标",
+        "提出TRISS方法：LLM调度+共享拓扑记忆+冲突感知执行，作为全面baseline并揭示协调挑战"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "本文是VLN方向的核心工作，首次系统化多智能体VLN并贡献新基准与新方法，对VLN研究者高度相关。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "multi-agent",
+        "benchmark",
+        "LLM",
+        "coordination"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有VLN研究主要关注单智能体执行单条指令，本文首次系统化形式化了多智能体VLN问题，将其建模为带依赖与资源约束的协调问题，并构建了MAVLN基准（11,724条episode，145个场景，最多4个智能体）。同时提出TRISS系统，结合LLM子任务调度器、共享拓扑记忆和冲突感知执行机制，实现多智能体无碰撞协同导航。\",\n  \"highlights\": [\n    \"首次将多智能体VLN形式化为带依赖与资源约束的协调问题\",\n    \"构建MAVLN基准：11,724条episode、145场景、最多4智能体、三种指令模式及定制约束感知指标\",\n    \"提出TRISS方法：LLM调度+共享拓扑记忆+冲突感知执行，作为全面baseline并揭示协调挑战\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"本文是VLN方向的核心工作，首次系统化多智能体VLN并贡献新基准与新方法，对VLN研究者高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"multi-agent\", \"benchmark\", \"LLM\", \"coordination\"]\n}",
+      "summarized_at": "2026-09-30T05:33:16.033935+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.35965",
+      "title": "Systematic Multi-Agent Vision-and-Language Navigation: Formulation, Benchmark, and Method",
+      "authors": [
+        "Yunzhe Xu",
+        "Zhe Liu"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) has largely focused on a single agent following a single instruction, yet many real-world applications require teams of robots to tackle tasks beyond the capabilities of any individual agent. We present Systematic Multi-Agent Vision-and-Language Navigation, providing, to our knowledge, the first systematic formalization of multi-agent VLN as a constrained coordination problem: each mission consists of subtasks carrying dependency and resource constraints (presence locks and holding chains). A verified four-stage crafting pipeline instantiates the task as MAVLN, comprising 11,724 episodes across 145 scenes with teams of up to four agents under three instruction regimes, accompanied by tailored constraint-aware metrics. We further present TRISS, a coordination-ready navigation system coupling an LLM-based subtask scheduler, a shared topological memory that turns each agent's exploration into team knowledge, and a conflict-aware execution mechanism that realizes simultaneous intentions as collision-free routes. Extensive experiments establish TRISS as a comprehensive baseline and reveal substantial room for improvement across scheduling, planning, and execution, highlighting the challenges of coordinating under MAVLN task constraints. Project page: https://xyz9911.github.io/mavln.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-28T18:00:01+00:00",
+      "updated": "2026-09-28T18:00:01+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.35965v1",
+      "abs_url": "https://arxiv.org/abs/2609.35965",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "现有VLN模型依赖算力充足的平台，难以部署于内存和功耗受限的边缘设备。本文提出EdgeVLN，将量化StreamVLN模型与轻量因果变换器LATTE结合，通过llama.cpp VLN驱动实现流式上下文重建与内存token剪枝，在NVIDIA Jetson Orin NX上完成实时部署。在R2R VLN-CE全部1839个验证集场景上，4位量化模型以58.02%的成功率超越BF16基线，同时显著降低延迟、能耗和内存占用。",
+      "highlights": [
+        "提出LATTE轻量因果变换器，复用骨干网络隐状态预测停止动作，无需额外视觉编码器或前向传播",
+        "系统量化8至2位精度并评估多种推理运行时，发现IQ4_NL格式在边缘板上可行且性能几乎无损",
+        "4位量化模型在Jetson Orin NX上仅占11.35GB内存，比存储流式BF16快20.8倍、能耗低13.3倍"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "直接面向VLN模型的边缘部署，在量化、运行时优化和实时停止策略上有实质性创新，对VLN乃至UAV-VLN的端侧部署均有参考价值。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "边缘部署",
+        "量化",
+        "StreamVLN",
+        "Jetson",
+        "R2R-VLN-CE"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有VLN模型依赖算力充足的平台，难以部署于内存和功耗受限的边缘设备。本文提出EdgeVLN，将量化StreamVLN模型与轻量因果变换器LATTE结合，通过llama.cpp VLN驱动实现流式上下文重建与内存token剪枝，在NVIDIA Jetson Orin NX上完成实时部署。在R2R VLN-CE全部1839个验证集场景上，4位量化模型以58.02%的成功率超越BF16基线，同时显著降低延迟、能耗和内存占用。\",\n  \"highlights\": [\"提出LATTE轻量因果变换器，复用骨干网络隐状态预测停止动作，无需额外视觉编码器或前向传播\", \"系统量化8至2位精度并评估多种推理运行时，发现IQ4_NL格式在边缘板上可行且性能几乎无损\", \"4位量化模型在Jetson Orin NX上仅占11.35GB内存，比存储流式BF16快20.8倍、能耗低13.3倍\"],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"直接面向VLN模型的边缘部署，在量化、运行时优化和实时停止策略上有实质性创新，对VLN乃至UAV-VLN的端侧部署均有参考价值。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"边缘部署\", \"量化\", \"StreamVLN\", \"Jetson\", \"R2R-VLN-CE\"]\n}",
+      "summarized_at": "2026-09-29T05:44:28.908085+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.35570",
+      "title": "EdgeVLN: Runtime-Aware Deployment Ready Quantized Vision Language Navigation Model",
+      "authors": [
+        "Rithvik Jonna",
+        "Man Namgung",
+        "Aakash Gurram",
+        "Tinoosh Mohsenin"
+      ],
+      "abstract": "Vision-language navigation (VLN) models perform well but target compute-rich platforms, limiting deployment on memory- and power-constrained robotic edge devices. Compression alone does not establish whether a VLN model fits the memory, latency, and energy budgets of an edge platform while preserving navigation behavior. We introduce EdgeVLN, a runtime-aware, deployment-ready quantized VLN model that closes this gap. EdgeVLN combines a quantized StreamVLN model with Latent Trajectory Termination Extractor (LATTE), a lightweight causal transformer that improves real-time stopping by predicting a Stop Action verifier rank. Both execute through our llama.cpp VLN driver, which reconstructs streaming context and prunes memory tokens on-board. We characterize a pretrained StreamVLN backbone across weight quantization from 8 to 2 bits and multiple inference runtimes to identify a feasible operating point. LATTE reuses backbone hidden states within the budget freed by quantization, requiring neither a second vision encoder nor an additional backbone forward pass. We evaluate six backbone precisions and seven candidate stop heads on BF16 and IQ4 NL across all 1,839 R2R VLN-CE val-unseen episodes. We measure success rate (SR) in simulation and latency, energy, and resident memory on an NVIDIA Jetson Orin NX 16 GB. LATTE achieves our highest SR, 58.02 percent on the deployed 4-bit model, exceeding the BF16 baseline with only 0.013 s additional latency per navigation step. Four-bit formats achieve nearly identical SR, but step energy varies 36.8 times by execution path. Only IQ4 NL under our VLN driver fits the board, using 11.35 GB resident memory while running 20.8 times faster and using 13.3 times less energy than storage-streamed BF16. INT2 collapses. Runtime selection, memory-token pruning, and quantization are essential for efficient edge deployment.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-09-28T16:32:09+00:00",
+      "updated": "2026-09-28T16:32:09+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.35570v1",
+      "abs_url": "https://arxiv.org/abs/2609.35570",
+      "matched_keywords": [
+        "Vision Language Navigation",
+        "Vision-language navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对零样本视觉语言导航(VLN)中多模态大模型推理延迟高的问题，提出高效框架NavJev。该方法通过动作中心视觉压缩(ACVC)整合航点几何、图像描述和语义标签，并利用判别性动作语义记忆(DASM)保留跨步骤的判别性证据，将在线导航重构为紧凑视觉压缩加轻量级动作选择。在R2R-CE数据集上以0.65秒/步的速度实现了27.0%的SR，显著降低了推理延迟与成本。",
+      "highlights": [
+        "提出动作中心视觉压缩(ACVC)，将航点几何、BLIP描述和RAM标签整合为候选动作的紧凑表示",
+        "提出判别性动作语义记忆(DASM)，过滤共享语义并维护跨步骤的判别性动作证据",
+        "将重复的多模态生成重构为轻量级类型化动作选择，在R2R-CE上实现0.65秒/步、27.0% SR的高效导航"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文直接解决视觉语言导航(VLN)中的效率问题，提出新的视觉压缩与记忆机制，属于核心VLN研究且具有创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "零样本导航",
+        "视觉压缩",
+        "动作选择",
+        "效率优化"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对零样本视觉语言导航(VLN)中多模态大模型推理延迟高的问题，提出高效框架NavJev。该方法通过动作中心视觉压缩(ACVC)整合航点几何、图像描述和语义标签，并利用判别性动作语义记忆(DASM)保留跨步骤的判别性证据，将在线导航重构为紧凑视觉压缩加轻量级动作选择。在R2R-CE数据集上以0.65秒/步的速度实现了27.0%的SR，显著降低了推理延迟与成本。\",\n  \"highlights\": [\n    \"提出动作中心视觉压缩(ACVC)，将航点几何、BLIP描述和RAM标签整合为候选动作的紧凑表示\",\n    \"提出判别性动作语义记忆(DASM)，过滤共享语义并维护跨步骤的判别性动作证据\",\n    \"将重复的多模态生成重构为轻量级类型化动作选择，在R2R-CE上实现0.65秒/步、27.0% SR的高效导航\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文直接解决视觉语言导航(VLN)中的效率问题，提出新的视觉压缩与记忆机制，属于核心VLN研究且具有创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"零样本导航\", \"视觉压缩\", \"动作选择\", \"效率优化\"]\n}",
+      "summarized_at": "2026-09-29T05:44:39.673254+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.34969",
+      "title": "NavJev: Efficient Vision-Language Navigation via Action-Centric Visual Compression and Discriminative Action-Semantic Memory",
+      "authors": [
+        "Kai Sheng",
+        "Liuyi Wang",
+        "Jinlong Li",
+        "Haojie Dai",
+        "Chengju Liu",
+        "Qijun Chen"
+      ],
+      "abstract": "Recent zero-shot Vision-and-Language Navigation (VLN) methods increasingly rely on multimodal large language models (MLLMs) to reason over visual observations, navigation instructions, and candidate actions. Although effective, repeatedly invoking autoregressive multimodal reasoning at every navigation step introduces substantial inference latency, limiting the responsiveness of embodied agents. We propose NavJev, an efficient VLN framework that reformulates online navigation from repeated multimodal generation into compact visual compression followed by lightweight typed action selection. Specifically, Action-Centric Visual Compression (ACVC) integrates waypoint geometry, BLIP captions, and RAM semantic tags into compact representations of candidate actions, while Discriminative Action-Semantic Memory (DASM) filters shared semantics and maintains discriminative action-specific evidence across navigation steps. Based on these representations, Jev directly performs structured probabilistic decisions over the available action set. Experiments on R2R-CE show that NavJev achieves 27.0% SR and 22.4% SPL with only 0.65 s per navigation step, while substantially reducing inference latency and cost compared with MLLM-based VLN methods. The project page is available at https://kai-sheng-caesar.github.io/NavJev/.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-28T11:50:35+00:00",
+      "updated": "2026-09-28T11:50:35+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.34969v1",
+      "abs_url": "https://arxiv.org/abs/2609.34969",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "Vision-and-Language Navigation",
+        "VLN",
+        "navigation instruction"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对城市环境中物体尺度变化大、观测距离多样导致语义映射困难的问题，提出了一种多尺度语义映射方法。该方法引入类别感知的观测校准策略以缓解不可靠观测，并利用互信息正则化减少校准与运动策略间的冗余耦合，同时采用类别级价值估计器建模异构映射策略。贡献包括构建大规模城市语义映射数据集及提出解决尺度与观测距离失配的联合优化框架。",
+      "highlights": [
+        "构建了具有多尺度实例标注的大规模城市语义映射数据集",
+        "提出类别感知的观测校准策略与互信息正则化以解耦校准与运动策略",
+        "采用类别级价值估计器并通过Pareto优化解决跨类别梯度冲突"
+      ],
+      "relevance_score": 4,
+      "relevance_reason": "该论文研究城市环境下的具身导航语义映射，虽涉及embodied navigation但未涉及视觉语言导航(VLN)指令理解与执行，属于相关但非核心研究。",
+      "is_uav_vln": false,
+      "tags": [
+        "semantic mapping",
+        "embodied navigation",
+        "urban environments",
+        "observation calibration",
+        "policy dependence"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对城市环境中物体尺度变化大、观测距离多样导致语义映射困难的问题，提出了一种多尺度语义映射方法。该方法引入类别感知的观测校准策略以缓解不可靠观测，并利用互信息正则化减少校准与运动策略间的冗余耦合，同时采用类别级价值估计器建模异构映射策略。贡献包括构建大规模城市语义映射数据集及提出解决尺度与观测距离失配的联合优化框架。\",\n  \"highlights\": [\n    \"构建了具有多尺度实例标注的大规模城市语义映射数据集\",\n    \"提出类别感知的观测校准策略与互信息正则化以解耦校准与运动策略\",\n    \"采用类别级价值估计器并通过Pareto优化解决跨类别梯度冲突\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"该论文研究城市环境下的具身导航语义映射，虽涉及embodied navigation但未涉及视觉语言导航(VLN)指令理解与执行，属于相关但非核心研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"semantic mapping\", \"embodied navigation\", \"urban environments\", \"observation calibration\", \"policy dependence\"]\n}",
+      "summarized_at": "2026-09-29T05:45:02.728448+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.34833",
+      "title": "Multi-Scale Semantic Mapping in Urban Environments via Observation Calibration and Policy Dependence Regularization",
+      "authors": [
+        "Runling Long",
+        "Junhao Feng",
+        "Jia Wan"
+      ],
+      "abstract": "Semantic mapping is fundamental to embodied navigation, yet existing methods are developed for indoor environments, where objects exhibit relatively limited scale variation and are observed from a restricted range of viewpoints. Urban environments pose substantially greater challenges: agents must map objects ranging from pedestrians to buildings while navigating large spaces with highly diverse viewing distances. These conditions introduce two key difficulties that existing datasets and methods fail to cover. First, object scale and observation distance can be severely mismatched. For example, small objects may be viewed from far away, whereas large objects may be observed at extremely close range, resulting in unreliable observation likelihoods. Second, objects with substantially different sizes and geometries require distinct mapping behaviors, which are difficult to capture with a single shared value estimator. To investigate these challenges, we introduce a large-scale urban semantic mapping dataset featuring realistic city layouts, high-fidelity rendering, and instance-level annotations spanning multiple object scales. We then propose a category-aware likelihood calibration policy that identifies and alleviates unreliable observations according to object category and viewing distance. Because the calibration and motion policies are optimized toward the same mapping objective, they may learn redundant shortcuts and become excessively coupled. We therefore introduce a mutual-information (MI) regularizer that penalizes their estimated representation dependence and encourages complementary behaviors. To better model heterogeneous mapping strategies across object scales, we further employ category-wise value estimators. We formulate their joint optimization as a Pareto optimization problem to mitigate conflicting gradients across categories.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T10:26:27+00:00",
+      "updated": "2026-09-28T10:26:27+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.34833v1",
+      "abs_url": "https://arxiv.org/abs/2609.34833",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "本文提出 PanoVLN，探索在全景视觉输入下的视觉语言导航任务。针对全景视野带来的长视野规划和复杂路径选择问题，引入置信度引导执行策略、分支路径训练监督以及融合语义与几何特征的全景表示方法。在 R2R-CE 和 RxR-CE 上显著超越 SOTA，并在四足机器人上验证了更快的导航性能。",
+      "highlights": [
+        "提出置信度引导执行(CGE)策略，动态决定单次全景观测后执行的动作数量，支持长视野规划",
+        "构建含频繁分支点的训练路径并提供针对性监督，提升复杂路口的路径选择能力",
+        "融合 RGB 全景的语义与几何特征，在不增加视觉 token 的前提下捕捉场景内容与空间布局"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文是核心 VLN 研究，在全景视觉输入、动作预测和视觉表示方面做出创新贡献，与研究者方向高度相关",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "panoramic",
+        "action-planning",
+        "visual-representation",
+        "embodied-navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文提出 PanoVLN，探索在全景视觉输入下的视觉语言导航任务。针对全景视野带来的长视野规划和复杂路径选择问题，引入置信度引导执行策略、分支路径训练监督以及融合语义与几何特征的全景表示方法。在 R2R-CE 和 RxR-CE 上显著超越 SOTA，并在四足机器人上验证了更快的导航性能。\",\n  \"highlights\": [\n    \"提出置信度引导执行(CGE)策略，动态决定单次全景观测后执行的动作数量，支持长视野规划\",\n    \"构建含频繁分支点的训练路径并提供针对性监督，提升复杂路口的路径选择能力\",\n    \"融合 RGB 全景的语义与几何特征，在不增加视觉 token 的前提下捕捉场景内容与空间布局\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文是核心 VLN 研究，在全景视觉输入、动作预测和视觉表示方面做出创新贡献，与研究者方向高度相关\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"panoramic\", \"action-planning\", \"visual-representation\", \"embodied-navigation\"]\n}",
+      "summarized_at": "2026-09-29T05:45:13.232064+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.34759",
+      "title": "PanoVLN: Towards Effective Panoramic Vision-and-Language Navigation",
+      "authors": [
+        "Zhen Wang",
+        "Changpeng Wang",
+        "Zhe Liu",
+        "Zhangyang Qi",
+        "Yuxiang Lu",
+        "Zimo Zeng",
+        "Donglian Qi",
+        "Xi Chen"
+      ],
+      "abstract": "Recent vision-language models (VLMs) have advanced vision-and-language navigation (VLN), enabling models to predict navigation actions from visual observations and language instructions. In this work, we explore VLN with panoramic observations and introduce PanoVLN. The motivation is straightforward: more complete visual context should enable better-informed navigation decisions. For example, a panorama can reveal a passage outside a perspective camera's field of view, allowing the model to identify the intended route without additional exploration. However, we find that simply replacing perspective images with panoramas yields only limited gains. Our diagnosis suggests that fully exploiting wider visibility requires modifications to action prediction, training supervision, and visual representation. First, wider visibility supports longer-horizon action planning. We make the model predict longer action sequences, enabling larger turns and subsequent movement from a single panorama. Specifically, we introduce a confidence-guided execution (CGE) strategy that dynamically determines how many predicted actions to execute before replanning. Second, wider visibility also brings more complex route choices. We therefore construct training routes with frequent branching points and clear instructions to provide targeted supervision for route selection. Third, panoramic navigation requires understanding spatial relationships across viewing directions, beyond recognizing individual landmarks. We combine semantic and geometric features from RGB panoramas to capture both scene content and spatial layout without adding visual tokens. With a 4B backbone and RGB-only input, PanoVLN surpasses the previous SOTA by 11.9% and 8.7% in success rate on R2R-CE and RxR-CE Val-Unseen. Real-world experiments on a quadruped further demonstrate faster navigation with fewer pauses than prior VLN methods.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-09-28T09:44:27+00:00",
+      "updated": "2026-09-28T09:44:27+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.34759v1",
+      "abs_url": "https://arxiv.org/abs/2609.34759",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "{\"summary_cn\":\" \",\"highlights\": [],\"relevance_score\": 0,\"relevance_reason\": \" \",\"is_uav_vln\": false,\"tags\": []}",
+      "summarized_at": "2026-09-29T05:45:22.373974+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.34276",
+      "title": "NavHarness: Towards Lifelong Embodied Navigation",
+      "authors": [
+        "Xunyi Zhao",
+        "Jian Zhou",
+        "Sihao Lin",
+        "Gengze Zhou",
+        "Zerui Li",
+        "Xinyu Yan",
+        "Jiajun Liu",
+        "Anton van den Hengel",
+        "Qi Wu"
+      ],
+      "abstract": "Frontier models can now perform well on individual embodied navigation tasks through multi-round multimodal reasoning with simple tools. Across successive tasks, however, an agent must also rely on an evolving map and earlier search records, both of which may be incomplete or conflict with new observations. We present NavHarness, a training-free embodied harness towards lifelong navigation that makes memory processing part of the navigation loop. During navigation, its multi-round agentic session draws on maps, task records, and house knowledge, checking them against observations and recording corrections to guide its actions. NavHarness preserves this experience across fresh conversations for new tasks or recovery attempts, while outcome verification and run-end summaries support its later reuse. On GOAT-Bench, NavHarness improves s-SR over context-only independent sessions by 18.6 points with Astra and 22.6 with Opus 5. Using SLAM-estimated poses, NavHarness with GPT-6 Astra achieves state-of-the-art task success of 83.7 s-SR with 36.9 e-SR on GOAT-Bench and 85.9 s-SR on IR2R-CE. To understand these gains, we examine how experience is carried between sessions and find that structured recovery handovers outperform length-matched summaries. In extended deployments across houses, consolidation improves navigation beyond retaining maps and task records, with case studies showing how agents use earlier experience to interpret new goals, investigate unresolved questions, and resume failed searches. We suggest that progress towards lifelong navigation depends on how successive reasoning sessions build on prior experience, alongside improvements in single-task capability.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-28T04:24:47+00:00",
+      "updated": "2026-09-28T04:24:47+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.34276v1",
+      "abs_url": "https://arxiv.org/abs/2609.34276",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "本文研究连续往返视觉语言导航(VLN)中的返程问题，诊断了方向可观测性、偏差恢复和终止稳定性方面的失败。提出一种可靠性感知的稀疏路径记忆方法，将去程轨迹记录为有序几何锚点，并通过结构化提示、动作级仲裁和终端验证在返程中进行查询。实验表明该方法将语言-only返程成功率从22.0%提升至55.1%，揭示了信息质量、行为一致性和在线可靠性是长时程导航的独立限制因素。",
+      "highlights": [
+        "首次系统研究连续往返VLN的返程导航问题",
+        "提出可靠性感知稀疏路径记忆，将去程轨迹编码为几何锚点供返程查询",
+        "实验揭示了信息质量、行为一致性与在线可靠性三者对长时程导航的独立影响"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文直接研究核心VLN问题，提出往返导航新范式与稀疏路径记忆方法，对VLN研究有创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "round-trip navigation",
+        "route memory",
+        "reliability-aware",
+        "continuous VLN"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文研究连续往返视觉语言导航(VLN)中的返程问题，诊断了方向可观测性、偏差恢复和终止稳定性方面的失败。提出一种可靠性感知的稀疏路径记忆方法，将去程轨迹记录为有序几何锚点，并通过结构化提示、动作级仲裁和终端验证在返程中进行查询。实验表明该方法将语言-only返程成功率从22.0%提升至55.1%，揭示了信息质量、行为一致性和在线可靠性是长时程导航的独立限制因素。\",\n  \"highlights\": [\n    \"首次系统研究连续往返VLN的返程导航问题\",\n    \"提出可靠性感知稀疏路径记忆，将去程轨迹编码为几何锚点供返程查询\",\n    \"实验揭示了信息质量、行为一致性与在线可靠性三者对长时程导航的独立影响\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文直接研究核心VLN问题，提出往返导航新范式与稀疏路径记忆方法，对VLN研究有创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"round-trip navigation\", \"route memory\", \"reliability-aware\", \"continuous VLN\"]\n}",
+      "summarized_at": "2026-09-29T05:45:32.518122+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.34163",
+      "title": "Reliability-Aware Sparse Route Memory for Round-Trip Vision-Language Navigation",
+      "authors": [
+        "Bojun Long",
+        "Lingfan Bao",
+        "Tianhu Peng",
+        "Jingcheng Sun",
+        "Chengxu Zhou"
+      ],
+      "abstract": "Vision-language navigation (VLN) is typically evaluated as a one-way task, although deployed robots may need to return after reaching a goal. We study continuous round-trip VLN and diagnose failures in directional observability, deviation recovery, and termination stability. We propose a reliability-aware sparse route memory that records the executed Outbound trajectory as ordered geometric anchors and queries them in reverse through a structured hint, action-level arbitration, and terminal verification. On 50 reverse-paired episodes using NaVILA and a simulated Unitree Go2, language-only Return succeeds in 22.0% of episodes, while our online system reaches 55.1%. With exact route information, the same interfaces achieve 86.0%, showing that effective Return requires both accurate information and consistent action on that information. The remaining online gap arises mainly from geometric evidence that is too unreliable to authorise intervention. These results distinguish information quality, behavioural consistency, and online reliability as separate limits in long-horizon navigation.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-28T02:40:09+00:00",
+      "updated": "2026-09-28T02:40:09+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.34163v1",
+      "abs_url": "https://arxiv.org/abs/2609.34163",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对无人机视觉语言导航(AVLN)中现有方法仅依赖单时间尺度预测的问题，ForeFly提出双视界潜在世界动作模型，同时预测近端未来（局部连续性）和路由关键远端未来（长程引导）。通过视界特有前瞻查询结合近期与路由关键视觉记忆，并引入前瞻引导动作精炼(FGAR)模块对两种未来信息进行非对称利用，分别增强局部动作和路由级引导。在TravelUAV和UAV-ON基准上显著优于强基线。",
+      "highlights": [
+        "双视界潜在世界动作模型：同时预测近端未来与路由关键远端未来，弥补单视界预测不足",
+        "前瞻引导动作精炼(FGAR)：非对称利用近端前瞻增强局部动作、路由关键前瞻进行特征校正与长程引导",
+        "在TravelUAV和UAV-ON两个AVLN基准上的已见与未见场景均优于强基线"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "该论文直接针对无人机视觉语言导航(AVLN)提出双视界世界模型与动作精炼方法，是UAV-VLN方向的核心创新工作。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "AVLN",
+        "world model",
+        "dual-horizon prediction",
+        "action refinement"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对无人机视觉语言导航(AVLN)中现有方法仅依赖单时间尺度预测的问题，ForeFly提出双视界潜在世界动作模型，同时预测近端未来（局部连续性）和路由关键远端未来（长程引导）。通过视界特有前瞻查询结合近期与路由关键视觉记忆，并引入前瞻引导动作精炼(FGAR)模块对两种未来信息进行非对称利用，分别增强局部动作和路由级引导。在TravelUAV和UAV-ON基准上显著优于强基线。\",\n  \"highlights\": [\n    \"双视界潜在世界动作模型：同时预测近端未来与路由关键远端未来，弥补单视界预测不足\",\n    \"前瞻引导动作精炼(FGAR)：非对称利用近端前瞻增强局部动作、路由关键前瞻进行特征校正与长程引导\",\n    \"在TravelUAV和UAV-ON两个AVLN基准上的已见与未见场景均优于强基线\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接针对无人机视觉语言导航(AVLN)提出双视界世界模型与动作精炼方法，是UAV-VLN方向的核心创新工作。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"AVLN\", \"world model\", \"dual-horizon prediction\", \"action refinement\"]\n}",
+      "summarized_at": "2026-09-29T05:45:39.086676+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.33581",
+      "title": "ForeFly: A Dual-Horizon World Action Model for Aerial Vision-Language Navigation",
+      "authors": [
+        "Kunhui Wang",
+        "Xintong Zhang",
+        "Junyu Gao",
+        "Changsheng Xu"
+      ],
+      "abstract": "Aerial Vision-Language Navigation (AVLN) requires UAVs to maintain reliable instruction following over long trajectories in complex 3D environments. However, existing AVLN approaches are predominantly reactive or limited to single-horizon prediction, overlooking complementary future cues across different temporal horizons. To address this limitation, we propose ForeFly, a dual-horizon latent world action model that predicts both a proximal future for local continuity and an adaptive route-critical future for long-range guidance. Horizon-specific foresight queries are primed with recent and route-critical visual memories, providing history-aware context for future prediction. To exploit their distinct roles in action generation, we introduce Foresight-Guided Action Refinement (FGAR), which asymmetrically exploits proximal foresight for local action enhancement and route-critical foresight for feature-wise correction and route-level guidance. Experiments on the TravelUAV and UAV-ON benchmarks show that ForeFly consistently outperforms strong baselines across seen and unseen settings, validating the effectiveness of dual-horizon foresight and FGAR learning. The code is available at: https://github.com/kunhuiW/ForeFly",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-27T13:54:48+00:00",
+      "updated": "2026-09-27T13:54:48+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.33581v1",
+      "abs_url": "https://arxiv.org/abs/2609.33581",
+      "matched_keywords": [
+        "Aerial Vision-Language Navigation",
+        "UAVs to maintain reliable instruction"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对视觉语言导航(VLN)模型参数量大、部署成本高的问题，提出一种两阶段方法：首先构建高性能教师模型，利用可学习查询槽显式提取全景观测中的导航证据并与指令对齐；其次通过知识蒸馏训练紧凑学生模型，同时迁移注意力位置和动作决策。实验表明学生模型在参数量减少93.65%的情况下仍能接近教师模型的导航性能。",
+      "highlights": [
+        "提出导航感知的跨模态交互方法，利用可学习查询槽显式提取全局与局部导航证据",
+        "设计基于查询瓶颈的蒸馏接口，同时迁移注意力区域和动作策略",
+        "在标准VLN基准上参数量减少93.65%且导航性能接近教师模型"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接研究视觉语言导航(VLN)的效率优化与知识蒸馏，属于核心VLN研究且具有显著创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "知识蒸馏",
+        "跨模态对齐",
+        "模型压缩"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航(VLN)模型参数量大、部署成本高的问题，提出一种两阶段方法：首先构建高性能教师模型，利用可学习查询槽显式提取全景观测中的导航证据并与指令对齐；其次通过知识蒸馏训练紧凑学生模型，同时迁移注意力位置和动作决策。实验表明学生模型在参数量减少93.65%的情况下仍能接近教师模型的导航性能。\",\n  \"highlights\": [\n    \"提出导航感知的跨模态交互方法，利用可学习查询槽显式提取全局与局部导航证据\",\n    \"设计基于查询瓶颈的蒸馏接口，同时迁移注意力区域和动作策略\",\n    \"在标准VLN基准上参数量减少93.65%且导航性能接近教师模型\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航(VLN)的效率优化与知识蒸馏，属于核心VLN研究且具有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"知识蒸馏\", \"跨模态对齐\", \"模型压缩\"]\n}",
+      "summarized_at": "2026-09-29T05:45:48.266418+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.33097",
+      "title": "Query, Align, and Distill: Navigation-Aware Cross-Modal Interaction for Efficient Vision-and-Language Navigation",
+      "authors": [
+        "Zhihao Chen",
+        "Yiyuan Ge",
+        "Ziyang Wang",
+        "Pu Cao",
+        "Lu Yang"
+      ],
+      "abstract": "Recent large-scale Vision-and-Language Navigation (VLN) models deliver strong accuracy but remain costly to deploy due to their large parameter counts and computational requirements. We tackle efficient VLN in two steps. First, we build a high-performing teacher that makes navigation evidence selection explicit and compressible. The teacher introduces a small set of learnable query slots to extract global and local action-sufficient navigable evidence from panoramic observations via a Navigable Query Generator, then progressively grounds these evidence tokens to the instruction with an Instruction-Query Aligner for policy prediction. Second, using this explicit query bottleneck as a distillation interface, we train a compact student by transferring both where to attend and what to do. We distill the teacher's global and local navigable queries with a navigation-aware token-adaptive objective, then further match action distributions during fine-tuning. Experiments on standard VLN benchmarks demonstrate that our student nearly matches the teacher's navigation performance while reducing the number of parameters by 93.65% compared to the teacher.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-09-27T02:08:25+00:00",
+      "updated": "2026-09-27T02:08:25+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.33097v1",
+      "abs_url": "https://arxiv.org/abs/2609.33097",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对视觉语言导航(VLN)在新环境适应中数据成本高的问题，提出FINE框架从现有轨迹中提取未来观测作为潜在监督。该方法通过显式landmark tokens预测未来地标区域，并利用隐式future token结合视频世界模型区分真实与反事实未来，显著提升了数据受限条件下的导航成功率。",
+      "highlights": [
+        "利用未来观测信息提取潜在监督，提升VLN数据效率",
+        "引入显式landmark tokens和隐式future token双重辅助表示",
+        "在R2R-CE和RxR-CE数据集上，尤其在低数据预算下显著提升成功率"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接针对视觉语言导航(VLN)提出数据高效的未来信息编码方法，属于VLN核心研究且有显著创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "Data-Efficiency",
+        "Future Prediction",
+        "World Model",
+        "R2R-CE",
+        "RxR-CE"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航(VLN)在新环境适应中数据成本高的问题，提出FINE框架从现有轨迹中提取未来观测作为潜在监督。该方法通过显式landmark tokens预测未来地标区域，并利用隐式future token结合视频世界模型区分真实与反事实未来，显著提升了数据受限条件下的导航成功率。\",\n  \"highlights\": [\n    \"利用未来观测信息提取潜在监督，提升VLN数据效率\",\n    \"引入显式landmark tokens和隐式future token双重辅助表示\",\n    \"在R2R-CE和RxR-CE数据集上，尤其在低数据预算下显著提升成功率\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接针对视觉语言导航(VLN)提出数据高效的未来信息编码方法，属于VLN核心研究且有显著创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Data-Efficiency\", \"Future Prediction\", \"World Model\", \"R2R-CE\", \"RxR-CE\"]\n}",
+      "summarized_at": "2026-09-29T05:46:01.524288+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.32855",
+      "title": "FINE: Future-Informed Navigation Encoding for Data-Efficient Vision-Language Navigation",
+      "authors": [
+        "Khang H. Nguyen",
+        "Hoang Pham Quang Nguyen",
+        "Ha Phuong Nguyen",
+        "Khanh Dinh Binh",
+        "Xuan Ha Nguyen",
+        "Vien Ngo",
+        "Duy Ho Nguyen Minh",
+        "Huan Nguyen",
+        "An T. Le"
+      ],
+      "abstract": "Adapting vision-language navigation (VLN) policies to new environments is expensive because every additional route and instruction requires an embodied demonstration. Yet standard observation-to-action training uses only a small fraction of the information already contained in each trajectory. In particular, future observations reveal the instruction-relevant landmarks that the agent will encounter, including what they look like and how they are arranged in 3D. We introduce FINE, a Future-Informed Navigation Encoding framework that extracts this latent supervision from existing demonstrations. FINE equips a VLN backbone with two complementary auxiliary representations. First, explicit landmark tokens follow the ordered landmarks specified by the instruction and are trained to predict future landmark regions in both semantic 2D patch-feature space and viewpoint-dependent 3D geometric feature space. Second, an implicit future token learns to distinguish the landmark state that is actually reached from plausible same-scene counterfactual futures generated by a video world model. On R2R-CE and RxR-CE val-unseen, FINE improves InternVLA-N1 by 2.6 and 4.5 success-rate points, respectively, at full training data. More importantly, as demonstrations become limited, the benefit grows: at a 70% demonstration budget, FINE improves success rate by 6.8 points, recovering roughly one-third of the performance lost by reducing the training demonstrations. Project page is available at https://finevln.github.io/.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-09-26T18:29:56+00:00",
+      "updated": "2026-09-26T18:29:56+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.32855v1",
+      "abs_url": "https://arxiv.org/abs/2609.32855",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "该论文针对零样本视觉语言导航中高层语义意图与底层物理执行之间的鸿沟，提出PACE模块，将过渡语义（楼梯、门、窄通道）转化为以智能体为中心的可通行可供性位姿，并基于该位姿条件化短视界动作生成。通过失败感知的偏好优化利用rollout对比对进一步改进闭环纠错能力，可即插即用地集成到六个零样本VLN导航器中，在R2R-CE和RxR-CE跨楼层子集上成功率大幅提升，并在真实环境中验证了有效性。",
+      "highlights": [
+        "提出可供性条件化执行模块PACE，将语义目标转化为可执行的可供性位姿，弥合语义-空间鸿沟",
+        "通过失败感知偏好优化（rollout对比对）增强闭环纠错与偏差恢复能力",
+        "即插即用集成六个零样本VLN导航器，跨楼层成功率显著提升（R2R-CE 16.35%→27.65%，RxR-CE 4.76%→12.06%）"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "直接面向VLN核心任务，提出创新的可供性条件化执行与偏好优化模块并在标准基准R2R-CE/RxR-CE上验证，对该研究者高度相关。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "zero-shot",
+        "affordance",
+        "cross-floor",
+        "preference learning",
+        "embodied navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"该论文针对零样本视觉语言导航中高层语义意图与底层物理执行之间的鸿沟，提出PACE模块，将过渡语义（楼梯、门、窄通道）转化为以智能体为中心的可通行可供性位姿，并基于该位姿条件化短视界动作生成。通过失败感知的偏好优化利用rollout对比对进一步改进闭环纠错能力，可即插即用地集成到六个零样本VLN导航器中，在R2R-CE和RxR-CE跨楼层子集上成功率大幅提升，并在真实环境中验证了有效性。\",\n  \"highlights\": [\n    \"提出可供性条件化执行模块PACE，将语义目标转化为可执行的可供性位姿，弥合语义-空间鸿沟\",\n    \"通过失败感知偏好优化（rollout对比对）增强闭环纠错与偏差恢复能力\",\n    \"即插即用集成六个零样本VLN导航器，跨楼层成功率显著提升（R2R-CE 16.35%→27.65%，RxR-CE 4.76%→12.06%）\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"直接面向VLN核心任务，提出创新的可供性条件化执行与偏好优化模块并在标准基准R2R-CE/RxR-CE上验证，对该研究者高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"zero-shot\", \"affordance\", \"cross-floor\", \"preference learning\", \"embodied navigation\"]\n}",
+      "summarized_at": "2026-09-29T05:46:17.659573+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.32292",
+      "title": "Affordance-Conditioned Decision Making: Bridging the Semantic-Spatial Gap in Zero-Shot Cross-Floor Vision-and-Language Navigation",
+      "authors": [
+        "Xuekang Yang",
+        "Lu Chen",
+        "Shuang Luo",
+        "Jialing Zhu",
+        "Qi Zhang",
+        "Yue Gao",
+        "Xiang Zhang"
+      ],
+      "abstract": "Vision-and-language navigation increasingly relies on general-purpose semantic planners, yet translating correct high-level intent into reliable physical execution remains difficult in spatially constrained transitions. Reaching a staircase, doorway, or narrow passage does not ensure traversal; the agent must identify an executable affordance pose and recover from accumulated action errors. We propose PACE (Preference-refined Affordance-Conditioned Execution), a supervised local execution module that augments frozen zero-shot semantic planners for reliable cross-floor navigation. PACE grounds transition-related semantics into a long-horizon, agent-centric traversable affordance pose and conditions short-horizon action generation on this spatial target, thereby aligning semantic goals with physical execution. We further post-train PACE through failure-aware preference refinement using rollout-derived pairs that contrast normal or recovery behaviors with deviation-amplifying behaviors, thereby improving closed-loop correction. We integrate PACE into six open-source zero-shot VLN navigators and demonstrate consistent improvements on the cross-floor subsets of R2R-CE and RxR-CE, increasing the average success rate from 16.35% to 27.65% and from 4.76% to 12.06%, respectively. Real-world experiments further demonstrate PACE's applicability in unseen environments, highlighting the potential of traversable affordances to bridge semantic intent and reliable embodied behavior.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-26T06:34:56+00:00",
+      "updated": "2026-09-29T01:34:23+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.32292v2",
+      "abs_url": "https://arxiv.org/abs/2609.32292",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "本文探索全语言模型(OLMs)在零样本语义音频-视觉导航(SAVN)中的直接应用，提出RAO-Nav部署流程，利用OLMs中编码的隐式音频-视觉知识使具身智能体能够听、看、推理和行动。方法上提出测试时潜在导航推理(LNR)模块，集成到解码空间中以激发OLMs的内在思维能力，检索更多目标相关观测并做出有效导航决策。实验表明该框架在无需任何训练数据的情况下超越了公开SAVN基准上的SOTA基线，并引入了全局导航指令新设置来评估OLMs作为具身导航智能体的能力。",
+      "highlights": [
+        "提出RAO-Nav零样本导航框架，直接利用OLMs的隐式多模态知识实现听、看、推理、行动一体化导航",
+        "设计测试时潜在导航推理(LNR)模块，集成到解码空间中激发模型内在推理能力",
+        "无需训练数据即在SAVN基准上超越SOTA，并引入全局导航指令新评估设置"
+      ],
+      "relevance_score": 7,
+      "relevance_reason": "论文核心为基于语言模型的多模态具身导航，与VLN的指令理解与导航决策高度相关，但额外引入音频模态，非纯视觉语言导航。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "具身导航",
+        "零样本导航",
+        "全语言模型",
+        "音频-视觉导航"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文探索全语言模型(OLMs)在零样本语义音频-视觉导航(SAVN)中的直接应用，提出RAO-Nav部署流程，利用OLMs中编码的隐式音频-视觉知识使具身智能体能够听、看、推理和行动。方法上提出测试时潜在导航推理(LNR)模块，集成到解码空间中以激发OLMs的内在思维能力，检索更多目标相关观测并做出有效导航决策。实验表明该框架在无需任何训练数据的情况下超越了公开SAVN基准上的SOTA基线，并引入了全局导航指令新设置来评估OLMs作为具身导航智能体的能力。\",\n  \"highlights\": [\n    \"提出RAO-Nav零样本导航框架，直接利用OLMs的隐式多模态知识实现听、看、推理、行动一体化导航\",\n    \"设计测试时潜在导航推理(LNR)模块，集成到解码空间中激发模型内在推理能力\",\n    \"无需训练数据即在SAVN基准上超越SOTA，并引入全局导航指令新评估设置\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"论文核心为基于语言模型的多模态具身导航，与VLN的指令理解与导航决策高度相关，但额外引入音频模态，非纯视觉语言导航。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"具身导航\", \"零样本导航\", \"全语言模型\", \"音频-视觉导航\"]\n}",
+      "summarized_at": "2026-09-29T05:47:29.744758+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.32224",
+      "title": "RAO-Nav: Probing Omni-Language Models for Zero-shot Semantic Audio-Visual Navigation",
+      "authors": [
+        "Qilang Ye",
+        "Meng Liu",
+        "Yu Zhou"
+      ],
+      "abstract": "We explore whether Omni-Language Models (OLMs) can be directly applied to zero-shot Semantic Audio-Visual Navigation (SAVN). Recent work demonstrates that even state-of-the-art specialized models still struggle to achieve generalist multimodal navigation, despite extensive task-specific training. In this paper, we introduce RAO-Nav, short for Reasoning All-in-One OLM, a deployment pipeline for zero-shot SAVN. By leveraging the rich implicit audio-visual knowledge encoded in OLMs, the embodied agent is enabled to ``hear'', ``see'', ``reason'', and ``act'' in the environment. To further elicit the built-in thinking ability of OLMs, we propose a test-time Latent Navigation Reasoning (LNR) module that can be seamlessly integrated into the decoding space. LNR encourages the model to retrieve more target-relevant observations and make effective navigation decisions. Through comprehensive experiments, we show that our framework surpasses existing state-of-the-art baselines on public SAVN benchmarks without using any training data. Moreover, we introduce a new \\emph{Global Navigation Instruction} setting to further evaluate the ability of OLMs to serve as embodied navigation agents. Code: https://github.com/rikeilong/OmniAV\\_Nav.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-09-26T04:33:00+00:00",
+      "updated": "2026-09-26T04:33:00+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.32224v1",
+      "abs_url": "https://arxiv.org/abs/2609.32224",
+      "matched_keywords": [
+        "Navigation Instruction",
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对城市级无人机视觉语言导航(VLN)中长程记忆与地理空间定位的需求，本文提出SatNav——一个基于高分辨率卫星影像构建的可扩展长航程UAV-VLN基准，涵盖18个城市59个场景共118K条导航episode，平均轨迹长度379米。该基准定义了Boundary、Landmark和Route三类任务以测试长程记忆与空间推理能力，并提出模块化框架SwiftVLN进行记忆组件消融研究，同时验证了卫星影像训练的导航模型可迁移至真实无人机观测。",
+      "highlights": [
+        "基于卫星影像构建可扩展的城市级UAV-VLN基准，无需依赖昂贵的3D重建资产，实现118K episodes覆盖18城市",
+        "定义Boundary/Landmark/Route三类任务族，系统测试长程记忆与地理空间推理能力",
+        "提出SwiftVLN模块化框架并开展记忆设计消融，同时验证卫星到无人机的迁移可行性"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接针对UAV-VLN构建大规模基准并提出新框架，是该领域的核心创新贡献。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "benchmark",
+        "satellite imagery",
+        "long-horizon navigation",
+        "memory",
+        "geospatial grounding",
+        "LVLM"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对城市级无人机视觉语言导航(VLN)中长程记忆与地理空间定位的需求，本文提出SatNav——一个基于高分辨率卫星影像构建的可扩展长航程UAV-VLN基准，涵盖18个城市59个场景共118K条导航episode，平均轨迹长度379米。该基准定义了Boundary、Landmark和Route三类任务以测试长程记忆与空间推理能力，并提出模块化框架SwiftVLN进行记忆组件消融研究，同时验证了卫星影像训练的导航模型可迁移至真实无人机观测。\",\n  \"highlights\": [\n    \"基于卫星影像构建可扩展的城市级UAV-VLN基准，无需依赖昂贵的3D重建资产，实现118K episodes覆盖18城市\",\n    \"定义Boundary/Landmark/Route三类任务族，系统测试长程记忆与地理空间推理能力\",\n    \"提出SwiftVLN模块化框架并开展记忆设计消融，同时验证卫星到无人机的迁移可行性\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接针对UAV-VLN构建大规模基准并提出新框架，是该领域的核心创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"benchmark\", \"satellite imagery\", \"long-horizon navigation\", \"memory\", \"geospatial grounding\", \"LVLM\"]\n}",
+      "summarized_at": "2026-09-28T05:24:24.996326+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.31507",
+      "title": "SatNav: A Scalable Benchmark for Long-Horizon UAV Vision-Language Navigation from Satellite Imagery",
+      "authors": [
+        "Jiajun Jiang",
+        "Chunliang Hua",
+        "Zichun Chen",
+        "Yanxing Wu",
+        "Zeyuan Yang",
+        "Jie Song",
+        "Xiao Hu"
+      ],
+      "abstract": "Urban uncrewed aerial vehicle (UAV) vision-language navigation (VLN) requires agents to follow instructions across extended urban spaces, inherently demanding long-term memory and geospatial grounding. However, scaling existing benchmarks remains difficult because of their reliance on costly reconstructed 3D assets, limiting geographic diversity and episode scale. To address this, we introduce SatNav, a scalable, long-horizon UAV VLN benchmark built from high-resolution satellite imagery. SatNav targets city-level navigation missions and uses satellite crops as approximations of UAV nadir views for visual observations. Through an automated cue-to-episode pipeline, SatNav constructs 118K episodes from 59 scenes across 18 cities, with an average trajectory length of 379 m. To stress-test long-horizon memory and geospatial reasoning, SatNav defines three task families: Boundary, Landmark, and Route, targeting loop progress tracking, landmark-based spatial grounding, and route following with counting cues. Benchmarking classical VLN agents and recent agents based on large vision-language models (LVLMs) on SatNav shows that city-scale navigation remains challenging. We further introduce SwiftVLN, a modular framework with switchable memory components, and conduct systematic memory-design ablations. Finally, satellite-to-UAV transfer experiments show that satellite-trained navigation models can operate on real-flight UAV observations, showing the practical relevance of SatNav. Our project page: https://eku127.github.io/SatNav/",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-09-25T16:48:44+00:00",
+      "updated": "2026-09-25T16:48:44+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.31507v1",
+      "abs_url": "https://arxiv.org/abs/2609.31507",
+      "matched_keywords": [
+        "UAV Vision-Language Navigation",
+        "UAV) vision-language navigation",
+        "VLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "针对具身3D导航中模拟数据存在视觉sim-to-real差距且真实数据采集成本高的问题，提出NavGen，一种利用高保真视觉生成模型作为可扩展数据引擎的文本到视频数据生成管线。该方法能跨室内外场景生成多样化的VLN导航片段，并通过风格多样化方法扩充长尾数据，最终构建了约40万条导航片段的数据集。实验表明，基于该数据训练的模型随规模提升性能优于现有数据集，并在真实世界飞行实验中达到75%的成功率。",
+      "highlights": [
+        "提出NavGen管线，利用视觉生成模型作为可扩展数据引擎生成VLN导航片段",
+        "构建约40万条导航片段数据集，通过风格多样化方法扩充长尾数据",
+        "在真实世界无人机飞行实验中验证了模型的迁移性，成功率达75%"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接研究视觉语言导航(VLN)并涉及UAV导航数据集与真实世界飞行实验，属于核心VLN/UAV-VLN研究且有创新的数据生成贡献。",
+      "is_uav_vln": true,
+      "tags": [
+        "VLN",
+        "UAV-VLN",
+        "数据生成",
+        "视觉生成模型",
+        "sim-to-real"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对具身3D导航中模拟数据存在视觉sim-to-real差距且真实数据采集成本高的问题，提出NavGen，一种利用高保真视觉生成模型作为可扩展数据引擎的文本到视频数据生成管线。该方法能跨室内外场景生成多样化的VLN导航片段，并通过风格多样化方法扩充长尾数据，最终构建了约40万条导航片段的数据集。实验表明，基于该数据训练的模型随规模提升性能优于现有数据集，并在真实世界飞行实验中达到75%的成功率。\",\n  \"highlights\": [\n    \"提出NavGen管线，利用视觉生成模型作为可扩展数据引擎生成VLN导航片段\",\n    \"构建约40万条导航片段数据集，通过风格多样化方法扩充长尾数据\",\n    \"在真实世界无人机飞行实验中验证了模型的迁移性，成功率达75%\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航(VLN)并涉及UAV导航数据集与真实世界飞行实验，属于核心VLN/UAV-VLN研究且有创新的数据生成贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"数据生成\", \"视觉生成模型\", \"sim-to-real\"]\n}",
+      "summarized_at": "2026-09-28T05:24:33.944258+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.30770",
+      "title": "NavGen: Visual Generative Models as a Scalable Data Engine for Embodied 3D Navigation",
+      "authors": [
+        "Xijie Huang",
+        "Yongyang Wan",
+        "Chengbin Dong",
+        "Zimo Ding",
+        "Mo Zhu",
+        "Yijin Wang",
+        "Zhiyang Liu",
+        "Fei Gao",
+        "Yuze Wu",
+        "Xin Zhou"
+      ],
+      "abstract": "General-purpose robot models increasingly rely on large and diverse datasets. For embodied 3D navigation, however, existing data sources face a fundamental trade-off: simulated data can be generated at scale but often suffer from the visual sim-to-real gap, whereas real-world flight data provide realistic observations but are costly to collect. This paper studies another direction: the use of high-fidelity visual generative models as scalable data engines for embodied 3D navigation. We introduce NavGen, a text-to-video data generation pipeline that produces diverse vision-language navigation (VLN) episodes across indoor and outdoor scenes. We also propose a style-diversification method that scales up long-tail data that are difficult and costly to collect. The resulting dataset contains approximately 400K navigation episodes. We evaluate our dataset against existing UAV navigation datasets across multiple metrics, and find that the model trained on our data generally improves with scale, outperforming those trained on existing datasets. To validate real-world transferability, we deploy the trained model in world-action-model paradigm to real-world flying experiments. The final model achieves a 75\\% success rate across different navigation tasks and environments.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-09-25T03:49:44+00:00",
+      "updated": "2026-09-25T03:49:44+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.30770v1",
+      "abs_url": "https://arxiv.org/abs/2609.30770",
+      "matched_keywords": [
+        "vision-language navigation",
+        "VLN",
+        "UAV navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-01"
+    },
+    {
+      "summary_cn": "本文评估了通用基础模型GPT-6-Astra在连续环境下的零样本视觉语言导航（VLN-CE）能力。该模型仅利用单目RGB图像，无需导航微调或预建地图，即可自主决定观察、移动和停止。实验表明，该模型在R2R-CE基准上取得了79.0%的成功率，超越了现有最强零样本和有监督方法，并展示了多阶段指令理解和自适应导航能力。",
+      "highlights": [
+        "仅用单目RGB输入，无需导航特定微调或预建场景地图即可实现零样本VLN-CE",
+        "在R2R-CE基准上达到79.0%的成功率，超越最强零样本和有监督方法13.0和6.9个百分点",
+        "揭示了可靠路径执行与目标验证仍是挑战，并指出未来VLN研究应基于基础模型发展泛化智能"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "论文直接研究视觉语言导航（VLN）核心任务，评估基础模型在连续环境中的零样本导航性能，属于该领域的核心且具创新贡献的研究。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "VLN-CE",
+        "零样本导航",
+        "基础模型",
+        "具身导航"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文评估了通用基础模型GPT-6-Astra在连续环境下的零样本视觉语言导航（VLN-CE）能力。该模型仅利用单目RGB图像，无需导航微调或预建地图，即可自主决定观察、移动和停止。实验表明，该模型在R2R-CE基准上取得了79.0%的成功率，超越了现有最强零样本和有监督方法，并展示了多阶段指令理解和自适应导航能力。\",\n  \"highlights\": [\n    \"仅用单目RGB输入，无需导航特定微调或预建场景地图即可实现零样本VLN-CE\",\n    \"在R2R-CE基准上达到79.0%的成功率，超越最强零样本和有监督方法13.0和6.9个百分点\",\n    \"揭示了可靠路径执行与目标验证仍是挑战，并指出未来VLN研究应基于基础模型发展泛化智能\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"论文直接研究视觉语言导航（VLN）核心任务，评估基础模型在连续环境中的零样本导航性能，属于该领域的核心且具创新贡献的研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLN-CE\", \"零样本导航\", \"基础模型\", \"具身导航\"]\n}",
+      "summarized_at": "2026-09-25T04:58:11.183957+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2609.29861",
+      "title": "GPT-6-Astra Lights Up Embodied Navigation: Evaluation in Zero-Shot Vision-and-Language Navigation in Continuous Environments",
+      "authors": [
+        "Guangzhao Dai",
+        "Qianru Sun",
+        "Qi Wu",
+        "Bin Zhu"
+      ],
+      "abstract": "We investigate whether GPT-6-Astra, a general-purpose foundation model, can navigate unfamiliar environments using its own perception, reasoning, and decision-making capabilities. Our evaluation focuses on zero-shot vision-and-language navigation in continuous environments (VLN-CE) through a minimal interface in the Codex harness, aiming to unleash GPT-6-Astra's full potential for navigation. Using monocular RGB, GPT-6-Astra decides when to observe, how to move, and when to stop, without navigation-specific fine-tuning, a trained waypoint predictor, or a pre-built scene map. Our evaluation yields four key findings and implications. First, GPT-6-Astra achieves strong zero-shot navigation performance using only monocular RGB observations. On R2R-CE-100, GPT-6-Astra (ultra reasoning) achieves a success rate of 81.3%, exceeding the strongest reported zero-shot and even train-based success rates by 15.3 and 9.2 percentage points, respectively. Second, GPT-6-Astra exhibits promising capabilities in interpreting multi-stage instructions, understanding the environment, and adjusting routes. Third, execution and goal-verification failures persist even with ultra reasoning. Fourth, these results motivate combining general-purpose model capabilities with navigation-specific expertise. Based on these findings, future VLN research should investigate which aspects of instruction interpretation, spatial understanding, and navigation decision-making general-purpose models can handle directly, and where navigation-specific learning can extend their capabilities. This includes exploring how spatial representations, navigation experience, and learned control skills can improve progress tracking, error recovery, and goal verification while preserving the flexibility to adjust routes.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-09-24T14:21:26+00:00",
+      "updated": "2026-09-25T12:44:47+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2609.29861v2",
+      "abs_url": "https://arxiv.org/abs/2609.29861",
+      "matched_keywords": [
+        "Embodied Navigation",
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-01"
+    }
+  ],
+  "summarized_count": 19,
+  "skipped_no_summary": 0
+}
