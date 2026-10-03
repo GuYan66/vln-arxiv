@@ -2029,5 +2029,27 @@
     "raw_model_output": "{\n  \"summary_cn\": \"本文提出 ASENA，一个将通用编程智能体与机器人感知、计算和持久经验相连接的具身导航系统。该系统允许智能体编写执行程序、修复失败并复用技能，同时引入了 4B 参数的单目导航策略 ASENA-VLN 作为可选工具，在 R2R 和 RxR 基准上达到 SOTA。通过持续的工作空间演化和模拟器反馈，ASENA 在 R2R 和 RxR 上的成功率显著提升，并在真实机器人上验证了其超越路径跟随的能力。\",\n  \"highlights\": [\n    \"提出 ASENA 自演化智能体系统，结合通用编程智能体与机器人感知执行，无需更新模型权重即可扩展机器人行为\",\n    \"引入 4B 参数的单目导航策略 ASENA-VLN，在 R2R (68.7%) 和 RxR (70.2%) 上达到 SOTA\",\n    \"通过持续经验积累与模拟器反馈，在 R2R 和 RxR 重复任务子集上成功率大幅提升至 98% 和 89%\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"ASENA-VLN 是核心视觉语言导航(VLN)策略，在 R2R 和 RxR 基准上取得 SOTA 成绩，对 VLN 研究有重要创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Embodied Navigation\", \"Self-evolving Agent\", \"R2R\", \"RxR\"]\n}",
     "summarized_at": "2026-10-01T05:55:14.869509+00:00",
     "summarize_error": null
+  },
+  "2610.00878": {
+    "summary_cn": "针对具身机器人需同时支持语言导航和动态人员跟踪的需求，本文提出统一全景-语言-动作模型UniTrackPLA。其全景感知编码(PAE)将全景图投影为时序-方位结构化的透视图，使预训练视觉编码器能处理全向观测；世界-动作一致性(WAC)模块在线验证动作前缀并触发重规划。方法在统一框架下同时完成VLN导航与人员跟踪，并发布OmniTrackNav-Bench基准（含仿真与真实数据），在Go2-W四足机器人上完成闭环验证。",
+    "highlights": [
+      "提出全景感知编码PAE，使透视图预训练编码器适配全向观测，保留时序与方位结构",
+      "引入世界-动作一致性WAC机制，在线预测动作条件下的未来视觉状态并验证路径点前缀，实现可靠复用与不一致重规划",
+      "发布OmniTrackNav-Bench基准，含5,000跟踪轨迹、10,000条VLN路线和96条真实路线，提供近92万路径点监督实例"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "论文直接解决VLN导航任务，提出全景感知编码与闭环验证机制并构建VLN基准，是VLN方向的核心创新工作，但场景为地面四足机器人而非无人机。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "panoramic perception",
+      "vision-language-action",
+      "person tracking",
+      "embodied robot",
+      "closed-loop planning"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对具身机器人需同时支持语言导航和动态人员跟踪的需求，本文提出统一全景-语言-动作模型UniTrackPLA。其全景感知编码(PAE)将全景图投影为时序-方位结构化的透视图，使预训练视觉编码器能处理全向观测；世界-动作一致性(WAC)模块在线验证动作前缀并触发重规划。方法在统一框架下同时完成VLN导航与人员跟踪，并发布OmniTrackNav-Bench基准（含仿真与真实数据），在Go2-W四足机器人上完成闭环验证。\",\n  \"highlights\": [\n    \"提出全景感知编码PAE，使透视图预训练编码器适配全向观测，保留时序与方位结构\",\n    \"引入世界-动作一致性WAC机制，在线预测动作条件下的未来视觉状态并验证路径点前缀，实现可靠复用与不一致重规划\",\n    \"发布OmniTrackNav-Bench基准，含5,000跟踪轨迹、10,000条VLN路线和96条真实路线，提供近92万路径点监督实例\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接解决VLN导航任务，提出全景感知编码与闭环验证机制并构建VLN基准，是VLN方向的核心创新工作，但场景为地面四足机器人而非无人机。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"panoramic perception\", \"vision-language-action\", \"person tracking\", \"embodied robot\", \"closed-loop planning\"]\n}",
+    "summarized_at": "2026-10-03T05:19:08.484202+00:00",
+    "summarize_error": null
   }
 }

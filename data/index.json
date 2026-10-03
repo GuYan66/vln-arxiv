@@ -881,7 +881,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-01.json"
+    },
+    "2610.00878": {
+      "arxiv_id": "2610.00878",
+      "title": "UniTrackPLA: Unified Panorama-Language-Action Model for Instruction-Guided Navigation and Dynamic Person Tracking",
+      "date": "2026-10-03",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-03.json"
     }
   },
-  "last_updated": "2026-10-01T05:55:14.872536+00:00"
+  "last_updated": "2026-10-03T05:19:08.486937+00:00"
 }
