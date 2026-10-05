@@ -890,7 +890,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-03.json"
+    },
+    "2610.03622": {
+      "arxiv_id": "2610.03622",
+      "title": "CORNAV: Construction-Aware Reasoning for Robot Navigation on Active Worksites",
+      "date": "2026-10-05",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-05.json"
+    },
+    "2610.02697": {
+      "arxiv_id": "2610.02697",
+      "title": "GeoScaffold: Learning Compact Geometric Latents via Reconstruction for Efficient Vision-Language Navigation",
+      "date": "2026-10-05",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-05.json"
     }
   },
-  "last_updated": "2026-10-04T05:53:35.331035+00:00"
+  "last_updated": "2026-10-05T05:41:31.703879+00:00"
 }
