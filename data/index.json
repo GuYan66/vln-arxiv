@@ -908,7 +908,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-05.json"
+    },
+    "2610.05664": {
+      "arxiv_id": "2610.05664",
+      "title": "StageVLN: Spatial and Trajectory Auxiliary Guidance for Efficient Vision-Language Navigation",
+      "date": "2026-10-06",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-06.json"
+    },
+    "2610.05024": {
+      "arxiv_id": "2610.05024",
+      "title": "LightVLN: Efficient Aerial Vision-and-Language Navigation with Compact Memory and History-Guided Local Aggregation",
+      "date": "2026-10-06",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-06.json"
     }
   },
-  "last_updated": "2026-10-05T05:41:31.703879+00:00"
+  "last_updated": "2026-10-06T06:21:29.927518+00:00"
 }
