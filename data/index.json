@@ -926,7 +926,43 @@
       "is_uav_vln": true,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-10-06.json"
+    },
+    "2610.08526": {
+      "arxiv_id": "2610.08526",
+      "title": "WareFly-VLA: A Vision-Language-Action Framework for UAV Navigation and Human Tracking in Smart Warehouses",
+      "date": "2026-10-07",
+      "relevance_score": 9,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-07.json"
+    },
+    "2610.07558": {
+      "arxiv_id": "2610.07558",
+      "title": "Seeing the Invisible: Physics-Guided Visual Prompting for Temperature- and Radiation-Aware VLA Navigation",
+      "date": "2026-10-07",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-07.json"
+    },
+    "2610.07396": {
+      "arxiv_id": "2610.07396",
+      "title": "What the Elevation Map Cannot See: Semantic-Aware Locomotion and Execution-Aware Navigation for Humanoid Robot",
+      "date": "2026-10-07",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-07.json"
+    },
+    "2610.07192": {
+      "arxiv_id": "2610.07192",
+      "title": "Sim-to-Real Transfer of Vision-Language Navigation in Continuous Environments Using an Ackermann-Steered Mobile Robot",
+      "date": "2026-10-07",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-10-07.json"
     }
   },
-  "last_updated": "2026-10-06T06:21:29.927518+00:00"
+  "last_updated": "2026-10-07T06:01:10.644863+00:00"
 }

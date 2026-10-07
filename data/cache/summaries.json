@@ -2135,5 +2135,90 @@
     "raw_model_output": "{\n  \"summary_cn\": \"针对无人机视觉语言导航中大规模模型与密集视觉历史带来的计算与内存开销问题，本文提出轻量化框架LightVLN。该方法结合0.5B语言骨干网络，将每帧历史观测压缩为单个token，并通过历史与指令引导的局部聚合将当前观测从256个视觉token压缩至32个。在公开数据集OpenFly和AerialVLN-S上取得优异性能，并成功部署于DJI M350 RTK无人机实现闭环机载计算与硬件在环评估。\",\n  \"highlights\": [\n    \"将每帧历史观测压缩为单个token，最多保留16帧历史，策略仅使用至多48个观测token\",\n    \"引入历史与指令条件化的局部聚合模块，将当前观测从256压缩至32个视觉token\",\n    \"在DJI M350 RTK上实现机载部署，模型推理达14.61 Hz，端到端决策更新达11.13 Hz\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"本文直接面向无人机视觉语言导航(UAV-VLN)，提出轻量化高效框架并完成真实硬件部署，是该研究者的核心方向且贡献显著。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"轻量化\", \"机载部署\", \"视觉token压缩\"]\n}",
     "summarized_at": "2026-10-06T06:21:29.923861+00:00",
     "summarize_error": null
+  },
+  "2610.08526": {
+    "summary_cn": "针对智能仓库中无人机语言条件控制缺乏基准的问题，本文提出了WareFly-VLA框架与数据集，包含507次遥操作飞行片段和8504个高分辨率RGB转换数据，用于语言引导的人类搜索、定位与跟踪。研究建立了四种开源VLA架构的统一基准，发现语言条件的空中控制远未解决，且现有基础模型从地面到空中平台的迁移效果较差。",
+    "highlights": [
+      "构建了首个面向智能仓库环境的无人机视觉-语言-动作(VLA)数据集，包含语言描述、连续飞行动作和真实工业场景",
+      "对四种开源VLA架构进行了无泄漏的统一基准评测，发现连续动作建模优于离散动作标记化",
+      "揭示了当前基础模型从地面/人形平台向空中平台迁移效果差，且在严格泛化设置下性能显著下降"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文直接研究无人机视觉语言导航与人类跟踪任务，构建了语言引导的无人机控制基准，属于UAV-VLN核心方向且有重要数据集与基准贡献。",
+    "is_uav_vln": true,
+    "tags": [
+      "UAV-VLN",
+      "VLA",
+      "benchmark",
+      "warehouse",
+      "human-tracking"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对智能仓库中无人机语言条件控制缺乏基准的问题，本文提出了WareFly-VLA框架与数据集，包含507次遥操作飞行片段和8504个高分辨率RGB转换数据，用于语言引导的人类搜索、定位与跟踪。研究建立了四种开源VLA架构的统一基准，发现语言条件的空中控制远未解决，且现有基础模型从地面到空中平台的迁移效果较差。\",\n  \"highlights\": [\n    \"构建了首个面向智能仓库环境的无人机视觉-语言-动作(VLA)数据集，包含语言描述、连续飞行动作和真实工业场景\",\n    \"对四种开源VLA架构进行了无泄漏的统一基准评测，发现连续动作建模优于离散动作标记化\",\n    \"揭示了当前基础模型从地面/人形平台向空中平台迁移效果差，且在严格泛化设置下性能显著下降\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究无人机视觉语言导航与人类跟踪任务，构建了语言引导的无人机控制基准，属于UAV-VLN核心方向且有重要数据集与基准贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"VLA\", \"benchmark\", \"warehouse\", \"human-tracking\"]\n}",
+    "summarized_at": "2026-10-07T06:00:37.547746+00:00",
+    "summarize_error": null
+  },
+  "2610.07558": {
+    "summary_cn": "针对安全关键场景中辐射、温度等不可见风险无法被RGB相机检测的问题，提出即插即用的物理引导视觉提示模块（PG-VP）。该模块通过物理风险评估确定避障方向，在连续帧上叠加动态虚拟障碍物，使冻结的VLA导航策略自然绕过不可见危险，无需新增编码器或重训练。在R2R-CE和RxR-CE上验证有效，并在真实机器人上成功避开了热源和辐射源。",
+    "highlights": [
+      "提出即插即用的PG-VP模块，复用冻结VLA模型的可见障碍物避障能力来规避不可见风险",
+      "通过动态视觉提示在连续帧上叠加虚拟障碍物，统一处理不同类型危险（辐射/温度），无需重训练",
+      "在R2R-CE/RxR-CE及真实机器人上验证，最差10%轨迹安全性分别提升63.45%和32.59%"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "论文直接研究VLN任务并在R2R-CE/RxR-CE基准上评估，提出了创新的物理引导视觉提示方法扩展VLA导航能力，属于核心VLN研究。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "VLA",
+      "visual prompting",
+      "safety-critical navigation",
+      "physics-guided"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对安全关键场景中辐射、温度等不可见风险无法被RGB相机检测的问题，提出即插即用的物理引导视觉提示模块（PG-VP）。该模块通过物理风险评估确定避障方向，在连续帧上叠加动态虚拟障碍物，使冻结的VLA导航策略自然绕过不可见危险，无需新增编码器或重训练。在R2R-CE和RxR-CE上验证有效，并在真实机器人上成功避开了热源和辐射源。\",\n  \"highlights\": [\n    \"提出即插即用的PG-VP模块，复用冻结VLA模型的可见障碍物避障能力来规避不可见风险\",\n    \"通过动态视觉提示在连续帧上叠加虚拟障碍物，统一处理不同类型危险（辐射/温度），无需重训练\",\n    \"在R2R-CE/RxR-CE及真实机器人上验证，最差10%轨迹安全性分别提升63.45%和32.59%\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接研究VLN任务并在R2R-CE/RxR-CE基准上评估，提出了创新的物理引导视觉提示方法扩展VLA导航能力，属于核心VLN研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"VLA\", \"visual prompting\", \"safety-critical navigation\", \"physics-guided\"]\n}",
+    "summarized_at": "2026-10-07T06:00:47.072042+00:00",
+    "summarize_error": null
+  },
+  "2610.07396": {
+    "summary_cn": "针对人形机器人导航中高程图无法识别的隐蔽危险物（如倒下的瓶子、水渍）以及VLN策略与实际运动执行之间的偏差问题，提出了一个建模隐蔽危险和执行偏差的基准测试，并设计了闭环VLN+运动控制框架持续对齐高层导航与机器人实际状态。在仿真中评估导航并在Unitree G1人形机器人上验证运动策略，结果表明语义输入能减少与高程图难以表征的危险物的接触，抗偏差机制提升了导航成功率。",
+    "highlights": [
+      "揭示了VLN策略指令与运动策略执行之间的偏差累积问题，导致机器人偏离预期路径",
+      "提出闭环VLN+locomotion控制框架，持续将高层导航与机器人实际状态重新对齐",
+      "构建了同时建模高程图隐蔽危险和执行偏差的仿真基准，并在物理人形机器人上验证"
+    ],
+    "relevance_score": 7,
+    "relevance_reason": "论文直接以VLN策略为核心组件，解决了VLN指令与底层运动执行之间的闭环对齐问题，属于VLN在具身机器人上的重要应用贡献，但聚焦于人形机器人locomotion而非VLN方法本身。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "humanoid-robot",
+      "locomotion",
+      "closed-loop-navigation",
+      "semantic-aware",
+      "benchmark"
+    ],
+    "raw_model_output": "{\"summary_cn\":\"针对人形机器人导航中高程图无法识别的隐蔽危险物（如倒下的瓶子、水渍）以及VLN策略与实际运动执行之间的偏差问题，提出了一个建模隐蔽危险和执行偏差的基准测试，并设计了闭环VLN+运动控制框架持续对齐高层导航与机器人实际状态。在仿真中评估导航并在Unitree G1人形机器人上验证运动策略，结果表明语义输入能减少与高程图难以表征的危险物的接触，抗偏差机制提升了导航成功率。\",\"highlights\":[\"揭示了VLN策略指令与运动策略执行之间的偏差累积问题，导致机器人偏离预期路径\",\"提出闭环VLN+locomotion控制框架，持续将高层导航与机器人实际状态重新对齐\",\"构建了同时建模高程图隐蔽危险和执行偏差的仿真基准，并在物理人形机器人上验证\"],\"relevance_score\":7,\"relevance_reason\":\"论文直接以VLN策略为核心组件，解决了VLN指令与底层运动执行之间的闭环对齐问题，属于VLN在具身机器人上的重要应用贡献，但聚焦于人形机器人locomotion而非VLN方法本身。\",\"is_uav_vln\":false,\"tags\":[\"VLN\",\"humanoid-robot\",\"locomotion\",\"closed-loop-navigation\",\"semantic-aware\",\"benchmark\"]}",
+    "summarized_at": "2026-10-07T06:00:56.954882+00:00",
+    "summarize_error": null
+  },
+  "2610.07192": {
+    "summary_cn": "针对传统VLN模型依赖导航图、全景视图和完美定位的局限，本文提出一种在连续环境中运行的VLN方法的仿真到现实(Sim-to-Real)迁移方案。系统采用基于跨模态注意力(CMA)的架构，在仿真环境中训练后，利用自定义阿克曼转向移动机器人收集的真实数据进行微调。通过线性光度调整和少量样本微调，模型成功适应真实环境，并在离线硬件上实现了有效的自然语言驱动导航。",
+    "highlights": [
+      "在连续环境中执行VLN，无需依赖导航图或全景视图",
+      "基于跨模态注意力(CMA)架构，实现从仿真到真实环境的迁移",
+      "使用配备相机和LiDAR的阿克曼转向移动机器人验证，并采用SPL和nDTW指标评估"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "该论文直接研究视觉语言导航(VLN)在连续环境下的Sim-to-Real迁移，属于核心VLN研究且在真实机器人部署方面有创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "Sim-to-Real",
+      "Cross-Modal Attention",
+      "Continuous Environments",
+      "Mobile Robot"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对传统VLN模型依赖导航图、全景视图和完美定位的局限，本文提出一种在连续环境中运行的VLN方法的仿真到现实(Sim-to-Real)迁移方案。系统采用基于跨模态注意力(CMA)的架构，在仿真环境中训练后，利用自定义阿克曼转向移动机器人收集的真实数据进行微调。通过线性光度调整和少量样本微调，模型成功适应真实环境，并在离线硬件上实现了有效的自然语言驱动导航。\",\n  \"highlights\": [\n    \"在连续环境中执行VLN，无需依赖导航图或全景视图\",\n    \"基于跨模态注意力(CMA)架构，实现从仿真到真实环境的迁移\",\n    \"使用配备相机和LiDAR的阿克曼转向移动机器人验证，并采用SPL和nDTW指标评估\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航(VLN)在连续环境下的Sim-to-Real迁移，属于核心VLN研究且在真实机器人部署方面有创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Sim-to-Real\", \"Cross-Modal Attention\", \"Continuous Environments\", \"Mobile Robot\"]\n}",
+    "summarized_at": "2026-10-07T06:01:10.642378+00:00",
+    "summarize_error": null
   }
 }
