@@ -962,7 +962,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.AI",
       "path": "papers/papers-2026-10-07.json"
+    },
+    "2610.10421": {
+      "arxiv_id": "2610.10421",
+      "title": "AirGroundVLN: A Large-Scale Benchmark for Goal-Oriented Air-Ground Collaborative Vision-and-Language Navigation",
+      "date": "2026-10-08",
+      "relevance_score": 9,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-08.json"
     }
   },
-  "last_updated": "2026-10-07T06:01:10.644863+00:00"
+  "last_updated": "2026-10-08T06:05:37.996548+00:00"
 }

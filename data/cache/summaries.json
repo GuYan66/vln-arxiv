@@ -2220,5 +2220,27 @@
     "raw_model_output": "{\n  \"summary_cn\": \"针对传统VLN模型依赖导航图、全景视图和完美定位的局限，本文提出一种在连续环境中运行的VLN方法的仿真到现实(Sim-to-Real)迁移方案。系统采用基于跨模态注意力(CMA)的架构，在仿真环境中训练后，利用自定义阿克曼转向移动机器人收集的真实数据进行微调。通过线性光度调整和少量样本微调，模型成功适应真实环境，并在离线硬件上实现了有效的自然语言驱动导航。\",\n  \"highlights\": [\n    \"在连续环境中执行VLN，无需依赖导航图或全景视图\",\n    \"基于跨模态注意力(CMA)架构，实现从仿真到真实环境的迁移\",\n    \"使用配备相机和LiDAR的阿克曼转向移动机器人验证，并采用SPL和nDTW指标评估\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航(VLN)在连续环境下的Sim-to-Real迁移，属于核心VLN研究且在真实机器人部署方面有创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Sim-to-Real\", \"Cross-Modal Attention\", \"Continuous Environments\", \"Mobile Robot\"]\n}",
     "summarized_at": "2026-10-07T06:01:10.642378+00:00",
     "summarize_error": null
+  },
+  "2610.10421": {
+    "summary_cn": "该论文提出了AirGroundVLN，一个大规模空地协同视觉语言导航基准，包含10,281个导航 episodes 和955个目标实例，覆盖19个Unreal Engine环境。针对空地视角差异和不对称空间可观测性两大挑战，提出了AG-CoNAV框架，包含时空锚定协同记忆(SACM)和空中引导的区域到局部规划(AGRLP)两个核心组件，实现跨平台历史上下文的一致性维护与粗细粒度导航结合。",
+    "highlights": [
+      "首个大规模空地协同目标导向VLN基准，含10,281 episodes和955目标实例",
+      "提出SACM模块解决跨平台时空上下文一致性问题",
+      "提出AGRLP模块将空中区域引导与地面精细导航相结合"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文直接研究VLN并涉及无人机/航拍视角的空中导航，是VLN与UAV-VLN交叉方向的核心工作，且提出了新基准和新框架，创新贡献显著。",
+    "is_uav_vln": true,
+    "tags": [
+      "VLN",
+      "UAV-VLN",
+      "air-ground collaboration",
+      "benchmark",
+      "collaborative navigation",
+      "spatial memory"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"该论文提出了AirGroundVLN，一个大规模空地协同视觉语言导航基准，包含10,281个导航 episodes 和955个目标实例，覆盖19个Unreal Engine环境。针对空地视角差异和不对称空间可观测性两大挑战，提出了AG-CoNAV框架，包含时空锚定协同记忆(SACM)和空中引导的区域到局部规划(AGRLP)两个核心组件，实现跨平台历史上下文的一致性维护与粗细粒度导航结合。\",\n  \"highlights\": [\"首个大规模空地协同目标导向VLN基准，含10,281 episodes和955目标实例\", \"提出SACM模块解决跨平台时空上下文一致性问题\", \"提出AGRLP模块将空中区域引导与地面精细导航相结合\"],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究VLN并涉及无人机/航拍视角的空中导航，是VLN与UAV-VLN交叉方向的核心工作，且提出了新基准和新框架，创新贡献显著。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"air-ground collaboration\", \"benchmark\", \"collaborative navigation\", \"spatial memory\"]\n}",
+    "summarized_at": "2026-10-08T06:05:37.994061+00:00",
+    "summarize_error": null
   }
 }
