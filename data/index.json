@@ -971,7 +971,25 @@
       "is_uav_vln": true,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-08.json"
+    },
+    "2610.11591": {
+      "arxiv_id": "2610.11591",
+      "title": "Acting from Belief, Looking When Needed: A Bayesian Spatial World Model for Navigation under Intermittent Perception",
+      "date": "2026-10-09",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-09.json"
+    },
+    "2610.10635": {
+      "arxiv_id": "2610.10635",
+      "title": "Speaking the Navigator's Language: Trajectory-Grounded Instruction Translation for Frozen Aerial VLN Agents",
+      "date": "2026-10-09",
+      "relevance_score": 9,
+      "is_uav_vln": true,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-10-09.json"
     }
   },
-  "last_updated": "2026-10-08T06:05:37.996548+00:00"
+  "last_updated": "2026-10-09T06:09:34.518368+00:00"
 }
