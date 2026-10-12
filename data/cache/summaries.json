@@ -2283,5 +2283,50 @@
     "raw_model_output": "{\"summary_cn\": \"针对无人机视觉语言导航中用户简短指令与训练数据详细指令之间的指令鸿沟问题，提出轨迹引导指令翻译器（TGIT）作为冻结导航器的前端，通过学习轨迹结果将用户简短指令翻译为可执行命令。该方法将简短指令成功率从11.33%提升至32.51%，并在CityNav和AirVLN等数据集上实现零样本迁移与恢复。\",\"highlights\": [\"针对冻结无人机VLN代理的指令鸿沟问题，提出轨迹引导指令翻译器TGIT\",\"通过语言模型生成配对简短指令数据并基于轨迹结果训练翻译器\",\"在真实人类指令上实现零样本迁移，成功率从11.33%提升至32.51%\"],\"relevance_score\": 9,\"relevance_reason\": \"该论文直接研究无人机视觉语言导航（UAV-VLN），提出创新性指令翻译方法解决指令鸿沟问题，与研究者方向高度契合。\",\"is_uav_vln\": true,\"tags\": [\"VLN\",\"UAV-VLN\",\"instruction translation\",\"frozen agent\",\"trajectory grounding\"]}",
     "summarized_at": "2026-10-09T06:09:34.513292+00:00",
     "summarize_error": null
+  },
+  "2610.13122": {
+    "summary_cn": "现有端到端VLN策略仅依赖动作监督隐式学习指令-视觉对齐与空间理解，容易过拟合训练相关性而非泛化所需的能力。GuidedNav提出统一框架，通过子任务/地标引导将预动作注意力对齐到当前指令片段与相关视觉区域，并通过空间引导将内部表示与几何特征对齐，在推理时无额外开销。该方法在R2R-CE和RxR-CE val-unseen上分别提升成功率8.1%和13.1%，同时发布了解释性增强的Guided-R2R和Guided-RxR数据集。",
+    "highlights": [
+      "提出预动作注意力引导与空间几何引导相结合的训练框架，显式塑造指令到动作的表示",
+      "在R2R-CE和RxR-CE上达到SOTA，推理速度更快且具备真实世界迁移能力",
+      "发布Guided-R2R和Guided-RxR两个标注增强数据集，支持更可解释的VLN研究"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文是VLN核心方向的前沿工作，提出创新训练框架并在标准benchmark上取得SOTA，对VLN研究者高度相关。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "注意力引导",
+      "空间几何",
+      "R2R-CE",
+      "RxR-CE",
+      "预动作注意力"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"现有端到端VLN策略仅依赖动作监督隐式学习指令-视觉对齐与空间理解，容易过拟合训练相关性而非泛化所需的能力。GuidedNav提出统一框架，通过子任务/地标引导将预动作注意力对齐到当前指令片段与相关视觉区域，并通过空间引导将内部表示与几何特征对齐，在推理时无额外开销。该方法在R2R-CE和RxR-CE val-unseen上分别提升成功率8.1%和13.1%，同时发布了解释性增强的Guided-R2R和Guided-RxR数据集。\",\n  \"highlights\": [\n    \"提出预动作注意力引导与空间几何引导相结合的训练框架，显式塑造指令到动作的表示\",\n    \"在R2R-CE和RxR-CE上达到SOTA，推理速度更快且具备真实世界迁移能力\",\n    \"发布Guided-R2R和Guided-RxR两个标注增强数据集，支持更可解释的VLN研究\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文是VLN核心方向的前沿工作，提出创新训练框架并在标准benchmark上取得SOTA，对VLN研究者高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"注意力引导\", \"空间几何\", \"R2R-CE\", \"RxR-CE\", \"预动作注意力\"]\n}",
+    "summarized_at": "2026-10-12T05:58:40.663734+00:00",
+    "summarize_error": null
+  },
+  "2610.13104": {
+    "summary_cn": "针对多步指令引导的VLN任务中已执行指令内容干扰后续决策的问题，本文提出VLN-AIEP框架，将指令执行进度估计与导航决策耦合，通过已访问轨迹抑制已执行指令内容的嵌入，并将候选位置与待执行内容匹配。该方法无需显式进度标注，利用地标锚定轨迹表示编码语义标签与相对几何信息来辅助进度估计。在R2R、RxR、CVDN和R2R-CE数据集上验证了方法的有效性。",
+    "highlights": [
+      "将指令执行进度估计与导航决策耦合，无需显式进度监督标注",
+      "构建地标锚定轨迹表示，编码语义标签与视角相对几何信息",
+      "在R2R、RxR、CVDN和R2R-CE四个数据集上取得优异性能"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "本文是核心VLN研究，提出无需显式进度监督的指令执行进度感知框架，在多个标准VLN数据集上验证，对该研究者的VLN方向高度相关且有创新贡献。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "progress estimation",
+      "landmark-anchored",
+      "instruction grounding",
+      "R2R",
+      "RxR",
+      "CVDN"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对多步指令引导的VLN任务中已执行指令内容干扰后续决策的问题，本文提出VLN-AIEP框架，将指令执行进度估计与导航决策耦合，通过已访问轨迹抑制已执行指令内容的嵌入，并将候选位置与待执行内容匹配。该方法无需显式进度标注，利用地标锚定轨迹表示编码语义标签与相对几何信息来辅助进度估计。在R2R、RxR、CVDN和R2R-CE数据集上验证了方法的有效性。\",\n  \"highlights\": [\n    \"将指令执行进度估计与导航决策耦合，无需显式进度监督标注\",\n    \"构建地标锚定轨迹表示，编码语义标签与视角相对几何信息\",\n    \"在R2R、RxR、CVDN和R2R-CE四个数据集上取得优异性能\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"本文是核心VLN研究，提出无需显式进度监督的指令执行进度感知框架，在多个标准VLN数据集上验证，对该研究者的VLN方向高度相关且有创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"progress estimation\", \"landmark-anchored\", \"instruction grounding\", \"R2R\", \"RxR\", \"CVDN\"]\n}",
+    "summarized_at": "2026-10-12T05:58:48.561374+00:00",
+    "summarize_error": null
   }
 }
