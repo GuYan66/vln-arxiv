@@ -1,0 +1,837 @@
+{
+  "date": "2026-10-14",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "针对大视觉语言模型在长程视觉语言导航中因上下文长度限制和历史冗余导致性能下降的问题，提出MemoryVLN系统。该方法通过遗忘曲线启发的时序采样压缩长序列历史，结合2D语义、3D几何与6D位姿构建自我感知记忆表示，并利用分层记忆库与记忆增强机制实现跨上下文记忆复用。在R2R-CE和RxR-CE数据集上显著超越现有基线。",
+      "highlights": [
+        "提出基于遗忘曲线的长序列压缩方法，在有限token预算下保留密集近期观测与稀疏远期代表性观测",
+        "设计融合2D语义、3D几何与6D位姿的自我感知记忆表示，同时编码观测内容与空间位置",
+        "构建分层记忆库实现跨上下文记忆复用，通过Top-K检索增强当前导航状态"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "本文是核心VLN研究，提出创新的记忆构建与管理机制解决长程导航问题，与该研究者的VLN方向高度相关",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "memory",
+        "LVLM",
+        "long-horizon",
+        "embodied navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对大视觉语言模型在长程视觉语言导航中因上下文长度限制和历史冗余导致性能下降的问题，提出MemoryVLN系统。该方法通过遗忘曲线启发的时序采样压缩长序列历史，结合2D语义、3D几何与6D位姿构建自我感知记忆表示，并利用分层记忆库与记忆增强机制实现跨上下文记忆复用。在R2R-CE和RxR-CE数据集上显著超越现有基线。\",\n  \"highlights\": [\"提出基于遗忘曲线的长序列压缩方法，在有限token预算下保留密集近期观测与稀疏远期代表性观测\", \"设计融合2D语义、3D几何与6D位姿的自我感知记忆表示，同时编码观测内容与空间位置\", \"构建分层记忆库实现跨上下文记忆复用，通过Top-K检索增强当前导航状态\"],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"本文是核心VLN研究，提出创新的记忆构建与管理机制解决长程导航问题，与该研究者的VLN方向高度相关\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"memory\", \"LVLM\", \"long-horizon\", \"embodied navigation\"]\n}",
+      "summarized_at": "2026-10-14T04:54:12.273175+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.18478",
+      "title": "MemoryVLN: From Ego-Aware Memory Representation to Cross-Context Memory Reuse in Vision-Language Navigation",
+      "authors": [
+        "Xueyao Wei",
+        "Yifei Wang",
+        "Delun Li",
+        "Shaoan Wang",
+        "Junzhi Yu",
+        "Wenjie Song",
+        "Xingyu Chen"
+      ],
+      "abstract": "Large vision-language models (LVLMs) have shown strong potential for embodied vision-language navigation (VLN), yet their performance degrades on long-horizon trajectories due to context-length limits, redundant historical observations, and unstable spatial alignment across time. These issues make it difficult to both compress long navigation histories and reliably reuse past spatial experience. To address these limitations, we propose \\textbf{MemoryVLN}, a unified memory-driven navigation system built around memory construction and management. During memory construction, \\emph{Long Sequence Compression} employs forgetting-curve-inspired temporal sampling to preserve dense recent evidence and sparse yet representative distant observations under a limited token budget. \\emph{Ego-Aware Memory Representation} further integrates 2D semantic tokens, 3D geometric tokens, and 6D agent poses, allowing each memory to encode both what was observed and where it was observed. During memory management, \\emph{Hierarchical Memory Bank} maintains in-episode and context-level memories through cross-context warm-start and confidence-controlled write-back. \\emph{Memory Enhancement} then retrieves the Top-$K$ relevant memories according to the current navigation state and fuses them with the current visual tokens. Together, these mechanisms transform raw navigation history into compact, spatially grounded, selectively retrievable, and reusable navigation experience. Extensive experiments on R2R-CE and RxR-CE demonstrate consistent improvements over the state-of-the-art baselines by a substantial margin (i.e., 2\\% and 6.5\\% in successful rate).",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-10-13T14:40:04+00:00",
+      "updated": "2026-10-13T14:40:04+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.18478v1",
+      "abs_url": "https://arxiv.org/abs/2610.18478",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "针对服务机器人长时序跨室内外导航的需求，本文提出了I2O2I-Nav基准，包含20个真实世界复合场景及对齐的3DGS渲染与碰撞几何。提出MODULAR-Agent通过完成验证、阶段交接和有限恢复协调冻结导航策略，评估显示连续组合导航极具挑战性，完整任务成功率仍较低。",
+      "highlights": [
+        "提出覆盖超11.5万平方米的室内外跨域长时序导航基准I2O2I-Nav",
+        "设计三级评估体系，从独立原语到完整四阶段I2O2I任务",
+        "MODULAR-Agent通过完成验证与阶段交接协调异构导航策略，将完整任务成功率从1.15%提升至4.02%"
+      ],
+      "relevance_score": 5,
+      "relevance_reason": "该研究聚焦于具身机器人的跨室内外长时序导航与基准构建，虽属于具身导航领域，但不涉及视觉语言导航(VLN)或无人机场景，与研究者核心方向相关性有限。",
+      "is_uav_vln": false,
+      "tags": [
+        "embodied navigation",
+        "long-horizon navigation",
+        "benchmark",
+        "modular agent",
+        "indoor-outdoor"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对服务机器人长时序跨室内外导航的需求，本文提出了I2O2I-Nav基准，包含20个真实世界复合场景及对齐的3DGS渲染与碰撞几何。提出MODULAR-Agent通过完成验证、阶段交接和有限恢复协调冻结导航策略，评估显示连续组合导航极具挑战性，完整任务成功率仍较低。\",\n  \"highlights\": [\n    \"提出覆盖超11.5万平方米的室内外跨域长时序导航基准I2O2I-Nav\",\n    \"设计三级评估体系，从独立原语到完整四阶段I2O2I任务\",\n    \"MODULAR-Agent通过完成验证与阶段交接协调异构导航策略，将完整任务成功率从1.15%提升至4.02%\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"该研究聚焦于具身机器人的跨室内外长时序导航与基准构建，虽属于具身导航领域，但不涉及视觉语言导航(VLN)或无人机场景，与研究者核心方向相关性有限。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"embodied navigation\", \"long-horizon navigation\", \"benchmark\", \"modular agent\", \"indoor-outdoor\"]\n}",
+      "summarized_at": "2026-10-14T04:54:23.454277+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.18307",
+      "title": "I2O2I-Nav: A Benchmark with a Modular Agent for Long-Horizon Indoor-to-Outdoor-to-Indoor Navigation",
+      "authors": [
+        "Zhengjie Shu",
+        "Wanyu Li",
+        "Di Xiao",
+        "Lingxin Jiang",
+        "Lai Jiang",
+        "Kaidi Hu",
+        "Xincheng Tang",
+        "Wenkang Hu",
+        "Haoran Wang",
+        "Jinchuan Zhang",
+        "Chang Chen",
+        "Wei Li",
+        "Jia Pan",
+        "Ruigang Yang"
+      ],
+      "abstract": "Service and delivery robots often need to complete long-horizon navigation missions spanning indoor and outdoor environments. Existing embodied navigation benchmarks primarily evaluate isolated stages or partial cross-domain journeys, providing limited support for assessing how heterogeneous navigation capabilities compose under continuous execution. We introduce I2O2I-Nav, a physics-enabled benchmark of 20 real-world composite scenes spanning over 115,000 square meters across multiple buildings and floors, with aligned 3DGS rendering and collision geometry. Its three-level evaluation progresses from independent primitives to two-stage compositions and complete four-stage I2O2I missions. Each stage starts from its predecessor's actual endpoint, while stage-conditional metrics track completion and localize failures along the mission. We further propose the MODULAR-Agent that coordinates frozen navigation policies through completion verification, stage handoffs, and bounded recovery. Evaluation across 1,374 episodes highlights the difficulty of continuous composition. The MODULAR-Agent achieves 40.5-76% success on individual primitives, but full I2O2I success remains low. Compared with a fixed policy chain using the same underlying policies, it more than doubles success on both Indoor-to-Outdoor (I2O) and Outdoor-to-Indoor (O2I), while improving full-mission success from 1.15% to 4.02%. Stage-wise analysis shows that the MODULAR-Agent enables more missions to reach the final object-navigation stage, where conditional success remains low, revealing challenges in both long-horizon stage execution and completion decisions.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-13T12:52:13+00:00",
+      "updated": "2026-10-13T12:52:13+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.18307v1",
+      "abs_url": "https://arxiv.org/abs/2610.18307",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "LynxScenes是一个由LYNX M20轮腿机器人采集的大规模真实世界户外数据集与基准，包含约100K个导航片段、300万标注帧及多传感器同步数据。数据集支持指令条件轨迹预测、BEV感知、未来场景预测和多视图场景重建四项任务，并引入伪闭环评估器衡量安全性、进度和指令合规性。该基准在导航、感知、世界模型和重建方法的评估中揭示了近距离户外机器人导航的显著挑战。",
+      "highlights": [
+        "大规模真实世界数据集：833.6小时、3294.7公里、300万标注帧，含四鱼眼相机、双激光雷达等多传感器同步数据",
+        "三层导航指令与连续未来轨迹对齐，支持指令条件轨迹预测任务",
+        "引入基于日志回放的伪闭环评估器，超越轨迹模仿，评估安全性、进度和指令合规性"
+      ],
+      "relevance_score": 5,
+      "relevance_reason": "数据集包含导航指令与轨迹预测任务，与VLN有一定关联，但核心聚焦轮腿机器人多任务感知与导航基准，非纯VLN研究。",
+      "is_uav_vln": false,
+      "tags": [
+        "dataset",
+        "benchmark",
+        "navigation instruction",
+        "trajectory prediction",
+        "wheel-legged robot",
+        "outdoor"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"LynxScenes是一个由LYNX M20轮腿机器人采集的大规模真实世界户外数据集与基准，包含约100K个导航片段、300万标注帧及多传感器同步数据。数据集支持指令条件轨迹预测、BEV感知、未来场景预测和多视图场景重建四项任务，并引入伪闭环评估器衡量安全性、进度和指令合规性。该基准在导航、感知、世界模型和重建方法的评估中揭示了近距离户外机器人导航的显著挑战。\",\n  \"highlights\": [\n    \"大规模真实世界数据集：833.6小时、3294.7公里、300万标注帧，含四鱼眼相机、双激光雷达等多传感器同步数据\",\n    \"三层导航指令与连续未来轨迹对齐，支持指令条件轨迹预测任务\",\n    \"引入基于日志回放的伪闭环评估器，超越轨迹模仿，评估安全性、进度和指令合规性\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"数据集包含导航指令与轨迹预测任务，与VLN有一定关联，但核心聚焦轮腿机器人多任务感知与导航基准，非纯VLN研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"dataset\", \"benchmark\", \"navigation instruction\", \"trajectory prediction\", \"wheel-legged robot\", \"outdoor\"]\n}",
+      "summarized_at": "2026-10-14T04:54:34.012681+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.18093",
+      "title": "LynxScenes: A Large-Scale Real-World Benchmark for Outdoor Wheel-Legged Robot Perception, Navigation, Imagination and Reconstruction",
+      "authors": [
+        "Jun Tian",
+        "Hao Wu",
+        "Ruo Chen",
+        "Yili Liao",
+        "Hongyi Lin",
+        "Jincheng Yu",
+        "Chao Li",
+        "Yingjie Niu"
+      ],
+      "abstract": "Wheel-legged robots operating in outdoor spaces shared with humans require accurate perception, socially compliant navigation, future-scene reasoning, and scene reconstruction. However, existing datasets typically support these capabilities in isolation and rarely provide dense spatial and behavior-level supervision on real wheel-legged platforms. We introduce LynxScenes, a large-scale real-world dataset and benchmark collected with a LYNX M20 wheel-legged robot. It contains approximately 100K 30-s navigation clips spanning 833.6 h and 3,294.7 km, with 3.0M annotated frames. The synchronized recordings include four fisheye cameras, dual LiDARs, IMU, odometry, and robot states. Annotations comprise 20.82M oriented 3D boxes across 27 categories, 13.89M road-structure annotations, and 20 navigation instructions organized into three layers and aligned with continuous future trajectories. LynxScenes supports four complementary tasks: instruction-conditioned trajectory prediction, BEV-based perception of 3D objects and road structures, future scene prediction, and multi-view scene reconstruction. For trajectory prediction, we further introduce a log-replay-based pseudo-closed-loop evaluator that measures safety, progress, and instruction compliance beyond trajectory imitation. Extensive evaluations across representative navigation, perception, world-model, and reconstruction methods reveal substantial remaining challenges in close-range outdoor robot navigation. The dataset and evaluation toolkit are planned for public release.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-13T10:12:55+00:00",
+      "updated": "2026-10-13T10:12:55+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.18093v1",
+      "abs_url": "https://arxiv.org/abs/2610.18093",
+      "matched_keywords": [
+        "navigation instruction"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "现有具身导航任务通常假设场景可通行性和物体状态在导航过程中保持不变，而本文提出了一种超越可达性的交互式导航框架，统一了通道引起的空间连通性变化、容器引起的目标可见性变化及其顺序依赖关系。研究构建了MultINav-Bench基准和MultINav-Agent三阶段智能体框架，利用持久化的状态条件交互图进行语义交互感知、动作选择和验证。实验表明该方法在通道、容器及混合任务上均优于基线。",
+      "highlights": [
+        "提出交互式导航基准MultINav-Bench，包含3K个episode，覆盖通道、容器及混合任务类型",
+        "设计基于持久化交互图的三阶段智能体框架MultINav-Agent，结合VLM进行动作选择与验证",
+        "提出分别评估导航成功、交互有效性和成本的评测协议"
+      ],
+      "relevance_score": 5,
+      "relevance_reason": "该研究属于具身导航与交互式导航领域，与VLN有方法论上的关联（如VLM驱动的动作选择、语义感知），但未涉及语言指令引导的视觉语言导航任务，且为地面机器人场景而非无人机场景。",
+      "is_uav_vln": false,
+      "tags": [
+        "embodied navigation",
+        "interactive navigation",
+        "VLM",
+        "benchmark",
+        "ObjectGoal"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有具身导航任务通常假设场景可通行性和物体状态在导航过程中保持不变，而本文提出了一种超越可达性的交互式导航框架，统一了通道引起的空间连通性变化、容器引起的目标可见性变化及其顺序依赖关系。研究构建了MultINav-Bench基准和MultINav-Agent三阶段智能体框架，利用持久化的状态条件交互图进行语义交互感知、动作选择和验证。实验表明该方法在通道、容器及混合任务上均优于基线。\",\n  \"highlights\": [\"提出交互式导航基准MultINav-Bench，包含3K个episode，覆盖通道、容器及混合任务类型\", \"设计基于持久化交互图的三阶段智能体框架MultINav-Agent，结合VLM进行动作选择与验证\", \"提出分别评估导航成功、交互有效性和成本的评测协议\"],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"该研究属于具身导航与交互式导航领域，与VLN有方法论上的关联（如VLM驱动的动作选择、语义感知），但未涉及语言指令引导的视觉语言导航任务，且为地面机器人场景而非无人机场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"embodied navigation\", \"interactive navigation\", \"VLM\", \"benchmark\", \"ObjectGoal\"]\n}",
+      "summarized_at": "2026-10-14T04:54:44.735430+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.17089",
+      "title": "Interactive Navigation Beyond Reachability: Benchmark and Agentic Framework",
+      "authors": [
+        "Delun Li",
+        "Xueyao Wei",
+        "Rui Chen",
+        "Yifei Wang",
+        "Junzhi Yu",
+        "Wenjie Song",
+        "Xingyu Chen"
+      ],
+      "abstract": "Existing embodied navigation tasks commonly assume that traversability and object states remain fixed during an episode. Yet reaching a goal may require opening a door to access a room and then opening a container to reveal a hidden target. We formulate interactive navigation beyond reachability, unifying channel-induced changes in spatial connectivity, container-induced changes in target visibility, and their sequential dependencies. We introduce MultINav-Bench, a 3K-episode ObjectGoal benchmark in MolmoSpaces spanning channel, container, and mixed tasks, with interaction-necessity annotations covering required and unnecessary episodes. Its data generation pipeline automates task construction across multiple task types. The evaluation protocol separately measures navigation success, interaction effectiveness, and cost. We further propose MultINav-Agent, a three-stage agentic framework built on a persistent, state-conditioned interaction graph. Semantic interactive perception grounds entities and interaction states; a vision-language model selects task-relevant actions based on expected changes in connectivity and target observability; and post-interaction verification updates the graph to guide subsequent navigation, exploration, or interaction. Experiments on MultINav-Bench show that MultINav-Agent consistently outperforms adapted baselines across channel, container, and mixed tasks.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-10-12T16:48:47+00:00",
+      "updated": "2026-10-12T16:48:47+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.17089v1",
+      "abs_url": "https://arxiv.org/abs/2610.17089",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "本文提出DR-APO方法，通过优势引导的目标改进和表示兼容的直接动作拟合，将策略改进与策略表示解耦，为高斯、扩散和流匹配策略提供统一的优化原则。在MuJoCo连续控制任务上表现优异，并在NavDP导航后训练中将仿真成功率从70.33%提升至89.55%，真实世界从25%提升至65%。",
+      "highlights": [
+        "提出解耦表示的优势引导策略优化方法，统一支持高斯、扩散和流匹配策略",
+        "在五个MuJoCo-v5任务上对扩散和流匹配策略取得最佳策略性能",
+        "NavDP后训练显著提升具身导航成功率，仿真89.55%、真实世界65%"
+      ],
+      "relevance_score": 4,
+      "relevance_reason": "论文涉及具身导航策略优化，但核心贡献是RL策略表示的统一优化框架，非视觉语言导航(VLN)研究。",
+      "is_uav_vln": false,
+      "tags": [
+        "强化学习",
+        "策略优化",
+        "扩散策略",
+        "具身导航",
+        "连续控制"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文提出DR-APO方法，通过优势引导的目标改进和表示兼容的直接动作拟合，将策略改进与策略表示解耦，为高斯、扩散和流匹配策略提供统一的优化原则。在MuJoCo连续控制任务上表现优异，并在NavDP导航后训练中将仿真成功率从70.33%提升至89.55%，真实世界从25%提升至65%。\",\n  \"highlights\": [\n    \"提出解耦表示的优势引导策略优化方法，统一支持高斯、扩散和流匹配策略\",\n    \"在五个MuJoCo-v5任务上对扩散和流匹配策略取得最佳策略性能\",\n    \"NavDP后训练显著提升具身导航成功率，仿真89.55%、真实世界65%\"\n  ],\n  \"relevance_score\": 4,\n  \"relevance_reason\": \"论文涉及具身导航策略优化，但核心贡献是RL策略表示的统一优化框架，非视觉语言导航(VLN)研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"强化学习\", \"策略优化\", \"扩散策略\", \"具身导航\", \"连续控制\"]\n}",
+      "summarized_at": "2026-10-14T04:54:52.953982+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.16618",
+      "title": "DR-APO: Decoupled-Representation Advantage-Guided Policy Optimization from Continuous Control to Embodied Navigation",
+      "authors": [
+        "Runhua Zhang",
+        "Yingjie Niu",
+        "Chao Li"
+      ],
+      "abstract": "Policy representations in reinforcement learning have expanded beyond Gaussian policies to diffusion and flow-matching based generative policies. However, existing RL methods remain representation-specific, lacking a unified optimization interface for emerging generative policies. In particular, extending likelihood-based objectives to multi-step generative policies couples optimization to their internal generation process, where accumulated likelihood ratios can weaken the update signal. Meanwhile, generative-policy-specific methods often rely on multi-candidate generation and critic-based selection, improving overall return while providing limited improvement to the policy itself. We introduce DR-APO (Decoupled-Representation Advantage-Guided Policy Optimization), which decouples policy improvement from policy representation through advantage-guided target improvement and representation-compatible direct action fitting, providing a shared optimization principle for Gaussian, diffusion, and flow policies. Across five MuJoCo-v5 tasks, DR-APO remains competitive with SAC for Gaussian policies and achieves the best aggregate policy-only performance for both diffusion and flow-matching policies. NavDP post-training improves the Success Rate (SR) from 70.33% to 89.55% in simulation and from 25% to 65% in real-world navigation. These results demonstrate a unified policy-improvement principle across Gaussian, diffusion, and flow policies, from continuous-control learning to embodied-policy post-training.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-10-12T11:33:19+00:00",
+      "updated": "2026-10-12T11:33:19+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.16618v1",
+      "abs_url": "https://arxiv.org/abs/2610.16618",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "本文研究无光照工业环境下的自主导航问题，提出基于空间音频和深度信息的ADAPT行动规划框架，并构建了DarkNav-Bench基准包含24个工业场景和四种声学条件。核心贡献是转移感知奖励塑造(TARS)，在位置-航向图上定义姿态感知最短动作势能，为强化学习策略提供动作一致的反馈。实验表明ADAPT在已见和未见场景中均优于基于训练的导航基线和零样本多模态模型。",
+      "highlights": [
+        "提出RGB-free导航方案，利用空间音频进行目标定位、深度进行避障",
+        "构建DarkNav-Bench基准，含24个工业场景和四种递进声学挑战条件",
+        "提出转移感知奖励塑造(TARS)，同时考虑可行移动和原地旋转，优于传统测地线进度奖励"
+      ],
+      "relevance_score": 3,
+      "relevance_reason": "论文虽属具身导航领域且摘要开头提及VLA模型，但实际研究的是音频-深度导航而非视觉语言导航，与VLN/UAV-VLN核心方向仅顺带关联。",
+      "is_uav_vln": false,
+      "tags": [
+        "embodied navigation",
+        "audio-based navigation",
+        "depth",
+        "reinforcement learning",
+        "reward shaping",
+        "industrial navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文研究无光照工业环境下的自主导航问题，提出基于空间音频和深度信息的ADAPT行动规划框架，并构建了DarkNav-Bench基准包含24个工业场景和四种声学条件。核心贡献是转移感知奖励塑造(TARS)，在位置-航向图上定义姿态感知最短动作势能，为强化学习策略提供动作一致的反馈。实验表明ADAPT在已见和未见场景中均优于基于训练的导航基线和零样本多模态模型。\",\n  \"highlights\": [\n    \"提出RGB-free导航方案，利用空间音频进行目标定位、深度进行避障\",\n    \"构建DarkNav-Bench基准，含24个工业场景和四种递进声学挑战条件\",\n    \"提出转移感知奖励塑造(TARS)，同时考虑可行移动和原地旋转，优于传统测地线进度奖励\"\n  ],\n  \"relevance_score\": 3,\n  \"relevance_reason\": \"论文虽属具身导航领域且摘要开头提及VLA模型，但实际研究的是音频-深度导航而非视觉语言导航，与VLN/UAV-VLN核心方向仅顺带关联。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"embodied navigation\", \"audio-based navigation\", \"depth\", \"reinforcement learning\", \"reward shaping\", \"industrial navigation\"]\n}",
+      "summarized_at": "2026-10-14T04:55:02.066304+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.15956",
+      "title": "ADAPT: Audio-Depth Action Planning with Transition-Aware Rewards for Lights-Out Industrial Navigation",
+      "authors": [
+        "Wenjun Huang",
+        "Shenghao Fu",
+        "Yian Jin",
+        "Yang Ni",
+        "Yifan Li",
+        "Lichi Li",
+        "Xingjian Diao",
+        "Pengfei Zhang",
+        "Yutong Song",
+        "Hanning Chen",
+        "Jiarui Cui",
+        "Tianyu Yang",
+        "Shilong Li",
+        "Yu Kong",
+        "Mohsen Imani"
+      ],
+      "abstract": "Vision-language-action models for embodied navigation typically rely on RGB observations, limiting their applicability in lights-out industrial environments where visible illumination may be unavailable. We study illumination-independent navigation using spatial audio for target localization and depth for obstacle-aware geometry. To support this setting, we introduce DarkNav-Bench, a benchmark with 24 industrial scenes and four progressively challenging acoustic conditions. We further propose ADAPT, an audio-depth action-planning framework equipped with spatial-audio perception and optimized for closed-loop navigation through reinforcement learning (RL). Our key RL contribution, transition-aware reward shaping (TARS), defines a pose-aware shortest-action potential over a position-heading graph. Unlike conventional geodesic-progress rewards, TARS accounts for both feasible movements and in-place rotations, providing action-consistent feedback for policy optimization. Experiments show that ADAPT consistently outperforms training-based navigation baselines and zero-shot multimodal models on both seen and unseen scenes. On unseen environments, it achieves 90.6% success under Clean conditions and retains 60.0% success under the most challenging Localized Noise setting. These results demonstrate the potential of spatial audio and depth as complementary modalities for reliable RGB-free navigation in lights-out industrial environments.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-10-11T22:23:04+00:00",
+      "updated": "2026-10-11T22:23:04+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.15956v1",
+      "abs_url": "https://arxiv.org/abs/2610.15956",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "针对视觉语言导航中高质量语言标注成本高、现有数据合成方法中导航与指令生成模型分离且监督滞后于策略演进的问题，提出RSI-Nav——一个数据中心化的递归自改进框架。该框架在共享模型内统一指令跟随与指令生成，采用分片式渐进处理：对无标注轨迹生成指令并执行评估，保留合格样本后立即更新模型，使新监督与不断演进的策略保持同步。实验在R2R-CE和RxR-CE上分别达到68.6%和72.4%的成功率，同时提升了指令生成质量和空间理解能力。",
+      "highlights": [
+        "在共享模型内统一vision-language-to-action和vision-action-to-language双向任务，实现语言-动作双重自举",
+        "分片式递归自改进策略，生成监督与策略同步更新，避免标注滞后问题",
+        "融合空间理解数据增强导航的空间推理能力，在R2R-CE/RxR-CE上取得SRE级性能"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文是核心VLN研究，提出创新的数据合成与自改进框架并取得SOTA性能，对VLN研究者高度相关",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "数据合成",
+        "自监督",
+        "指令生成",
+        "R2R",
+        "RxR"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航中高质量语言标注成本高、现有数据合成方法中导航与指令生成模型分离且监督滞后于策略演进的问题，提出RSI-Nav——一个数据中心化的递归自改进框架。该框架在共享模型内统一指令跟随与指令生成，采用分片式渐进处理：对无标注轨迹生成指令并执行评估，保留合格样本后立即更新模型，使新监督与不断演进的策略保持同步。实验在R2R-CE和RxR-CE上分别达到68.6%和72.4%的成功率，同时提升了指令生成质量和空间理解能力。\",\n  \"highlights\": [\n    \"在共享模型内统一vision-language-to-action和vision-action-to-language双向任务，实现语言-动作双重自举\",\n    \"分片式递归自改进策略，生成监督与策略同步更新，避免标注滞后问题\",\n    \"融合空间理解数据增强导航的空间推理能力，在R2R-CE/RxR-CE上取得SRE级性能\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文是核心VLN研究，提出创新的数据合成与自改进框架并取得SOTA性能，对VLN研究者高度相关\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"数据合成\", \"自监督\", \"指令生成\", \"R2R\", \"RxR\"]\n}",
+      "summarized_at": "2026-10-14T04:55:10.427937+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.15782",
+      "title": "Data-Centric Recursive Self-Improvement for Navigation via Policy-Synchronized Language-Action Dual Bootstrapping",
+      "authors": [
+        "Songze Li",
+        "Haoming Gu",
+        "Ziyang Gong",
+        "Zhitong Wang",
+        "Gengze Zhou",
+        "Zun Wang",
+        "Yuhan Zhu",
+        "Tianxiang Jiang",
+        "Juanzi Li",
+        "Qi Wu",
+        "Weinan Zhang",
+        "Yu Qiao",
+        "Wenwei Zhang",
+        "Yi Wang"
+      ],
+      "abstract": "Vision-language navigation requires agents to follow natural-language instructions to reach target locations, making high-quality language supervision essential. Since human annotation is costly, prior work has explored scalable data synthesis methods. However, existing methods typically either use separate models for navigation and instruction generation or couple the two tasks through task-specific components; most also annotate the full trajectory corpus with a fixed model before updating, which can cause generated supervision to lag behind the evolving policy. Therefore, we introduce RSI-Nav, a data-centric recursive self-improvement framework for navigation via policy-synchronized language-action dual bootstrapping, which unifies vision-language-to-action instruction following and vision-action-to-language instruction generation within a shared model. Specifically, after supervised fine-tuning establishes fundamental capabilities, RSI-Nav progressively processes unlabeled trajectories in small shards. The current model generates instructions for these trajectories, executes them to evaluate goal completion and path efficiency, retains qualified samples, and immediately updates itself before processing the next shard. This shard-wise update keeps newly generated supervision aligned with the evolving policy. We also incorporate spatial understanding data, since stronger spatial reasoning benefits navigation. Extensive experiments show that RSI-Nav reaches 68.6% SR on R2R-CE and 72.4% SR on RxR-CE, while providing stronger instruction-generation utility and modestly improved spatial understanding after recursive evolution.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-11T17:09:07+00:00",
+      "updated": "2026-10-11T17:09:07+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.15782v1",
+      "abs_url": "https://arxiv.org/abs/2610.15782",
+      "matched_keywords": [
+        "Vision-language navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "针对室内火灾环境中视觉退化严重阻碍视觉语言导航(VLN)的问题，本文提出FireNav框架，将视觉重建与导航效用对齐。该方法将重建特征作为辅助证据，通过轻量级路由器根据视觉特征、任务上下文和执行状态决定证据的引入与否及贡献强度，并引入决策效用校准来监督证据选择。此外，作者贡献了FireVLN-Bench基准数据集，实验证明该方法在导航成功率和路径效率上均优于现有基线。",
+      "highlights": [
+        "提出决策导向的重建证据路由框架，解决图像重建保真度与导航决策效用不对齐的问题",
+        "引入轻量级路由器与决策效用校准机制，动态评估重建特征对动作预测的贡献",
+        "构建FireVLN-Bench：首个包含干净参考、安全监督及匹配连续导航设置的室内火灾VLN基准"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "本文是视觉语言导航(VLN)领域的核心研究，虽聚焦于室内火灾场景而非无人机场景，但在VLN的方法论（视觉退化处理、决策对齐）上具有重要创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "视觉退化",
+        "图像重建",
+        "决策效用",
+        "基准数据集"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对室内火灾环境中视觉退化严重阻碍视觉语言导航(VLN)的问题，本文提出FireNav框架，将视觉重建与导航效用对齐。该方法将重建特征作为辅助证据，通过轻量级路由器根据视觉特征、任务上下文和执行状态决定证据的引入与否及贡献强度，并引入决策效用校准来监督证据选择。此外，作者贡献了FireVLN-Bench基准数据集，实验证明该方法在导航成功率和路径效率上均优于现有基线。\",\n  \"highlights\": [\n    \"提出决策导向的重建证据路由框架，解决图像重建保真度与导航决策效用不对齐的问题\",\n    \"引入轻量级路由器与决策效用校准机制，动态评估重建特征对动作预测的贡献\",\n    \"构建FireVLN-Bench：首个包含干净参考、安全监督及匹配连续导航设置的室内火灾VLN基准\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"本文是视觉语言导航(VLN)领域的核心研究，虽聚焦于室内火灾场景而非无人机场景，但在VLN的方法论（视觉退化处理、决策对齐）上具有重要创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"视觉退化\", \"图像重建\", \"决策效用\", \"基准数据集\"]\n}",
+      "summarized_at": "2026-10-14T04:55:20.439346+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.15595",
+      "title": "FireNav: Decision-Oriented Reconstruction Evidence Routing for Vision-Language Navigation in Indoor Fire Environments",
+      "authors": [
+        "Hongbo Ding",
+        "Xiang Chen",
+        "Jiangxin Dong",
+        "Jinshan Pan"
+      ],
+      "abstract": "In real-world indoor fire environments, visual degradation severely impairs instruction grounding, waypoint prediction, and long-horizon exploration in vision-language navigation (VLN). Although image restoration offers a natural means to mitigate such visual degradation, existing methods primarily optimize reconstruction fidelity, which does not necessarily translate into better navigation decisions and may even corrupt task-critical cues when applied indiscriminately. In this paper, we present FireNav, a decision-oriented reconstruction evidence routing framework that aligns visual restoration with navigation utility in VLN. To advance this task, we first contribute FireVLN-Bench, a paired indoor fire navigation benchmark with clean references preserving task semantics, safety supervision, and matched settings for continuous navigation and robot execution with simulated dynamics. Our FireNav retains native visual tokens and treats latent reconstruction features as auxiliary evidence, where a lightweight router leverages visual features, task context, and prior execution states to determine whether such evidence should be admitted and how strongly it should contribute to the visual tokens. To learn when reconstruction is beneficial, we further introduce decision utility calibration, which compares action prediction losses with and without candidate evidence under the same state, thereby supervising evidence selection according to its contribution to waypoint, heading, and arrival prediction. Experiments demonstrate that FireNav consistently outperforms state-of-the-art baselines in both navigation success and path efficiency across evaluation settings.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-11T13:20:04+00:00",
+      "updated": "2026-10-11T13:20:04+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.15595v1",
+      "abs_url": "https://arxiv.org/abs/2610.15595",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "针对真实世界中视觉语言导航(VLN)面临的部分可观测性问题，本文提出一种免训练、不确定性感知的多智能体协同搜索框架。该框架利用多模态大语言模型(MLLM)生成语义区域、目标线索与可导航连接等不确定先验，结合在线观测进行修正，并将协同导航建模为滚动时域的多智能体混合整数线性规划问题。实验表明该方法在Matterport3D数据集上提升了目标覆盖率和搜索效率，且无需任务特定重训练即可泛化至未见环境。",
+      "highlights": [
+        "免训练的轻量级框架，将高层语义推理与底层执行解耦",
+        "将MLLM输出作为不确定先验，结合在线观测与图上下文证据进行修正",
+        "将协同导航建模为滚动时域多智能体混合整数线性规划，优化目标奖励与路径代价"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "论文直接研究视觉语言导航(VLN)中的多智能体协同搜索问题，属于核心VLN研究且有方法论创新，但基于地面Matterport3D场景而非无人机航拍场景。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "多智能体",
+        "免训练",
+        "不确定性感知",
+        "混合整数线性规划",
+        "MLLM"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对真实世界中视觉语言导航(VLN)面临的部分可观测性问题，本文提出一种免训练、不确定性感知的多智能体协同搜索框架。该框架利用多模态大语言模型(MLLM)生成语义区域、目标线索与可导航连接等不确定先验，结合在线观测进行修正，并将协同导航建模为滚动时域的多智能体混合整数线性规划问题。实验表明该方法在Matterport3D数据集上提升了目标覆盖率和搜索效率，且无需任务特定重训练即可泛化至未见环境。\",\n  \"highlights\": [\n    \"免训练的轻量级框架，将高层语义推理与底层执行解耦\",\n    \"将MLLM输出作为不确定先验，结合在线观测与图上下文证据进行修正\",\n    \"将协同导航建模为滚动时域多智能体混合整数线性规划，优化目标奖励与路径代价\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"论文直接研究视觉语言导航(VLN)中的多智能体协同搜索问题，属于核心VLN研究且有方法论创新，但基于地面Matterport3D场景而非无人机航拍场景。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"多智能体\", \"免训练\", \"不确定性感知\", \"混合整数线性规划\", \"MLLM\"]\n}",
+      "summarized_at": "2026-10-14T04:55:33.671708+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.15038",
+      "title": "Training-Free Multi-Agent Cooperative Embodied Search from Uncertain Vision-Language Priors",
+      "authors": [
+        "Fan Pu",
+        "Keshu Wu",
+        "Jiwan Jiang",
+        "Shiyu Shen",
+        "Zhiwen Fan",
+        "Zhengzhong Tu",
+        "Jiachen Li",
+        "Yang Zhou"
+      ],
+      "abstract": "Real-world Vision-Language Navigation (VLN) requires agents to act under partial observability, where map structure, semantic cues, and target locations may be incomplete or incorrectly inferred by foundation models. This paper presents a lightweight, training-free, and uncertainty-aware framework for cooperative multi-agent multi-target search in mapless environments. Instead of learning an end-to-end navigation policy, the framework separates high-level semantic reasoning from low-level execution through a scalable graph-optimization backbone. Multimodal Large Language Models (MLLMs) serve only as hypothesis generators, proposing semantic zones, target-location cues, and possible navigable connections. These outputs are treated as uncertain priors and further refined using online observations and graph-context evidence. Cooperative navigation is then formulated as a rolling-horizon multi-agent mixed-integer linear program with a lexicographic objective that first maximizes target-directed reward and then reduces travel distance, uncertain-edge use, and repeated visits. Experiments derived from 100 Matterport3D test cases show that the proposed framework improves target coverage and search efficiency over representative baseline methods, while shared information and joint planning enable more balanced workloads across agents. By operating on an abstract graph without relying on embodiment-specific policy parameters, the framework scales across varying numbers of agents and targets, generalizes to unseen environments, and accommodates different perception modules and low-level controllers without task-specific retraining.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "math.OC"
+      ],
+      "published": "2026-10-10T16:22:39+00:00",
+      "updated": "2026-10-10T16:22:39+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.15038v1",
+      "abs_url": "https://arxiv.org/abs/2610.15038",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "针对单无人机在户外搜救场景中因部分可观测性导致的导航难题，本文提出BGC-Nav，一种无需训练的跨高度多无人机协作导航框架。该方法通过信念引导耦合机制，将高空无人机的全局信念记忆作为咨询性偏置而非刚性指令，引导低空无人机进行自主探索。实验表明该方法在ESARBench上显著优于现有的单智能体和协作导航方法。",
+      "highlights": [
+        "提出无需训练的跨高度多无人机协作VLN框架BGC-Nav",
+        "通过信念引导耦合机制平衡高空观测不确定性与低空探索自主性",
+        "在ESARBench基准上优于当前单智能体与协作导航方法"
+      ],
+      "relevance_score": 10,
+      "relevance_reason": "该论文直接聚焦无人机视觉语言导航(UAV-VLN)中的多机跨高度协作问题，是该研究者核心方向的创新贡献。",
+      "is_uav_vln": true,
+      "tags": [
+        "UAV-VLN",
+        "多机协作",
+        "跨高度导航",
+        "信念引导"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对单无人机在户外搜救场景中因部分可观测性导致的导航难题，本文提出BGC-Nav，一种无需训练的跨高度多无人机协作导航框架。该方法通过信念引导耦合机制，将高空无人机的全局信念记忆作为咨询性偏置而非刚性指令，引导低空无人机进行自主探索。实验表明该方法在ESARBench上显著优于现有的单智能体和协作导航方法。\",\n  \"highlights\": [\n    \"提出无需训练的跨高度多无人机协作VLN框架BGC-Nav\",\n    \"通过信念引导耦合机制平衡高空观测不确定性与低空探索自主性\",\n    \"在ESARBench基准上优于当前单智能体与协作导航方法\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接聚焦无人机视觉语言导航(UAV-VLN)中的多机跨高度协作问题，是该研究者核心方向的创新贡献。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"UAV-VLN\", \"多机协作\", \"跨高度导航\", \"信念引导\"]\n}",
+      "summarized_at": "2026-10-14T04:55:41.846753+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.14702",
+      "title": "BGC-Nav: Cross-Altitude Multi-UAV Collaborative Navigation via Belief-Guided Coupling",
+      "authors": [
+        "Jiuwu Hao",
+        "Yueyang Wu",
+        "Liguo Sun",
+        "Haolin Song",
+        "Zao Zhang",
+        "Pin Lv"
+      ],
+      "abstract": "Despite recent advances in Aerial Vision-and-Language Navigation (VLN), single Unmanned Aerial Vehicle (UAV) search-and-rescue in outdoor scenarios remains challenging due to partial observability, making cross-altitude collaboration a promising direction. However, existing collaborative navigation methods rely on precise target localization and rigid goal-dispatching paradigms, ignoring high-altitude observation uncertainty and suppressing low-altitude exploration autonomy. To address these issues, we introduce BGC-Nav, a training-free cross-altitude collaboration framework that enables robust navigation via Belief-Guided Coupling (BGC). Specifically, the high-altitude UAV maintains a Global Belief Memory encoding task-conditioned priors, which the low-altitude agent incorporates into decision-making via Local Exhaustion Memory (LEM), Local Attraction Augmentation (LAA), and Directional Belief Prior (DBP) as an advisory bias rather than a rigid command. Extensive experiments on ESARBench show that BGC-Nav consistently outperforms state-of-the-art single-agent and collaborative methods. Code is available at https://github.com/uestchjw/BGC-Nav.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-10T08:19:56+00:00",
+      "updated": "2026-10-10T08:19:56+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.14702v1",
+      "abs_url": "https://arxiv.org/abs/2610.14702",
+      "matched_keywords": [
+        "UAV Collaborative Navigation",
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "现有VLN评估仅关注到达目标和路径效率，忽视碰撞安全，且滑动评估机制可能掩盖不安全动作的影响。本文提出VLN-Safe基准，在滑动和阻塞两种评估机制下分析碰撞行为，发现38.5-56.8%的成功episode存在碰撞接触。基于分析结果提出无需训练的碰撞防护器，通过否决风险动作并执行逃逸机动，在阻塞模式下减少碰撞步骤62-98%并提升成功率6.9-29.3个百分点。",
+      "highlights": [
+        "提出VLN-Safe基准，在滑动与阻塞两种评估机制下系统揭示VLN agent的碰撞行为",
+        "发现深度几何和近期运动历史比策略派生信号更能预测即将发生的碰撞",
+        "提出无需训练的碰撞防护器，在阻塞模式下减少碰撞步骤62-98%，同时提升成功率"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "直接针对VLN的碰撞安全评估与改进，属于核心VLN研究且有基准和方法层面的创新贡献",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "碰撞安全",
+        "评估基准",
+        "R2R-CE",
+        "导航安全"
+      ],
+      "raw_model_output": "{\"summary_cn\": \"现有VLN评估仅关注到达目标和路径效率，忽视碰撞安全，且滑动评估机制可能掩盖不安全动作的影响。本文提出VLN-Safe基准，在滑动和阻塞两种评估机制下分析碰撞行为，发现38.5-56.8%的成功episode存在碰撞接触。基于分析结果提出无需训练的碰撞防护器，通过否决风险动作并执行逃逸机动，在阻塞模式下减少碰撞步骤62-98%并提升成功率6.9-29.3个百分点。\",\"highlights\": [\"提出VLN-Safe基准，在滑动与阻塞两种评估机制下系统揭示VLN agent的碰撞行为\",\"发现深度几何和近期运动历史比策略派生信号更能预测即将发生的碰撞\",\"提出无需训练的碰撞防护器，在阻塞模式下减少碰撞步骤62-98%，同时提升成功率\"],\"relevance_score\": 8,\"relevance_reason\": \"直接针对VLN的碰撞安全评估与改进，属于核心VLN研究且有基准和方法层面的创新贡献\",\"is_uav_vln\": false,\"tags\": [\"VLN\", \"碰撞安全\", \"评估基准\", \"R2R-CE\", \"导航安全\"]}",
+      "summarized_at": "2026-10-14T04:55:52.394243+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.14682",
+      "title": "Successful but Unsafe: An Analytical Benchmark for Revealing Collisions in Vision-and-Language Navigation",
+      "authors": [
+        "Hieu D. Pham",
+        "Quoc-An Luong",
+        "Dung D. Le"
+      ],
+      "abstract": "Vision-and-language navigation (VLN) agents are typically evaluated by whether they reach a target and how efficiently they follow an instructed route, yet these metrics provide little information about collision behavior. Moreover, continuous VLN evaluation commonly uses a sliding regime, where an agent can slide along obstacles after a collision, potentially masking the effect of unsafe actions on navigation performance. We introduce VLN-Safe, a benchmark for analyzing collision safety under two complementary evaluation regimes: sliding, reflecting common VLN evaluation practice, and blocking, where collision-inducing actions prevent forward motion and more directly expose their consequences. Across six published agents on R2R-CE, 38.5-56.8% of successful episodes contain contact under sliding, while switching to blocking decreases success rate by 11.7-36.1 percentage points. We further analyze signals for anticipating imminent collisions and find that depth geometry and recent movement history are more informative than policy-derived signals, while safe alternatives near the policy's preferred action are rarely available. Motivated by these findings, we introduce a training-free collision guard that vetoes risky forward actions, executes an escape maneuver, and returns control to the original policy. Under blocking, the guard reduces collision steps by 62-98% and improves success rate by 6.9-29.3 percentage points across five recurrent, topological, and vision-language-action agents. Under sliding, it leaves success rate unchanged while raising the share of collision-free successes by 4.1-12.4 points. These results reveal a substantial gap between task success and collision-safe navigation and show that lightweight collision-aware intervention can improve both safety and navigation performance.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-10T07:53:14+00:00",
+      "updated": "2026-10-10T07:53:14+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.14682v1",
+      "abs_url": "https://arxiv.org/abs/2610.14682",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "本文提出VbotNav-0，一个云边协同的双策略导航框架，通过异步策略间条件机制连接室内外连续导航。云策略基于视觉历史、导航指令和路线token生成子目标引导，边缘策略结合当前RGB与LiDAR观测生成局部轨迹，使局部感知-动作回路在云更新间隔期持续运行。在258个episode、145个场景的闭环评估中取得55.04%成功率和55.03%路径长度加权成功率。",
+      "highlights": [
+        "云边异步双策略架构：云策略生成子目标引导，边缘策略执行局部轨迹规划，两者解耦运行",
+        "统一路线表示连接室内路径与室外地图路线，实现跨场景连续导航",
+        "训练策略融合导航演示数据、纠正数据与视觉问答(VQA)数据"
+      ],
+      "relevance_score": 6,
+      "relevance_reason": "论文使用导航指令和视觉历史进行子目标推理，涉及VLN核心要素，但主要贡献在云边协同架构而非VLN算法创新本身。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "cloud-edge",
+        "dual-policy",
+        "indoor-outdoor",
+        "navigation"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文提出VbotNav-0，一个云边协同的双策略导航框架，通过异步策略间条件机制连接室内外连续导航。云策略基于视觉历史、导航指令和路线token生成子目标引导，边缘策略结合当前RGB与LiDAR观测生成局部轨迹，使局部感知-动作回路在云更新间隔期持续运行。在258个episode、145个场景的闭环评估中取得55.04%成功率和55.03%路径长度加权成功率。\",\n  \"highlights\": [\n    \"云边异步双策略架构：云策略生成子目标引导，边缘策略执行局部轨迹规划，两者解耦运行\",\n    \"统一路线表示连接室内路径与室外地图路线，实现跨场景连续导航\",\n    \"训练策略融合导航演示数据、纠正数据与视觉问答(VQA)数据\"\n  ],\n  \"relevance_score\": 6,\n  \"relevance_reason\": \"论文使用导航指令和视觉历史进行子目标推理，涉及VLN核心要素，但主要贡献在云边协同架构而非VLN算法创新本身。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"cloud-edge\", \"dual-policy\", \"indoor-outdoor\", \"navigation\"]\n}",
+      "summarized_at": "2026-10-14T04:56:02.948581+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.14634",
+      "title": "VbotNav-0: Asynchronous Cloud-Edge Dual-Policy Navigation across Indoor and Outdoor Environments",
+      "authors": [
+        "Shiqi Tan",
+        "Yujun Zhang",
+        "Keyu Li",
+        "Shuaixi Pan",
+        "Siyu Zhou",
+        "Hailong Qin",
+        "Yinan Yu"
+      ],
+      "abstract": "Continuous indoor-outdoor navigation connects destination-level reasoning with motion decisions that must respond to current observations. We present VbotNav-0, a cloud-edge dual-policy framework that links these processes through asynchronous policy-to-policy conditioning. The cloud policy produces subgoal guidance from visual history, navigation instructions, and route tokens; the edge policy combines available guidance with current RGB and LiDAR observations to generate local trajectories. This formulation allows the local perception-action loop to continue between cloud updates. A common route representation connects indoor paths and outdoor map routes, and the training recipe combines navigation demonstrations, corrective data, and grounded visual question answering (VQA). In the reported closed-loop evaluation of 258 episodes across 145 scenes, VbotNav-0 achieves 55.04% success rate and 55.03% success weighted by path length.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-10T06:33:08+00:00",
+      "updated": "2026-10-10T06:33:08+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.14634v1",
+      "abs_url": "https://arxiv.org/abs/2610.14634",
+      "matched_keywords": [
+        "navigation instruction"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "现有端到端VLN策略仅依赖动作监督隐式学习指令-视觉对齐与空间理解，容易过拟合训练相关性而非泛化所需的能力。GuidedNav提出统一框架，通过子任务/地标引导将预动作注意力对齐到当前指令片段与相关视觉区域，并通过空间引导将内部表示与几何特征对齐，在推理时无额外开销。该方法在R2R-CE和RxR-CE val-unseen上分别提升成功率8.1%和13.1%，同时发布了解释性增强的Guided-R2R和Guided-RxR数据集。",
+      "highlights": [
+        "提出预动作注意力引导与空间几何引导相结合的训练框架，显式塑造指令到动作的表示",
+        "在R2R-CE和RxR-CE上达到SOTA，推理速度更快且具备真实世界迁移能力",
+        "发布Guided-R2R和Guided-RxR两个标注增强数据集，支持更可解释的VLN研究"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文是VLN核心方向的前沿工作，提出创新训练框架并在标准benchmark上取得SOTA，对VLN研究者高度相关。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "注意力引导",
+        "空间几何",
+        "R2R-CE",
+        "RxR-CE",
+        "预动作注意力"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"现有端到端VLN策略仅依赖动作监督隐式学习指令-视觉对齐与空间理解，容易过拟合训练相关性而非泛化所需的能力。GuidedNav提出统一框架，通过子任务/地标引导将预动作注意力对齐到当前指令片段与相关视觉区域，并通过空间引导将内部表示与几何特征对齐，在推理时无额外开销。该方法在R2R-CE和RxR-CE val-unseen上分别提升成功率8.1%和13.1%，同时发布了解释性增强的Guided-R2R和Guided-RxR数据集。\",\n  \"highlights\": [\n    \"提出预动作注意力引导与空间几何引导相结合的训练框架，显式塑造指令到动作的表示\",\n    \"在R2R-CE和RxR-CE上达到SOTA，推理速度更快且具备真实世界迁移能力\",\n    \"发布Guided-R2R和Guided-RxR两个标注增强数据集，支持更可解释的VLN研究\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文是VLN核心方向的前沿工作，提出创新训练框架并在标准benchmark上取得SOTA，对VLN研究者高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"注意力引导\", \"空间几何\", \"R2R-CE\", \"RxR-CE\", \"预动作注意力\"]\n}",
+      "summarized_at": "2026-10-12T05:58:40.663734+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.13122",
+      "title": "GuidedNav: Shaping Vision-Language Navigation Representations through Pre-action Attention and Spatial Guidance",
+      "authors": [
+        "Jingyu Guo",
+        "Jiaxin Huang",
+        "Chengxing Lin",
+        "Xiaoyu Luo",
+        "Cheng Wen",
+        "Shanshan Ye",
+        "Tingjin Chu",
+        "Shaoli Huang",
+        "Mingming Gong"
+      ],
+      "abstract": "Vision-and-language navigation (VLN) requires an agent to track progress through an extended instruction, identify landmarks relevant to its current objective, and understand the surrounding spatial structure to act. End-to-end navigation policies typically rely on action supervision to implicitly learn these capabilities. Without explicit guidance on the evidence underlying each decision, however, policies can overfit to correlations predictive of training actions rather than learn the task-relevant grounding and geometry needed for generalization. Our insight is to guide the representations that connect instructions to actions: identifying what remains to be done determines which visual evidence matters, while understanding the geometry around that evidence informs how to move. We introduce GuidedNav, a unified framework that explicitly shapes these representations through training-time guidance. Subtask and landmark guidance steer native pre-action attention toward the active instruction segment and relevant visual regions, grounding action prediction in the current objective. Spatial guidance aligns the policy's internal representations with geometric features that capture long-horizon context and local spatial structure. Together, these objectives strengthen navigation capabilities while avoiding the inference overhead of intermediate textual reasoning and online geometric encoding. We also introduce Guided-R2R and Guided-RxR, two annotation-enriched navigation datasets that support more interpretable VLN research. GuidedNav establishes state-of-the-art performance among the compared monocular RGB policies, improving success rates by 8.1% and 13.1% relative to the strongest prior results on R2R-CE and RxR-CE val-unseen, respectively, while achieving faster inference. Extensive experiments further demonstrate the effectiveness and real-world transferability of our approach.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-09T07:18:03+00:00",
+      "updated": "2026-10-09T07:18:03+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.13122v1",
+      "abs_url": "https://arxiv.org/abs/2610.13122",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "Vision-and-language navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "针对多步指令引导的VLN任务中已执行指令内容干扰后续决策的问题，本文提出VLN-AIEP框架，将指令执行进度估计与导航决策耦合，通过已访问轨迹抑制已执行指令内容的嵌入，并将候选位置与待执行内容匹配。该方法无需显式进度标注，利用地标锚定轨迹表示编码语义标签与相对几何信息来辅助进度估计。在R2R、RxR、CVDN和R2R-CE数据集上验证了方法的有效性。",
+      "highlights": [
+        "将指令执行进度估计与导航决策耦合，无需显式进度监督标注",
+        "构建地标锚定轨迹表示，编码语义标签与视角相对几何信息",
+        "在R2R、RxR、CVDN和R2R-CE四个数据集上取得优异性能"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "本文是核心VLN研究，提出无需显式进度监督的指令执行进度感知框架，在多个标准VLN数据集上验证，对该研究者的VLN方向高度相关且有创新贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "progress estimation",
+        "landmark-anchored",
+        "instruction grounding",
+        "R2R",
+        "RxR",
+        "CVDN"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对多步指令引导的VLN任务中已执行指令内容干扰后续决策的问题，本文提出VLN-AIEP框架，将指令执行进度估计与导航决策耦合，通过已访问轨迹抑制已执行指令内容的嵌入，并将候选位置与待执行内容匹配。该方法无需显式进度标注，利用地标锚定轨迹表示编码语义标签与相对几何信息来辅助进度估计。在R2R、RxR、CVDN和R2R-CE数据集上验证了方法的有效性。\",\n  \"highlights\": [\n    \"将指令执行进度估计与导航决策耦合，无需显式进度监督标注\",\n    \"构建地标锚定轨迹表示，编码语义标签与视角相对几何信息\",\n    \"在R2R、RxR、CVDN和R2R-CE四个数据集上取得优异性能\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"本文是核心VLN研究，提出无需显式进度监督的指令执行进度感知框架，在多个标准VLN数据集上验证，对该研究者的VLN方向高度相关且有创新贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"progress estimation\", \"landmark-anchored\", \"instruction grounding\", \"R2R\", \"RxR\", \"CVDN\"]\n}",
+      "summarized_at": "2026-10-12T05:58:48.561374+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.13104",
+      "title": "Robust Vision-Language Navigation with Awareness of Instruction-Execution Progress",
+      "authors": [
+        "Jiagan Huang",
+        "Zikun Zhou",
+        "Hongpeng Wang",
+        "Guangming Lu",
+        "Jun Yu",
+        "Wenjie Pei"
+      ],
+      "abstract": "In Vision-Language Navigation (VLN) tasks involving multi-step instructions as guidance, an agent must associate its observations with the relevant instruction content at each decision point. Most graph-based methods commonly match candidate trajectories with the entire instruction, allowing already executed content to interfere with subsequent decisions. Although instruction-execution progress provides a direct cue for separating executed and pending content, existing progress estimation approaches often rely on explicit progress supervision, sophisticated progress-learning stages, or costly online reasoning with LLMs. In this paper, we propose a robust VLN framework with Awareness of Instruction-Execution Progress (VLN-AIEP), which couples progress estimation with navigation decision-making. VLN-AIEP associates the visited trajectory with the instruction to suppress embeddings corresponding to executed content, and then matches candidate locations with the pending content. This coupling makes correct navigation decisions depend on accurate progress estimation, allowing the progress estimator to learn directly from navigation decision labels without explicit progress annotations. To support progress estimation, we construct a landmark-anchored trajectory representation that encodes the semantic labels and viewpoint-relative geometry of instruction-referred landmarks. These landmarks serve as spatial references for associating the visited trajectory with executed instruction content. Extensive experiments on R2R, RxR, CVDN, and R2R-CE demonstrate that the proposed method achieves favorable performance across multiple metrics.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-09T06:57:43+00:00",
+      "updated": "2026-10-09T06:57:43+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.13104v1",
+      "abs_url": "https://arxiv.org/abs/2610.13104",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "针对传感器被其他任务占用导致导航感知中断的问题，本文提出一种贝叶斯空间世界模型ALONE，通过在内部传播空间信念并仅在需要时选择性获取观测来执行导航。该方法利用学习到的几何结构先验推断未观测区域，并输出可靠性地图以决定何时重新感知。在无人机单目深度相机间歇感知的实例中，该方法在大幅减少观测需求的同时实现了高导航成功率。",
+      "highlights": [
+        "提出贝叶斯空间世界模型ALONE，支持间歇感知下的导航",
+        "仅在可靠性不足阻碍导航时请求新观测，大幅降低观测需求",
+        "在无人机室内飞行实验中验证了间歇深度感知下的导航有效性"
+      ],
+      "relevance_score": 5,
+      "relevance_reason": "论文研究无人机在间歇感知下的导航，属于机器人导航与无人机场景，但未涉及视觉语言导航(VLN)任务。",
+      "is_uav_vln": false,
+      "tags": [
+        "无人机导航",
+        "贝叶斯世界模型",
+        "间歇感知",
+        "空间信念"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对传感器被其他任务占用导致导航感知中断的问题，本文提出一种贝叶斯空间世界模型ALONE，通过在内部传播空间信念并仅在需要时选择性获取观测来执行导航。该方法利用学习到的几何结构先验推断未观测区域，并输出可靠性地图以决定何时重新感知。在无人机单目深度相机间歇感知的实例中，该方法在大幅减少观测需求的同时实现了高导航成功率。\",\n  \"highlights\": [\n    \"提出贝叶斯空间世界模型ALONE，支持间歇感知下的导航\",\n    \"仅在可靠性不足阻碍导航时请求新观测，大幅降低观测需求\",\n    \"在无人机室内飞行实验中验证了间歇深度感知下的导航有效性\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"论文研究无人机在间歇感知下的导航，属于机器人导航与无人机场景，但未涉及视觉语言导航(VLN)任务。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"无人机导航\", \"贝叶斯世界模型\", \"间歇感知\", \"空间信念\"]\n}",
+      "summarized_at": "2026-10-09T06:09:22.016641+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.11591",
+      "title": "Acting from Belief, Looking When Needed: A Bayesian Spatial World Model for Navigation under Intermittent Perception",
+      "authors": [
+        "Feihong Yang",
+        "Xiang Long",
+        "Jincheng Yu",
+        "Jianfei Zhang",
+        "Guangjun Ge",
+        "Chao Wang",
+        "Yu Wang"
+      ],
+      "abstract": "Robot navigation commonly uses wide-coverage, high-frequency sensing to reduce partial observability; this reliance becomes restrictive when another task temporarily redirects a shared sensor from navigation, interrupting navigation-relevant observations. We study navigation under intermittent perception: acting from an internal spatial belief and looking again only when execution needs a new observation, potentially freeing the shared sensor for other tasks between navigation observations. ALONE, a Bayesian spatial world model, propagates a structured spatial belief using executed actions and corrects it with selectively acquired observations; learned priors over common geometric structures infer unobserved structure from available observation history. It decodes the belief into a spatial estimate for the motion-planning module and predicts a reliability map expressing confidence in the estimate's accuracy. ALONE requests an observation only if insufficient reliability hinders navigation and new evidence should make relevant-region spatial information more reliable; otherwise, it continues acting from the propagated belief. We instantiate ALONE for drone navigation with intermittent single-camera depth images. Across two simulated scene families, it achieves 98% and 97% closed-loop success at a 10 Hz decision rate. Among successful trials, median fractions of decision steps requiring a new depth observation are only 0.9% and 1.3%, respectively, demonstrating high navigation success with substantially reduced observation demand. Real-world indoor flight experiments further validate navigation under intermittent depth observations, with all 10 trials successful.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-08T09:42:02+00:00",
+      "updated": "2026-10-08T09:42:02+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.11591v1",
+      "abs_url": "https://arxiv.org/abs/2610.11591",
+      "matched_keywords": [
+        "drone navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "该论文提出了AirGroundVLN，一个大规模空地协同视觉语言导航基准，包含10,281个导航 episodes 和955个目标实例，覆盖19个Unreal Engine环境。针对空地视角差异和不对称空间可观测性两大挑战，提出了AG-CoNAV框架，包含时空锚定协同记忆(SACM)和空中引导的区域到局部规划(AGRLP)两个核心组件，实现跨平台历史上下文的一致性维护与粗细粒度导航结合。",
+      "highlights": [
+        "首个大规模空地协同目标导向VLN基准，含10,281 episodes和955目标实例",
+        "提出SACM模块解决跨平台时空上下文一致性问题",
+        "提出AGRLP模块将空中区域引导与地面精细导航相结合"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接研究VLN并涉及无人机/航拍视角的空中导航，是VLN与UAV-VLN交叉方向的核心工作，且提出了新基准和新框架，创新贡献显著。",
+      "is_uav_vln": true,
+      "tags": [
+        "VLN",
+        "UAV-VLN",
+        "air-ground collaboration",
+        "benchmark",
+        "collaborative navigation",
+        "spatial memory"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"该论文提出了AirGroundVLN，一个大规模空地协同视觉语言导航基准，包含10,281个导航 episodes 和955个目标实例，覆盖19个Unreal Engine环境。针对空地视角差异和不对称空间可观测性两大挑战，提出了AG-CoNAV框架，包含时空锚定协同记忆(SACM)和空中引导的区域到局部规划(AGRLP)两个核心组件，实现跨平台历史上下文的一致性维护与粗细粒度导航结合。\",\n  \"highlights\": [\"首个大规模空地协同目标导向VLN基准，含10,281 episodes和955目标实例\", \"提出SACM模块解决跨平台时空上下文一致性问题\", \"提出AGRLP模块将空中区域引导与地面精细导航相结合\"],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文直接研究VLN并涉及无人机/航拍视角的空中导航，是VLN与UAV-VLN交叉方向的核心工作，且提出了新基准和新框架，创新贡献显著。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"air-ground collaboration\", \"benchmark\", \"collaborative navigation\", \"spatial memory\"]\n}",
+      "summarized_at": "2026-10-08T06:05:37.994061+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.10421",
+      "title": "AirGroundVLN: A Large-Scale Benchmark for Goal-Oriented Air-Ground Collaborative Vision-and-Language Navigation",
+      "authors": [
+        "Zhenxuan Zeng",
+        "Qingle Wu",
+        "Wei Suo",
+        "Maojia Wu",
+        "Bairong Zhang",
+        "Hangzheng Yu",
+        "Peng Wang"
+      ],
+      "abstract": "Goal-oriented Vision-and-Language Navigation (VLN) requires agents to locate and reach targets described in natural language without prescribed routes. Air--ground collaboration is valuable for tasks requiring both wide-area search and fine-grained localization. However, systematic study of goal-oriented air--ground collaborative VLN remains limited by the lack of large-scale, diverse benchmarks and two core challenges: 1) substantial differences between aerial and ground views, together with useful observations becoming unavailable as navigation proceeds, make it difficult to maintain spatially consistent context across platforms and over time; and 2) asymmetric spatial observability makes ground perception locally detailed but spatially limited and aerial perception broad but locally coarse, limiting the reliability of single-platform planning. To address these limitations, we introduce AirGroundVLN, a benchmark containing 10,281 navigation episodes and 955 target instances across 19 Unreal Engine environments, with seen/unseen splits and an aerial-visibility protocol for systematic evaluation. Alongside the benchmark, we propose AG-CoNAV, a trainable reference framework comprising two key components: Spatiotemporally Anchored Collaborative Memory (SACM) and Aerial-Guided Regional-to-Local Planning (AGRLP). SACM maintains and retrieves spatially consistent historical context across aerial and ground observations. Meanwhile, AGRLP combines regional aerial guidance with fine-grained ground navigation. Extensive experiments demonstrate the effectiveness of AG-CoNAV and establish AirGroundVLN as a comprehensive benchmark for future exploration.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-07T17:01:20+00:00",
+      "updated": "2026-10-07T17:01:20+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.10421v1",
+      "abs_url": "https://arxiv.org/abs/2610.10421",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-14"
+    },
+    {
+      "summary_cn": "针对无人机视觉语言导航中用户简短指令与训练数据详细指令之间的指令鸿沟问题，提出轨迹引导指令翻译器（TGIT）作为冻结导航器的前端，通过学习轨迹结果将用户简短指令翻译为可执行命令。该方法将简短指令成功率从11.33%提升至32.51%，并在CityNav和AirVLN等数据集上实现零样本迁移与恢复。",
+      "highlights": [
+        "针对冻结无人机VLN代理的指令鸿沟问题，提出轨迹引导指令翻译器TGIT",
+        "通过语言模型生成配对简短指令数据并基于轨迹结果训练翻译器",
+        "在真实人类指令上实现零样本迁移，成功率从11.33%提升至32.51%"
+      ],
+      "relevance_score": 9,
+      "relevance_reason": "该论文直接研究无人机视觉语言导航（UAV-VLN），提出创新性指令翻译方法解决指令鸿沟问题，与研究者方向高度契合。",
+      "is_uav_vln": true,
+      "tags": [
+        "VLN",
+        "UAV-VLN",
+        "instruction translation",
+        "frozen agent",
+        "trajectory grounding"
+      ],
+      "raw_model_output": "{\"summary_cn\": \"针对无人机视觉语言导航中用户简短指令与训练数据详细指令之间的指令鸿沟问题，提出轨迹引导指令翻译器（TGIT）作为冻结导航器的前端，通过学习轨迹结果将用户简短指令翻译为可执行命令。该方法将简短指令成功率从11.33%提升至32.51%，并在CityNav和AirVLN等数据集上实现零样本迁移与恢复。\",\"highlights\": [\"针对冻结无人机VLN代理的指令鸿沟问题，提出轨迹引导指令翻译器TGIT\",\"通过语言模型生成配对简短指令数据并基于轨迹结果训练翻译器\",\"在真实人类指令上实现零样本迁移，成功率从11.33%提升至32.51%\"],\"relevance_score\": 9,\"relevance_reason\": \"该论文直接研究无人机视觉语言导航（UAV-VLN），提出创新性指令翻译方法解决指令鸿沟问题，与研究者方向高度契合。\",\"is_uav_vln\": true,\"tags\": [\"VLN\",\"UAV-VLN\",\"instruction translation\",\"frozen agent\",\"trajectory grounding\"]}",
+      "summarized_at": "2026-10-09T06:09:34.513292+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.10635",
+      "title": "Speaking the Navigator's Language: Trajectory-Grounded Instruction Translation for Frozen Aerial VLN Agents",
+      "authors": [
+        "Xi Chen",
+        "Zhe Liu",
+        "Xiaogang Xu",
+        "Jiafei Xu",
+        "Chunyi Zhou",
+        "Yuan Su",
+        "Rui Zeng",
+        "Tianyu Du",
+        "Kelu Yao",
+        "Chao Li",
+        "Shouling Ji"
+      ],
+      "abstract": "Aerial vision-and-language navigation (VLN) agents are typically trained on detail-rich, trajectory-aligned commands, whereas users issue short, intent-driven instructions; on a frozen OpenFly navigator, this \\emph{instruction gap} drops success rate (SR) from $31.03\\%$ to $11.33\\%$. To scale translator training, we prompt a language model with human-written style examples to convert original commands into paired, intent-centered Weak commands, which yield $15.27\\%$ SR. We introduce the \\textbf{Trajectory-Grounded Instruction Translator (TGIT)}, a front-end that keeps the navigator frozen and translates Weak inputs into agent-executable commands by learning from its trajectory outcomes. The resulting Weak-trained translator raises Weak-input SR to $37.93\\%$ and transfers zero-shot to real human instructions ($11.33\\%{\\rightarrow}32.51\\%$); it also improves held-out OpenFly ($4.95\\%{\\rightarrow}20.79\\%$) and yields recovery on CityNav and AirVLN.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-10-07T13:52:37+00:00",
+      "updated": "2026-10-07T13:52:37+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.10635v1",
+      "abs_url": "https://arxiv.org/abs/2610.10635",
+      "matched_keywords": [
+        "VLN",
+        "vision-and-language navigation",
+        "CityNav"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-14"
+    }
+  ],
+  "summarized_count": 17,
+  "skipped_no_summary": 0
+}

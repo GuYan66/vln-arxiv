@@ -1007,7 +1007,115 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-10-12.json"
+    },
+    "2610.18478": {
+      "arxiv_id": "2610.18478",
+      "title": "MemoryVLN: From Ego-Aware Memory Representation to Cross-Context Memory Reuse in Vision-Language Navigation",
+      "date": "2026-10-14",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.18307": {
+      "arxiv_id": "2610.18307",
+      "title": "I2O2I-Nav: A Benchmark with a Modular Agent for Long-Horizon Indoor-to-Outdoor-to-Indoor Navigation",
+      "date": "2026-10-14",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.18093": {
+      "arxiv_id": "2610.18093",
+      "title": "LynxScenes: A Large-Scale Real-World Benchmark for Outdoor Wheel-Legged Robot Perception, Navigation, Imagination and Reconstruction",
+      "date": "2026-10-14",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.17089": {
+      "arxiv_id": "2610.17089",
+      "title": "Interactive Navigation Beyond Reachability: Benchmark and Agentic Framework",
+      "date": "2026-10-14",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.16618": {
+      "arxiv_id": "2610.16618",
+      "title": "DR-APO: Decoupled-Representation Advantage-Guided Policy Optimization from Continuous Control to Embodied Navigation",
+      "date": "2026-10-14",
+      "relevance_score": 4,
+      "is_uav_vln": false,
+      "primary_category": "cs.LG",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.15956": {
+      "arxiv_id": "2610.15956",
+      "title": "ADAPT: Audio-Depth Action Planning with Transition-Aware Rewards for Lights-Out Industrial Navigation",
+      "date": "2026-10-14",
+      "relevance_score": 3,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.15782": {
+      "arxiv_id": "2610.15782",
+      "title": "Data-Centric Recursive Self-Improvement for Navigation via Policy-Synchronized Language-Action Dual Bootstrapping",
+      "date": "2026-10-14",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.15595": {
+      "arxiv_id": "2610.15595",
+      "title": "FireNav: Decision-Oriented Reconstruction Evidence Routing for Vision-Language Navigation in Indoor Fire Environments",
+      "date": "2026-10-14",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.15038": {
+      "arxiv_id": "2610.15038",
+      "title": "Training-Free Multi-Agent Cooperative Embodied Search from Uncertain Vision-Language Priors",
+      "date": "2026-10-14",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.14702": {
+      "arxiv_id": "2610.14702",
+      "title": "BGC-Nav: Cross-Altitude Multi-UAV Collaborative Navigation via Belief-Guided Coupling",
+      "date": "2026-10-14",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.14682": {
+      "arxiv_id": "2610.14682",
+      "title": "Successful but Unsafe: An Analytical Benchmark for Revealing Collisions in Vision-and-Language Navigation",
+      "date": "2026-10-14",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.14634": {
+      "arxiv_id": "2610.14634",
+      "title": "VbotNav-0: Asynchronous Cloud-Edge Dual-Policy Navigation across Indoor and Outdoor Environments",
+      "date": "2026-10-14",
+      "relevance_score": 6,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-14.json"
     }
   },
-  "last_updated": "2026-10-13T06:47:21.080187+00:00"
+  "last_updated": "2026-10-14T04:56:02.951803+00:00"
 }
