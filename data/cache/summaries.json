@@ -2583,5 +2583,47 @@
     "raw_model_output": "{\n  \"summary_cn\": \"本文提出VbotNav-0，一个云边协同的双策略导航框架，通过异步策略间条件机制连接室内外连续导航。云策略基于视觉历史、导航指令和路线token生成子目标引导，边缘策略结合当前RGB与LiDAR观测生成局部轨迹，使局部感知-动作回路在云更新间隔期持续运行。在258个episode、145个场景的闭环评估中取得55.04%成功率和55.03%路径长度加权成功率。\",\n  \"highlights\": [\n    \"云边异步双策略架构：云策略生成子目标引导，边缘策略执行局部轨迹规划，两者解耦运行\",\n    \"统一路线表示连接室内路径与室外地图路线，实现跨场景连续导航\",\n    \"训练策略融合导航演示数据、纠正数据与视觉问答(VQA)数据\"\n  ],\n  \"relevance_score\": 6,\n  \"relevance_reason\": \"论文使用导航指令和视觉历史进行子目标推理，涉及VLN核心要素，但主要贡献在云边协同架构而非VLN算法创新本身。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"cloud-edge\", \"dual-policy\", \"indoor-outdoor\", \"navigation\"]\n}",
     "summarized_at": "2026-10-14T04:56:02.948581+00:00",
     "summarize_error": null
+  },
+  "2610.22092": {
+    "summary_cn": "针对无人机在人群附近导航时缺乏类别感知安全约束的问题，提出一种完全机载的模块化感知-规划流水线。该系统利用BLIP编码器进行场景描述与文本条件分割，并结合深度信息进行3D定位，再由轻量级LLM（Qwen-2.5-0.5B）结合检索增强与语法约束解码来推断特定障碍物风险。实验表明，该方法在低空城市导航中显著降低碰撞率，并在动态环境下的语义感知着陆任务中将成功率从34%提升至96%。",
+    "highlights": [
+      "提出完全机载的模块化流水线，将视觉观测转化为上下文相关的安全约束，填补了无人机导航中的人类感知安全鸿沟",
+      "采用轻量级LLM按物体类别而非每帧进行推理，结合RAG与语法约束解码输出规划器兼容的JSON格式风险判断",
+      "在Jetson Orin NX上实现10Hz感知，碰撞事件减少约3倍，语义感知着陆成功率提升至96%"
+    ],
+    "relevance_score": 6,
+    "relevance_reason": "论文属于无人机视觉导航与语义感知安全领域，利用了视觉语言模型（BLIP）和LLM进行场景理解与推理，但核心聚焦于安全避障与规划而非视觉语言导航（VLN）任务。",
+    "is_uav_vln": false,
+    "tags": [
+      "UAV Navigation",
+      "LLM Reasoning",
+      "Human-Aware Safety",
+      "Semantic Perception",
+      "BLIP"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对无人机在人群附近导航时缺乏类别感知安全约束的问题，提出一种完全机载的模块化感知-规划流水线。该系统利用BLIP编码器进行场景描述与文本条件分割，并结合深度信息进行3D定位，再由轻量级LLM（Qwen-2.5-0.5B）结合检索增强与语法约束解码来推断特定障碍物风险。实验表明，该方法在低空城市导航中显著降低碰撞率，并在动态环境下的语义感知着陆任务中将成功率从34%提升至96%。\",\n  \"highlights\": [\n    \"提出完全机载的模块化流水线，将视觉观测转化为上下文相关的安全约束，填补了无人机导航中的人类感知安全鸿沟\",\n    \"采用轻量级LLM按物体类别而非每帧进行推理，结合RAG与语法约束解码输出规划器兼容的JSON格式风险判断\",\n    \"在Jetson Orin NX上实现10Hz感知，碰撞事件减少约3倍，语义感知着陆成功率提升至96%\"\n  ],\n  \"relevance_score\": 6,\n  \"relevance_reason\": \"论文属于无人机视觉导航与语义感知安全领域，利用了视觉语言模型（BLIP）和LLM进行场景理解与推理，但核心聚焦于安全避障与规划而非视觉语言导航（VLN）任务。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"UAV Navigation\", \"LLM Reasoning\", \"Human-Aware Safety\", \"Semantic Perception\", \"BLIP\"]\n}",
+    "summarized_at": "2026-10-16T04:32:26.252673+00:00",
+    "summarize_error": null
+  },
+  "2610.21450": {
+    "summary_cn": "针对基于大模型的无人机视觉语言导航(VLN)推理成本高的问题，提出全动作块执行框架X-Fly。该方法通过Recovery DAgger标注学习者访问的决策状态以平滑重连专家轨迹并学习停止策略，结合Flow-GRPO联合优化流控制器与停止策略。在OpenFly数据集上，测试集SR大幅超越基线方法。",
+    "highlights": [
+      "提出全动作块执行机制，将模型推理时间从195ms降至42ms",
+      "设计Recovery DAgger与Flow-GRPO两阶段训练框架，解决动作块执行偏离专家轨迹及停止失败问题",
+      "在OpenFly数据集test-seen和test-unseen上SR分别达74.18%和51.73%"
+    ],
+    "relevance_score": 10,
+    "relevance_reason": "该论文直接研究无人机视觉语言导航(UAV-VLN)，提出创新的全动作块执行与训练框架，属于该研究者的核心领域且贡献显著。",
+    "is_uav_vln": true,
+    "tags": [
+      "VLN",
+      "UAV-VLN",
+      "Aerial Navigation",
+      "Reinforcement Learning",
+      "Imitation Learning"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"针对基于大模型的无人机视觉语言导航(VLN)推理成本高的问题，提出全动作块执行框架X-Fly。该方法通过Recovery DAgger标注学习者访问的决策状态以平滑重连专家轨迹并学习停止策略，结合Flow-GRPO联合优化流控制器与停止策略。在OpenFly数据集上，测试集SR大幅超越基线方法。\",\n  \"highlights\": [\n    \"提出全动作块执行机制，将模型推理时间从195ms降至42ms\",\n    \"设计Recovery DAgger与Flow-GRPO两阶段训练框架，解决动作块执行偏离专家轨迹及停止失败问题\",\n    \"在OpenFly数据集test-seen和test-unseen上SR分别达74.18%和51.73%\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接研究无人机视觉语言导航(UAV-VLN)，提出创新的全动作块执行与训练框架，属于该研究者的核心领域且贡献显著。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"Aerial Navigation\", \"Reinforcement Learning\", \"Imitation Learning\"]\n}",
+    "summarized_at": "2026-10-16T04:32:35.877176+00:00",
+    "summarize_error": null
   }
 }

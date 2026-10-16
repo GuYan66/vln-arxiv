@@ -1115,7 +1115,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-14.json"
+    },
+    "2610.22092": {
+      "arxiv_id": "2610.22092",
+      "title": "Onboard Lightweight LLM Reasoning for Human-Aware Safe UAV Navigation",
+      "date": "2026-10-16",
+      "relevance_score": 6,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-16.json"
+    },
+    "2610.21450": {
+      "arxiv_id": "2610.21450",
+      "title": "X-Fly: Learning to Reach and Stop in Full-Chunk Aerial Vision-Language Navigation",
+      "date": "2026-10-16",
+      "relevance_score": 10,
+      "is_uav_vln": true,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-16.json"
     }
   },
-  "last_updated": "2026-10-15T04:39:15.426248+00:00"
+  "last_updated": "2026-10-16T04:32:35.880533+00:00"
 }
