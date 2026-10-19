@@ -2625,5 +2625,48 @@
     "raw_model_output": "{\n  \"summary_cn\": \"针对基于大模型的无人机视觉语言导航(VLN)推理成本高的问题，提出全动作块执行框架X-Fly。该方法通过Recovery DAgger标注学习者访问的决策状态以平滑重连专家轨迹并学习停止策略，结合Flow-GRPO联合优化流控制器与停止策略。在OpenFly数据集上，测试集SR大幅超越基线方法。\",\n  \"highlights\": [\n    \"提出全动作块执行机制，将模型推理时间从195ms降至42ms\",\n    \"设计Recovery DAgger与Flow-GRPO两阶段训练框架，解决动作块执行偏离专家轨迹及停止失败问题\",\n    \"在OpenFly数据集test-seen和test-unseen上SR分别达74.18%和51.73%\"\n  ],\n  \"relevance_score\": 10,\n  \"relevance_reason\": \"该论文直接研究无人机视觉语言导航(UAV-VLN)，提出创新的全动作块执行与训练框架，属于该研究者的核心领域且贡献显著。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"VLN\", \"UAV-VLN\", \"Aerial Navigation\", \"Reinforcement Learning\", \"Imitation Learning\"]\n}",
     "summarized_at": "2026-10-16T04:32:35.877176+00:00",
     "summarize_error": null
+  },
+  "2610.23203": {
+    "summary_cn": "本文提出SimpleVLN，一个保持原生多模态大语言模型(MLLM)架构的视觉语言导航框架。通过结合单轮决策输入与固定预算的全局-局部记忆、动作分块输出、渐进式IL-DAgger-RL优化管线，有效释放了原生MLLM的导航能力。在R2R-CE和RxR-CE基准上分别取得76.7%和80.1%的成功率，大幅超越现有方法。",
+    "highlights": [
+      "保持原生MLLM架构，无需任务特定设计即可实现高效VLN",
+      "结合固定预算全局-局部记忆与动作分块，解决长程导航的上下文增长问题",
+      "渐进式IL-DAgger-RL训练管线与可扩展任务合成流水线，实现从动作模仿到任务级优化的提升"
+    ],
+    "relevance_score": 9,
+    "relevance_reason": "该论文是核心VLN研究，提出创新的架构保持框架并在R2R/RxR基准上取得SOTA，对VLN研究者高度相关。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "MLLM",
+      "navigation",
+      "R2R",
+      "RxR"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"本文提出SimpleVLN，一个保持原生多模态大语言模型(MLLM)架构的视觉语言导航框架。通过结合单轮决策输入与固定预算的全局-局部记忆、动作分块输出、渐进式IL-DAgger-RL优化管线，有效释放了原生MLLM的导航能力。在R2R-CE和RxR-CE基准上分别取得76.7%和80.1%的成功率，大幅超越现有方法。\",\n  \"highlights\": [\n    \"保持原生MLLM架构，无需任务特定设计即可实现高效VLN\",\n    \"结合固定预算全局-局部记忆与动作分块，解决长程导航的上下文增长问题\",\n    \"渐进式IL-DAgger-RL训练管线与可扩展任务合成流水线，实现从动作模仿到任务级优化的提升\"\n  ],\n  \"relevance_score\": 9,\n  \"relevance_reason\": \"该论文是核心VLN研究，提出创新的架构保持框架并在R2R/RxR基准上取得SOTA，对VLN研究者高度相关。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"MLLM\", \"navigation\", \"R2R\", \"RxR\"]\n}",
+    "summarized_at": "2026-10-19T04:41:11.159070+00:00",
+    "summarize_error": null
+  },
+  "2610.22812": {
+    "summary_cn": "现有VLN基准通常假设指令可执行，忽略了机器人身体约束下的局部可通过性与无碰撞执行问题。本文提出PASS-VLN基准与模型，通过在深度生成的局部鸟瞰图中进行障碍物膨胀来编码机器人身体宽度，融合几何、视觉与语言信息预测离散潜在动作码用于闭环执行。实验表明该方法将无碰撞成功率提升约12个百分点，并能自适应不同身体宽度的可达-停止决策。",
+    "highlights": [
+      "提出passability-aware局部指令VLN基准，固定场景/指令/路线而改变机器人身体宽度，解耦局部物理执行与长程规划",
+      "模型通过障碍物膨胀编码身体宽度，融合几何与多模态上下文，预测离散潜在动作码实现连续闭环执行",
+      "无碰撞成功率提升约12个百分点，泛化到未见身体宽度，并可作为低层执行器与高层规划器集成及真实世界部署"
+    ],
+    "relevance_score": 8,
+    "relevance_reason": "核心VLN研究，创新性地将机器人身体约束与可通过性引入局部指令执行，对VLN底层执行能力有重要贡献，但场景为地面机器人而非无人机。",
+    "is_uav_vln": false,
+    "tags": [
+      "VLN",
+      "passability",
+      "collision-free",
+      "body-constraint",
+      "local-navigation",
+      "benchmark"
+    ],
+    "raw_model_output": "{\n  \"summary_cn\": \"现有VLN基准通常假设指令可执行，忽略了机器人身体约束下的局部可通过性与无碰撞执行问题。本文提出PASS-VLN基准与模型，通过在深度生成的局部鸟瞰图中进行障碍物膨胀来编码机器人身体宽度，融合几何、视觉与语言信息预测离散潜在动作码用于闭环执行。实验表明该方法将无碰撞成功率提升约12个百分点，并能自适应不同身体宽度的可达-停止决策。\",\n  \"highlights\": [\n    \"提出passability-aware局部指令VLN基准，固定场景/指令/路线而改变机器人身体宽度，解耦局部物理执行与长程规划\",\n    \"模型通过障碍物膨胀编码身体宽度，融合几何与多模态上下文，预测离散潜在动作码实现连续闭环执行\",\n    \"无碰撞成功率提升约12个百分点，泛化到未见身体宽度，并可作为低层执行器与高层规划器集成及真实世界部署\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"核心VLN研究，创新性地将机器人身体约束与可通过性引入局部指令执行，对VLN底层执行能力有重要贡献，但场景为地面机器人而非无人机。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"passability\", \"collision-free\", \"body-constraint\", \"local-navigation\", \"benchmark\"]\n}",
+    "summarized_at": "2026-10-19T04:41:23.395752+00:00",
+    "summarize_error": null
   }
 }

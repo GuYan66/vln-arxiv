@@ -1133,7 +1133,25 @@
       "is_uav_vln": true,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-16.json"
+    },
+    "2610.23203": {
+      "arxiv_id": "2610.23203",
+      "title": "SimpleVLN: Towards Simple and Frontier Vision-Language Navigation",
+      "date": "2026-10-19",
+      "relevance_score": 9,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-19.json"
+    },
+    "2610.22812": {
+      "arxiv_id": "2610.22812",
+      "title": "PASS-VLN: Passability-Aware Local-Command Vision-and-Language Navigation",
+      "date": "2026-10-19",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-19.json"
     }
   },
-  "last_updated": "2026-10-18T04:34:21.698718+00:00"
+  "last_updated": "2026-10-19T04:41:23.398913+00:00"
 }
