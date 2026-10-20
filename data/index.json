@@ -1151,7 +1151,79 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-19.json"
+    },
+    "2610.26729": {
+      "arxiv_id": "2610.26729",
+      "title": "PlanarCityLoc: Breaking Silhouette Ambiguity in LoD Aerial Localization via 3D Planes",
+      "date": "2026-10-20",
+      "relevance_score": 3,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-20.json"
+    },
+    "2610.26545": {
+      "arxiv_id": "2610.26545",
+      "title": "ReInsVLN: Revisiting Historical Evidence for Training-Free Vision-and-Language Navigation",
+      "date": "2026-10-20",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-20.json"
+    },
+    "2610.25959": {
+      "arxiv_id": "2610.25959",
+      "title": "EmbodiedWorld-200K: Toward Embodied World Agents via Embodied-Planning Dataset and Interactive World Models",
+      "date": "2026-10-20",
+      "relevance_score": 7,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-10-20.json"
+    },
+    "2610.25687": {
+      "arxiv_id": "2610.25687",
+      "title": "Revealing and Bridging the Physical Executability Gap in Vision-Language Navigation",
+      "date": "2026-10-20",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-20.json"
+    },
+    "2610.25223": {
+      "arxiv_id": "2610.25223",
+      "title": "Map2Vid: Embodied Navigation Video Generation with Human-Friendly Motion Control",
+      "date": "2026-10-20",
+      "relevance_score": 6,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-20.json"
+    },
+    "2610.25130": {
+      "arxiv_id": "2610.25130",
+      "title": "Structure over Reasoning: Unified Zero-Shot Navigation with a Small Vision-Language Model",
+      "date": "2026-10-20",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-20.json"
+    },
+    "2610.24767": {
+      "arxiv_id": "2610.24767",
+      "title": "DialogMem: Evaluating Dialogue-Grounded Embodied Memory in 3D Environments",
+      "date": "2026-10-20",
+      "relevance_score": 6,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-10-20.json"
+    },
+    "2610.24122": {
+      "arxiv_id": "2610.24122",
+      "title": "HAVANA: A Hierarchical Video-Action Model for Vision-Language Navigation",
+      "date": "2026-10-20",
+      "relevance_score": 8,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-20.json"
     }
   },
-  "last_updated": "2026-10-19T04:41:23.398913+00:00"
+  "last_updated": "2026-10-20T04:53:29.861507+00:00"
 }
