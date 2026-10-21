@@ -1223,7 +1223,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-10-20.json"
+    },
+    "2610.28476": {
+      "arxiv_id": "2610.28476",
+      "title": "CLOSER: Evidence-Aware Active Visual Verification for Embodied Object-Goal Navigation",
+      "date": "2026-10-21",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-21.json"
+    },
+    "2610.27110": {
+      "arxiv_id": "2610.27110",
+      "title": "MatchCityLoc: Aerial Localization in LoD City Models via Surface Normal Matching",
+      "date": "2026-10-21",
+      "relevance_score": 5,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-21.json"
     }
   },
-  "last_updated": "2026-10-20T04:53:29.861507+00:00"
+  "last_updated": "2026-10-21T04:47:42.201585+00:00"
 }
