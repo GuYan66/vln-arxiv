@@ -2898,5 +2898,27 @@
     "raw_model_output": "{\n  \"summary_cn\": \"针对航空导航缺乏密集飞行演示和广泛环境覆盖的问题，本文提出了AirPlayground基准。该基准构建了94个基于3D高斯溅射(3DGS)的光照逼真环境，并通过自适应管线自动收集了94K飞行演示数据。研究在可见与不可见环境中对四种策略范式的七个基线进行了评估，并分析了预测误差、执行协议和场景交互对闭环性能的影响。\",\n  \"highlights\": [\n    \"构建了94个包含对齐碰撞几何的光照逼真3DGS环境，覆盖室内、城市室外和植被场景\",\n    \"开发了场景自适应管线自动收集专家飞行数据，生成94K演示和4650万同步观测-状态-动作样本\",\n    \"支持多种策略范式训练与统一协议评估，并揭示了预测误差与闭环结果的关系\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"该论文聚焦于无人机航空导航基准构建，属于UAV-VLN核心范畴，提供了大规模数据集和统一评估框架，对无人机视觉语言导航研究具有重要参考价值。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"Aerial Navigation\", \"3D Gaussian Splatting\", \"Benchmark\", \"UAV\", \"Imitation Learning\"]\n}",
     "summarized_at": "2026-10-22T04:46:03.656152+00:00",
     "summarize_error": null
+  },
+  "2610.30643": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-10-24T04:37:02.364159+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
+  },
+  "2610.30609": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-10-24T04:37:06.600404+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
   }
 }

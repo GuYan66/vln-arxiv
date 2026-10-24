@@ -1250,7 +1250,25 @@
       "is_uav_vln": true,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-22.json"
+    },
+    "2610.30643": {
+      "arxiv_id": "2610.30643",
+      "title": "Asking Less, Adapting Better: Feedback-Efficient Test-Time Adaptation for Vision-and-Language Navigation",
+      "date": "2026-10-24",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-24.json"
+    },
+    "2610.30609": {
+      "arxiv_id": "2610.30609",
+      "title": "KinoUAV: A Benchmark for Safe and Stable UAV Vision-Language Navigation with Kinodynamic Modeling",
+      "date": "2026-10-24",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-24.json"
     }
   },
-  "last_updated": "2026-10-22T04:46:03.658548+00:00"
+  "last_updated": "2026-10-24T04:37:06.603754+00:00"
 }
