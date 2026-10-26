@@ -1268,7 +1268,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-10-24.json"
+    },
+    "2610.32697": {
+      "arxiv_id": "2610.32697",
+      "title": "SP-Guide: Enhancing Aerial Vision-Language Navigation with Spatial Priors",
+      "date": "2026-10-26",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-26.json"
+    },
+    "2610.31762": {
+      "arxiv_id": "2610.31762",
+      "title": "See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space",
+      "date": "2026-10-26",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-26.json"
     }
   },
-  "last_updated": "2026-10-25T04:41:28.524366+00:00"
+  "last_updated": "2026-10-26T04:47:26.931257+00:00"
 }

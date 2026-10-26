@@ -1,0 +1,456 @@
+{
+  "date": "2026-10-26",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-26T04:47:22.107417+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.32697",
+      "title": "SP-Guide: Enhancing Aerial Vision-Language Navigation with Spatial Priors",
+      "authors": [
+        "Haoxiang Tang",
+        "Dong Zhou",
+        "Shen Tan",
+        "Minxuan Jiang",
+        "Xitong Li"
+      ],
+      "abstract": "Aerial vision-language navigation (AVLN) requires a UAV to reach a language-described target from partial egocentric observations while reasoning over large outdoor scenes. Existing approaches typically fuse view-centered RGB observations and globally anchored history maps as generic visual embeddings, leaving cross-modal spatial alignment to be learned from sparse navigation supervision. We present SP-Guide, a transformer- based goal-prediction framework that addresses this weakness of alignment through a Spatial Prior Cross-Modal Encoder, an Instruction Enhanced Decoder, and a Goal Convergence Filter for terminal target refinement. Experiments implemented on the CityNav benchmark show that SP-Guide improves success rate over the representative baselines, with the largest gains on unseen environments. These results indicate that physically grounded spatial priors provide an effective inductive bias for robust AVLN.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-10-23T14:21:58+00:00",
+      "updated": "2026-10-23T14:21:58+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.32697v1",
+      "abs_url": "https://arxiv.org/abs/2610.32697",
+      "matched_keywords": [
+        "Aerial Vision-Language Navigation",
+        "CityNav"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-26T04:47:26.927507+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.31762",
+      "title": "See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space",
+      "authors": [
+        "Jiawei Chen",
+        "Yinxi Wang",
+        "Zihan Yang",
+        "Meijun Gao",
+        "Yaowei Liu",
+        "Shuming Zhang",
+        "Zecheng Li",
+        "Xiangju Mi",
+        "Yuxuan Liu",
+        "Runzhong Huang",
+        "Tianlin Li",
+        "Xun Zhang",
+        "Zhengyang Wang",
+        "Xu Miao",
+        "Tong Yang"
+      ],
+      "abstract": "What visual representation should a navigation policy act on? Navigation policies built on vision foundation models largely leave representation design to the encoders' pretraining objectives. We present RepresentNav, a navigation foundation model built on a self-constructed representation space: a visual representation constructed by the policy's own objectives from vision foundation models. RepresentNav builds this space with Representation Residuals, a compact three-layer transformer that attends over features spanning the full depth of multiple complementary vision foundation models, so that the policy learns to see what it needs for navigation. In the same space it dreams what it wants: before every action a latent chain-of-thought predicts the representation of the scene a moment ahead. The dream is trained end-to-end with the policy as a joint-embedding predictive architecture (JEPA), with a next-representation prediction loss and a regularizer on its targets. RepresentNav sets a new state of the art on VLNVerse, VLN-CE R2R, EVT-Bench, and two point-goal benchmarks, and its gains carry over to a physical robot amid clutter and moving people. On VLNVerse fine-grained, RepresentNav achieves 83.80% success, outperforming the previous state of the art by 20.05 percentage points, and on EVT-Bench distracted tracking it reaches 85.5% with a single camera (+10.1). With the same encoders, the self-constructed space clearly outperforms concatenating their outputs and learns to weight their layers unevenly, and a dream in it cuts collisions by a quarter. A single dreamed latent decodes into the depth, semantics, and 3D occupancy of the scene a moment ahead, more accurately than pretrained encoders applied to the real future frame, although occupancy is never supervised, and the rollout tracks the robot's own motion over the next second: the dream emerges as a compact latent world model.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-10-22T18:00:39+00:00",
+      "updated": "2026-10-22T18:00:39+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.31762v1",
+      "abs_url": "https://arxiv.org/abs/2610.31762",
+      "matched_keywords": [
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-24T04:37:02.364159+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.30643",
+      "title": "Asking Less, Adapting Better: Feedback-Efficient Test-Time Adaptation for Vision-and-Language Navigation",
+      "authors": [
+        "Zixu Wang",
+        "Huaquan Zhang",
+        "Shoukai Xu",
+        "Jinwu Hu",
+        "Zhiquan Wen",
+        "Mingkui Tan"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) requires agents to follow instructions and navigate to target locations. However, current VLN agents often suffer severe performance degradation in unseen environments due to distribution shifts. Test-Time Adaptation (TTA) offers a promising paradigm to bridge this gap, yet existing methods that rely on unsupervised entropy minimization can propagate errors through the trajectory, causing cascading failures in navigation. Recent methods mitigate this by incorporating human feedback, but they apply trajectory-level supervision uniformly across all steps without localizing the actions is truly informative, leading to inefficient feedback utilization and mismatched optimization granularity. To address these limitations, we propose FETA, a Feedback-Efficient Test-Time Adaptation method that improves both feedback efficiency and optimization reliability. To reduce unnecessary human interventions, we introduce a hierarchical sample selection strategy to localize informative samples. Specifically, we first filter trajectories whose normalized policy entropy exhibits large fluctuations. Within each selected trajectory, we further select the critical action via an entropy-gradient saliency criterion and query a single binary feedback on its correctness. A discrepancy-aware entropy optimization objective then updates the policy only at the queried step, with adaptive scaling that assigns larger relative weights to samples with greater prediction-feedback discrepancy. Extensive experiments across multiple benchmarks demonstrate that FETA achieves state-of-the-art performance with fewer human interventions, while remaining robust under noisy feedback and continual adaptation settings.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-10-22T03:05:25+00:00",
+      "updated": "2026-10-22T03:05:25+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.30643v1",
+      "abs_url": "https://arxiv.org/abs/2610.30643",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-24T04:37:06.600404+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.30609",
+      "title": "KinoUAV: A Benchmark for Safe and Stable UAV Vision-Language Navigation with Kinodynamic Modeling",
+      "authors": [
+        "Chenyao Yang",
+        "Peijin Wang",
+        "Yingchao Feng",
+        "Wenhui Diao"
+      ],
+      "abstract": "Unmanned aerial vehicles (UAVs) have recently emerged as important remote sensing platforms, and UAV navigation has shown great potential in remote sensing applications. However, existing methods do not explicitly incorporate kinodynamic modeling or safety distances into trajectory generation, resulting in high absolute yaw rates, frequent collisions, and low navigation success rates, which limit safety and motion stability. To address this challenge, we introduce KinoUAV, a kinodynamic benchmark comprising a dataset and KinoUAV-Agent. First, we develop a hierarchical kinodynamic trajectory generation pipeline that drives UAV through acceleration actions. It uses waypoint chains from global planning and generates trajectories segment by segment under velocity, acceleration, and jerk constraints, reducing oscillations and improving trajectory stability. Furthermore, we introduce directional free-space distance (DFD) labels into the constructed dataset to describe the available clearance for safe motion decisions. The proposed KinoUAV-Agent predicts DFDs and uses them to generate safe actions, decoupling perception from action decision-making. This design enables autonomous obstacle avoidance and improves navigation safety. The benchmark incorporates the proposed Cruise-Seek task, in which the UAV first enters the target region and then searches for the target, reducing the difficulty of target search and improving navigation success. Experiments on KinoUAV show that KinoUAV-Agent outperforms existing methods, achieving the highest success rate while maintaining lower absolute yaw rates and collision rates. These results demonstrate the effectiveness of kinodynamic modeling for safe and stable UAV navigation.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-22T02:16:48+00:00",
+      "updated": "2026-10-22T02:16:48+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.30609v1",
+      "abs_url": "https://arxiv.org/abs/2610.30609",
+      "matched_keywords": [
+        "UAV Vision-Language Navigation",
+        "UAV navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "针对航空导航缺乏密集飞行演示和广泛环境覆盖的问题，本文提出了AirPlayground基准。该基准构建了94个基于3D高斯溅射(3DGS)的光照逼真环境，并通过自适应管线自动收集了94K飞行演示数据。研究在可见与不可见环境中对四种策略范式的七个基线进行了评估，并分析了预测误差、执行协议和场景交互对闭环性能的影响。",
+      "highlights": [
+        "构建了94个包含对齐碰撞几何的光照逼真3DGS环境，覆盖室内、城市室外和植被场景",
+        "开发了场景自适应管线自动收集专家飞行数据，生成94K演示和4650万同步观测-状态-动作样本",
+        "支持多种策略范式训练与统一协议评估，并揭示了预测误差与闭环结果的关系"
+      ],
+      "relevance_score": 7,
+      "relevance_reason": "该论文聚焦于无人机航空导航基准构建，属于UAV-VLN核心范畴，提供了大规模数据集和统一评估框架，对无人机视觉语言导航研究具有重要参考价值。",
+      "is_uav_vln": true,
+      "tags": [
+        "Aerial Navigation",
+        "3D Gaussian Splatting",
+        "Benchmark",
+        "UAV",
+        "Imitation Learning"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对航空导航缺乏密集飞行演示和广泛环境覆盖的问题，本文提出了AirPlayground基准。该基准构建了94个基于3D高斯溅射(3DGS)的光照逼真环境，并通过自适应管线自动收集了94K飞行演示数据。研究在可见与不可见环境中对四种策略范式的七个基线进行了评估，并分析了预测误差、执行协议和场景交互对闭环性能的影响。\",\n  \"highlights\": [\n    \"构建了94个包含对齐碰撞几何的光照逼真3DGS环境，覆盖室内、城市室外和植被场景\",\n    \"开发了场景自适应管线自动收集专家飞行数据，生成94K演示和4650万同步观测-状态-动作样本\",\n    \"支持多种策略范式训练与统一协议评估，并揭示了预测误差与闭环结果的关系\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"该论文聚焦于无人机航空导航基准构建，属于UAV-VLN核心范畴，提供了大规模数据集和统一评估框架，对无人机视觉语言导航研究具有重要参考价值。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"Aerial Navigation\", \"3D Gaussian Splatting\", \"Benchmark\", \"UAV\", \"Imitation Learning\"]\n}",
+      "summarized_at": "2026-10-22T04:46:03.656152+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.29699",
+      "title": "AirPlayground: Benchmarking Aerial Navigation across Diverse Reconstructed Environments",
+      "authors": [
+        "Rangya Zhang",
+        "Yujing Shang",
+        "Zhuoyuan Yu",
+        "Mingsheng Li",
+        "Qingsong Yan",
+        "Chao Yan",
+        "Yuhang Zhang",
+        "Mir Feroskhan"
+      ],
+      "abstract": "Large-scale aerial resources provide a foundation for learning navigation across diverse environments. However, existing resources remain limited in providing (1) densely sampled flight demonstrations for learning different policy formulations and (2) broad environment coverage for standardized closed-loop evaluation. To address these limitations, we introduce AirPlayground, a unified benchmark for training and evaluating aerial navigation policies across diverse environments. We first construct 94 photorealistic 3D Gaussian Splatting (3DGS) environments spanning indoor, urban outdoor, and vegetation settings, with aligned collision geometry. Building on these environments, we develop a scene-adaptive pipeline for automated expert flight collection, yielding 94K demonstrations and 46.5M synchronized observation-state-action samples at 50 Hz. We further provide an extensible API that supports training different policy formulations on this shared corpus and evaluating them under unified protocols in the corresponding environments. We benchmark seven baselines spanning four policy paradigms across three navigation settings in seen and unseen environments, and further examine scaling behavior with ACT. Scaling ACT's training corpus from 5 to 70 scenes raises median success rates on seen and unseen environments from 30.6% and 16.8% to 41.2% and 29.4%, respectively. Through this shared training and evaluation framework, AirPlayground supports analysis of how offline prediction errors relate to closed-loop outcomes. Our analyses highlight the roles of prediction errors, execution protocols, and scene interactions in closed-loop performance.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-21T13:13:00+00:00",
+      "updated": "2026-10-21T13:13:00+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.29699v1",
+      "abs_url": "https://arxiv.org/abs/2610.29699",
+      "matched_keywords": [
+        "Aerial Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "针对具身物体目标导航中检测器误检和贪心接近候选导致失败的问题，提出CLOSER框架，将停止决策视为闭环证据获取过程。该方法结合视觉语言模型（VLM）对候选物体多视角进行验证，通过嵌入多样性门控选择互补视角并融合概率，在不确定时利用扩散策略驱动智能体主动靠近候选直至决策明确。该方法可即插即用地集成到现有ObjectNav系统中，在Gibson和HM3D上提升了成功率。",
+      "highlights": [
+        "将停止决策建模为闭环证据获取，结合VLM验证与主动感知",
+        "使用嵌入多样性门控选择互补视角，并用轻量网络融合多视角概率",
+        "不确定时通过扩散策略主动靠近候选物体，可即插即用集成到现有系统"
+      ],
+      "relevance_score": 5,
+      "relevance_reason": "该论文研究具身ObjectNav中的主动视觉验证，与VLN共享具身导航基础但非语言指令驱动的VLN任务，属于相关但非核心。",
+      "is_uav_vln": false,
+      "tags": [
+        "ObjectNav",
+        "VLM",
+        "active perception",
+        "embodied navigation",
+        "diffusion policy"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对具身物体目标导航中检测器误检和贪心接近候选导致失败的问题，提出CLOSER框架，将停止决策视为闭环证据获取过程。该方法结合视觉语言模型（VLM）对候选物体多视角进行验证，通过嵌入多样性门控选择互补视角并融合概率，在不确定时利用扩散策略驱动智能体主动靠近候选直至决策明确。该方法可即插即用地集成到现有ObjectNav系统中，在Gibson和HM3D上提升了成功率。\",\n  \"highlights\": [\n    \"将停止决策建模为闭环证据获取，结合VLM验证与主动感知\",\n    \"使用嵌入多样性门控选择互补视角，并用轻量网络融合多视角概率\",\n    \"不确定时通过扩散策略主动靠近候选物体，可即插即用集成到现有系统\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"该论文研究具身ObjectNav中的主动视觉验证，与VLN共享具身导航基础但非语言指令驱动的VLN任务，属于相关但非核心。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"ObjectNav\", \"VLM\", \"active perception\", \"embodied navigation\", \"diffusion policy\"]\n}",
+      "summarized_at": "2026-10-21T04:47:25.982774+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.28476",
+      "title": "CLOSER: Evidence-Aware Active Visual Verification for Embodied Object-Goal Navigation",
+      "authors": [
+        "Pengying Wu",
+        "Mingye Jiang",
+        "Yunze Hu",
+        "Zhejia Wen",
+        "Kangjie Zhou",
+        "Zongru Yang",
+        "Zhe Peng",
+        "Chang Liu"
+      ],
+      "abstract": "Object-goal navigation (ObjectNav) requires an embodied agent to find an instance of a specified category in an unseen environment and stop near it. The agent typically relies on an object detector but must judge online from a limited egocentric video stream, sometimes a single frame, whether a detected candidate is the target. Detectors often confidently mistake similar objects, such as a sofa for a bed, and stopping at a false positive fails the episode. Prevailing systems also approach candidates greedily, leaving them occluded or partially observed. We present CLOSER, an evidence-aware active verification framework that treats stopping as closed-loop evidence acquisition, coupling vision-language model (VLM) verification with active perception. CLOSER fine-tunes an open-source VLM to label each view of a candidate tracked across frames as target, non-target, or uncertain, selects complementary views with an embedding-based diversity gate, and fuses their per-view probabilities with a lightweight network. If the fused judgment remains uncertain, a diffusion policy drives the agent toward the candidate using only the tracked mask and depth until the decision becomes decisive. CLOSER runs locally and plugs into existing ObjectNav systems without retraining them. On Gibson and Habitat-Matterport 3D, it raises average success rate by 3.6 points and success weighted by path length by 2.0 points, showing that verifying evidence before committing improves embodied navigation.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-10-20T16:27:33+00:00",
+      "updated": "2026-10-20T16:27:33+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.28476v1",
+      "abs_url": "https://arxiv.org/abs/2610.28476",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "针对城市环境中无人机GNSS信号不可靠的问题，本文提出MatchCityLoc框架，利用表面法线匹配在无纹理的LoD城市模型中实现精确的视觉定位。该方法通过零样本模型提取查询图像的表面法线并与渲染的LoD法线匹配，建立3D到2D的对应关系，通过PnP求解位姿并迭代优化。该方法弥合了航拍图像与无纹理几何之间的模态差距，实现了基于轻量级、隐私保护城市模型的精准定位。",
+      "highlights": [
+        "提出从带噪声的6-DoF位姿先验直接进行特征匹配的新范式，替代传统2D轮廓重叠评分",
+        "利用零样本基础模型提取表面法线，建立航拍图像与无纹理LoD模型间的3D-to-2D对应关系",
+        "通过渲染-匹配循环迭代优化位姿，在极少渲染次数下实现高精度定位"
+      ],
+      "relevance_score": 5,
+      "relevance_reason": "该论文研究无人机在城市环境中的视觉定位，属于UAV导航范畴，但核心是几何位姿估计而非视觉语言导航(VLN)。",
+      "is_uav_vln": false,
+      "tags": [
+        "UAV",
+        "视觉定位",
+        "表面法线匹配",
+        "城市模型",
+        "位姿估计"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对城市环境中无人机GNSS信号不可靠的问题，本文提出MatchCityLoc框架，利用表面法线匹配在无纹理的LoD城市模型中实现精确的视觉定位。该方法通过零样本模型提取查询图像的表面法线并与渲染的LoD法线匹配，建立3D到2D的对应关系，通过PnP求解位姿并迭代优化。该方法弥合了航拍图像与无纹理几何之间的模态差距，实现了基于轻量级、隐私保护城市模型的精准定位。\",\n  \"highlights\": [\n    \"提出从带噪声的6-DoF位姿先验直接进行特征匹配的新范式，替代传统2D轮廓重叠评分\",\n    \"利用零样本基础模型提取表面法线，建立航拍图像与无纹理LoD模型间的3D-to-2D对应关系\",\n    \"通过渲染-匹配循环迭代优化位姿，在极少渲染次数下实现高精度定位\"\n  ],\n  \"relevance_score\": 5,\n  \"relevance_reason\": \"该论文研究无人机在城市环境中的视觉定位，属于UAV导航范畴，但核心是几何位姿估计而非视觉语言导航(VLN)。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"UAV\", \"视觉定位\", \"表面法线匹配\", \"城市模型\", \"位姿估计\"]\n}",
+      "summarized_at": "2026-10-21T04:47:42.197033+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.27110",
+      "title": "MatchCityLoc: Aerial Localization in LoD City Models via Surface Normal Matching",
+      "authors": [
+        "Oussema Dhaouadi",
+        "Zuria Bauer",
+        "Johannes Michael Meier",
+        "Marc Pollefeys",
+        "Daniel Cremers",
+        "Olaf Wysocki"
+      ],
+      "abstract": "Autonomous Unmanned Aerial Vehicle (UAV) navigation in urban environments requires precise pose estimation. Because Global Navigation Satellite System (GNSS) signals are often unreliable in cities, visual localization serves as a crucial complement. Within this domain, textureless Level-of-Detail (LoD) city models provide a lightweight and privacy-preserving substitute for heavy 3D textured meshes. However, localizing against abstract geometry is challenging. Existing pipelines typically score 2D silhouette overlaps, which can suffer from severe geometric ambiguities. We present MatchCityLoc, a framework that shifts this paradigm to direct feature matching from a noisy 6-DoF pose prior. By extracting surface normals from the query image using a zero-shot foundation model and matching them against rendered LoD normals, we establish explicit 3D-to-2D correspondences. This enables a Perspective-n-Point (PnP) pose solve, which we iteratively refine through a render-and-match loop. Experiments demonstrate strong pose recall and accurate translation and rotation among the evaluated off-the-shelf LoD-based methods with very few renderings. By bridging the modality gap between aerial imagery and texture-free geometry, MatchCityLoc enables accurate localization using lightweight, privacy-preserving city models.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-19T18:10:59+00:00",
+      "updated": "2026-10-19T18:10:59+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.27110v1",
+      "abs_url": "https://arxiv.org/abs/2610.27110",
+      "matched_keywords": [
+        "UAV) navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "针对城市环境中GNSS信号退化时的无人机航拍视觉定位问题，提出PlanarCityLoc方法。该方法利用建筑立面和屋顶的平面几何特征，将图像侧平面块与LoD模型平面匹配，通过PnP算法优化位姿，突破了现有基于轮廓方法在图像空间对齐时的模糊性。该方法无需特定数据集训练即可达到先进的定位召回率。",
+      "highlights": [
+        "利用3D平面几何打破基于轮廓的航拍定位模糊性",
+        "将图像平面块与无纹理LoD城市模型匹配，通过PnP优化位姿",
+        "无需数据集特定训练或微调，在UAVD4L-LoDv2和Swiss-EPFLv2上达到SOTA"
+      ],
+      "relevance_score": 3,
+      "relevance_reason": "虽然涉及无人机导航和视觉定位，但属于几何视觉定位方法，不涉及视觉语言导航(VLN)任务。",
+      "is_uav_vln": false,
+      "tags": [
+        "aerial localization",
+        "visual localization",
+        "drone navigation",
+        "3D planes",
+        "LoD city models"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对城市环境中GNSS信号退化时的无人机航拍视觉定位问题，提出PlanarCityLoc方法。该方法利用建筑立面和屋顶的平面几何特征，将图像侧平面块与LoD模型平面匹配，通过PnP算法优化位姿，突破了现有基于轮廓方法在图像空间对齐时的模糊性。该方法无需特定数据集训练即可达到先进的定位召回率。\",\n  \"highlights\": [\n    \"利用3D平面几何打破基于轮廓的航拍定位模糊性\",\n    \"将图像平面块与无纹理LoD城市模型匹配，通过PnP优化位姿\",\n    \"无需数据集特定训练或微调，在UAVD4L-LoDv2和Swiss-EPFLv2上达到SOTA\"\n  ],\n  \"relevance_score\": 3,\n  \"relevance_reason\": \"虽然涉及无人机导航和视觉定位，但属于几何视觉定位方法，不涉及视觉语言导航(VLN)任务。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"aerial localization\", \"visual localization\", \"drone navigation\", \"3D planes\", \"LoD city models\"]\n}",
+      "summarized_at": "2026-10-20T04:51:46.910627+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.26729",
+      "title": "PlanarCityLoc: Breaking Silhouette Ambiguity in LoD Aerial Localization via 3D Planes",
+      "authors": [
+        "Oussema Dhaouadi",
+        "Shao Jie Hu-Chen",
+        "Jakob Gollreiter",
+        "Samir Jusufi",
+        "Nikolas Rieger",
+        "Caroline Wendlandt",
+        "Christian Wender",
+        "Jingfeng Mao",
+        "Guangming Wang",
+        "Zuria Bauer",
+        "Marc Pollefeys",
+        "Daniel Cremers",
+        "Olaf Wysocki"
+      ],
+      "abstract": "Aerial visual localization is crucial for autonomous drone navigation in urban environments where GNSS signals are often degraded. Lightweight textureless Level-of-Detail (LoD) city models provide a geometric map alternative to textured assets. Existing silhouette-based methods rely on image-space alignment, which can leave different camera poses indistinguishable and favor incorrect poses when segmentation errors distort the building outlines. We present PlanarCityLoc, which moves beyond silhouette overlap by leveraging the planar geometry of building facades and roofs. Following geometry-aware initialization, we match image-side planar patches to LoD model planes and use the resulting 3D-to-2D correspondences to refine pose with Perspective-n-Point (PnP). The framework uses off-the-shelf geometry and segmentation models without dataset-specific training or fine-tuning. Experiments on UAVD4L-LoDv2 and Swiss-EPFLv2 achieve state-of-the-art localization recall among the evaluated off-the-shelf LoD-based methods. By grounding image-space alignment in 3D planes, PlanarCityLoc enables more accurate aerial localization with lightweight, textureless city maps.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-19T16:58:14+00:00",
+      "updated": "2026-10-19T16:58:14+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.26729v1",
+      "abs_url": "https://arxiv.org/abs/2610.26729",
+      "matched_keywords": [
+        "drone navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "针对视觉语言导航中历史信息冗余和利用不足的问题，提出无需训练的框架 ReInsVLN。该方法通过覆盖与指令感知的压缩机制构建紧凑视觉上下文，并利用遗忘启发式历史提醒机制引导导航器重新审视历史观测。在 R2R 数据集上显著提升成功率，同时有效降低延迟和内存消耗，并在真实机器人上验证了其适用性。",
+      "highlights": [
+        "提出 ReInsBench 诊断基准，通过受控续行试验评估导航历史利用率",
+        "设计无需训练的 ReInsVLN 框架，包含视觉上下文压缩与历史提醒机制",
+        "在 R2R Val-Unseen 上成功率提升达 8.48 个百分点，并降低预填充延迟与 KV 缓存内存"
+      ],
+      "relevance_score": 8,
+      "relevance_reason": "该论文直接研究视觉语言导航（VLN），提出了创新的无需训练的历史信息利用框架并在主流基准上取得显著提升，属于核心 VLN 研究。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "history utilization",
+        "training-free",
+        "visual compression",
+        "memory"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对视觉语言导航中历史信息冗余和利用不足的问题，提出无需训练的框架 ReInsVLN。该方法通过覆盖与指令感知的压缩机制构建紧凑视觉上下文，并利用遗忘启发式历史提醒机制引导导航器重新审视历史观测。在 R2R 数据集上显著提升成功率，同时有效降低延迟和内存消耗，并在真实机器人上验证了其适用性。\",\n  \"highlights\": [\n    \"提出 ReInsBench 诊断基准，通过受控续行试验评估导航历史利用率\",\n    \"设计无需训练的 ReInsVLN 框架，包含视觉上下文压缩与历史提醒机制\",\n    \"在 R2R Val-Unseen 上成功率提升达 8.48 个百分点，并降低预填充延迟与 KV 缓存内存\"\n  ],\n  \"relevance_score\": 8,\n  \"relevance_reason\": \"该论文直接研究视觉语言导航（VLN），提出了创新的无需训练的历史信息利用框架并在主流基准上取得显著提升，属于核心 VLN 研究。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"history utilization\", \"training-free\", \"visual compression\", \"memory\"]\n}",
+      "summarized_at": "2026-10-20T04:51:55.408108+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.26545",
+      "title": "ReInsVLN: Revisiting Historical Evidence for Training-Free Vision-and-Language Navigation",
+      "authors": [
+        "Siwei Cheng",
+        "Hao Wu",
+        "Zitong Qi",
+        "Xinming Zhang",
+        "Haoyu Xi",
+        "Peiran Yin",
+        "Haozhe Hu",
+        "Xudong Wang",
+        "Xiaoyu Shen",
+        "Wei Zhang"
+      ],
+      "abstract": "Vision-and-language navigation (VLN) relies on retaining and using relevant observations. Yet growing histories introduce redundancy, and retained information may remain underused. We introduce ReInsBench, a diagnostic benchmark that examines history utilization through controlled continuation trials. Its results show that history-review reinstruction can recover navigation failures using the existing task context. Motivated by this finding, we propose ReInsVLN, a training-free framework supporting memory construction and utilization in frozen navigators. Coverage- and Instruction-Aware Compression constructs compact visual context through temporal redundancy reduction, coverage-aware protection, and instruction-guided token selection. Forgetting-Inspired History Reminders guide navigators to revisit retained observations according to a predefined schedule, without additional model calls. On R2R Val-Unseen, ReInsVLN improves success rates by 8.48 and 3.37 percentage points over the native StreamVLN and InternVLA-N1, reaching 64.27% and 64.44%, respectively. Visual compression largely preserves navigation performance while reducing prefill latency and KV cache memory by up to 21.77% and 32.25%, respectively, on matched observation workloads. Real-world trials on humanoid and quadruped robots further support the applicability of ReInsVLN to sequential instruction following and ordinal navigation.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-19T15:08:06+00:00",
+      "updated": "2026-10-19T15:08:06+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.26545v1",
+      "abs_url": "https://arxiv.org/abs/2610.26545",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-26"
+    },
+    {
+      "summary_cn": "本文致力于研究开放世界环境下的通用具身智能体(EWA)。为此，作者发布了EmbodiedWorld-200K数据集，包含20万条跨越多种场景的具身导航与规划样本，并提供了从底层相机运动轨迹到高层语义指令的多层级标注。此外，提出了一种利用视频世界模型作为低成本环境代理，对智能体进行交互式强化学习后训练的新方案，显著提升了其在分布外场景的泛化能力。",
+      "highlights": [
+        "发布大规模具身导航-规划数据集EmbodiedWorld-200K，提供多层级标注与统一评估基准",
+        "提出以视频世界模型作为低成本环境代理，进行交互式强化学习后训练",
+        "通过离线预训练与RL后训练结合，显著提升智能体在开放世界及分布外场景的泛化能力"
+      ],
+      "relevance_score": 7,
+      "relevance_reason": "该工作聚焦于具身导航与规划，提供大规模数据集和基于世界模型的训练框架，与VLN研究核心目标一致且具有方法论贡献。",
+      "is_uav_vln": false,
+      "tags": [
+        "VLN",
+        "Embodied AI",
+        "World Model",
+        "Reinforcement Learning",
+        "Dataset"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"本文致力于研究开放世界环境下的通用具身智能体(EWA)。为此，作者发布了EmbodiedWorld-200K数据集，包含20万条跨越多种场景的具身导航与规划样本，并提供了从底层相机运动轨迹到高层语义指令的多层级标注。此外，提出了一种利用视频世界模型作为低成本环境代理，对智能体进行交互式强化学习后训练的新方案，显著提升了其在分布外场景的泛化能力。\",\n  \"highlights\": [\n    \"发布大规模具身导航-规划数据集EmbodiedWorld-200K，提供多层级标注与统一评估基准\",\n    \"提出以视频世界模型作为低成本环境代理，进行交互式强化学习后训练\",\n    \"通过离线预训练与RL后训练结合，显著提升智能体在开放世界及分布外场景的泛化能力\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"该工作聚焦于具身导航与规划，提供大规模数据集和基于世界模型的训练框架，与VLN研究核心目标一致且具有方法论贡献。\",\n  \"is_uav_vln\": false,\n  \"tags\": [\"VLN\", \"Embodied AI\", \"World Model\", \"Reinforcement Learning\", \"Dataset\"]\n}",
+      "summarized_at": "2026-10-20T04:52:14.569813+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.25959",
+      "title": "EmbodiedWorld-200K: Toward Embodied World Agents via Embodied-Planning Dataset and Interactive World Models",
+      "authors": [
+        "X. Feng",
+        "J. Tang",
+        "Z. Lin",
+        "L. Chen",
+        "S. Shao",
+        "Q. Lu",
+        "K. Huang"
+      ],
+      "abstract": "Building embodied agents that can perceive, reason, and act across diverse 3D worlds is a central research direction toward artificial general intelligence. Yet most existing work remains confined to specific tasks in a single scene and transfers poorly to new environments, leaving general embodied agents for open-world settings under-explored. We refer to such agents as Embodied World Agents (EWAs), whose defining property is the ability to understand diverse visual environments and execute general actions in open-world conditions. To advance EWA research, we study open-world embodied navigation-planning and release EmbodiedWorld-200K, a large-scale dataset of over 200K samples spanning diverse scenes. Each example is equipped with multi-level annotations, ranging from low-level camera-motion trajectories to high-level semantic instructions. The dataset also provides unified evaluation splits and task-specific metrics, supporting offline pretraining and fair evaluation of EWAs. Beyond offline supervision, a defining characteristic of an EWA is its interaction with the environment; training solely on offline data is therefore insufficient, especially for generalizing to scenes not covered in the training distribution. Building dedicated real interactive environments, however, is often prohibitively expensive. To address this, we propose a novel training scheme that employs a video world model as a low-cost environment proxy and performs interactive reinforcement-learning (RL) post-training of the EWA within it. Empirically, pretraining on EmbodiedWorld-200K substantially improves the open-world embodied planning ability of the EWA, and further RL post-training inside a world model yields clear gains on out-of-distribution scenes. The dataset, baseline checkpoints, and training and evaluation code are available at https://xiaokunfeng.github.io/EmbodiedWorld-200K/.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-10-19T07:52:01+00:00",
+      "updated": "2026-10-19T07:52:01+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.25959v1",
+      "abs_url": "https://arxiv.org/abs/2610.25959",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-26"
+    }
+  ],
+  "summarized_count": 6,
+  "skipped_no_summary": 0
+}
