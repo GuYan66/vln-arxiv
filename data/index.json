@@ -1286,7 +1286,61 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-26.json"
+    },
+    "2610.35576": {
+      "arxiv_id": "2610.35576",
+      "title": "Preemptive Instruction Following with Resumption",
+      "date": "2026-10-27",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-27.json"
+    },
+    "2610.35066": {
+      "arxiv_id": "2610.35066",
+      "title": "MemVLN: Streaming Episodic Memory for Vision-Language Navigation",
+      "date": "2026-10-27",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-27.json"
+    },
+    "2610.34286": {
+      "arxiv_id": "2610.34286",
+      "title": "ScheNav: Schematic-Guided Object Goal Navigation",
+      "date": "2026-10-27",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-27.json"
+    },
+    "2610.34054": {
+      "arxiv_id": "2610.34054",
+      "title": "Extended LASMP: Language Aided Subset Sampling Based Motion Planner for Drone Navigation",
+      "date": "2026-10-27",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-27.json"
+    },
+    "2610.34028": {
+      "arxiv_id": "2610.34028",
+      "title": "Explaining Navigation Decisions: Stage-Aware Visual Attribution for Vision-Language Navigation",
+      "date": "2026-10-27",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-10-27.json"
+    },
+    "2610.33546": {
+      "arxiv_id": "2610.33546",
+      "title": "MOON: Learning When to Forget and How to Move On in Vision-and-Language Navigation",
+      "date": "2026-10-27",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-27.json"
     }
   },
-  "last_updated": "2026-10-26T04:47:26.931257+00:00"
+  "last_updated": "2026-10-27T05:08:30.557800+00:00"
 }
