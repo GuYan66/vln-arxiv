@@ -1,0 +1,430 @@
+{
+  "date": "2026-10-28",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-27T05:08:06.809523+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.35576",
+      "title": "Preemptive Instruction Following with Resumption",
+      "authors": [
+        "Zerun Liu",
+        "Lechao Cheng",
+        "Yimin Liu",
+        "Shengeng Tang",
+        "Yaxiong Wang",
+        "Zhun Zhong"
+      ],
+      "abstract": "Long-horizon embodied navigation may be interrupted by a higher-priority instruction before the current task sequence is complete. The agent must finish its current atomic task, execute the inserted task, and resume the remaining sequence from the updated environment state, where its viewpoint and available navigation candidates may have changed. To evaluate this capability, we introduce PIFR benchmark, a novel task for runtime task preemption and resumption in embodied navigation. PIFR includes single, repeated, and nested interruption settings,with stage-specific metrics for inserted-task completion, resumption of the original task, and completion of the full sequence. Evaluations show that recovery performance varies across interruption conditions, while aggregate success can obscure differences in interruption handling and resumption. We further propose a lightweight candidate-ranking baseline to improve target re-grounding after interruption. Together, PIFR and the baseline provide a systematic framework for studying interruption handling and task recovery in long-horizon embodied navigation.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-26T15:10:26+00:00",
+      "updated": "2026-10-26T15:10:26+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.35576v1",
+      "abs_url": "https://arxiv.org/abs/2610.35576",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-27T05:08:11.146729+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.35066",
+      "title": "MemVLN: Streaming Episodic Memory for Vision-Language Navigation",
+      "authors": [
+        "Yan Wang",
+        "Jiangyong Huang",
+        "Siyuan Huang",
+        "Baoxiong Jia"
+      ],
+      "abstract": "Vision-language navigation (VLN) requires an embodied agent to follow language instructions through 3D environments. Maintaining persistent episodic memory remains a challenge for VLM-based streaming agents in long-horizon navigation. We present MEMVLN, a streaming episodic memory framework that maintains a bounded bank of compressed perceptual features annotated with timesteps and action-derived relative poses, and produces compact memory tokens via cross-attention. We pair the proposed memory with a frozen pretrained geometry encoder. To learn the memory module, we design a masking-based trajectory summarization task with multi-granularity sub-trajectory decomposition, encouraging route reconstruction exclusively from episodic memory. Under navigation training restricted to the official R2R/RxR trajectories, MEMVLN achieves state-of-the-art performance on most reported metrics on standard VLN-CE benchmarks. Long-horizon analyses further characterize when episodic memory is useful. For physical evaluation, we collect 30 instruction-conditioned episodes in one physical scene, use 24 as demonstrations for post-training, and hold out six for testing. On the held-out episodes, MEMVLN improves success over the VLM baseline from 17% to 40%, and post-training further raises it to 47%.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-26T09:13:13+00:00",
+      "updated": "2026-10-27T03:47:53+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.35066v2",
+      "abs_url": "https://arxiv.org/abs/2610.35066",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-27T05:08:16.022815+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.34286",
+      "title": "ScheNav: Schematic-Guided Object Goal Navigation",
+      "authors": [
+        "Guichen Huang",
+        "Chenchen Jing",
+        "Che Sun",
+        "Yuwei Wu",
+        "Yunde Jia"
+      ],
+      "abstract": "Object goal navigation requires an embodied agent to locate and reach target objects in complex environments. Humans often rely on low-cost yet informative schematic maps, such as rough sketches or directional annotations. We develop a workflow for schematic-guided embodied navigation with two components: a training-data generation pipeline and ScheNav, a closed-loop navigation framework. Our lightweight data-generation pipeline turns 2D floorplans into navigation training environments, yielding Furnished-RPLAN, a dataset of over 33k furnished layouts with paired navigation episodes and noise-controllable schematic maps. ScheNav turns rough schematic guidance into exploration and stopping decisions by using SchemaField, a learned spatial module that fuses the guidance with accumulated observations and predicts spatial value fields. The framework updates these fields as exploration proceeds, with trajectory-based training and a cross-frame consistency objective supporting coherent guidance across changing viewpoints. ScheNav learns to use schematic guidance entirely from simulated floorplans and transfers this ability to unseen embodied environments. Experiments show improved navigation success and path efficiency across schematic maps, goal ellipses, and pointed directions, together with tolerance to the tested schematic perturbations and omissions. Together, these results demonstrate that rough schematic guidance offers a practical way to improve embodied navigation.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-25T13:37:13+00:00",
+      "updated": "2026-10-25T13:37:13+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.34286v1",
+      "abs_url": "https://arxiv.org/abs/2610.34286",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-27T05:08:20.301979+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.34054",
+      "title": "Extended LASMP: Language Aided Subset Sampling Based Motion Planner for Drone Navigation",
+      "authors": [
+        "Saswati Bhattacharjee",
+        "Anirban Sinha",
+        "Mukulika Ghosh",
+        "Chinwe Ekenna"
+      ],
+      "abstract": "This paper proposes a command-aligned sampling distribution that incorporates navigation commands directly into the exploration process to improve the efficiency of sampling-based motion planning for quadcopters in three-dimensional environments. Inspired by the Language-Aided Subset Sampling Motion Planner, this paper extends command-aware subset sampling to aerial systems. Subset sampling is generalized to command-aligned regions, enabling structured 3D exploration while preserving probabilistic completeness. Natural language instructions are grounded into yaw-conditioned and altitude-aware geometric constraints using a prompt-based large language model for entity extraction and instruction validation. Extensive simulations in complex environments demonstrate that the proposed method generates collision-free, consistent trajectories while significantly reducing sampling effort compared to uniform RRT-based planners.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-10-25T04:30:15+00:00",
+      "updated": "2026-10-25T04:30:15+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.34054v1",
+      "abs_url": "https://arxiv.org/abs/2610.34054",
+      "matched_keywords": [
+        "Drone Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-27T05:08:25.447647+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.34028",
+      "title": "Explaining Navigation Decisions: Stage-Aware Visual Attribution for Vision-Language Navigation",
+      "authors": [
+        "Yiyuan Yao",
+        "Xinpeng Ding",
+        "Minglei Chen",
+        "Fei Gao",
+        "Lihuo He",
+        "Jie Yuan",
+        "Aijun Li",
+        "Nannan Wang",
+        "Xinbo Gao"
+      ],
+      "abstract": "As Vision-Language Models (VLMs) increasingly enable robots to follow language instructions, understanding their navigation decisions becomes important for reliable deployment. Existing explainability methods overlook a key challenge in Vision-Language Navigation (VLN): evidence for the current action may be distributed across historical and current observations and associated with different instruction stages. We identify instruction-stage insensitivity, where existing methods produce similar explanations despite changes across different navigation stages. To address this issue, we propose a stage-aware attribution framework for VLN. We first construct action-conditioned temporal instruction--visual attributions across observations. These attributions are projected into instruction space to estimate stage associations, which guide the aggregation of relevant historical evidence for refining the current explanation. An instruction-guided spatial filter further suppresses isolated responses while preserving compact, instruction-relevant regions. Experiments across multiple VLN policies and benchmarks show improved attribution quality over existing methods. We further demonstrate that our method acts as a diagnostic tool for analyzing failure cases, and validate its applicability to real-world navigation on a Unitree G1 robot.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-25T03:33:48+00:00",
+      "updated": "2026-10-25T03:33:48+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.34028v1",
+      "abs_url": "https://arxiv.org/abs/2610.34028",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-27T05:08:30.554330+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.33546",
+      "title": "MOON: Learning When to Forget and How to Move On in Vision-and-Language Navigation",
+      "authors": [
+        "Jingmeng Zhou",
+        "Seson Sun",
+        "Binyao Xu",
+        "Lingming Zhang",
+        "Hanshi Wang",
+        "Fudong Ge",
+        "Weiming Hu",
+        "Jin Gao",
+        "Zhipeng Zhang"
+      ],
+      "abstract": "Recent vision-and-language navigation (VLN) policies act on their visual history, and an incorrect action can take them off the instructed route. Paired interventions on four VLN policies show that clearing the history doubles pooled success at the onset of a deviation but lowers it on route, while later in a deviation, removing only the off-route frames helps much less. After a deviation, the retained history keeps the policy from turning where a turn is needed, which we call behavioral inertia. We propose MOON, a framework that equips a frozen VLN policy with two lightweight modules, adding less than 1% of its parameters. A deviation judge decides when to forget, raising an alarm that clears the history when it predicts that the agent is off route. A recovery policy, trained with GRPO from alarm states, learns how to move on, turning more of the successes found only by sampling into a single greedy rollout. Experiments on R2R-CE and RxR-CE show that MOON reaches the highest R2R-CE success rate among the compared methods and raises the success rate of its frozen base by 5.2 and 6.0 points, and an ablation with a random trigger indicates that this gain depends on when the history is cleared. Without retraining, MOON also improves zero-shot object-goal navigation on HM3D-OVON. Together, these results suggest that deviation recovery depends on knowing when to forget, not only how to act. Code is available at https://github.com/AutoLab-SAI-SJTU/MOON.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-24T08:50:29+00:00",
+      "updated": "2026-10-24T08:50:29+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.33546v1",
+      "abs_url": "https://arxiv.org/abs/2610.33546",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-26T04:47:22.107417+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.32697",
+      "title": "SP-Guide: Enhancing Aerial Vision-Language Navigation with Spatial Priors",
+      "authors": [
+        "Haoxiang Tang",
+        "Dong Zhou",
+        "Shen Tan",
+        "Minxuan Jiang",
+        "Xitong Li"
+      ],
+      "abstract": "Aerial vision-language navigation (AVLN) requires a UAV to reach a language-described target from partial egocentric observations while reasoning over large outdoor scenes. Existing approaches typically fuse view-centered RGB observations and globally anchored history maps as generic visual embeddings, leaving cross-modal spatial alignment to be learned from sparse navigation supervision. We present SP-Guide, a transformer- based goal-prediction framework that addresses this weakness of alignment through a Spatial Prior Cross-Modal Encoder, an Instruction Enhanced Decoder, and a Goal Convergence Filter for terminal target refinement. Experiments implemented on the CityNav benchmark show that SP-Guide improves success rate over the representative baselines, with the largest gains on unseen environments. These results indicate that physically grounded spatial priors provide an effective inductive bias for robust AVLN.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-10-23T14:21:58+00:00",
+      "updated": "2026-10-23T14:21:58+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.32697v1",
+      "abs_url": "https://arxiv.org/abs/2610.32697",
+      "matched_keywords": [
+        "Aerial Vision-Language Navigation",
+        "CityNav"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-26T04:47:26.927507+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.31762",
+      "title": "See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space",
+      "authors": [
+        "Jiawei Chen",
+        "Yinxi Wang",
+        "Zihan Yang",
+        "Meijun Gao",
+        "Yaowei Liu",
+        "Shuming Zhang",
+        "Zecheng Li",
+        "Xiangju Mi",
+        "Yuxuan Liu",
+        "Runzhong Huang",
+        "Tianlin Li",
+        "Xun Zhang",
+        "Zhengyang Wang",
+        "Xu Miao",
+        "Tong Yang"
+      ],
+      "abstract": "What visual representation should a navigation policy act on? Navigation policies built on vision foundation models largely leave representation design to the encoders' pretraining objectives. We present RepresentNav, a navigation foundation model built on a self-constructed representation space: a visual representation constructed by the policy's own objectives from vision foundation models. RepresentNav builds this space with Representation Residuals, a compact three-layer transformer that attends over features spanning the full depth of multiple complementary vision foundation models, so that the policy learns to see what it needs for navigation. In the same space it dreams what it wants: before every action a latent chain-of-thought predicts the representation of the scene a moment ahead. The dream is trained end-to-end with the policy as a joint-embedding predictive architecture (JEPA), with a next-representation prediction loss and a regularizer on its targets. RepresentNav sets a new state of the art on VLNVerse, VLN-CE R2R, EVT-Bench, and two point-goal benchmarks, and its gains carry over to a physical robot amid clutter and moving people. On VLNVerse fine-grained, RepresentNav achieves 83.80% success, outperforming the previous state of the art by 20.05 percentage points, and on EVT-Bench distracted tracking it reaches 85.5% with a single camera (+10.1). With the same encoders, the self-constructed space clearly outperforms concatenating their outputs and learns to weight their layers unevenly, and a dream in it cuts collisions by a quarter. A single dreamed latent decodes into the depth, semantics, and 3D occupancy of the scene a moment ahead, more accurately than pretrained encoders applied to the real future frame, although occupancy is never supervised, and the rollout tracks the robot's own motion over the next second: the dream emerges as a compact latent world model.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-10-22T18:00:39+00:00",
+      "updated": "2026-10-22T18:00:39+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.31762v1",
+      "abs_url": "https://arxiv.org/abs/2610.31762",
+      "matched_keywords": [
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-24T04:37:02.364159+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.30643",
+      "title": "Asking Less, Adapting Better: Feedback-Efficient Test-Time Adaptation for Vision-and-Language Navigation",
+      "authors": [
+        "Zixu Wang",
+        "Huaquan Zhang",
+        "Shoukai Xu",
+        "Jinwu Hu",
+        "Zhiquan Wen",
+        "Mingkui Tan"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) requires agents to follow instructions and navigate to target locations. However, current VLN agents often suffer severe performance degradation in unseen environments due to distribution shifts. Test-Time Adaptation (TTA) offers a promising paradigm to bridge this gap, yet existing methods that rely on unsupervised entropy minimization can propagate errors through the trajectory, causing cascading failures in navigation. Recent methods mitigate this by incorporating human feedback, but they apply trajectory-level supervision uniformly across all steps without localizing the actions is truly informative, leading to inefficient feedback utilization and mismatched optimization granularity. To address these limitations, we propose FETA, a Feedback-Efficient Test-Time Adaptation method that improves both feedback efficiency and optimization reliability. To reduce unnecessary human interventions, we introduce a hierarchical sample selection strategy to localize informative samples. Specifically, we first filter trajectories whose normalized policy entropy exhibits large fluctuations. Within each selected trajectory, we further select the critical action via an entropy-gradient saliency criterion and query a single binary feedback on its correctness. A discrepancy-aware entropy optimization objective then updates the policy only at the queried step, with adaptive scaling that assigns larger relative weights to samples with greater prediction-feedback discrepancy. Extensive experiments across multiple benchmarks demonstrate that FETA achieves state-of-the-art performance with fewer human interventions, while remaining robust under noisy feedback and continual adaptation settings.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-10-22T03:05:25+00:00",
+      "updated": "2026-10-22T03:05:25+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.30643v1",
+      "abs_url": "https://arxiv.org/abs/2610.30643",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-10-24T04:37:06.600404+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2610.30609",
+      "title": "KinoUAV: A Benchmark for Safe and Stable UAV Vision-Language Navigation with Kinodynamic Modeling",
+      "authors": [
+        "Chenyao Yang",
+        "Peijin Wang",
+        "Yingchao Feng",
+        "Wenhui Diao"
+      ],
+      "abstract": "Unmanned aerial vehicles (UAVs) have recently emerged as important remote sensing platforms, and UAV navigation has shown great potential in remote sensing applications. However, existing methods do not explicitly incorporate kinodynamic modeling or safety distances into trajectory generation, resulting in high absolute yaw rates, frequent collisions, and low navigation success rates, which limit safety and motion stability. To address this challenge, we introduce KinoUAV, a kinodynamic benchmark comprising a dataset and KinoUAV-Agent. First, we develop a hierarchical kinodynamic trajectory generation pipeline that drives UAV through acceleration actions. It uses waypoint chains from global planning and generates trajectories segment by segment under velocity, acceleration, and jerk constraints, reducing oscillations and improving trajectory stability. Furthermore, we introduce directional free-space distance (DFD) labels into the constructed dataset to describe the available clearance for safe motion decisions. The proposed KinoUAV-Agent predicts DFDs and uses them to generate safe actions, decoupling perception from action decision-making. This design enables autonomous obstacle avoidance and improves navigation safety. The benchmark incorporates the proposed Cruise-Seek task, in which the UAV first enters the target region and then searches for the target, reducing the difficulty of target search and improving navigation success. Experiments on KinoUAV show that KinoUAV-Agent outperforms existing methods, achieving the highest success rate while maintaining lower absolute yaw rates and collision rates. These results demonstrate the effectiveness of kinodynamic modeling for safe and stable UAV navigation.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-10-22T02:16:48+00:00",
+      "updated": "2026-10-22T02:16:48+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.30609v1",
+      "abs_url": "https://arxiv.org/abs/2610.30609",
+      "matched_keywords": [
+        "UAV Vision-Language Navigation",
+        "UAV navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-28"
+    },
+    {
+      "summary_cn": "针对航空导航缺乏密集飞行演示和广泛环境覆盖的问题，本文提出了AirPlayground基准。该基准构建了94个基于3D高斯溅射(3DGS)的光照逼真环境，并通过自适应管线自动收集了94K飞行演示数据。研究在可见与不可见环境中对四种策略范式的七个基线进行了评估，并分析了预测误差、执行协议和场景交互对闭环性能的影响。",
+      "highlights": [
+        "构建了94个包含对齐碰撞几何的光照逼真3DGS环境，覆盖室内、城市室外和植被场景",
+        "开发了场景自适应管线自动收集专家飞行数据，生成94K演示和4650万同步观测-状态-动作样本",
+        "支持多种策略范式训练与统一协议评估，并揭示了预测误差与闭环结果的关系"
+      ],
+      "relevance_score": 7,
+      "relevance_reason": "该论文聚焦于无人机航空导航基准构建，属于UAV-VLN核心范畴，提供了大规模数据集和统一评估框架，对无人机视觉语言导航研究具有重要参考价值。",
+      "is_uav_vln": true,
+      "tags": [
+        "Aerial Navigation",
+        "3D Gaussian Splatting",
+        "Benchmark",
+        "UAV",
+        "Imitation Learning"
+      ],
+      "raw_model_output": "{\n  \"summary_cn\": \"针对航空导航缺乏密集飞行演示和广泛环境覆盖的问题，本文提出了AirPlayground基准。该基准构建了94个基于3D高斯溅射(3DGS)的光照逼真环境，并通过自适应管线自动收集了94K飞行演示数据。研究在可见与不可见环境中对四种策略范式的七个基线进行了评估，并分析了预测误差、执行协议和场景交互对闭环性能的影响。\",\n  \"highlights\": [\n    \"构建了94个包含对齐碰撞几何的光照逼真3DGS环境，覆盖室内、城市室外和植被场景\",\n    \"开发了场景自适应管线自动收集专家飞行数据，生成94K演示和4650万同步观测-状态-动作样本\",\n    \"支持多种策略范式训练与统一协议评估，并揭示了预测误差与闭环结果的关系\"\n  ],\n  \"relevance_score\": 7,\n  \"relevance_reason\": \"该论文聚焦于无人机航空导航基准构建，属于UAV-VLN核心范畴，提供了大规模数据集和统一评估框架，对无人机视觉语言导航研究具有重要参考价值。\",\n  \"is_uav_vln\": true,\n  \"tags\": [\"Aerial Navigation\", \"3D Gaussian Splatting\", \"Benchmark\", \"UAV\", \"Imitation Learning\"]\n}",
+      "summarized_at": "2026-10-22T04:46:03.656152+00:00",
+      "summarize_error": null,
+      "arxiv_id": "2610.29699",
+      "title": "AirPlayground: Benchmarking Aerial Navigation across Diverse Reconstructed Environments",
+      "authors": [
+        "Rangya Zhang",
+        "Yujing Shang",
+        "Zhuoyuan Yu",
+        "Mingsheng Li",
+        "Qingsong Yan",
+        "Chao Yan",
+        "Yuhang Zhang",
+        "Mir Feroskhan"
+      ],
+      "abstract": "Large-scale aerial resources provide a foundation for learning navigation across diverse environments. However, existing resources remain limited in providing (1) densely sampled flight demonstrations for learning different policy formulations and (2) broad environment coverage for standardized closed-loop evaluation. To address these limitations, we introduce AirPlayground, a unified benchmark for training and evaluating aerial navigation policies across diverse environments. We first construct 94 photorealistic 3D Gaussian Splatting (3DGS) environments spanning indoor, urban outdoor, and vegetation settings, with aligned collision geometry. Building on these environments, we develop a scene-adaptive pipeline for automated expert flight collection, yielding 94K demonstrations and 46.5M synchronized observation-state-action samples at 50 Hz. We further provide an extensible API that supports training different policy formulations on this shared corpus and evaluating them under unified protocols in the corresponding environments. We benchmark seven baselines spanning four policy paradigms across three navigation settings in seen and unseen environments, and further examine scaling behavior with ACT. Scaling ACT's training corpus from 5 to 70 scenes raises median success rates on seen and unseen environments from 30.6% and 16.8% to 41.2% and 29.4%, respectively. Through this shared training and evaluation framework, AirPlayground supports analysis of how offline prediction errors relate to closed-loop outcomes. Our analyses highlight the roles of prediction errors, execution protocols, and scene interactions in closed-loop performance.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-10-21T13:13:00+00:00",
+      "updated": "2026-10-21T13:13:00+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2610.29699v1",
+      "abs_url": "https://arxiv.org/abs/2610.29699",
+      "matched_keywords": [
+        "Aerial Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-10-28"
+    }
+  ],
+  "summarized_count": 1,
+  "skipped_no_summary": 0
+}
