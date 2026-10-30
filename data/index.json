@@ -1340,7 +1340,34 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-27.json"
+    },
+    "2610.39446": {
+      "arxiv_id": "2610.39446",
+      "title": "Ask to Evolve: A Unified Harness for Lifelong Embodied Navigation with Hybrid Action Space and Persistent Memory",
+      "date": "2026-10-30",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-30.json"
+    },
+    "2610.38318": {
+      "arxiv_id": "2610.38318",
+      "title": "What Should a Navigator Remember? Spatiotemporal Memory for Zero-Shot Vision-Language Navigation",
+      "date": "2026-10-30",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-30.json"
+    },
+    "2610.38248": {
+      "arxiv_id": "2610.38248",
+      "title": "MATCH: Execution-Aware Hierarchical Reinforcement Learning for Vision-and-Language Navigation in Continuous Environment",
+      "date": "2026-10-30",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-10-30.json"
     }
   },
-  "last_updated": "2026-10-29T05:48:32.299323+00:00"
+  "last_updated": "2026-10-30T05:49:41.559119+00:00"
 }
