@@ -1367,7 +1367,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-10-30.json"
+    },
+    "2610.41446": {
+      "arxiv_id": "2610.41446",
+      "title": "Beyond Trial-and-Error: A Geospatial-Guided Active Reasoning Framework for Robust Aerial Vision-and-Language Navigation",
+      "date": "2026-11-02",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-02.json"
     }
   },
-  "last_updated": "2026-11-01T06:04:29.926771+00:00"
+  "last_updated": "2026-11-02T06:02:19.085483+00:00"
 }
