@@ -1376,7 +1376,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-11-02.json"
+    },
+    "2611.05129": {
+      "arxiv_id": "2611.05129",
+      "title": "WayTrace: A Map-to-Language-to-Trace Hierarchy for Embodied Urban Navigation",
+      "date": "2026-11-04",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-04.json"
+    },
+    "2611.04972": {
+      "arxiv_id": "2611.04972",
+      "title": "Caging Vision-Language Navigation for Legged Robots via Barrier-Certified Safety Architecture",
+      "date": "2026-11-04",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-04.json"
     }
   },
-  "last_updated": "2026-11-03T06:47:12.363598+00:00"
+  "last_updated": "2026-11-04T06:22:12.473183+00:00"
 }
