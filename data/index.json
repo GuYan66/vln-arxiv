@@ -1394,7 +1394,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-11-04.json"
+    },
+    "2611.05738": {
+      "arxiv_id": "2611.05738",
+      "title": "OdorSpaces: Visual-Olfactory Embodied Navigation in 3D Environments",
+      "date": "2026-11-05",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-05.json"
     }
   },
-  "last_updated": "2026-11-04T06:22:12.473183+00:00"
+  "last_updated": "2026-11-05T06:46:17.062794+00:00"
 }
