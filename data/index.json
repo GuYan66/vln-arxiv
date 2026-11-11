@@ -1430,7 +1430,16 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-11-10.json"
+    },
+    "2611.13028": {
+      "arxiv_id": "2611.13028",
+      "title": "GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning",
+      "date": "2026-11-11",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-11.json"
     }
   },
-  "last_updated": "2026-11-10T07:18:14.501543+00:00"
+  "last_updated": "2026-11-11T06:20:36.533853+00:00"
 }

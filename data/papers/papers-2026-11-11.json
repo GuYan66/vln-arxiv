@@ -1,0 +1,174 @@
+{
+  "date": "2026-11-11",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-10T07:18:04.013394+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.12087",
+      "title": "Compass 1: Towards Open-World and Persistent Embodied Navigation from Monocular RGB Videos",
+      "authors": [
+        "Hai Zhang",
+        "Siqi Liang",
+        "Yanjun Guo",
+        "Shoufeng Zhang",
+        "Yunhao Wang",
+        "Hangyu Du",
+        "Haoguang Mai",
+        "Hongchen Li",
+        "Jiazhi Yang",
+        "Jialong Zeng",
+        "Yu Hu",
+        "Chen Chen",
+        "Gangcheng Jiang",
+        "Zishun Zhuo",
+        "Lirui Zhao",
+        "Zhigang Li",
+        "Yu Qiao",
+        "Zhenjie Yang",
+        "Fu Zhang",
+        "Hongyang Li"
+      ],
+      "abstract": "Embodied navigation requires agents to achieve persistent spatial awareness and long-horizon execution stability in open-world environments. However, existing navigation architectures struggle to sustain both capabilities, remaining effective only over a handful of recent frames. We present Compass 1, the first embodied navigation foundation model to unify language understanding and video generation while enabling memory backtracking through nearly 2mins of visual history. Without altering the underlying architecture, we introduce History Representation, which integrates sparse visual keyframes with an explicit History Representation Map to preserve long-term spatiotemporal context. To effectively leverage this history, we further introduce History Utilization, a structured VQA supervision protocol comprising three categories: task-stage grounding, exploration consistency, and spatiotemporal target retrieval, enabling map-grounded reasoning and stable persistent long-horizon navigation. To fuel this system, we establish a complete annotation pipeline for monocular RGB videos and open-source a massive dataset featuring over 500 hours of high-quality real-world interactions and over 2,000 hours of annotated web videos. Trained mainly on the distribution of 1m height camera, Compass 1 generalizes seamlessly across diverse embodiments and scenarios, ranging from indoor environments to pedestrian-dense streets, spanning wheeled robot at 0.35m, quadruped dog at 0.5m, humanoid at 0.85m, and aerial drone at 1.5m. Compass 1achieves a dominant overall success rate of 79.4% across open-world evaluations, compared to 17.8% for the strongest baseline. It demonstrates exceptional zero-shot execution exceeding 90% on foundational tasks, a 250% boost in exploration, and an unparalleled leap from 0% to 58% in challenging persistent history backtracking.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-11-09T09:04:48+00:00",
+      "updated": "2026-11-09T09:04:48+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.12087v1",
+      "abs_url": "https://arxiv.org/abs/2611.12087",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-11"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-11T06:20:36.531134+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.13028",
+      "title": "GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning",
+      "authors": [
+        "Jiajun Chen",
+        "Shicheng Fang",
+        "Jiahao Lu",
+        "Yuxin Wang",
+        "Xipeng Qiu"
+      ],
+      "abstract": "AAA games offer a rich testbed for evaluating agent perception, reasoning, and control. However, evaluating whether agents can complete tasks in AAA games is challenging and often human-annotated because task outcomes are often difficult to verify automatically, let alone applying it for Reinforcement Learning (RL). We introduce GTAGym, an environment and framework for evaluation and RL on GTA V tasks. Its evaluation benchmark, GTAVBench, derived from GTA V main-story missions, contains 103 online tasks reconstructed across nine task families, alongside 47 image-based shooting and sniping tasks using GTA V imagery. A web server provides access to the online environment and evaluation interface, supporting parallel testing through screenshots and keyboard-mouse actions with automatic engine-state outcome checks. We evaluate six frontier LLMs on GTAVBench with textual task instructions and on its GTAVBench-AGI branch, where instructions appear only in the first screenshot and a harness automatically compresses interaction history. The best configuration achieves 70.9% overall accuracy in GTAVBench-AGI, yet aerial navigation, evasion and interception remain difficult. GTAGym also provides a scalable generator that samples task parameters within user-specified ranges and option sets under fixed templates, creating batches of 3D and image-based shooting environments for RL with automatic reward and termination signals. LoRA RL of Qwen3.8-27B on generated on-foot navigation tasks improves the in-domain performance and transfers to out-of-domain task categories, and native GTA V tasks from 15% to 23%.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-11-09T08:59:36+00:00",
+      "updated": "2026-11-09T08:59:36+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.13028v1",
+      "abs_url": "https://arxiv.org/abs/2611.13028",
+      "matched_keywords": [
+        "aerial navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-11"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-10T07:18:09.352459+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.11510",
+      "title": "Reaching Is Not Finding: Map-Anchored Visual Prompting for the Last Mile of Aerial Vision-Language Navigation",
+      "authors": [
+        "Ningbo Li",
+        "Kebin Liu",
+        "Jingcan Chen",
+        "Weichen Zhang",
+        "Rong Ding",
+        "Yunhao Liu",
+        "Mo Li"
+      ],
+      "abstract": "Aerial vision-language navigation (VLN) asks a drone to find an object described in natural language. The description usually locates the object relative to named landmarks, such as streets and buildings. We observe that current navigators often bring the drone close to the target and then stop at the wrong place: they reach the target without finding it. This gap is shared by navigators of very different designs, from imitation learners to a fine-tuned 7B vision-language model. A simple test reveals the cause. When we replace the target object in the instruction with another one next to the same landmarks, no navigator goes to it, and most stop where they did before. Navigators learn to reach the landmarks, not to identify the described object. We therefore propose MAP-VP, a plug-and-play module for the last step. After any navigator stops, MAP-VP draws the landmarks named in the instruction onto the drone's current view, using the landmark outlines that the benchmark provides on a map. A fine-tuned 4B vision-language model then locates the target relative to these landmarks. The training data are generated automatically from the benchmark annotations. Neither drawing the landmarks nor fine-tuning helps much alone, but together they are highly effective. Without retraining any navigator, MAP-VP significantly improves all six navigators we test on CityNav. It roughly doubles the success rate of the two strongest trained navigators, raising HETT from 25.9% to 54.6% and FlightGPT from 24.2% to 48.9%, whereas CityNav's official detector-based last step adds less than two points to HETT.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-11-08T17:33:37+00:00",
+      "updated": "2026-11-08T17:33:37+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.11510v1",
+      "abs_url": "https://arxiv.org/abs/2611.11510",
+      "matched_keywords": [
+        "Aerial Vision-Language Navigation",
+        "VLN",
+        "CityNav"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-11"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-10T07:18:14.497207+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.10366",
+      "title": "CPNav: Calibrated Vision-Language Navigation for Object-Goal Search in Unseen Environments",
+      "authors": [
+        "Qizhao Chen",
+        "Yuanhong Zeng",
+        "Shoh Nishino",
+        "Anushri Dixit"
+      ],
+      "abstract": "Directing a robot to locate a target object in unseen environments remains a central challenge in embodied AI. Vision-Language Model (VLM)-based methods provide rich semantic reasoning but often produce uncalibrated and overconfident action decisions. We introduce CPNav, a navigation framework that combines collision-aware planning with statistically calibrated VLM action scoring for map-free object-goal navigation. From RGB-D input, CPNav constructs a navigability map, generates collision-free motion primitives, and queries two VLMs for goal detection and action scoring. The resulting scores are calibrated offline via conformal prediction (CP) using oracle actions obtained through a tree-structured exploration procedure with backtracking, providing finite-sample guarantees at a user-specified risk level. The CP layer is model-agnostic and can wrap any VLM policy. Online, calibrated VLM scores guide action selection, while a tree-structured exploration history records alternative actions and allows backtracking. We evaluate CPNav in both simulation and real-world hardware settings. In AI Habitat simulation, compared with the uncalibrated baseline method, CPNav achieves relative SR and SPL improvements of 6.2% and 11.4% on HM3D v0.2, and 12.4% and 8.8% on MP3D, respectively. In real-world deployment on a modified Hiwonder MentorPi robot, the corresponding improvements in SR and SPL are 24.9% and 15.2%, respectively. Code is available at https://github.com/practice-lab-ucla/CPnav.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-11-07T01:05:40+00:00",
+      "updated": "2026-11-07T01:05:40+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.10366v1",
+      "abs_url": "https://arxiv.org/abs/2611.10366",
+      "matched_keywords": [
+        "Vision-Language Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-11"
+    }
+  ],
+  "summarized_count": 0,
+  "skipped_no_summary": 0
+}
