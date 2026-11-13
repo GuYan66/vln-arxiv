@@ -1439,7 +1439,52 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-11-11.json"
+    },
+    "2611.17330": {
+      "arxiv_id": "2611.17330",
+      "title": "ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation",
+      "date": "2026-11-13",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-13.json"
+    },
+    "2611.17163": {
+      "arxiv_id": "2611.17163",
+      "title": "UAV-Flow++: A Unified Suite for Benchmarking and Learning Language-Guided UAV Flight",
+      "date": "2026-11-13",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-13.json"
+    },
+    "2611.16246": {
+      "arxiv_id": "2611.16246",
+      "title": "What Can a VLA Learn from the Agent That Calls It? Task-Level Experience Distillation for Embodied Navigation",
+      "date": "2026-11-13",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-13.json"
+    },
+    "2611.15589": {
+      "arxiv_id": "2611.15589",
+      "title": "EMS-Nav: Embodied Multi-Scale Navigation",
+      "date": "2026-11-13",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-13.json"
+    },
+    "2611.15277": {
+      "arxiv_id": "2611.15277",
+      "title": "DroneDiffusion: Uncertainty-Guided Diffusion Path Planner for UAV Navigation",
+      "date": "2026-11-13",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-13.json"
     }
   },
-  "last_updated": "2026-11-12T07:10:09.301151+00:00"
+  "last_updated": "2026-11-13T06:46:23.730708+00:00"
 }
