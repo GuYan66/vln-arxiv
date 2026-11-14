@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-14",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-13T06:46:03.621643+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.17330",
+      "title": "ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation",
+      "authors": [
+        "Guangyuan Sui",
+        "Yunzhong Hou",
+        "Chi Harold Liu"
+      ],
+      "abstract": "Vision language navigation (VLN) is very challenging for Unmanned Aerial Vehicles (UAVs) since small errors in 3D motion prediction can lead to navigation errors and collisions. Unable to fathom execution outcomes in 3D environments, existing methods often struggle to predict accurate navigation waypoints from language instructions. To solve this, we introduce the Prototypical Visual Imagination framework, shortened as ProtoVis-Nav, which forces the model to imagine an outcome-associated local visual representation for the intended next UAV movement. Specifically, we predict feature prototypes and use their linear combination to estimate the visual feature of the target region. In this manner, the VLN model first imagines the local visual representation of the next intended location, and then uses predicted prototypes as context for generating the final action, promoting alignment between visual context and waypoint outputs. Extensive experiments demonstrate the effectiveness of the ProtoVis-Nav framework and show substantial improvements over existing baselines.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-11-12T18:59:49+00:00",
+      "updated": "2026-11-12T18:59:49+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.17330v1",
+      "abs_url": "https://arxiv.org/abs/2611.17330",
+      "matched_keywords": [
+        "UAV Navigation",
+        "Vision language navigation",
+        "VLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-14"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-13T06:46:07.575221+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.17163",
+      "title": "UAV-Flow++: A Unified Suite for Benchmarking and Learning Language-Guided UAV Flight",
+      "authors": [
+        "Donglin Yang",
+        "Xiangyu Wang",
+        "Yantong Zhong",
+        "Wenhao Zheng",
+        "Zihan Ding",
+        "Yue Liao",
+        "Hongsheng Li",
+        "Ke Xu",
+        "Si Liu"
+      ],
+      "abstract": "Language-guided UAV navigation has largely focused on long-horizon route planning, leaving short-range, object-relative flight maneuvers underexplored. To address this gap, we formulate Flying-on-a-Word (Flow), a task requiring a UAV to convert concise natural-language instruction, egocentric visual observation, and current state dynamics into continuous flight actions. Flow encompasses both primitive motion commands and complex object-interactive behaviors, assessing motion intent comprehension and spatial context grounding. To enable policy learning and closed-loop evaluation, we introduce UAV-Flow, a comprehensive dataset comprising 30,692 expert-piloted real-world trajectories across eight distinct motion categories, alongside 10,109 simulation trajectories in the UAV-Flow-Sim environment equipped with task-specific completion criteria. Furthermore, we develop FlowVLA, which undergoes imitation pretraining on mixed real-sim demonstrations and online post-training via Tail-Aware GRPO (TGRPO). By leveraging group reward distributions, TGRPO effectively reinforces high-reward action sequences. Evaluated on 273 held-out UAV-Flow-Sim episodes, pretrained FlowVLA achieves a mean success rate of 75.58%, outperforming the strongest baseline by 6.72 percentage points, which TGRPO post-training further elevates to 93.16% with superior sample efficiency. Physical UAV experiments demonstrate robust execution of object-relative commands in both indoor and outdoor real-world scenes. Together, Flow establishes a novel benchmark and learning framework for language-conditioned flight maneuvers.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-11-12T17:39:43+00:00",
+      "updated": "2026-11-12T17:39:43+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.17163v1",
+      "abs_url": "https://arxiv.org/abs/2611.17163",
+      "matched_keywords": [
+        "UAV navigation",
+        "UAV to convert concise natural-language instruction"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-14"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-13T06:46:13.739362+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.16246",
+      "title": "What Can a VLA Learn from the Agent That Calls It? Task-Level Experience Distillation for Embodied Navigation",
+      "authors": [
+        "Jinze Tao",
+        "Yuxiao Han",
+        "Kangkang Dong",
+        "Yancong Wei",
+        "Xiaojun Zhu",
+        "Bokui Chen",
+        "Houde Liu"
+      ],
+      "abstract": "Navigation agents use a large language model (LLM) planner to call a vision-language-action (VLA) model. Each episode needs the LLM, adding cost and delay. We distill successful agent experience into the VLA instead of distilling the planner. The VLA then navigates alone at test time. Agent sessions are not VLA demonstrations. They include motions driven by planner tools and sub-instructions, along with detours. We present H2E, a task-level experience distillation method that converts these sessions into VLA training data. Every motion becomes a VLA action under the original task instruction, with the resulting poses as targets. H2E masks the loss on steps that move away from the goal. It labels every visited state within 1 m of the goal as a stop. We then update the VLA with low-rank adaptation. The VLA learns to stop at the goal and find goals the base model never reaches. On all 3,189 REVERIE-CE val-unseen episodes, H2E raises the success rate of an 8B VLA from 35.0% to 44.9%.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-11-12T03:42:58+00:00",
+      "updated": "2026-11-12T03:42:58+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.16246v1",
+      "abs_url": "https://arxiv.org/abs/2611.16246",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-14"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-13T06:46:18.951596+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.15589",
+      "title": "EMS-Nav: Embodied Multi-Scale Navigation",
+      "authors": [
+        "Zenghui Yang",
+        "Xinan Wang",
+        "Danyang Li",
+        "Zhe Xu",
+        "Zheng Yang",
+        "Jingao Xu",
+        "Qiang Ma"
+      ],
+      "abstract": "Industrial inspection robots must reach work areas and specific equipment. These destinations span spatial scales from regions to objects, so robots must relate each target to its surroundings to interpret the task and determine where to go. Existing methods support multi-scale navigation through rich environment representations, but at substantial computational and storage cost. These costs limit deployment where wireless coverage is incomplete and robots must rely on onboard computation to keep navigating. We introduce EMS-Nav, a biologically inspired multi-scale navigation framework for online, on-device operation. Its core innovation is to organize perception, spatial understanding, and navigation around regions, making local spaces the basic units of both environmental understanding and computation. EMS-Nav groups objects and their relationships into functionally meaningful spaces and builds a hierarchy from local areas to the broader environment. This organization supports efficient map construction alongside the interpretation and execution of language goals at different scales. In multi-scale navigation experiments, EMS-Nav achieves the highest success rates across all four target categories: objects, rooms, regions, and specific instances. It outperforms state-of-the-art open-vocabulary mapping and navigation methods, improving overall first-attempt success by 9.39 percentage points over the strongest baseline while reducing mapping overhead and language-model input size. Local deployment in real indoor environments further demonstrates its applicability to on-device embodied navigation. By establishing regions as the organizing basis for perception, spatial understanding, and language-guided action, EMS-Nav provides a system that combines multi-scale understanding with computational efficiency to support diverse language goals on resource-constrained robots.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-11-11T15:09:28+00:00",
+      "updated": "2026-11-11T15:09:28+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.15589v1",
+      "abs_url": "https://arxiv.org/abs/2611.15589",
+      "matched_keywords": [
+        "embodied navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-14"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-13T06:46:23.726444+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.15277",
+      "title": "DroneDiffusion: Uncertainty-Guided Diffusion Path Planner for UAV Navigation",
+      "authors": [
+        "Ivan Valuev",
+        "Iana Zhura",
+        "Valerii Serpiva",
+        "Miguel Altamirano Cabrera",
+        "Dzmitry Tsetserukou"
+      ],
+      "abstract": "We present DroneDiffusion, a perception-aware diffusion planner for local 3-D UAV trajectory generation that explicitly models and avoids failure zones caused by lens flare, overexposure, and reflective surfaces. A vision-language perceptual safety estimator produces a pixel-aligned reliability map that highlights regions of degraded sensing. A denoising diffusion probabilistic model (DDPM) is conditioned on this map together with the onboard RGB image, goal point, and initial velocity to generate egocentric 3-D trajectories. To enforce obstacle avoidance at inference time without retraining, we apply training-free CHOMP guidance over a 3-D Euclidean signed distance field. The model is trained entirely in simulation and deployed zero-shot on a real drone. Reliability conditioning raises the mean perceptual reliability along generated trajectories to 0.71, compared with 0.63 for a geometric baseline, while guidance halves the collision rate of the learned prior from 14.7% to 7.8%. Perceptual safety conditioning and geometric guidance are therefore complementary: treating sensor reliability as a first-class signal reduces incursions into unreliable regions while maintaining competitive navigation performance.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-11T10:08:50+00:00",
+      "updated": "2026-11-11T10:08:50+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.15277v1",
+      "abs_url": "https://arxiv.org/abs/2611.15277",
+      "matched_keywords": [
+        "UAV Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-14"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-10T07:18:04.013394+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.12087",
+      "title": "Compass 1: Towards Open-World and Persistent Embodied Navigation from Monocular RGB Videos",
+      "authors": [
+        "Hai Zhang",
+        "Siqi Liang",
+        "Yanjun Guo",
+        "Shoufeng Zhang",
+        "Yunhao Wang",
+        "Hangyu Du",
+        "Haoguang Mai",
+        "Hongchen Li",
+        "Jiazhi Yang",
+        "Jialong Zeng",
+        "Yu Hu",
+        "Chen Chen",
+        "Gangcheng Jiang",
+        "Zishun Zhuo",
+        "Lirui Zhao",
+        "Zhigang Li",
+        "Yu Qiao",
+        "Zhenjie Yang",
+        "Fu Zhang",
+        "Hongyang Li"
+      ],
+      "abstract": "Embodied navigation requires agents to achieve persistent spatial awareness and long-horizon execution stability in open-world environments. However, existing navigation architectures struggle to sustain both capabilities, remaining effective only over a handful of recent frames. We present Compass 1, the first embodied navigation foundation model to unify language understanding and video generation while enabling memory backtracking through nearly 2mins of visual history. Without altering the underlying architecture, we introduce History Representation, which integrates sparse visual keyframes with an explicit History Representation Map to preserve long-term spatiotemporal context. To effectively leverage this history, we further introduce History Utilization, a structured VQA supervision protocol comprising three categories: task-stage grounding, exploration consistency, and spatiotemporal target retrieval, enabling map-grounded reasoning and stable persistent long-horizon navigation. To fuel this system, we establish a complete annotation pipeline for monocular RGB videos and open-source a massive dataset featuring over 500 hours of high-quality real-world interactions and over 2,000 hours of annotated web videos. Trained mainly on the distribution of 1m height camera, Compass 1 generalizes seamlessly across diverse embodiments and scenarios, ranging from indoor environments to pedestrian-dense streets, spanning wheeled robot at 0.35m, quadruped dog at 0.5m, humanoid at 0.85m, and aerial drone at 1.5m. Compass 1achieves a dominant overall success rate of 79.4% across open-world evaluations, compared to 17.8% for the strongest baseline. It demonstrates exceptional zero-shot execution exceeding 90% on foundational tasks, a 250% boost in exploration, and an unparalleled leap from 0% to 58% in challenging persistent history backtracking.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-11-09T09:04:48+00:00",
+      "updated": "2026-11-09T09:04:48+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.12087v1",
+      "abs_url": "https://arxiv.org/abs/2611.12087",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-14"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-11T06:20:36.531134+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.13028",
+      "title": "GTAGym: AAA Game Tasks Environment for Evaluation and Reinforcement Learning",
+      "authors": [
+        "Jiajun Chen",
+        "Shicheng Fang",
+        "Jiahao Lu",
+        "Yuxin Wang",
+        "Xipeng Qiu"
+      ],
+      "abstract": "AAA games offer a rich testbed for evaluating agent perception, reasoning, and control. However, evaluating whether agents can complete tasks in AAA games is challenging and often human-annotated because task outcomes are often difficult to verify automatically, let alone applying it for Reinforcement Learning (RL). We introduce GTAGym, an environment and framework for evaluation and RL on GTA V tasks. Its evaluation benchmark, GTAVBench, derived from GTA V main-story missions, contains 103 online tasks reconstructed across nine task families, alongside 47 image-based shooting and sniping tasks using GTA V imagery. A web server provides access to the online environment and evaluation interface, supporting parallel testing through screenshots and keyboard-mouse actions with automatic engine-state outcome checks. We evaluate six frontier LLMs on GTAVBench with textual task instructions and on its GTAVBench-AGI branch, where instructions appear only in the first screenshot and a harness automatically compresses interaction history. The best configuration achieves 70.9% overall accuracy in GTAVBench-AGI, yet aerial navigation, evasion and interception remain difficult. GTAGym also provides a scalable generator that samples task parameters within user-specified ranges and option sets under fixed templates, creating batches of 3D and image-based shooting environments for RL with automatic reward and termination signals. LoRA RL of Qwen3.8-27B on generated on-foot navigation tasks improves the in-domain performance and transfers to out-of-domain task categories, and native GTA V tasks from 15% to 23%.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-11-09T08:59:36+00:00",
+      "updated": "2026-11-11T11:55:08+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.13028v2",
+      "abs_url": "https://arxiv.org/abs/2611.13028",
+      "matched_keywords": [
+        "aerial navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-14"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-10T07:18:09.352459+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.11510",
+      "title": "Reaching Is Not Finding: Map-Anchored Visual Prompting for the Last Mile of Aerial Vision-Language Navigation",
+      "authors": [
+        "Ningbo Li",
+        "Kebin Liu",
+        "Jingcan Chen",
+        "Weichen Zhang",
+        "Rong Ding",
+        "Yunhao Liu",
+        "Mo Li"
+      ],
+      "abstract": "Aerial vision-language navigation (VLN) asks a drone to find an object described in natural language. The description usually locates the object relative to named landmarks, such as streets and buildings. We observe that current navigators often bring the drone close to the target and then stop at the wrong place: they reach the target without finding it. This gap is shared by navigators of very different designs, from imitation learners to a fine-tuned 7B vision-language model. A simple test reveals the cause. When we replace the target object in the instruction with another one next to the same landmarks, no navigator goes to it, and most stop where they did before. Navigators learn to reach the landmarks, not to identify the described object. We therefore propose MAP-VP, a plug-and-play module for the last step. After any navigator stops, MAP-VP draws the landmarks named in the instruction onto the drone's current view, using the landmark outlines that the benchmark provides on a map. A fine-tuned 4B vision-language model then locates the target relative to these landmarks. The training data are generated automatically from the benchmark annotations. Neither drawing the landmarks nor fine-tuning helps much alone, but together they are highly effective. Without retraining any navigator, MAP-VP significantly improves all six navigators we test on CityNav. It roughly doubles the success rate of the two strongest trained navigators, raising HETT from 25.9% to 54.6% and FlightGPT from 24.2% to 48.9%, whereas CityNav's official detector-based last step adds less than two points to HETT.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-11-08T17:33:37+00:00",
+      "updated": "2026-11-08T17:33:37+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.11510v1",
+      "abs_url": "https://arxiv.org/abs/2611.11510",
+      "matched_keywords": [
+        "Aerial Vision-Language Navigation",
+        "VLN",
+        "CityNav"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-14"
+    }
+  ],
+  "summarized_count": 0,
+  "skipped_no_summary": 0
+}
