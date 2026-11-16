@@ -1484,7 +1484,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-11-13.json"
+    },
+    "2611.18346": {
+      "arxiv_id": "2611.18346",
+      "title": "VLAN: Vision-Language Accessible Navigation",
+      "date": "2026-11-16",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-11-16.json"
+    },
+    "2611.17442": {
+      "arxiv_id": "2611.17442",
+      "title": "Racing the Clock: Teaching VLNs Budget-Conditioned Object Search",
+      "date": "2026-11-16",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-16.json"
     }
   },
-  "last_updated": "2026-11-15T06:31:24.192291+00:00"
+  "last_updated": "2026-11-16T06:29:25.766565+00:00"
 }
