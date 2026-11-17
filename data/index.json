@@ -1502,7 +1502,70 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-11-16.json"
+    },
+    "2611.20676": {
+      "arxiv_id": "2611.20676",
+      "title": "Learning and Verifying Progress: Closed-Loop Agentic Planning with Progress-Enhanced Execution for Long-Horizon Vision-Language Navigation",
+      "date": "2026-11-17",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-17.json"
+    },
+    "2611.20631": {
+      "arxiv_id": "2611.20631",
+      "title": "Instructions Before Actions: Prospective and Retrospective Language Supervision for Driving Vision-Language-Action Data",
+      "date": "2026-11-17",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-17.json"
+    },
+    "2611.20593": {
+      "arxiv_id": "2611.20593",
+      "title": "JEPTERA: A Platform Agnostic JEPA-Assisted Model Predictive Planner for Urban UAV Navigation",
+      "date": "2026-11-17",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-17.json"
+    },
+    "2611.20558": {
+      "arxiv_id": "2611.20558",
+      "title": "Vision-Language Grounded Semantic Navigation for Autonomous Mobile Robots",
+      "date": "2026-11-17",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-17.json"
+    },
+    "2611.19901": {
+      "arxiv_id": "2611.19901",
+      "title": "Remember, Replay, Adapt: Learning from Past Experience in Online Vision-and-Language Navigation",
+      "date": "2026-11-17",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-17.json"
+    },
+    "2611.19818": {
+      "arxiv_id": "2611.19818",
+      "title": "Drone Navigation for Fast, Safe Emergency Response",
+      "date": "2026-11-17",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-17.json"
+    },
+    "2611.19287": {
+      "arxiv_id": "2611.19287",
+      "title": "VLN-Flash: Parallel Action Decoding with Adaptive Execution for Vision-and-Language Navigation",
+      "date": "2026-11-17",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-17.json"
     }
   },
-  "last_updated": "2026-11-16T06:29:25.766565+00:00"
+  "last_updated": "2026-11-17T07:55:48.735562+00:00"
 }

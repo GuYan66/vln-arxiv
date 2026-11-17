@@ -3206,5 +3206,82 @@
     "raw_model_output": "",
     "summarized_at": "2026-11-16T06:29:25.762916+00:00",
     "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
+  },
+  "2611.20676": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-17T07:54:53.096832+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
+  },
+  "2611.20631": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-17T07:54:58.356940+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
+  },
+  "2611.20593": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-17T07:55:07.487677+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
+  },
+  "2611.20558": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-17T07:55:24.734868+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
+  },
+  "2611.19901": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-17T07:55:32.797448+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
+  },
+  "2611.19818": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-17T07:55:38.989606+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
+  },
+  "2611.19287": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-17T07:55:48.731307+00:00",
+    "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions"
   }
 }
