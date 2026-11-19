@@ -1583,7 +1583,34 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-11-18.json"
+    },
+    "2611.24247": {
+      "arxiv_id": "2611.24247",
+      "title": "Allocentric Memory, Egocentric Acting: A Dual-Frame VLA for Urban Aerial Navigation",
+      "date": "2026-11-19",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-19.json"
+    },
+    "2611.24077": {
+      "arxiv_id": "2611.24077",
+      "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
+      "date": "2026-11-19",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-19.json"
+    },
+    "2611.23930": {
+      "arxiv_id": "2611.23930",
+      "title": "A Hierarchical Onboard Vision-Language-Navigation Framework for Aerial Robots in Complex Environments",
+      "date": "2026-11-19",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-19.json"
     }
   },
-  "last_updated": "2026-11-18T07:29:08.945269+00:00"
+  "last_updated": "2026-11-19T07:25:54.122812+00:00"
 }
