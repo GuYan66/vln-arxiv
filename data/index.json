@@ -1610,7 +1610,25 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-11-19.json"
+    },
+    "2611.26414": {
+      "arxiv_id": "2611.26414",
+      "title": "ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain",
+      "date": "2026-11-20",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-11-20.json"
+    },
+    "2611.25587": {
+      "arxiv_id": "2611.25587",
+      "title": "Cognitive-Horizon Action Chunking: Memory-Guided Adaptive Reasoning for Embodied Navigation",
+      "date": "2026-11-20",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-20.json"
     }
   },
-  "last_updated": "2026-11-19T07:25:54.122812+00:00"
+  "last_updated": "2026-11-20T07:15:57.976087+00:00"
 }
