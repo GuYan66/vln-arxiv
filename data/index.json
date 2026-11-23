@@ -1628,7 +1628,52 @@
       "is_uav_vln": false,
       "primary_category": "cs.RO",
       "path": "papers/papers-2026-11-20.json"
+    },
+    "2611.27499": {
+      "arxiv_id": "2611.27499",
+      "title": "NavRSI: Recursive Harness Self-Improvement for Vision-and-Language Navigation",
+      "date": "2026-11-23",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-23.json"
+    },
+    "2611.27418": {
+      "arxiv_id": "2611.27418",
+      "title": "Beyond Future Views: Exploring Future-State World Models for Vision-Language Navigation",
+      "date": "2026-11-23",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-23.json"
+    },
+    "2611.27255": {
+      "arxiv_id": "2611.27255",
+      "title": "AceVLN: Asynchronous Cloud Edge Deployment of VLNs via Latent Scheduling and Compensation",
+      "date": "2026-11-23",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.DC",
+      "path": "papers/papers-2026-11-23.json"
+    },
+    "2611.27219": {
+      "arxiv_id": "2611.27219",
+      "title": "NavTTT: Adaptive Parametric Memory via Hierarchical Test-Time Training for Vision-and-Language Navigation",
+      "date": "2026-11-23",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-23.json"
+    },
+    "2611.27166": {
+      "arxiv_id": "2611.27166",
+      "title": "Mem-X: A Memory-Dependent Cross-Episode Benchmark for Vision-and-Language Navigation",
+      "date": "2026-11-23",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-23.json"
     }
   },
-  "last_updated": "2026-11-22T06:47:43.359372+00:00"
+  "last_updated": "2026-11-23T07:48:53.665293+00:00"
 }

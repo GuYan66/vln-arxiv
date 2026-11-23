@@ -1,0 +1,523 @@
+{
+  "date": "2026-11-23",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-23T07:40:45.354734+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x723ec266ae90>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.27499",
+      "title": "NavRSI: Recursive Harness Self-Improvement for Vision-and-Language Navigation",
+      "authors": [
+        "Guangzhao Dai",
+        "Guoxin Lian",
+        "Shuo Wang",
+        "Shengbin Yue",
+        "Qianru Sun",
+        "Xiangbo Shu",
+        "Bin Zhu"
+      ],
+      "abstract": "Frontier large language models (LLMs) have enabled vision-and-language navigation (VLN) through direct closed-loop perception and action. However, navigation performance depends strongly on the harness governing LLM-environment interactions, while existing harnesses largely rely on manually designed navigation tools, memory, and agent roles. We introduce NavRSI, a harness-centric recursive self-improvement framework that optimizes the navigation behavior of frozen LLMs through closed-loop experience. In each round, NavRSI iteratively collects navigation trajectories and failure diagnostics, employs a designer agent to rewrite the harness, and retains the revisions that prove effective, while the designer accumulates experience from previous revisions so that the harness and this experience co-evolve. Privileged simulator diagnostics guide only the designer and remain inaccessible to the navigating LLM, enabling deployment with a single RGB camera and primitive actions, without task-specific model training or additional navigation tools. Experiments demonstrate consistent improvements across LLMs from four vendors, with 85.64% success rate on the full R2R-CE val-unseen split with GPT-6-Astra, surpassing the previously reported best by 4.13%. Evaluations on RxR-CE, NavRAG-CE, and a real humanoid robot further demonstrate its generalizability.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-20T11:47:47+00:00",
+      "updated": "2026-11-20T11:47:47+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.27499v1",
+      "abs_url": "https://arxiv.org/abs/2611.27499",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-23T07:42:47.461097+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x723ec2520910>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.27418",
+      "title": "Beyond Future Views: Exploring Future-State World Models for Vision-Language Navigation",
+      "authors": [
+        "Kangyi Wu",
+        "Pengna Li",
+        "Yucheng Wang",
+        "Yance Fang",
+        "Xihan Ma",
+        "Zhizhong Su",
+        "Yang Wu",
+        "Ye Deng",
+        "Jinjun Wang",
+        "Jianyi Liu"
+      ],
+      "abstract": "Vision-Language Navigation(VLN) requires an embodied agent to follow language instructions through unseen 3D environments, where the target spaces often lie beyond the current observation. Navigation world models address this challenge by predicting future views either as pixels or latent representations, providing valuable look-ahead information for action decision. Both paradigms define the future primarily through what the agent may observe, raising a fundamental question: is predicting future views the ultimate form to represent the future for VLN? Cognitive studies show that the human hippocampus prospectively represents both future goals and intervening locations along planned routes. Inspired by this predictive-map view, we organize the navigation-relevant future around goal-directed spatial states and route structure. We instantiate this perspective with two complementary abstractions: a short-horizon waypoint that specifies the next local state to reach, and a mid-horizon corridor that captures the spatial support of the upcoming route. Based on this design, we propose FS-Nav, a future-state world modeling framework that predicts waypoint-corridor states from spatial memory and language instructions, and communicates them to a VLM navigator through top-down and first-person interfaces. Experiments on standard VLN benchmarks demonstrate that FS-Nav achieves state-of-the-art performance. This highlights navigation-relevant future-state modeling as a promising direction for representing the future in VLN.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-20T10:22:30+00:00",
+      "updated": "2026-11-20T10:22:30+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.27418v1",
+      "abs_url": "https://arxiv.org/abs/2611.27418",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-23T07:44:49.541229+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x723ec25202d0>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.27255",
+      "title": "AceVLN: Asynchronous Cloud Edge Deployment of VLNs via Latent Scheduling and Compensation",
+      "authors": [
+        "Zihao Zheng",
+        "Hangyu Cao",
+        "Yulong Han",
+        "Xichang Wu",
+        "Zhihao Mao",
+        "Maoliang Li",
+        "Jiayu Chen",
+        "Hailong Zou",
+        "Donggang Cao",
+        "Xuanzhe Liu",
+        "Hong Mei",
+        "Xiang Chen"
+      ],
+      "abstract": "Cloud--edge deployment enables asynchronous dual-system VLN on resource-constrained robots, but inference and communication delays cause latent mismatch and navigation errors. Existing adaptation methods reuse historical guidance but cannot provide updated navigation information when it becomes inadequate. We propose AceVLN, a training-free framework for active latent refresh and edge-side compensation. Our analysis reveals that action-relevant mismatch is concentrated in a compact Critical Subspace and can be tracked through fast-system feature drift. Critical Feature Drift Entropy reflects navigation sensitivity and guides adaptive refresh, while Critical Drift Continuity indicates when recent latent updates can support compensation during latency spikes. AceVLN integrates subspace-decoupled mismatch modeling, entropy-guided refresh scheduling, and continuity-guided compensation. Experiments show that \\textit{AceVLN} improves success rates by 1.7--2.4 percentage points over the strongest baselines, while reducing amortized computation time by 2.7--10.0\\% and FLOPs by 18.4--22.3\\%.",
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.RO"
+      ],
+      "published": "2026-11-20T08:00:34+00:00",
+      "updated": "2026-11-20T08:00:34+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.27255v1",
+      "abs_url": "https://arxiv.org/abs/2611.27255",
+      "matched_keywords": [
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-23T07:46:51.583513+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x723ec2521090>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.27219",
+      "title": "NavTTT: Adaptive Parametric Memory via Hierarchical Test-Time Training for Vision-and-Language Navigation",
+      "authors": [
+        "Xiaoyu Luo",
+        "Chengxing Lin",
+        "Jiaxin Huang",
+        "Jiale Liu",
+        "Jingyu Guo",
+        "Sirui Chen",
+        "Aolin Li",
+        "Shaoli Huang",
+        "Cheng-zhong Xu",
+        "Hui Kong"
+      ],
+      "abstract": "Vision-and-language navigation (VLN) demands that agents accumulate and reason over streaming visual observations throughout long navigation episodes. Existing approaches struggle to maintain long-term history, constrained by the finite context capacity of transformer architectures. To solve the problem, fast-weight test-time training (TTT) provides a mechanism for encoding streaming observations into an evolving parameter state. However, existing TTT does not distinguish informative observations from repetitive visual content, allowing redundant tokens to interfere with the retention of information needed for subsequent decisions. We propose Navigation-Conditioned Test-Time Training (NavTTT), which introduces adaptive memory formation and hierarchical memory integration for vision-and-language navigation. NavTTT leverages global navigation context to prioritize informative visual evidence and integrates language instructions with spatial information to construct spatially grounded memory representations. Episode-local nonlinear fast weights store these representations as Adaptive Parametric Memory (APM), preserving history beyond the visual context for later decisions. To reduce cross-layer coupling in memory formation, NavTTT maintains independent fast-weight memories across multiple decoder depths. This decoupled design prevents errors or biases from spreading across different memory levels. Meanwhile, it enables shared historical information to be independently represented at various levels of abstraction. Experiments demonstrate strong navigation performance on VLN-CE benchmarks and effective instruction following on a real robot.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-11-20T07:14:55+00:00",
+      "updated": "2026-11-20T07:14:55+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.27219v1",
+      "abs_url": "https://arxiv.org/abs/2611.27219",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-23T07:48:53.661553+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x723ec2521590>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.27166",
+      "title": "Mem-X: A Memory-Dependent Cross-Episode Benchmark for Vision-and-Language Navigation",
+      "authors": [
+        "Zhikang Shi",
+        "Yuk Tung Samuel Fang",
+        "Hongyu Ding",
+        "Zixuan Chen",
+        "Yujin Wang",
+        "Junhui Guo",
+        "You Wu",
+        "Jieqi Shi",
+        "Jing Huo",
+        "Yang Gao"
+      ],
+      "abstract": "Long-term memory enables embodied agents to reuse past observations across tasks. However, existing cross-episode vision-and-language navigation (VLN) benchmarks often leave it unclear whether successful navigation relies on historical memory or current exploration. We introduce Mem-X, a benchmark designed to evaluate memory-dependent cross-episode VLN. Mem-X organizes episodes into sessions in which subsequent instructions refer to objects or routes encountered in earlier episodes. Its three levels evaluate historical-object recall, in-memory localization and episodic indexing, and off-memory relocalization and historical-route reproduction. For the latter two levels, agents receive episode-local poses but no transformations between episode frames, requiring them to establish spatial correspondence with historical memory. Mem-X comprises 2,071 episodes across 710 sessions in 34 scenes, including 1,204 memory-dependent episodes. We also provide MemBridge, a modular baseline that combines semantic scene memory, cross-episode localization, and coarse-to-fine retrieval to support existing VLN agents. Experiments with state-of-the-art VLN methods demonstrate the benefits of MemBridge while revealing substantial room for improvement on memory-dependent navigation. The benchmark and baseline code are available at https://github.com/NJU-R-L-Group-Embodied-Lab/Mem-X.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-11-20T05:51:31+00:00",
+      "updated": "2026-11-20T05:51:31+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.27166v1",
+      "abs_url": "https://arxiv.org/abs/2611.27166",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-20T07:15:53.517969+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.26414",
+      "title": "ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain",
+      "authors": [
+        "Zixuan Huang",
+        "Yang Zhou",
+        "Guli Zhang",
+        "Sunzhu Li",
+        "Hongyan Xie",
+        "Zehao Chen",
+        "Fuzhen Zhuang",
+        "Kaixuan Wang",
+        "Xiaozhi Chen",
+        "Yikun Ban",
+        "Deqing Wang"
+      ],
+      "abstract": "Representative vision-language navigation (VLN) methods typically couple a vision-language model (VLM) brain with a learnable action head and fine-tune the VLM brain on navigation-domain data to predict geometric goals. However, such adaptation can substantially alter base VLM weights and degrade general visual capabilities. We introduce ZeroVLN, a slow-fast navigation framework that achieves effective navigation with zero navigation-domain SFT of the VLM brain. Rather than teaching the brain to predict geometric goals, we equip it with a semantic tool-calling interface for conveying movement decisions to an action expert in natural language. We first adapt the action expert to carry out these movement requests, then jointly improve the brain's movement decisions and the action expert's continuous execution through closed-loop reinforcement learning (RL). Trained on the same navigation episodes, ZeroVLN substantially outperforms representative SFT-based hierarchical VLN methods on standard VLN-CE (continuous environments) benchmarks, while inducing only minor changes to the brain's weights and largely preserving its general capabilities. To our knowledge, ZeroVLN is the first slow-fast VLN framework with zero navigation-domain SFT of the VLM brain, and the first to jointly optimize its slow and fast policies through closed-loop agentic RL in VLN-CE.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-11-19T17:01:00+00:00",
+      "updated": "2026-11-19T17:01:00+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.26414v1",
+      "abs_url": "https://arxiv.org/abs/2611.26414",
+      "matched_keywords": [
+        "vision-language navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-20T07:15:57.971674+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.25587",
+      "title": "Cognitive-Horizon Action Chunking: Memory-Guided Adaptive Reasoning for Embodied Navigation",
+      "authors": [
+        "Weile Gong",
+        "Zijian Lu",
+        "Jiahao Zheng",
+        "Bo Xu",
+        "Yiping Zuo",
+        "Jiajia Guo",
+        "Xin He",
+        "Weijun Wang",
+        "Weibei Fan"
+      ],
+      "abstract": "Multimodal foundation models are advancing embodied navigation, but frequent inference incurs substantial computational cost. We present Cognitive-Horizon Action Chunking (CHAC), a training-free framework for memory-guided adaptive reasoning with a frozen navigation policy. Retained visual context, completion cues, and controller feedback determine the cognitive horizon, or how many cached waypoints the robot executes before refreshing its prediction. At the policy's stop request, local visitation history guides a bounded correction with at most one extra movement and no additional model calls. CHAC reduces vision-language model calls by 33.4% on HM3D-OVON and 64.7% on R2R-CE, with success-rate decreases of 0.63 and 10.82 percentage points, respectively. Success rate and success weighted by path length improve per model call on both benchmarks. Across four physical navigation tasks with 40 runs per method, CHAC achieves 18 successes versus 14 for native execution, reducing model calls by 54.9% and GPU inference time by 49.7%.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-19T06:31:49+00:00",
+      "updated": "2026-11-19T06:31:49+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.25587v1",
+      "abs_url": "https://arxiv.org/abs/2611.25587",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-19T07:25:43.625857+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.24247",
+      "title": "Allocentric Memory, Egocentric Acting: A Dual-Frame VLA for Urban Aerial Navigation",
+      "authors": [
+        "Haotian Xu",
+        "Yue Hu",
+        "Zhengqiu Zhu",
+        "Tuo Feng",
+        "Wenguan Wang",
+        "Quanjun Yin"
+      ],
+      "abstract": "Language-goal aerial navigation requires a UAV to reach a destination specified in natural language using observations collected during flight. A key challenge is linking changing egocentric perception with spatial evidence anchored to stable locations for long-range navigation. We propose CityNav-VLA, a dual-frame vision-language-action model for urban navigation integrating dynamic egocentric context with persistent allocentric spatial memory. The UAV incrementally accumulates visual observations on a fixed north-up map initialized with geographic and landmark priors, preserving evidence across viewpoint changes. A dynamic query conditioned on the instruction, current observations, UAV state, and motion history retrieves relevant memory evidence to predict a map-frame target. A deterministic controller converts this target into body-frame commands using the UAV's current pose, connecting global reasoning with egocentric execution. To reduce target fluctuations over long horizons, early goal commitment (EGC) fixes the execution target to the coordinate-wise median of the first $K$ predictions without extra trainable parameters. On Test Unseen, CityNav-VLA reduces NE by 21.2% and improves SR and SPL by 15.8% and 30.9%, respectively. It also reduces NE by 6.2% and improves SR and SPL by 5.6% and 23.2%, respectively, relative to the former SOTA after dataset refinement. Cumulative ablations show that navigation-map features yield the largest gains, while metric coordinates further improve endpoint accuracy. With a 4B-scale backbone, inference averages 0.68 s per decision with 8.6 GB peak memory on a single A100, presenting remarkable model efficiency.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-11-18T11:24:13+00:00",
+      "updated": "2026-11-18T11:24:13+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.24247v1",
+      "abs_url": "https://arxiv.org/abs/2611.24247",
+      "matched_keywords": [
+        "Aerial Navigation",
+        "CityNav"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-19T07:25:49.030513+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.24077",
+      "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
+      "authors": [
+        "Shiwei Wu",
+        "Yuwen Pan",
+        "Zhi Li",
+        "Yaowen Li",
+        "Yan Zhou",
+        "Xuemiao Xu",
+        "Yu Liu"
+      ],
+      "abstract": "Vision-language-action (VLA) models enable unmanned aerial vehicles (UAVs) to follow natural-language instructions, yet still fail frequently in closed-loop flight. Correcting these failures requires repairs, i.e., actions that avoid them at the states the policy itself reaches, which human pilots cannot label at scale and rule-based planners cannot supply reliably. In this paper, we present AeroRSI, a recursive self-improvement framework in which an aerial navigation policy iteratively learns from its own failures. Our key insight is that a failing policy should judge its own repairs by flying on from them. Judged in this way, its sampled actions and even rule-based proposals that hurt it when imitated directly become reliable supervision. Moreover, an episode terminates at its first failure, concealing subsequent failures until the earlier ones are repaired. AeroRSI thus renews its supervision in every round, anchoring the failures of the current policy, verifying repairs by its continuation, and distilling them while keeping its behavior elsewhere. On TravelUAV, three rounds raise the success rate of a supervised 2B-parameter policy from 46.4% to 67.5% and reduce collisions by half, surpassing the previous state of the art by 10.6 points from the same initialization without extra human labels or inference cost. Code and models are available at https://github.com/starsholic/AeroRSI.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-11-18T09:07:04+00:00",
+      "updated": "2026-11-18T09:07:04+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.24077v1",
+      "abs_url": "https://arxiv.org/abs/2611.24077",
+      "matched_keywords": [
+        "Aerial Vision-Language Navigation",
+        "UAVs) to follow natural-language instruction",
+        "aerial navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-19T07:25:54.119336+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.23930",
+      "title": "A Hierarchical Onboard Vision-Language-Navigation Framework for Aerial Robots in Complex Environments",
+      "authors": [
+        "Yuze Wu",
+        "Mo Zhu",
+        "Xingxing Li",
+        "Yuheng Du",
+        "Zhaoqi Wang",
+        "Yuxin Fan",
+        "Wenjun Li",
+        "Kenghou Hoi",
+        "Zhichao Han",
+        "Xin Zhou",
+        "Fei Gao"
+      ],
+      "abstract": "Unmanned Aerial Vehicles (UAVs) are expected to achieve semantic reasoning, intelligent decision-making, and long-horizon navigation under strict onboard constraints. While recent foundation-model-driven approaches have shown promising progress toward this goal, existing methods remain limited by challenges in 3D data availability, trajectory feasibility, long-horizon reasoning, and computational efficiency in complex environments. To bridge these gaps, we propose VLN-AR, a hierarchical vision-language-navigation (VLN) framework for aerial robots. VLN-AR decouples multimodal reasoning and low-level control, enabling structured prediction of 3D pose commands and navigation intentions that are translated into dynamically feasible actions. To mitigate data scarcity and domain gaps, we introduce a fully automated 3D Gaussian Splatting (3DGS)-based pipeline to generate scalable photorealistic UAV navigation data. A progressive three-stage training strategy further enhances grounding, scene reasoning, and complex navigation. In addition, a lightweight cognitive agent improves long-horizon reasoning via memory-aware task decomposition. Finally, we design onboard optimization techniques, including token sparsification and model lightweighting, achieving 7.1x-9.4x speedup while maintaining high navigation performance on resource-limited UAV platforms. Experiments show great improvements over existing methods in both simulation and real-world UAV navigation. Project website: https://wyz000.github.io/VLN-AR/",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-11-18T06:21:08+00:00",
+      "updated": "2026-11-18T06:21:08+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.23930v1",
+      "abs_url": "https://arxiv.org/abs/2611.23930",
+      "matched_keywords": [
+        "VLN",
+        "UAV navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-18T07:29:01.251545+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.22883",
+      "title": "Fly as Instructed: Refining World-Action Policies for UAV Vision-Language Navigation",
+      "authors": [
+        "Zhexuan Zhou",
+        "Yanke Sun",
+        "Yuhan Zong",
+        "Youmin Gong",
+        "Jie Mei"
+      ],
+      "abstract": "Natural language-guided UAV navigation enables intuitive human-robot interaction and flexible autonomous flight in complex environments. However, reliable navigation requires accurate instruction following, continuous task progress tracking, and safe obstacle avoidance, which remain challenging for existing world-action models that primarily focus on action prediction. To address these limitations, we propose a world-action learning framework that integrates three complementary mechanisms: a language-conditioned action interface with targeted post-training for instruction-responsive motion, recurrent instruction-consumption prediction to track task progress and determine termination, and Gaussian-scene post-training to enhance obstacle avoidance through trajectory imitation and differentiable geometric feedback. Closed-loop evaluations and ablation studies demonstrate improvements in sequential task completion, safe goal reaching, and timely termination. Furthermore, direct one-step denoising reduces inference overhead, and real-world indoor and outdoor flights validate the framework's effectiveness.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-17T14:54:49+00:00",
+      "updated": "2026-11-17T14:54:49+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.22883v1",
+      "abs_url": "https://arxiv.org/abs/2611.22883",
+      "matched_keywords": [
+        "UAV Vision-Language Navigation",
+        "UAV navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-18T07:29:08.941411+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.22321",
+      "title": "Beyond Episodic Recall: Experience-to-Knowledge Evolution for Lifelong Embodied Navigation",
+      "authors": [
+        "Weitao An",
+        "Chenghao Xu",
+        "Xu Yang",
+        "Cheng Deng"
+      ],
+      "abstract": "Lifelong embodied navigation requires agents to accumulate experience through continuous interaction and reuse it for subsequent goal searches. Existing memory-enhanced methods typically retain historical observations or construct structured scene representations. However, storing observations or high-dimensional semantic embeddings incurs growing storage costs. Meanwhile, structured representations support retrieval and semantic reasoning but do not explicitly evolve accumulated experience into environment-specific knowledge. To address these limitations, we propose Experience-Evolving Memory (EvoNav), a novel two-timescale memory framework. It organizes semantic observations, spatial relations, and task-feedback cues into sparse experience atoms. During online operation, experience atoms continually consolidate repeated observations and form dynamic links based on transitions. At the slower timescale, EvoNav distills accumulated category co-occurrences and feedback signals into environment-specific structural knowledge without relying on predefined object--room relations. For each new goal, EvoNav combines direct goal evidence from experience atoms with learned structural knowledge to guide goal-directed search on the current traversability map. Experiments on single-goal, sequential multi-floor, and multimodal navigation demonstrate effective experience reuse and improved path efficiency with compact persistent memory, together with successful transfer to a real robot.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-17T07:18:30+00:00",
+      "updated": "2026-11-17T07:18:30+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.22321v1",
+      "abs_url": "https://arxiv.org/abs/2611.22321",
+      "matched_keywords": [
+        "Embodied Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-17T07:54:53.096832+00:00",
+      "summarize_error": "HTTPError: 401 Client Error: Unauthorized for url: https://ai-api.d-robotics.cc/v1/chat/completions",
+      "arxiv_id": "2611.20676",
+      "title": "Learning and Verifying Progress: Closed-Loop Agentic Planning with Progress-Enhanced Execution for Long-Horizon Vision-Language Navigation",
+      "authors": [
+        "Kangjie Zhou",
+        "Sukai Wang",
+        "Yuhan Xiao",
+        "Qinghang Liu",
+        "Zhejia Wen",
+        "ChunXuan Jiao",
+        "Wei Shan",
+        "Guanghui Ren",
+        "Maoqing Yao",
+        "Chang Liu"
+      ],
+      "abstract": "Long-horizon vision-language navigation (VLN) requires agents to track instruction progress and recover from local errors before they propagate across subtasks. However, executors trained on expert trajectories encounter policy-induced state shifts during deployment, and their stop signals do not reliably indicate subtask completion. We introduce Learning and Verifying Progress for VLN (LeaP-VLN), an agentic VLN system that couples progress-aware execution with independent progress verification through plan--execute--verify--recover cycles. LeaP-VLN leverages progress both explicitly, through a progress verifier that verifies subtask completion before the agent advances and triggers dual-phase recovery upon route deviation, and implicitly, by co-training the executor on progress reasoning and action prediction to enhance the executor's progress awareness and corrective control. To adapt the executor to this closed-loop interface, we propose a two-stage progress-enhanced curriculum: behavior cloning on expert demonstrations, followed by joint training on demonstrations, expert action corrections, and progress-reasoning supervision. Policy-generated trajectories expose the executor to both intra-subtask drift and inter-subtask state shifts, aligning training with the deviations encountered during closed-loop execution. Extensive experiments on R2R-CE and RxR-CE demonstrate state-of-the-art success rates among monocular methods trained without additional navigation datasets, while real-world experiments further validate the effectiveness of LeaP-VLN in long-horizon navigation.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-16T07:40:00+00:00",
+      "updated": "2026-11-16T07:40:00+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.20676v1",
+      "abs_url": "https://arxiv.org/abs/2611.20676",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-23"
+    }
+  ],
+  "summarized_count": 0,
+  "skipped_no_summary": 0
+}
