@@ -1673,7 +1673,61 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-11-23.json"
+    },
+    "2611.30900": {
+      "arxiv_id": "2611.30900",
+      "title": "GlanceNav: Efficient Vision-and-Language Navigation with Streaming Memory and Counterfactual Rewind",
+      "date": "2026-11-24",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-24.json"
+    },
+    "2611.30463": {
+      "arxiv_id": "2611.30463",
+      "title": "Autonomous UAV Navigation in an Unknown Environment via Multi-Trajectory Model Predictive Control",
+      "date": "2026-11-24",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "eess.SY",
+      "path": "papers/papers-2026-11-24.json"
+    },
+    "2611.30310": {
+      "arxiv_id": "2611.30310",
+      "title": "Seeing Together, Acting Apart: Shared Environmental Understanding for Multi-Robot Navigation",
+      "date": "2026-11-24",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-24.json"
+    },
+    "2611.29507": {
+      "arxiv_id": "2611.29507",
+      "title": "A ROS2 based Human-In-The-Loop Framework for UAV Search and Rescue Operations",
+      "date": "2026-11-24",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-24.json"
+    },
+    "2611.28796": {
+      "arxiv_id": "2611.28796",
+      "title": "NavDecision: Parallel Multi-Step Action Prediction with Persistent Self-Referential Learning for Vision-and-Language Navigation",
+      "date": "2026-11-24",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-24.json"
+    },
+    "2611.28553": {
+      "arxiv_id": "2611.28553",
+      "title": "WorldWeave: Rethinking Embodied Navigation through Cross-Task World Modeling",
+      "date": "2026-11-24",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-24.json"
     }
   },
-  "last_updated": "2026-11-23T07:48:53.665293+00:00"
+  "last_updated": "2026-11-24T10:06:46.440647+00:00"
 }
