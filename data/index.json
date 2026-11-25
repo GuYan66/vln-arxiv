@@ -1727,7 +1727,34 @@
       "is_uav_vln": false,
       "primary_category": "cs.CV",
       "path": "papers/papers-2026-11-24.json"
+    },
+    "2611.32493": {
+      "arxiv_id": "2611.32493",
+      "title": "CoFiNav: VLM-Guided Coarse-to-Fine Semantic Navigation for Open-Ended Last-Mile UAV Delivery",
+      "date": "2026-11-25",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-25.json"
+    },
+    "2611.32400": {
+      "arxiv_id": "2611.32400",
+      "title": "Verify then Steer: Progress Hallucination-Aware Recovery for Continuous Vision-and-Language Navigation",
+      "date": "2026-11-25",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-25.json"
+    },
+    "2611.32218": {
+      "arxiv_id": "2611.32218",
+      "title": "PoseVLN: Learning Geometric State Evolution for Vision-Language Navigation",
+      "date": "2026-11-25",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-11-25.json"
     }
   },
-  "last_updated": "2026-11-24T10:06:46.440647+00:00"
+  "last_updated": "2026-11-25T08:40:22.297843+00:00"
 }
