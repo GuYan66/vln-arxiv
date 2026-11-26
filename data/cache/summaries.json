@@ -3514,5 +3514,60 @@
     "raw_model_output": "",
     "summarized_at": "2026-11-25T08:40:22.292912+00:00",
     "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x7541874502d0>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))"
+  },
+  "2611.34655": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-26T08:19:37.916125+00:00",
+    "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a99ae90>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))"
+  },
+  "2611.34561": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-26T08:21:40.033597+00:00",
+    "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a854910>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))"
+  },
+  "2611.34249": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-26T08:23:42.216659+00:00",
+    "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a8542d0>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))"
+  },
+  "2611.34115": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-26T08:25:44.312607+00:00",
+    "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a855090>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))"
+  },
+  "2611.33865": {
+    "summary_cn": "",
+    "highlights": [],
+    "relevance_score": null,
+    "relevance_reason": "",
+    "is_uav_vln": false,
+    "tags": [],
+    "raw_model_output": "",
+    "summarized_at": "2026-11-26T08:27:46.433722+00:00",
+    "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a99bc50>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))"
   }
 }

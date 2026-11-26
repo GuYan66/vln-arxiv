@@ -1754,7 +1754,52 @@
       "is_uav_vln": false,
       "primary_category": "cs.AI",
       "path": "papers/papers-2026-11-25.json"
+    },
+    "2611.34655": {
+      "arxiv_id": "2611.34655",
+      "title": "Nav4Manip: From Navigation to Dexterous Mobile Manipulation through Co-Evolution",
+      "date": "2026-11-26",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-26.json"
+    },
+    "2611.34561": {
+      "arxiv_id": "2611.34561",
+      "title": "Compact Vision-Language Navigation in Continuous Environmentsvia On-Policy Training and Route-Bearing Output",
+      "date": "2026-11-26",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-26.json"
+    },
+    "2611.34249": {
+      "arxiv_id": "2611.34249",
+      "title": "Navigent: A Geometry-Grounded Agentic Framework for Vision Language Navigation",
+      "date": "2026-11-26",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.AI",
+      "path": "papers/papers-2026-11-26.json"
+    },
+    "2611.34115": {
+      "arxiv_id": "2611.34115",
+      "title": "A Simple Yet Effective Agent for Open-World Aerial Object Search",
+      "date": "2026-11-26",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.CV",
+      "path": "papers/papers-2026-11-26.json"
+    },
+    "2611.33865": {
+      "arxiv_id": "2611.33865",
+      "title": "Measuring the Value of One Shared Image at Robot Handoffs in Vision-and-Language Navigation",
+      "date": "2026-11-26",
+      "relevance_score": null,
+      "is_uav_vln": false,
+      "primary_category": "cs.RO",
+      "path": "papers/papers-2026-11-26.json"
     }
   },
-  "last_updated": "2026-11-25T08:40:22.297843+00:00"
+  "last_updated": "2026-11-26T08:27:46.437853+00:00"
 }
