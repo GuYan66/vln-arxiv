@@ -1,0 +1,601 @@
+{
+  "date": "2026-11-27",
+  "categories": [
+    "cs.CV",
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA"
+  ],
+  "query": "(cat:cs.CV OR cat:cs.RO OR cat:cs.AI OR cat:cs.CL OR cat:cs.LG OR cat:cs.MA) AND (abs:\"vision-language navigation\" OR ti:\"vision-language navigation\" OR abs:\"vision and language navigation\" OR ti:\"vision and language navigation\" OR abs:\"vision-and-language navigation\" OR ti:\"vision-and-language navigation\" OR abs:VLN OR ti:VLN OR abs:\"aerial vision-language\" OR ti:\"aerial vision-language\" OR abs:\"aerial navigation\" OR ti:\"aerial navigation\" OR abs:\"drone navigation\" OR ti:\"drone navigation\" OR abs:\"UAV navigation\" OR ti:\"UAV navigation\" OR abs:\"UAV vision-language\" OR ti:\"UAV vision-language\" OR abs:\"embodied navigation\" OR ti:\"embodied navigation\" OR abs:\"language grounded navigation\" OR ti:\"language grounded navigation\" OR abs:\"instruction following navigation\" OR ti:\"instruction following navigation\" OR abs:\"navigation instruction\" OR ti:\"navigation instruction\" OR abs:AerialVLN OR ti:AerialVLN OR abs:CityNav OR ti:CityNav)",
+  "papers": [
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-26T08:19:37.916125+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a99ae90>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.34655",
+      "title": "Nav4Manip: From Navigation to Dexterous Mobile Manipulation through Co-Evolution",
+      "authors": [
+        "Yusen Feng",
+        "Zixi Kang",
+        "Zhijun Yin",
+        "Changxiao Liu",
+        "Tianhong Gao",
+        "Jiazhao Zhang",
+        "Jiahang Liu",
+        "Libin Liu",
+        "Zhizheng Zhang",
+        "He Wang"
+      ],
+      "abstract": "Dexterous mobile manipulation is essential for robots to perform useful tasks in complex, unstructured environments. However, existing systems face two challenges. First, navigation remains too coarse for downstream manipulation, which often requires a precise base position and approach orientation rather than merely reaching a meter-scale goal region. Second, navigation and manipulation are commonly trained in isolation, lacking a feedback loop that enables the two capabilities to co-evolve. These limitations prevent current systems from reliably executing long-horizon dexterous mobile-manipulation tasks in real-world environments. To address them, we introduce Nav4Manip, a bidirectionally coupled co-evolution system for long-horizon dexterous mobile manipulation. It comprises two complementary architectures: Nav4Manip-N learns long-horizon navigation and refines its policy through manipulation feedback, while Nav4Manip-M trains a world-action model (WAM) for downstream dexterous manipulation. We train Nav4Manip-N in three stages: multi-task co-tuning learns navigation behavior and manipulation-aware affordance prediction; rejection sampling fine-tuning (RFT) rejects low-quality policy-generated paths and fine-tunes the model on retained trajectories; and reinforcement learning from AI feedback (RLAIF) uses counterfactual preferences to further improve navigation decisions. To support this framework, we establish the Nav-N-Manip benchmark and construct Nav4Manip-Pairs from benchmark rollouts, providing large-scale paired navigation--manipulation trajectories and affordance supervision. Extensive experiments on public vision-language navigation (VLN) benchmarks and Nav-N-Manip demonstrate state-of-the-art performance, while real-world evaluations show that Nav4Manip completes diverse dexterous mobile-manipulation tasks. Project website: https://nav4manip.github.io/.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-25T16:29:17+00:00",
+      "updated": "2026-11-25T16:29:17+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.34655v1",
+      "abs_url": "https://arxiv.org/abs/2611.34655",
+      "matched_keywords": [
+        "vision-language navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-26T08:21:40.033597+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a854910>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.34561",
+      "title": "Compact Vision-Language Navigation in Continuous Environmentsvia On-Policy Training and Route-Bearing Output",
+      "authors": [
+        "Reshad Ul Karim",
+        "Syeda Maliha Tabassum",
+        "Md. Khalilur Rhaman",
+        "Md Rashad Al Hasan Rony"
+      ],
+      "abstract": "Instruction-following robots need navigation policies that reach high accuracy and remain inexpensive to train and to run on a single graphics processing unit (GPU). The most accurate vision-language navigation policies for continuous environments rely on language models with 4 to 8 billion parameters, long observation histories, and large auxiliary corpora. Two properties of the standard training setup limit smaller policies. Imitation labels cover the states that an expert visits, whereas the running policy reaches states that its own errors produce. In addition, an image-plane waypoint exists only while the route lies inside the camera view. We present \\textbf{\\paper}, a monocular red-green-blue (RGB) policy with 2 billion (2B) parameters that addresses both limitations. \\paper adapts Qwen3-VL-2B with low-rank adapters and processes an eight-frame memory and the current view in one forward pass. The policy predicts the route direction as a bearing in the body frame of the agent, which remains defined for every heading, and a deterministic controller converts this bearing into motion. This design allows training to relabel the states that the policy itself visits. On-policy correction improves success, while bearing decoding outperforms image-plane waypoint scanning across all evaluated start headings with identical weights. On the \\valunseen split, \\paper achieves \\rFinSR\\% success on Room-to-Room in Continuous Environments (\\rtor), averaged over three seeds, and \\rRxFinSR\\% on its Room-Across-Room counterpart (\\rxr). Inference requires \\rDecMs\\,ms and \\rInferGB\\,GiB of memory, while training takes \\rCostTrainTyp\\ GPU-hours on one 12\\,GB consumer GPU.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-11-25T15:32:39+00:00",
+      "updated": "2026-11-25T15:32:39+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.34561v1",
+      "abs_url": "https://arxiv.org/abs/2611.34561",
+      "matched_keywords": [
+        "Vision-Language Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-26T08:23:42.216659+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a8542d0>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.34249",
+      "title": "Navigent: A Geometry-Grounded Agentic Framework for Vision Language Navigation",
+      "authors": [
+        "Xinyu Zhou",
+        "Weiren Cai",
+        "Yitong Chen",
+        "Shenghai Yuan",
+        "Zihang Mu",
+        "Boyu Ma",
+        "Jiahua Dong",
+        "Yanshuo Lu",
+        "Jiaqi Bai",
+        "Jianfei Yang"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) with general-purpose multimodal large language models (MLLMs) offers a flexible alternative to task-specific navigation policies, while reliable long-horizon execution remains challenging. Agents must track navigation progress, detect discrepancies between commanded and actual motion, and recognize when movement has passed relevant landmarks or entrances. We present Navigent, an agentic VLN framework built around a frozen MLLM and a Geometry-Grounded Execution Critic (GEC). GEC performs two complementary checks: action-to-motion consistency, which evaluates measured displacement against commanded movement, and motion-to-landmark consistency, which tracks agent-selected visual anchors and entrance candidates in world coordinates. Detected discrepancies interrupt the remaining action sequence and trigger reobservation, local adjustment, or node-based recovery. Historical visual memory supports progress tracking across extended routes. An offline self-improvement procedure further analyzes successful and failed training trajectories to refine navigation prompts and GEC logic while keeping model weights fixed. On the R2R-CE validation-unseen split (1,839 episodes) and RxR-CE validation-unseen split(3,669 episodes), Navigent achieves 84.0%/86.0% SR and 72.9%/69.1% SPL, respectively, demonstrating the value of geometry-grounded execution verification for reliable agentic navigation. Project Page: https://marslab-navigent.github.io/navigent.github.io/ Code: https://github.com/MarsLab-Navigent/Navigent",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-11-25T12:12:31+00:00",
+      "updated": "2026-11-25T12:12:31+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.34249v1",
+      "abs_url": "https://arxiv.org/abs/2611.34249",
+      "matched_keywords": [
+        "Vision Language Navigation",
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-26T08:25:44.312607+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a855090>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.34115",
+      "title": "A Simple Yet Effective Agent for Open-World Aerial Object Search",
+      "authors": [
+        "Jitai Hao",
+        "Liangxing Yang",
+        "Zhenyang Li",
+        "Fan Liu",
+        "Qiang Huang",
+        "Jun Yu"
+      ],
+      "abstract": "Open-world aerial object search methods often rely on persistent spatial maps, learned world models, or task-specific policy training. To examine how far a minimal, training-free design can go, we introduce SimpleUAV, an agent built around a frozen, off-the-shelf vision-language model (VLM). SimpleUAV separates current-view target assessment from history-conditioned action selection, combining fresh candidate evidence with lightweight search context. Local geometry converts visual selections into bounded straight-line movements, depth-based checks halt blocked segments, and measured execution feedback guides subsequent decisions. This closed loop sustains search without persistent spatial maps or task-specific training. SimpleUAV achieves 41.61% Success Rate (SR) on UAV-ON and 11.98% on AerialDojo-200K, compared with 23.80% and 3.20% for the strongest prior baselines, respectively. With limited benchmark-specific adaptation, the same core agent transfers to aerial Vision-and-Language Navigation (VLN) on TravelUAV, improving Full SR by at least 19.66% across all three splits under L1 assistance. These results establish a strong baseline for evaluating when additional architectural complexity benefits aerial search.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-11-25T10:17:35+00:00",
+      "updated": "2026-11-25T10:17:35+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.34115v1",
+      "abs_url": "https://arxiv.org/abs/2611.34115",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-26T08:27:46.433722+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x76fb0a99bc50>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.33865",
+      "title": "Measuring the Value of One Shared Image at Robot Handoffs in Vision-and-Language Navigation",
+      "authors": [
+        "Yuze Lu"
+      ],
+      "abstract": "When the lead robot cannot continue, what should it send the teammate that must finish the route? We replay a frozen receiver at each contact under alternative messages. Across 3,920 autonomous departures in 106 environments, adding the view before the lead's last action block to its executed actions raised success by 7.51 percentage points (pp) per RxR handoff and 8.54 pp per SAGE handoff. Per departure the gains were 2.23 and 1.44 pp, respectively. The lead continuing in simulation defines the empirical full-history ceiling (Solo). At contact, the lead had accumulated a median of 41 frames. Sending one frame when available recovered 24% of the full-history advantage over actions alone in SAGE and 30% in RxR. Over an estimated progress cue in SAGE, the image rescued 100 routes and reversed 54 successes. Near-goal receivers finished outside less often (63.1% to 51.7%, post hoc). In secondary comparisons the earlier view outperformed the contact view by 6-7 pp per handoff. Exact-route specificity and image gains at controlled starts with mostly unknown progress or outside the goal region remained unresolved. Gains were detectable from about 7 kB per handoff. Random transmission matched within size bins nearly equaled the learned sender's team success. At a required handoff, a view of the approach to the last maneuver helps the receiver finish.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-11-25T06:43:54+00:00",
+      "updated": "2026-11-25T06:43:54+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.33865v1",
+      "abs_url": "https://arxiv.org/abs/2611.33865",
+      "matched_keywords": [
+        "Vision-and-Language Navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-25T08:36:17.842935+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x754187596e90>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.32493",
+      "title": "CoFiNav: VLM-Guided Coarse-to-Fine Semantic Navigation for Open-Ended Last-Mile UAV Delivery",
+      "authors": [
+        "Xuanpu Wang",
+        "Shun Hu",
+        "Bing Li",
+        "Rongqing Zhang"
+      ],
+      "abstract": "Unmanned aerial vehicle (UAV) delivery is an important application of the low-altitude economy, enhancing the flexibility and accessibility of last-mile logistics. Existing UAV delivery methods generally rely on precise terminal coordinates, predefined terminal specifications, or task-specific localization procedures, limiting the scope and flexibility of delivery. As UAV logistics becomes more intelligent, open-ended semantic descriptions offer a new paradigm for specifying terminal destinations. However, conventional aerial navigation methods have limited ability to generalize to delivery scenarios that require open-vocabulary terminal navigation. To enable this broader delivery paradigm, we propose CoFiNav, a VLM-guided coarse-to-fine UAV semantic navigation framework that progressively grounds relation-defined terminal destinations through hierarchical semantic search and active 3D observation. Given a task description, a coarse prior map from OpenStreetMap (OSM), and accumulated observations, CoFiNav uses a vision-language model (VLM) to determine which unresolved entity or spatial relation should be verified next. A geometry-aware module converts the semantic observation request into feasible viewpoints using RGB images and LiDAR, while conventional motion planning handles safe execution. Experiments across multiple urban environments show that CoFiNav outperforms representative adapted baselines in success rate while requiring shorter flight paths and fewer observations.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-24T12:22:18+00:00",
+      "updated": "2026-11-24T12:22:18+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.32493v1",
+      "abs_url": "https://arxiv.org/abs/2611.32493",
+      "matched_keywords": [
+        "aerial navigation",
+        "UAV semantic navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-25T08:38:20.151686+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x754187450910>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.32400",
+      "title": "Verify then Steer: Progress Hallucination-Aware Recovery for Continuous Vision-and-Language Navigation",
+      "authors": [
+        "Jiewen Hou",
+        "Guanxiang Qi",
+        "Meina Kan",
+        "Shiguang Shan",
+        "Xilin Chen"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) requires an agent to follow language instructions to reach a target in an unseen 3D environment. However, existing methods still struggle to recover from route deviations at test time. We investigate this limitation through the lens of instruction progress, and trace it to a phenomenon we term progress hallucination: agents misinterpret off-route observations as evidence of task progress, causing their internal instruction progress to advance beyond the actual task stage and hindering recovery based on earlier sub-instructions. To address this failure mode, we propose PHAR (Progress Hallucination-Aware Recovery), a test-time recovery framework following a verify-then-steer paradigm. The verifier examines residual-stream representations of the Vision-Language Model (VLM) to identify mismatch of cross-modal evidence along the trajectories, and uses split conformal calibration to control false alarms. When an alarm is raised, the steering module uses a contextual bandit to adaptively select the rewind extent of instruction progress for online recovery. Through extensive experiments on R2R-CE and RxR-CE, our framework enhances the reliability of multiple state-of-the-art vision-language navigation methods at test time.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-11-24T11:05:44+00:00",
+      "updated": "2026-11-24T11:05:44+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.32400v1",
+      "abs_url": "https://arxiv.org/abs/2611.32400",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN",
+        "vision-language navigation"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-25T08:40:22.292912+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x7541874502d0>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.32218",
+      "title": "PoseVLN: Learning Geometric State Evolution for Vision-Language Navigation",
+      "authors": [
+        "Pengyu Hou",
+        "Mingfei Han",
+        "Haihong Hao",
+        "Xiaolong Wu",
+        "Bo Dong",
+        "Xiaojun Chang",
+        "Salman Khan",
+        "Bin Shi"
+      ],
+      "abstract": "Vision-Language Navigation (VLN) requires an embodied agent to relate past experience, current spatial state, and future motion while following natural-language instructions. Recent approaches improve these capabilities through long-horizon memory, state-aware reasoning, and future prediction, yet these components are often modeled separately, leaving navigation state evolution insufficiently connected across time. We argue that camera pose provides a natural geometric representation for bridging past, present, and future states. Based on this insight, we propose PoseVLN, a pose-aware VLN framework that jointly learns navigation decisions and geometric state evolution. PoseVLN organizes visual memory and the current observation in an episode-relative coordinate frame, and jointly predicts the next K navigation actions together with a local $Δ$Pose over the same horizon. The predicted $Δ$Pose is composed with the current trajectory-level pose to obtain the future pose state, which is recursively propagated throughout navigation, forming a continuous geometric state evolution from past memory to future motion. Experiments on the R2R-CE and RxR-CE Val-Unseen splits demonstrate the effectiveness of explicitly modeling geometric state evolution, with PoseVLN outperforming the strongest compared baselines by 2.6 and 2.9 percentage points in success rate, respectively, using only single RGB observations.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-11-24T09:03:39+00:00",
+      "updated": "2026-11-24T09:03:39+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.32218v1",
+      "abs_url": "https://arxiv.org/abs/2611.32218",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-24T09:56:35.028858+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x7fb41467ee90>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.30900",
+      "title": "GlanceNav: Efficient Vision-and-Language Navigation with Streaming Memory and Counterfactual Rewind",
+      "authors": [
+        "Anh Dao",
+        "Quan-Dung Pham",
+        "Danh Vinh Le",
+        "Tuyen Pham Le",
+        "Quan Nguyen",
+        "Yuzhang Shang"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) have become strong policies for vision-and-language navigation (VLN). However, most of them encode a sample of past frames again at every decision and are trained on isolated decisions, so computation is redundant and the usable history is short. They also learn from their own mistakes through outcome rewards that give one scalar to a whole episode. We ask whether a navigator can encode each frame only once, at a constant cost per step, and still remember what matters and learn efficiently from its mistakes. We present GlanceNav, a streaming navigator built on a hybrid MLLM. Its Gated DeltaNet layers carry a recurrent state through the whole episode, while its attention layers keep a short window of recent observations and a small bank of keyframes, selected by how much each frame changes the recurrent state. This constant-size memory keeps the cost per step fixed and allows training on whole episodes with the same memory as at inference. Because the entire memory can also be copied in constant time, we further propose Counterfactual Rewind (CoRe), a reinforcement learning stage that rewinds a drifting rollout to its closest approach to the goal, lets an expert correct a few actions, and credits decisions by the resulting change in outcome. Trained only on the R2R-CE and RxR-CE training splits, with 1,000 instructions for reinforcement learning, a 4B GlanceNav reaches success rates of 71.9% and 73.6% on R2R-CE and RxR-CE val-unseen. On R2R-CE, it outperforms the strongest previous single-RGB method trained without external data by 9.1 points, while running at 104 ms per step.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-11-23T16:02:19+00:00",
+      "updated": "2026-11-23T16:02:19+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.30900v1",
+      "abs_url": "https://arxiv.org/abs/2611.30900",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-24T09:58:37.295996+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x7fb414534910>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.30463",
+      "title": "Autonomous UAV Navigation in an Unknown Environment via Multi-Trajectory Model Predictive Control",
+      "authors": [
+        "Danilo Saccani",
+        "Lorenzo Fagiano"
+      ],
+      "abstract": "A novel model predictive control (MPC) formulation, named multi-trajectory MPC (mt-MPC), is presented and applied to the problem of autonomous navigation of an unmanned aerial vehicle (UAV) in an unknown environment. The UAV is equipped with a LiDAR sensor, providing only a partial description of the surroundings and resulting in time-varying constraints as the vehicle navigates among the obstacles. The control system layout is hierarchical: the low-level loops stabilize the vehicle's trajectories and track the set-points commanded by the high-level, mt-MPC controller. The latter is required to plan the UAV trajectory trading off safety, i.e. to avoid collisions with the uncertain obstacles, and exploitation, i.e. to reach an assigned target location. To achieve this goal, mt-MPC considers different future state trajectories in the same Finite Horizon Optimal Control Problem (FHOCP), enabling a partial decoupling between constraint satisfaction (safety) and cost function minimization (exploitation). Recursive feasibility and, consequently, persistent obstacle avoidance guarantees are derived under the assumption of a time invariant environment. The performance of the approach is studied in simulation and compared with that of a standard MPC, showing good improvement.",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.RO"
+      ],
+      "published": "2026-11-23T10:55:42+00:00",
+      "updated": "2026-11-23T10:55:42+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.30463v1",
+      "abs_url": "https://arxiv.org/abs/2611.30463",
+      "matched_keywords": [
+        "UAV Navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-24T10:00:39.509401+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x7fb4145342d0>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.30310",
+      "title": "Seeing Together, Acting Apart: Shared Environmental Understanding for Multi-Robot Navigation",
+      "authors": [
+        "Haihong Hao",
+        "Lei Chen",
+        "Mingfei Han",
+        "Chenglong Yan",
+        "Dong An",
+        "Yuqiang Yang",
+        "Changlin Li",
+        "Minghao Guo",
+        "Salman Khan",
+        "Xiaojun Chang"
+      ],
+      "abstract": "Multi-robot embodied systems are typically designed to collaborate by coordinating actions, sharing trajectories, or learning joint policies. We ask a complementary question: can collaboration emerge before decision-making, by first building a shared understanding of the environment? We introduce Shared Environmental Understanding, a policy-agnostic representation that aggregates partial egocentric observations from multiple robots into a shared latent world model. This shifts collaboration from the policy space to the representation space, enabling decentralized decision-making with shared environmental context. To this end, we propose Shared Environment Encoding and Retrieval (SEER), a framework that organizes multi-robot observations into a shared memory, retrieves relevant context via spatio-temporal similarity, and encodes it using a predictive latent world model. The resulting representations are injected into downstream navigation agents as tokens. Experimental results demonstrate that SEER captures action-relevant environmental structure and consistently improves navigation performance across both specialized VLN agents and general vision-language model agents, while preserving single-agent capabilities.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-11-23T08:58:12+00:00",
+      "updated": "2026-11-23T08:58:12+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.30310v1",
+      "abs_url": "https://arxiv.org/abs/2611.30310",
+      "matched_keywords": [
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-24T10:02:41.970872+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x7fb414535090>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.29507",
+      "title": "A ROS2 based Human-In-The-Loop Framework for UAV Search and Rescue Operations",
+      "authors": [
+        "Anubhav Pandey",
+        "Harshit Nagpal",
+        "Aditya Agarwal",
+        "Tejasvi Alladi",
+        "Fei Richard Yu"
+      ],
+      "abstract": "Existing Unmanned Aerial Vehicle (UAV) autonomy frameworks lack human contextual awareness, limiting real-time adaptability in unstructured Search and Rescue (SAR) environments. To address data availability, we propose a Robot Operating System (ROS2)-based human-in-the-loop (HITL) framework that translates human directional gestures (left/right) into UAV navigation commands using RGB-Depth (RGB-D) sensing and YOLOv11 (You Only Look Once). The deprecation of ROS1 necessitates migrating to ROS2, prioritising real-time communication, scalability, and long-term maintainability. Unlike approaches optimised for peak accuracy under ideal conditions, the proposed system prioritises robustness and real-time deployment in degraded SAR environments. Our system achieves 89% confidence in depth estimation under occlusion and varying environmental conditions in Gazebo-PX4 simulations. In foggy conditions, RGB-D fusion consistently provides more informative cues than RGB alone, with an average improvement of 46.7% across all scenarios and distances. The framework demonstrates superior occlusion handling (+15%), adaptive RGB-D fusion, temporal consistency modelling, and real-time deployment via a ROS2 data distribution service (DDS), with end-to-end latency below 50 ms. We evaluate the modified YOLOv11 and the depth-weighted pose estimation on a held-out simulated test set and on real people from the public UAV-GESTURE dataset, in clear air and in Koschmieder fog. Without retraining, the framework reads the gestures of real people with 80% accuracy, depth keeps 77% at a visibility of 10 m where RGB drops to 24%, and the modified YOLOv11 reaches 91% in simulation and 99% on held-out real people when trained on real data. The open-source ROS2 implementation eases the transition of SAR-UAV platforms from ROS1, enabling UAVs to act directly on operator gestures without complex path planning.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "published": "2026-11-22T14:25:55+00:00",
+      "updated": "2026-11-22T14:25:55+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.29507v1",
+      "abs_url": "https://arxiv.org/abs/2611.29507",
+      "matched_keywords": [
+        "UAV navigation"
+      ],
+      "is_uav_hint": true,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-24T10:04:44.227818+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x7fb414535590>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.28796",
+      "title": "NavDecision: Parallel Multi-Step Action Prediction with Persistent Self-Referential Learning for Vision-and-Language Navigation",
+      "authors": [
+        "Kai Wu",
+        "Yufan Hu",
+        "Quan Fang",
+        "Boning Zhang",
+        "Junyu Gao"
+      ],
+      "abstract": "Vision-and-language navigation (VLN) requires timely decisions based on instructions and visual observations. However, autoregressive VLN models generate action descriptions token by token, introducing substantial inference overhead. Decision models offer an efficient alternative but face challenges in maintaining short-horizon action coherence and long-horizon goal alignment. To address these challenges, we propose NavDecision, an efficient multi-step VLN decision model. We introduce parallel multi-step action prediction (PMAP) to predict multiple action distributions from a shared vision-language state, and memory-augmented self-referential policy optimization (M-SRPO) to learn from unsuccessful trajectories using successful trajectories as references. A cross-iteration success memory further accumulates historical successful trajectories to provide informative training feedback. NavDecision achieves success rates of 64.60% on R2R-CE and 64.57% on RxR-CE with a 4B backbone. Compared with existing autoregressive VLN methods, it delivers significant inference speedups of up to $22.28\\times$ and $18.96\\times$ while maintaining comparable navigation performance.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-11-21T13:16:21+00:00",
+      "updated": "2026-11-21T13:16:21+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.28796v1",
+      "abs_url": "https://arxiv.org/abs/2611.28796",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-24T10:06:46.435907+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x7fb41467ed50>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.28553",
+      "title": "WorldWeave: Rethinking Embodied Navigation through Cross-Task World Modeling",
+      "authors": [
+        "Xuan Yao",
+        "Jiahao Zhang",
+        "Rongjunchen Zhang",
+        "Kaixuan Huang",
+        "Junyu Gao",
+        "Changsheng Xu"
+      ],
+      "abstract": "Mobile embodied agents continuously alter their observations through their own motion, while external dynamics further shape future interactions. Different mobile embodied tasks therefore capture complementary patterns of state evolution, yet jointly learning world dynamics across such interactions remains less explored. We investigate this problem through Vision-and-Language Navigation (VLN) and Embodied Visual Tracking (EVT), which respectively involve navigation toward a stationary goal and interaction with a moving target. We propose WorldWeave, a cross-task world model that couples shared predictive dynamics with task-specific adaptation. Instead of conditioning state transitions on heterogeneous physical actions, WorldWeave learns latent actions from observed state changes via inverse-forward dynamics, establishing a shared transition representation across tasks. The resulting future-state predictions are adaptively integrated into task-specific representations for downstream decision making. Experiments across multiple VLN and EVT benchmarks demonstrate consistent improvements over specialized baselines.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-11-21T04:19:48+00:00",
+      "updated": "2026-11-21T04:19:48+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.28553v1",
+      "abs_url": "https://arxiv.org/abs/2611.28553",
+      "matched_keywords": [
+        "Embodied Navigation",
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-23T07:40:45.354734+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x723ec266ae90>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.27499",
+      "title": "NavRSI: Recursive Harness Self-Improvement for Vision-and-Language Navigation",
+      "authors": [
+        "Guangzhao Dai",
+        "Guoxin Lian",
+        "Shuo Wang",
+        "Shengbin Yue",
+        "Qianru Sun",
+        "Xiangbo Shu",
+        "Bin Zhu"
+      ],
+      "abstract": "Frontier large language models (LLMs) have enabled vision-and-language navigation (VLN) through direct closed-loop perception and action. However, navigation performance depends strongly on the harness governing LLM-environment interactions, while existing harnesses largely rely on manually designed navigation tools, memory, and agent roles. We introduce NavRSI, a harness-centric recursive self-improvement framework that optimizes the navigation behavior of frozen LLMs through closed-loop experience. In each round, NavRSI iteratively collects navigation trajectories and failure diagnostics, employs a designer agent to rewrite the harness, and retains the revisions that prove effective, while the designer accumulates experience from previous revisions so that the harness and this experience co-evolve. Privileged simulator diagnostics guide only the designer and remain inaccessible to the navigating LLM, enabling deployment with a single RGB camera and primitive actions, without task-specific model training or additional navigation tools. Experiments demonstrate consistent improvements across LLMs from four vendors, with 85.64% success rate on the full R2R-CE val-unseen split with GPT-6-Astra, surpassing the previously reported best by 4.13%. Evaluations on RxR-CE, NavRAG-CE, and a real humanoid robot further demonstrate its generalizability.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-20T11:47:47+00:00",
+      "updated": "2026-11-20T11:47:47+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.27499v1",
+      "abs_url": "https://arxiv.org/abs/2611.27499",
+      "matched_keywords": [
+        "Vision-and-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    },
+    {
+      "summary_cn": "",
+      "highlights": [],
+      "relevance_score": null,
+      "relevance_reason": "",
+      "is_uav_vln": false,
+      "tags": [],
+      "raw_model_output": "",
+      "summarized_at": "2026-11-23T07:42:47.461097+00:00",
+      "summarize_error": "ConnectTimeout: HTTPSConnectionPool(host='ai-api.d-robotics.cc', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<HTTPSConnection(host='ai-api.d-robotics.cc', port=443) at 0x723ec2520910>, 'Connection to ai-api.d-robotics.cc timed out. (connect timeout=60)'))",
+      "arxiv_id": "2611.27418",
+      "title": "Beyond Future Views: Exploring Future-State World Models for Vision-Language Navigation",
+      "authors": [
+        "Kangyi Wu",
+        "Pengna Li",
+        "Yucheng Wang",
+        "Yance Fang",
+        "Xihan Ma",
+        "Zhizhong Su",
+        "Yang Wu",
+        "Ye Deng",
+        "Jinjun Wang",
+        "Jianyi Liu"
+      ],
+      "abstract": "Vision-Language Navigation(VLN) requires an embodied agent to follow language instructions through unseen 3D environments, where the target spaces often lie beyond the current observation. Navigation world models address this challenge by predicting future views either as pixels or latent representations, providing valuable look-ahead information for action decision. Both paradigms define the future primarily through what the agent may observe, raising a fundamental question: is predicting future views the ultimate form to represent the future for VLN? Cognitive studies show that the human hippocampus prospectively represents both future goals and intervening locations along planned routes. Inspired by this predictive-map view, we organize the navigation-relevant future around goal-directed spatial states and route structure. We instantiate this perspective with two complementary abstractions: a short-horizon waypoint that specifies the next local state to reach, and a mid-horizon corridor that captures the spatial support of the upcoming route. Based on this design, we propose FS-Nav, a future-state world modeling framework that predicts waypoint-corridor states from spatial memory and language instructions, and communicates them to a VLM navigator through top-down and first-person interfaces. Experiments on standard VLN benchmarks demonstrate that FS-Nav achieves state-of-the-art performance. This highlights navigation-relevant future-state modeling as a promising direction for representing the future in VLN.",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-11-20T10:22:30+00:00",
+      "updated": "2026-11-20T10:22:30+00:00",
+      "pdf_url": "https://arxiv.org/pdf/2611.27418v1",
+      "abs_url": "https://arxiv.org/abs/2611.27418",
+      "matched_keywords": [
+        "Vision-Language Navigation",
+        "VLN"
+      ],
+      "is_uav_hint": false,
+      "fetch_date": "2026-11-27"
+    }
+  ],
+  "summarized_count": 0,
+  "skipped_no_summary": 0
+}
